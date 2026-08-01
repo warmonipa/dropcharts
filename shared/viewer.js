@@ -291,6 +291,12 @@
     render();
   }
 
+  function centerAreaLabels() {
+    document.querySelectorAll('.table-wrap').forEach(function (wrap) {
+      wrap.style.setProperty('--area-label-center', Math.round(wrap.clientWidth / 2) + 'px');
+    });
+  }
+
   // --- render ---
 
   function render() {
@@ -361,7 +367,8 @@
         var area = areaFor(ep, enEntry ? enEntry.name : entry.name);
         if (area && area !== lastArea) {
           html += '<tr class="area-gap' + (lastArea === null ? ' first' : '') + '">' +
-                  '<td colspan="' + colCount + '">' + area + '</td></tr>';
+                  '<td colspan="' + colCount + '"><span class="area-label">' +
+                  area + '</span></td></tr>';
           lastArea = area;
         }
         html += '<tr>';
@@ -402,6 +409,7 @@
     }
 
     container.innerHTML = html || '<div style="text-align:center;padding:40px;color:#666">No results</div>';
+    centerAreaLabels();
 
     var statsEl = document.getElementById('stats');
     if (searchTerm) {
@@ -452,6 +460,7 @@
       setRateFormat: setRateFormat
     };
     window.onSearch = onSearch;
+    window.addEventListener('resize', centerAreaLabels);
 
     initTooltip();
     buildControls();

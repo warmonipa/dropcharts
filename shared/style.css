@@ -149,12 +149,19 @@ body {
   border-left: none;
   border-right: none;
   padding: 18px 4px 6px;
-  text-align: center;
+  text-align: left;
   font-size: 0.95em;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
+}
+.drop-table tr.area-gap .area-label {
+  display: inline-block;
+  position: sticky;
+  left: var(--area-label-center, 50vw);
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 .drop-table tr.area-gap.first td {
   padding-top: 6px;
