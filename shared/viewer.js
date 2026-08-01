@@ -350,12 +350,11 @@
       data.sectionIds.forEach(function (sid, i) {
         html += '<th class="section-header" style="background-color:' + data.sectionColors[i] + ';color:' + contrastText(data.sectionColors[i]) + '">' + sid + '</th>';
       });
-      html += '<th class="monster-col">' + colLabel + '</th>';
       html += '</tr></thead>';
 
       html += '<tbody>';
       var lastArea = null;
-      var colCount = data.sectionIds.length + 2;
+      var colCount = data.sectionIds.length + 1;
       for (var fi = 0; fi < filteredWithIdx.length; fi++) {
         var entry = filteredWithIdx[fi].entry;
         var enEntry = enEntries[filteredWithIdx[fi].idx];
@@ -397,7 +396,6 @@
             html += '<td class="drop-cell empty" style="' + cellStyle + '">\u2014</td>';
           }
         }
-        html += '<td class="monster-name" title="' + entry.name + '"><span class="mob-name">' + displayName + '</span>' + drTag + '</td>';
         html += '</tr>';
       }
       html += '</tbody></table></div></div>';
