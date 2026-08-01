@@ -1,0 +1,22 @@
+{
+  "name": "dropcharts",
+  "version": "1.0.0",
+  "description": "Drop charts for Phantasy Star Online",
+  "main": "data.js",
+  "scripts": {
+    "update": "uv run bash tools/update.sh",
+    "update:bb": "uv run bash tools/update.sh bb",
+    "update:dc": "uv run bash tools/update.sh dc",
+    "update:ngc": "uv run bash tools/update.sh ngc",
+    "update:i18n": "uv run bash tools/update.sh i18n",
+    "update:reorder": "uv run bash tools/update.sh reorder",
+    "update:align": "uv run bash tools/update.sh align",
+    "update:ss": "uv run bash tools/update.sh ss",
+    "build": "uv run python3 tools/build_site.py",
+    "test": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
