@@ -181,10 +181,9 @@ def main():
         "versions",
         choices=VERSIONS,
         nargs="*",
-        default=VERSIONS,
     )
     args = parser.parse_args()
-    errors, summaries = validate_all(versions=args.versions)
+    errors, summaries = validate_all(versions=args.versions or VERSIONS)
     for version, summary in summaries.items():
         print(
             f"{version}: {summary['entries']} entries, "
