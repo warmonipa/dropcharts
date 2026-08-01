@@ -41,6 +41,10 @@ DC drop rates are displayed as percentages, such as `0.134277%`.
 | First column | Monster name and its overall drop rate |
 | Remaining columns | The item and probability for each of the ten Section IDs |
 
+The first column remains frozen while the Section ID columns scroll horizontally. There is
+no duplicate name column at the right edge. Area headings remain centered in the visible
+scrolling region, including on phones and tablets.
+
 A Section ID, such as Viridia or Greenill, is assigned when a character is created. Different Section IDs produce different item drops.
 
 ## Dreamcast-specific content

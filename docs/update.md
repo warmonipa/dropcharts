@@ -116,6 +116,21 @@ source -> parse -> localize -> align -> mark SS -> validate
 
 A full update ingests BB, DC, and NGC first, then runs localization, alignment, SS marking, and validation. Each targeted `update:bb`, `update:dc`, or `update:ngc` command also completes all downstream stages for that version. A successful command therefore leaves deployable output without stale translations or missing SS markers.
 
+## Verification
+
+```bash
+npm test
+```
+
+The suite covers generated data, cross-language coordinates, multi-drop cells, legacy
+parsers, build output, and the responsive viewer contract. The layout regression tests
+require exactly one monster/location column, verify that its header and cells are frozen,
+and ensure area labels derive their horizontal position from the visible scroll container.
+
+When changing table layout or responsive breakpoints, also inspect a production build at a
+phone-sized viewport and scroll a table horizontally. The frozen label and area heading must
+remain stationary while the Section ID cells move.
+
 ## Deployment
 
 ```bash

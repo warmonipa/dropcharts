@@ -45,6 +45,10 @@ NGC drop rates are displayed as percentages, such as `1.5625%`.
 | First column | Monster name and its overall drop rate |
 | Remaining columns | The item and probability for each of the ten Section IDs |
 
+The first column remains frozen while the Section ID columns scroll horizontally. There is
+no duplicate name column at the right edge. Area headings remain centered in the visible
+scrolling region, including on phones and tablets.
+
 ## GameCube-specific content
 
 Compared with the Dreamcast version, the GameCube release adds complete Episode 2 monster and drop data, including:

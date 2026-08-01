@@ -56,8 +56,12 @@ Enter text in the search box to filter monster and item names as you type. Match
 
 | Column | Contents |
 | --- | --- |
-| First column | Monster or box name and its overall drop rate |
+| First column | Monster name or box-area location and its overall drop rate |
 | Remaining columns | The item and probability for each of the ten Section IDs |
+
+The first column remains frozen while the Section ID columns scroll horizontally. There is
+no duplicate name column at the right edge. Area headings remain centered in the visible
+scrolling region, including on phones and tablets.
 
 A Section ID is assigned when a character is created and determines which rare items can drop. A single Section ID cell may contain several independent drops. The viewer displays each item with its own probability. For example, an Ultimate Episode 4 area box may list both ordinary equipment and a `Photon Crystal`; these are separate drops, not alternate localized names for one item.
 
