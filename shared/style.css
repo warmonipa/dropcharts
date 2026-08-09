@@ -180,6 +180,21 @@ body {
   z-index: 9999;
   pointer-events: none;
 }
+#rate-tooltip {
+  display: none;
+  position: fixed;
+  padding: 6px 9px;
+  color: #fff;
+  background: #1a1a2e;
+  border: 1px solid #777;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 10000;
+  pointer-events: none;
+}
 .drop-cell .item-tooltip-img {
   display: none;
 }
@@ -238,6 +253,11 @@ body {
 }
 .drop-cell .drop-rate {
   font-size: 0.85em;
+}
+.drop-cell .drop-rate.has-rdr {
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
 }
 .drop-cell.empty { color: #555; }
 .drop-table tr:hover td { background-color: rgba(233, 69, 96, 0.1); }

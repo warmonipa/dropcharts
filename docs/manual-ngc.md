@@ -38,12 +38,18 @@ Enter text in the search box to filter monster and item names as you type. Searc
 
 NGC drop rates are displayed as percentages, such as `1.5625%`.
 
+The yellow probability below the monster name is the Drop Anything Rate (DAR). The probability
+below an item is its final per-kill Drop Rate (DR), where `DR = DAR × RDR`. Item rates with a
+dotted underline can be hovered to show the inferred Rare Drop Rate (RDR). The tooltip uses
+`≈` because the source DAR and DR values are rounded before the viewer calculates
+`RDR = DR / DAR`.
+
 ### Table layout
 
 | Column | Contents |
 | --- | --- |
-| First column | Monster name and its overall drop rate |
-| Remaining columns | The item and probability for each of the ten Section IDs |
+| First column | Monster name and DAR |
+| Remaining columns | The item and final DR for each of the ten Section IDs |
 
 The first column remains frozen while the Section ID columns scroll horizontally. There is
 no duplicate name column at the right edge. Area headings remain centered in the visible

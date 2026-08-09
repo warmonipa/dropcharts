@@ -83,9 +83,32 @@
     var tip = document.createElement('img');
     tip.id = 'item-tooltip';
     document.body.appendChild(tip);
+    var rateTip = document.createElement('div');
+    rateTip.id = 'rate-tooltip';
+    document.body.appendChild(rateTip);
     var lastCell = null;
 
     document.addEventListener('mousemove', function (e) {
+      var rate = e.target.closest('.drop-rate.has-rdr');
+      if (rate) {
+        rateTip.textContent = rate.dataset.rdr;
+        rateTip.style.display = 'block';
+        var rateX = e.clientX + 12;
+        var rateY = e.clientY + 16;
+        if (rateX + rateTip.offsetWidth > window.innerWidth - 4) {
+          rateX = e.clientX - rateTip.offsetWidth - 12;
+        }
+        if (rateY + rateTip.offsetHeight > window.innerHeight - 4) {
+          rateY = e.clientY - rateTip.offsetHeight - 12;
+        }
+        rateTip.style.left = rateX + 'px';
+        rateTip.style.top = rateY + 'px';
+        tip.style.display = 'none';
+        lastCell = null;
+        return;
+      }
+      rateTip.style.display = 'none';
+
       var option = e.target.closest('.drop-option');
       if (option) {
         var img = option.querySelector('.item-tooltip-img');
@@ -115,6 +138,15 @@
     return (I18N_DATA[lang] || I18N_DATA.en)[key] || key;
   }
 
+  function fmtPercent(probability) {
+    var pct = probability * 100;
+    if (pct >= 100) return '100%';
+    if (pct >= 10)  return pct.toFixed(1) + '%';
+    if (pct >= 1)   return pct.toFixed(2) + '%';
+    if (pct >= 0.1) return pct.toFixed(3) + '%';
+    return pct.toFixed(4) + '%';
+  }
+
   function fmtRate(raw) {
     if (!raw) return '';
     if (!CFG.hasRateToggle) return raw;           // DC/NGC: show as-is (percentages)
@@ -122,12 +154,30 @@
     // Convert fraction to percent
     var parts = raw.split('/');
     if (parts.length !== 2) return raw;
-    var pct = (parseFloat(parts[0]) / parseFloat(parts[1])) * 100;
-    if (pct >= 100) return '100%';
-    if (pct >= 10)  return pct.toFixed(1) + '%';
-    if (pct >= 1)   return pct.toFixed(2) + '%';
-    if (pct >= 0.1) return pct.toFixed(3) + '%';
-    return pct.toFixed(4) + '%';
+    return fmtPercent(parseFloat(parts[0]) / parseFloat(parts[1]));
+  }
+
+  function parseRate(raw) {
+    if (!raw) return NaN;
+    if (raw.endsWith('%')) return parseFloat(raw) / 100;
+    var parts = raw.split('/');
+    if (parts.length !== 2) return NaN;
+    return parseFloat(parts[0]) / parseFloat(parts[1]);
+  }
+
+  function fmtDerivedRate(probability) {
+    if (!CFG.hasRateToggle || rateFormat === 'percent') return fmtPercent(probability);
+    var denominator = Math.round((1 / probability) * 10) / 10;
+    return '1/' + denominator;
+  }
+
+  function rdrTooltip(drRaw, darRaw) {
+    var dr = parseRate(drRaw);
+    var dar = parseRate(darRaw);
+    if (!Number.isFinite(dr) || !Number.isFinite(dar) || dr <= 0 || dar <= 0) return '';
+    var rdr = dr / dar;
+    if (rdr > 1.000001) return '';
+    return 'RDR \u2248 ' + fmtDerivedRate(Math.min(rdr, 1));
   }
 
   function D() { return DATA_MAP[lang] || DATA_MAP.en; }
@@ -395,7 +445,11 @@
               html += '<span class="item-name' + (itemIsSsRare ? ' ss-rare-item' : '') + '">' + drop.item + '</span>';
               var imgFile = IMG_MAP && (IMG_MAP[drop.item] || (enItem && IMG_MAP[enItem]));
               if (imgFile) html += '<img class="item-tooltip-img" src="../shared/images/' + encodeURIComponent(imgFile) + '" alt="" loading="lazy">';
-              if (drop.rate) html += '<span class="drop-rate" style="color:' + subColor + '">' + fmtRate(drop.rate) + '</span>';
+              if (drop.rate) {
+                var rdr = typeKey === 'monsters' ? rdrTooltip(drop.rate, entry.dropRate) : '';
+                var rdrAttr = rdr ? ' data-rdr="' + rdr + '"' : '';
+                html += '<span class="drop-rate' + (rdr ? ' has-rdr' : '') + '" style="color:' + subColor + '"' + rdrAttr + '>' + fmtRate(drop.rate) + '</span>';
+              }
               html += '</span>';
             });
             html += '</td>';

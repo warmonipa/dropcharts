@@ -48,6 +48,12 @@ Select `%` or `Fraction` to change the probability format.
 - **%:** Percentage, such as `0.45%`
 - **Fraction:** The game's underlying fractional probability, such as `1/222`
 
+For monster rows, the yellow probability below the monster name is the Drop Anything Rate
+(DAR). The probability below an item is its final per-kill Drop Rate (DR), where
+`DR = DAR × RDR`. Item rates with a dotted underline can be hovered to show the inferred Rare
+Drop Rate (RDR). The tooltip uses `≈` because the source DAR and DR values are rounded before
+the viewer calculates `RDR = DR / DAR`. RDR tooltips do not apply to box rows.
+
 ### Search
 
 Enter text in the search box to filter monster and item names as you type. Matching item cells are highlighted.
@@ -56,8 +62,8 @@ Enter text in the search box to filter monster and item names as you type. Match
 
 | Column | Contents |
 | --- | --- |
-| First column | Monster name or box-area location and its overall drop rate |
-| Remaining columns | The item and probability for each of the ten Section IDs |
+| First column | Monster name and DAR, or box-area location and its overall drop rate |
+| Remaining columns | The item and final DR for each of the ten Section IDs |
 
 The first column remains frozen while the Section ID columns scroll horizontally. There is
 no duplicate name column at the right edge. Area headings remain centered in the visible
