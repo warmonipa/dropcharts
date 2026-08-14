@@ -326,7 +326,8 @@
   }
 
   function fuzzyMatch(text, term) {
-    text = text.toLowerCase();
+    text = text.normalize('NFKC').toLowerCase();
+    term = term.normalize('NFKC').toLowerCase();
     var ti = 0;
     for (var i = 0; i < term.length; i++) {
       ti = text.indexOf(term[i], ti);

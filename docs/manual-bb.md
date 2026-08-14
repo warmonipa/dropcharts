@@ -15,6 +15,9 @@ This viewer shows monster and box drops for Phantasy Star Online: Blue Burst (Ep
 
 Select `EN`, `日本語`, or `中文` to change the interface language and the displayed monster and item names.
 
+Chinese uses psobb-localization's unified mixed-width names directly. There is no separate
+full-width or half-width display mode.
+
 You can also set the language in the URL, for example `?lang=zh`.
 
 ### Difficulty selection
@@ -56,7 +59,9 @@ the viewer calculates `RDR = DR / DAR`. RDR tooltips do not apply to box rows.
 
 ### Search
 
-Enter text in the search box to filter monster and item names as you type. Matching item cells are highlighted.
+Enter text in the search box to filter monster and item names as you type. Matching item
+cells are highlighted. Search treats full-width and half-width Latin letters, digits, and
+symbols as equivalent, so either form can find a mixed-width Chinese name.
 
 ### Table layout
 
@@ -91,4 +96,4 @@ Blue Burst is the most comprehensive version in this viewer. Compared with NGC, 
 
 ## Data sources
 
-English and Japanese BB data is scraped from the [Ephinea Drop Charts](https://ephinea.pioneer2.net/drop-charts). Chinese data is generated from the game client's `unitxt` files.
+English and Japanese BB data is scraped from the [Ephinea Drop Charts](https://ephinea.pioneer2.net/drop-charts). Chinese names are generated from psobb-localization's unified mixed-width Unitxt resource.

@@ -52,6 +52,47 @@ def extract_names(data):
     return monsters, items
 
 
+def add_name_parts(
+    en_name,
+    ja_name,
+    zh_name,
+    target_map,
+    target_norm,
+    *,
+    prefer_later_parts,
+):
+    """Merge a compound chart label into the flat cross-version name map.
+
+    BB monster labels encode standard and Ultimate names as the first and
+    second parts. If both parts have the same English name but different
+    translations, downstream DC/NGC data needs the Ultimate translation.
+    """
+    en_parts = en_name.split("/")
+    translations = {
+        "ja": ja_name.split("/") if ja_name else [],
+        "zh": zh_name.split("/") if zh_name else [],
+    }
+
+    for part_index, en_part in enumerate(en_parts):
+        en_part = en_part.strip()
+        if not en_part:
+            continue
+
+        normalized = normalize_key(en_part)
+        if normalized not in target_norm:
+            target_norm[normalized] = en_part
+            target_map[en_part] = {}
+        canonical = target_norm[normalized]
+
+        for language, parts in translations.items():
+            if part_index >= len(parts) or not parts[part_index].strip():
+                continue
+            if language not in target_map[canonical] or (
+                prefer_later_parts and part_index > 0
+            ):
+                target_map[canonical][language] = parts[part_index].strip()
+
+
 def load_supplemental_zh_pairs():
     """Load psohaven mappings or preserve the existing generated mappings."""
     psohaven_path = ROOT / "psohaven_en2zh.json"
@@ -116,31 +157,16 @@ def build_mapping():
                     ja_entry = ja_entries[i] if i < len(ja_entries) else None
                     zh_entry = zh_entries[i] if i < len(zh_entries) else None
 
-                    # Monster/box names - may be compound "Name1/Name2"
-                    en_parts = en_entry["name"].split("/")
-                    ja_parts = ja_entry["name"].split("/") if ja_entry else []
-                    zh_parts = zh_entry["name"].split("/") if zh_entry else []
-
                     target_map = monsters_map if section_key == "monsters" else items_map
                     target_norm = monster_norm if section_key == "monsters" else item_norm
-
-                    for pi, en_part in enumerate(en_parts):
-                        en_part = en_part.strip()
-                        if not en_part:
-                            continue
-                        nk = normalize_key(en_part)
-                        if nk not in target_norm:
-                            target_norm[nk] = en_part
-                            target_map[en_part] = {}
-                        canonical = target_norm[nk]
-                        if pi < len(ja_parts) and ja_parts[pi].strip():
-                            ja_val = ja_parts[pi].strip()
-                            if "ja" not in target_map[canonical]:
-                                target_map[canonical]["ja"] = ja_val
-                        if pi < len(zh_parts) and zh_parts[pi].strip():
-                            zh_val = zh_parts[pi].strip()
-                            if "zh" not in target_map[canonical]:
-                                target_map[canonical]["zh"] = zh_val
+                    add_name_parts(
+                        en_entry["name"],
+                        ja_entry["name"] if ja_entry else "",
+                        zh_entry["name"] if zh_entry else "",
+                        target_map,
+                        target_norm,
+                        prefer_later_parts=section_key == "monsters",
+                    )
 
                     # Item names in drops
                     ja_drops = list(iter_entry_drops(ja_entry)) if ja_entry else []

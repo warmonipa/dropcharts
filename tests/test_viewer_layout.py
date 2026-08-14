@@ -39,6 +39,10 @@ class ViewerLayoutTest(unittest.TestCase):
         self.assertIn("--area-label-center", self.viewer)
         self.assertIn("left: var(--area-label-center", self.styles)
 
+    def test_search_normalizes_mixed_width_names(self):
+        self.assertIn("text.normalize('NFKC').toLowerCase()", self.viewer)
+        self.assertIn("term.normalize('NFKC').toLowerCase()", self.viewer)
+
 
 if __name__ == "__main__":
     unittest.main()

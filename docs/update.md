@@ -6,7 +6,9 @@ This guide describes how to refresh, rebuild, validate, and deploy the drop-tabl
 
 - Python 3.10 or later and `uv`; Python dependencies are managed by `pyproject.toml` and `uv.lock`.
 - A local checkout of the `ephinea4haven.github.io` source-data repository next to this repository. The DC and NGC source HTML is no longer stored in this working tree. The parsers read it from verified commit `7280fec3e435bf06b2d0a25659478ef5375eb86c`. Set `EPHINEA4HAVEN_REPO` to use another checkout.
-- Optional game-client `unitxt` PRS files, required when regenerating BB Chinese data from the client resources.
+- A local checkout of `psobb-localization` next to this repository. Its aligned
+  English reference and unified Chinese mixed-width Unitxt are the authoritative
+  BB translation source. Set `PSOBB_LOCALIZATION_REPO` when the checkout is elsewhere.
 
 ## Quick start
 
@@ -42,11 +44,17 @@ The pipeline can also be invoked directly:
 | Script | Input | Output |
 | --- | --- | --- |
 | `scraper.py` | Live Ephinea Drop Charts | `bb/data/en.js`, `bb/data/ja.js` |
-| `gen_zh.py` | Game-client `unitxt` PRS files | `bb/data/zh.js` |
+| `gen_zh.py` | `psobb-localization/localization/{en,zh}/unitxt_j.prs` | `bb/data/zh.js` |
 | `reorder.py` | All BB language datasets | The same files, with monsters in canonical order |
 
 - `scraper.py` requires network access to `ephinea.pioneer2.net`.
-- `gen_zh.py` first looks for the Windows client's `unitxt` PRS files. If they are unavailable, it falls back to `i18n_names.json`.
+- `gen_zh.py` requires psobb-localization's aligned English and unified Chinese
+  Unitxt files. It preserves the source's mixed widths, maps
+  Ephinea chart aliases back to canonical Unitxt indexes, and fails rather than
+  silently using a stale translation fallback. Use `--localization-repo` or
+  `PSOBB_LOCALIZATION_REPO` to select a non-sibling checkout.
+- BB publishes one Chinese dataset from that unified mixed-width source; the viewer does
+  not generate or select separate full-width and half-width variants.
 - `reorder.py` runs automatically at the end of `update:bb`. It orders BB enemies as common enemies, elite enemies, then bosses within each area, matching DC and NGC.
 
 Every version and every monster or area/box row uses one cell protocol. Each `drops` array always corresponds to the ten Section ID columns. An empty or single-drop cell has the form `{"item": "...", "rate": "..."}`. A cell with several independent drops uses `{"items": [{"item": "...", "rate": "..."}, ...]}`. Consumers must iterate through `tools/drop_data.py` in Python or `cellDrops()` in the viewer instead of assuming a cell cardinality from the `monsters` or `boxes` type. Multi-drop cells currently occur in BB area boxes, but the model also supports future multi-drop monster cells.
@@ -70,6 +78,11 @@ Every version and every monster or area/box row uses one cell protocol. Each `dr
 | `build_i18n.py` | All BB/NGC language datasets and supplemental Chinese mappings | `i18n_names.json`, `dc/data/ja.js`, `dc/data/zh.js`, `ngc/data/zh.js` |
 
 Localization depends on the BB and NGC datasets, so update those inputs first. A full update enforces the correct order automatically.
+
+BB monster rows encode standard and Ultimate names as the first and second parts of a
+compound label. When both parts share one English name but have different translations,
+`build_i18n.py` uses the second, Ultimate translation in its flat cross-version mapping.
+This preserves the Ultimate-tier names expected by the DC and NGC derived datasets.
 
 ### 5. BB monster ordering
 
@@ -125,7 +138,8 @@ npm test
 The suite covers generated data, cross-language coordinates, multi-drop cells, legacy
 parsers, build output, and the responsive viewer contract. The layout regression tests
 require exactly one monster/location column, verify that its header and cells are frozen,
-and ensure area labels derive their horizontal position from the visible scroll container.
+ensure area labels derive their horizontal position from the visible scroll container, and
+verify that mixed-width search normalizes both names and queries.
 
 When changing table layout or responsive breakpoints, also inspect a production build at a
 phone-sized viewport and scroll a table horizontally. The frozen label and area heading must
