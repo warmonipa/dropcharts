@@ -212,6 +212,26 @@ class MultiItemConsumerTest(unittest.TestCase):
         self.assertEqual(target["Existing"], {"zh": "权威译名", "ja": "既存"})
         self.assertEqual(target["Site Only"], {"zh": "本站独有"})
 
+    def test_unitxt_merge_preserves_case_sensitive_item_identities(self):
+        target = {"Blade": {"zh": "旧译名"}}
+        identities = {build_i18n.normalize_key("Blade"): "Blade"}
+
+        build_i18n.merge_unitxt_item_names(
+            {
+                "Blade": "突刺匕首",
+                "BLADE": "匕首",
+                "Saber": "光剑",
+                "SABER": "光剑",
+            },
+            target,
+            identities,
+        )
+
+        self.assertEqual(target["Blade"]["zh"], "突刺匕首")
+        self.assertEqual(target["BLADE"]["zh"], "匕首")
+        self.assertEqual(target["Saber"]["zh"], "光剑")
+        self.assertNotIn("SABER", target)
+
     def test_build_i18n_prefers_ultimate_name_for_flat_cross_version_map(self):
         bb_en = sample_name_data("Gi Gue/Gi Gue")
         bb_ja = sample_name_data("ギ・グー/ギ・グー")

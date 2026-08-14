@@ -137,6 +137,27 @@ def merge_names(source, target_map, target_norm, *, replace):
                 target_map[canonical][language] = value
 
 
+def merge_unitxt_item_names(source, target_map, target_norm):
+    """Merge Unitxt items without collapsing case-sensitive name identities."""
+    groups = {}
+    for name, zh_name in source.items():
+        groups.setdefault(normalize_key(name), []).append((name, zh_name))
+
+    regular = {}
+    case_sensitive = []
+    for entries in groups.values():
+        if len({zh_name for _, zh_name in entries}) > 1:
+            case_sensitive.extend(entries)
+        else:
+            regular.update({name: {"zh": zh_name} for name, zh_name in entries})
+
+    merge_names(regular, target_map, target_norm, replace=True)
+
+    for name, zh_name in case_sensitive:
+        target_map.setdefault(name, {})["zh"] = zh_name
+        target_norm.setdefault(normalize_key(name), name)
+
+
 def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     """Build unified i18n mapping from all sources."""
     # Mapping: normalized_en -> {"en": original_en, "ja": ja, "zh": zh}
@@ -289,12 +310,7 @@ def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     # aligned English identity exists. Uncovered authority entries are kept.
     print("Aligning authoritative Chinese names from mixed-width Unitxt...")
     unitxt = load_unitxt_name_maps(Path(localization_repo))
-    merge_names(
-        {name: {"zh": zh} for name, zh in unitxt.items.items()},
-        items_map,
-        item_norm,
-        replace=True,
-    )
+    merge_unitxt_item_names(unitxt.items, items_map, item_norm)
     monster_names = {
         name: {"zh": zh} for name, zh in unitxt.standard_monsters.items()
     }
