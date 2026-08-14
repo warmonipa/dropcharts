@@ -7,8 +7,9 @@ This guide describes how to refresh, rebuild, validate, and deploy the drop-tabl
 - Python 3.10 or later and `uv`; Python dependencies are managed by `pyproject.toml` and `uv.lock`.
 - A local checkout of the `ephinea4haven.github.io` source-data repository next to this repository. The DC and NGC source HTML is no longer stored in this working tree. The parsers read it from verified commit `7280fec3e435bf06b2d0a25659478ef5375eb86c`. Set `EPHINEA4HAVEN_REPO` to use another checkout.
 - A local checkout of `psobb-localization` next to this repository. Its aligned
-  English reference and unified Chinese mixed-width Unitxt are the authoritative
-  BB translation source. Set `PSOBB_LOCALIZATION_REPO` when the checkout is elsewhere.
+  English reference and unified Chinese mixed-width Unitxt align the Chinese
+  names in the sole authority, `i18n_names.json`. Set
+  `PSOBB_LOCALIZATION_REPO` when the checkout is elsewhere.
 
 ## Quick start
 
@@ -75,9 +76,13 @@ Every version and every monster or area/box row uses one cell protocol. Each `dr
 
 | Script | Input | Output |
 | --- | --- | --- |
-| `build_i18n.py` | All BB/NGC language datasets and supplemental Chinese mappings | `i18n_names.json`, `dc/data/ja.js`, `dc/data/zh.js`, `ngc/data/zh.js` |
+| `build_i18n.py` | `i18n_names.json`, BB/NGC datasets, and aligned Unitxt | Updated authority plus `dc/data/ja.js`, `dc/data/zh.js`, `ngc/data/zh.js` |
 
-Localization depends on the BB and NGC datasets, so update those inputs first. A full update enforces the correct order automatically.
+`i18n_names.json` is the sole name authority. The rebuild preserves entries
+outside Unitxt, fills missing Japanese metadata from platform datasets, and
+replaces every matching Chinese name with the exact mixed-width Unitxt value.
+Localization depends on the BB and NGC datasets, so update those inputs first.
+A full update enforces the correct order automatically.
 
 BB monster rows encode standard and Ultimate names as the first and second parts of a
 compound label. When both parts share one English name but have different translations,
@@ -117,7 +122,9 @@ python3 tools/validate_alignment.py
 
 `validate_alignment.py` verifies that BB, DC, and NGC have matching difficulties, types, episodes, row counts, ten Section ID columns, cell entry counts, probabilities, empty/nonempty states, and SS markers across English, Japanese, and Chinese.
 
-`build_i18n.py` prefers `psohaven_en2zh.json`. If that optional file is absent, it uses the existing `i18n_names.json` as the supplemental Chinese mapping so a full update can still finish.
+Do not add parallel supplemental translation files. Add uncovered names to
+`i18n_names.json`; subsequent rebuilds retain them and Unitxt wins wherever an
+aligned English identity exists.
 
 ## Execution order
 

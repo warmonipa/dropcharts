@@ -9,6 +9,7 @@ Usage: python build_i18n.py
 import argparse
 import copy
 import json
+import os
 import re
 import unicodedata
 from datetime import datetime
@@ -21,9 +22,13 @@ from drop_data import (
     write_json,
     write_generated_js,
 )
+from gen_zh import build_name_maps, parse_unitxt
 
 ROOT = Path(__file__).parent.parent
 TRANSLATED_VERSIONS = ("dc", "ngc")
+DEFAULT_LOCALIZATION_REPO = Path(
+    os.environ.get("PSOBB_LOCALIZATION_REPO", ROOT.parent / "psobb-localization")
+).expanduser()
 
 
 def normalize_key(name):
@@ -93,23 +98,46 @@ def add_name_parts(
                 target_map[canonical][language] = parts[part_index].strip()
 
 
-def load_supplemental_zh_pairs():
-    """Load psohaven mappings or preserve the existing generated mappings."""
-    psohaven_path = ROOT / "psohaven_en2zh.json"
-    if psohaven_path.is_file():
-        return json.loads(psohaven_path.read_text(encoding="utf-8")), psohaven_path.name
-
-    generated_path = ROOT / "i18n_names.json"
-    generated = json.loads(generated_path.read_text(encoding="utf-8"))
-    pairs = []
-    for section in ("monsters", "items"):
-        for en_name, translations in generated.get(section, {}).items():
-            if zh_name := translations.get("zh"):
-                pairs.append({"en": en_name, "zh": zh_name})
-    return pairs, generated_path.name
+def load_authoritative_names():
+    """Load the sole hand-maintained name authority."""
+    path = ROOT / "i18n_names.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if set(data) != {"monsters", "items"}:
+        raise ValueError("i18n_names.json must contain monsters and items")
+    return data
 
 
-def build_mapping():
+def load_unitxt_name_maps(localization_repo: Path):
+    """Load psobb-localization's aligned mixed-width Unitxt name maps."""
+    localization_dir = localization_repo.resolve() / "localization"
+    en_path = localization_dir / "en" / "unitxt_j.prs"
+    zh_path = localization_dir / "zh" / "unitxt_j.prs"
+    missing = [path for path in (en_path, zh_path) if not path.is_file()]
+    if missing:
+        raise FileNotFoundError(
+            "psobb-localization Unitxt source missing: "
+            + ", ".join(str(path) for path in missing)
+        )
+    return build_name_maps(parse_unitxt(en_path), parse_unitxt(zh_path))
+
+
+def merge_names(source, target_map, target_norm, *, replace):
+    """Merge an English-keyed translation mapping by normalized identity."""
+    for en_name, translations in source.items():
+        normalized = normalize_key(en_name)
+        if normalized in target_norm:
+            canonical = target_norm[normalized]
+        else:
+            canonical = en_name
+            target_norm[normalized] = canonical
+            target_map[canonical] = {}
+        for language in ("ja", "zh"):
+            value = translations.get(language)
+            if value and (replace or language not in target_map[canonical]):
+                target_map[canonical][language] = value
+
+
+def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     """Build unified i18n mapping from all sources."""
     # Mapping: normalized_en -> {"en": original_en, "ja": ja, "zh": zh}
     # We track both monsters and items separately
@@ -250,31 +278,33 @@ def build_mapping():
     ngc_new_items = len(items_map) - bb_items
     print(f"  NGC added: {len(monsters_map) - bb_monsters} monsters, {ngc_new_items} items")
 
-    # ========== 3. psohaven EN->ZH ==========
-    supplemental_pairs, supplemental_source = load_supplemental_zh_pairs()
-    print(f"Loading supplemental ZH data from {supplemental_source}...")
-    ph_added = 0
-    for pair in supplemental_pairs:
-        en_name = pair["en"]
-        zh_name = pair["zh"]
-        nk = normalize_key(en_name)
-        # Try items first, then monsters
-        if nk in item_norm:
-            canonical = item_norm[nk]
-            if "zh" not in items_map[canonical]:
-                items_map[canonical]["zh"] = zh_name
-                ph_added += 1
-        elif nk in monster_norm:
-            canonical = monster_norm[nk]
-            if "zh" not in monsters_map[canonical]:
-                monsters_map[canonical]["zh"] = zh_name
-                ph_added += 1
-        else:
-            # Register as item (psohaven is mostly items)
-            item_norm[nk] = en_name
-            items_map[en_name] = {"zh": zh_name}
-            ph_added += 1
-    print(f"  psohaven: {ph_added} zh mappings added")
+    # ========== 3. Sole authority ==========
+    print("Loading authoritative names from i18n_names.json...")
+    authoritative = load_authoritative_names()
+    merge_names(authoritative["monsters"], monsters_map, monster_norm, replace=True)
+    merge_names(authoritative["items"], items_map, item_norm, replace=True)
+
+    # ========== 4. psobb-localization Unitxt ==========
+    # Unitxt controls Chinese wording and per-name character width wherever an
+    # aligned English identity exists. Uncovered authority entries are kept.
+    print("Aligning authoritative Chinese names from mixed-width Unitxt...")
+    unitxt = load_unitxt_name_maps(Path(localization_repo))
+    merge_names(
+        {name: {"zh": zh} for name, zh in unitxt.items.items()},
+        items_map,
+        item_norm,
+        replace=True,
+    )
+    monster_names = {
+        name: {"zh": zh} for name, zh in unitxt.standard_monsters.items()
+    }
+    monster_names.update(
+        {name: {"zh": zh} for name, zh in unitxt.ultimate_monsters.items()}
+    )
+    merge_names(monster_names, monsters_map, monster_norm, replace=True)
+    print(
+        f"  Authority: {len(monsters_map)} monsters, {len(items_map)} items"
+    )
 
     # ========== Handle special matching variations ==========
     # Some names differ slightly between sources. Build a fuzzy alias map.
@@ -484,6 +514,12 @@ def main():
         default=TRANSLATED_VERSIONS,
         help="translated datasets to rebuild (mapping is always refreshed)",
     )
+    parser.add_argument(
+        "--localization-repo",
+        type=Path,
+        default=DEFAULT_LOCALIZATION_REPO,
+        help="psobb-localization checkout (default: sibling checkout)",
+    )
     args = parser.parse_args()
     versions = set(args.versions)
 
@@ -491,7 +527,7 @@ def main():
     print("Building unified i18n name mapping")
     print("=" * 60)
 
-    monsters_map, items_map, ja_to_en_items = build_mapping()
+    monsters_map, items_map, ja_to_en_items = build_mapping(args.localization_repo)
     lookup, norm_lookup, ja_lookup = build_translation_lookup(
         monsters_map, items_map, ja_to_en_items
     )

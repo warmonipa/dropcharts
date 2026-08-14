@@ -195,6 +195,23 @@ class MultiItemConsumerTest(unittest.TestCase):
             ["维加亚", "追加插槽"],
         )
 
+    def test_authority_merge_preserves_uncovered_names_and_replaces_values(self):
+        target = {"Existing": {"zh": "旧译名"}}
+        identities = {build_i18n.normalize_key("Existing"): "Existing"}
+
+        build_i18n.merge_names(
+            {
+                "existing": {"zh": "权威译名", "ja": "既存"},
+                "Site Only": {"zh": "本站独有"},
+            },
+            target,
+            identities,
+            replace=True,
+        )
+
+        self.assertEqual(target["Existing"], {"zh": "权威译名", "ja": "既存"})
+        self.assertEqual(target["Site Only"], {"zh": "本站独有"})
+
     def test_build_i18n_prefers_ultimate_name_for_flat_cross_version_map(self):
         bb_en = sample_name_data("Gi Gue/Gi Gue")
         bb_ja = sample_name_data("ギ・グー/ギ・グー")
@@ -209,8 +226,13 @@ class MultiItemConsumerTest(unittest.TestCase):
             ),
             patch.object(
                 build_i18n,
-                "load_supplemental_zh_pairs",
-                return_value=([], "test fixture"),
+                "load_authoritative_names",
+                return_value={"monsters": {}, "items": {}},
+            ),
+            patch.object(
+                build_i18n,
+                "load_unitxt_name_maps",
+                return_value=gen_zh.UnitxtNameMaps({}, {}, {}, {}),
             ),
         ):
             monsters, _, _ = build_i18n.build_mapping()
