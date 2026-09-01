@@ -55,6 +55,8 @@ The first column remains frozen while the Section ID columns scroll horizontally
 no duplicate name column at the right edge. Area headings remain centered in the visible
 scrolling region, including on phones and tablets.
 
+In the Chinese viewer, Viridia is labeled `深绿` and Greenill is labeled `黄绿`.
+
 ## GameCube-specific content
 
 Compared with the Dreamcast version, the GameCube release adds complete Episode 2 monster and drop data, including:

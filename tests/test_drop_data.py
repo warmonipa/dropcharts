@@ -11,7 +11,7 @@ sys.path.insert(0, str(TOOLS))
 import build_i18n  # noqa: E402
 import gen_zh  # noqa: E402
 import mark_ss  # noqa: E402
-from drop_data import iter_entry_drops  # noqa: E402
+from drop_data import iter_entry_drops, localize_section_ids  # noqa: E402
 
 
 def sample_data():
@@ -96,6 +96,13 @@ class MultiItemConsumerTest(unittest.TestCase):
             [drop["item"] for drop in iter_entry_drops(entry)],
             ["Vjaya", "AddSlot"],
         )
+
+    def test_chinese_section_id_labels_distinguish_the_two_greens(self):
+        data = {"sectionIds": ["Viridia", "Greenill", "Skyly"]}
+
+        localize_section_ids(data, "zh")
+
+        self.assertEqual(data["sectionIds"], ["深绿", "黄绿", "Skyly"])
 
     def test_gen_zh_translates_every_item_in_cell(self):
         name_maps = gen_zh.UnitxtNameMaps(

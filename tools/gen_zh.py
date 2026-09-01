@@ -17,7 +17,13 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-from drop_data import DROP_TYPES, iter_entry_drops, load_js_data, write_generated_js
+from drop_data import (
+    DROP_TYPES,
+    iter_entry_drops,
+    localize_section_ids,
+    load_js_data,
+    write_generated_js,
+)
 from prs import decompress
 
 
@@ -246,6 +252,7 @@ def translate_area_name(en_name: str, name_maps: UnitxtNameMaps) -> str:
 def translate_data(en_data: dict, name_maps: UnitxtNameMaps) -> dict:
     """Deep-copy English chart data and translate every display name."""
     zh_data = copy.deepcopy(en_data)
+    localize_section_ids(zh_data, "zh")
 
     for difficulty_data in zh_data["data"].values():
         for drop_type in DROP_TYPES:

@@ -2,8 +2,8 @@
 // Language: zh (psobb-localization mixed-width Unitxt; EN SHA-256 0588bfb68512f73c30720486fc70166a4d88d56ef32ef40e29466b6d616fc774; ZH SHA-256 8fa2414fa9473a25c8b27862f1f60b82ae269630b485eb27acd15c52d489a0f7)
 window.DROP_DATA_ZH = {
   "sectionIds": [
-    "Viridia",
-    "Greenill",
+    "深绿",
+    "黄绿",
     "Skyly",
     "Bluefull",
     "Purplenum",

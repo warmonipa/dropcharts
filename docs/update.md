@@ -120,7 +120,7 @@ python3 tools/validate_alignment.py
 
 `sync_coordinates.py` treats each version's English dataset as the language-independent coordinate source. It synchronizes row drop rates, per-cell probabilities, and SS markers. If a translation is missing, it preserves the English item name rather than replacing a valid coordinate with an empty value.
 
-`validate_alignment.py` verifies that BB, DC, and NGC have matching difficulties, types, episodes, row counts, ten Section ID columns, cell entry counts, probabilities, empty/nonempty states, and SS markers across English, Japanese, and Chinese.
+`validate_alignment.py` verifies that BB, DC, and NGC have matching difficulties, types, episodes, row counts, ten Section ID columns, localized Section ID labels, cell entry counts, probabilities, empty/nonempty states, and SS markers across English, Japanese, and Chinese.
 
 Do not add parallel supplemental translation files. Add uncovered names to
 `i18n_names.json`; subsequent rebuilds retain them and Unitxt wins wherever an

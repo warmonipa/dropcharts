@@ -18,6 +18,7 @@ from pathlib import Path
 from drop_data import (
     DROP_TYPES,
     iter_entry_drops,
+    localize_section_ids,
     load_js_data,
     write_json,
     write_generated_js,
@@ -420,6 +421,7 @@ def translate_name(name, lookup, norm_lookup, ja_lookup, target_lang):
 def translate_data(data, lookup, norm_lookup, ja_lookup, target_lang):
     """Translate all names in drop data to target language."""
     result = copy.deepcopy(data)
+    localize_section_ids(result, target_lang)
     for diff_data in result["data"].values():
         for section_key in DROP_TYPES:
             section = diff_data.get(section_key, {})

@@ -2,8 +2,8 @@
 // Source: NGC drop charts (zh)
 window.DROP_DATA_ZH = {
   "sectionIds": [
-    "Viridia",
-    "Greenill",
+    "深绿",
+    "黄绿",
     "Skyly",
     "Bluefull",
     "Purplenum",

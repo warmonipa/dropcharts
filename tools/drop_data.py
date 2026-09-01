@@ -17,11 +17,26 @@ VERSIONS = ("bb", "dc", "ngc")
 LANGUAGES = ("en", "ja", "zh")
 DROP_TYPES = ("monsters", "boxes")
 
+ZH_SECTION_ID_LABELS = {
+    "Viridia": "深绿",
+    "Greenill": "黄绿",
+}
+
 _ASSIGNMENT_RE = re.compile(
     r"(.*?window\.DROP_DATA_(?P<language>EN|JA|ZH)\s*=\s*)"
     r"(?P<data>\{.*\})(?P<suffix>\s*;\s*)$",
     re.DOTALL,
 )
+
+
+def localize_section_ids(data, language):
+    """Replace translated Section ID display labels in-place."""
+    if language == "zh" and "sectionIds" in data:
+        data["sectionIds"] = [
+            ZH_SECTION_ID_LABELS.get(section_id, section_id)
+            for section_id in data["sectionIds"]
+        ]
+    return data
 
 
 def make_drop_cell(drops):

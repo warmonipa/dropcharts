@@ -11,6 +11,7 @@ from drop_data import (
     VERSIONS,
     cell_shape_errors,
     iter_cell_drops,
+    localize_section_ids,
     load_js_data,
 )
 
@@ -54,8 +55,15 @@ def validate_version(version, *, root=ROOT):
 
     for language in LANGUAGES[1:]:
         localized = datasets[language]
-        if localized.get("sectionIds") != section_ids:
-            errors.append(f"{version}/{language}: section IDs differ from en")
+        expected_section_ids = localize_section_ids(
+            {"sectionIds": list(section_ids)}, language
+        )["sectionIds"]
+        if localized.get("sectionIds") != expected_section_ids:
+            errors.append(
+                f"{version}/{language}: unexpected localized section IDs"
+            )
+        if len(localized.get("sectionColors", [])) != len(expected_section_ids):
+            errors.append(f"{version}/{language}: section color count mismatch")
         if set(localized.get("data", {})) != set(english.get("data", {})):
             errors.append(f"{version}/{language}: difficulty keys differ from en")
 

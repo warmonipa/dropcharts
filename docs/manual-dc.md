@@ -53,6 +53,8 @@ scrolling region, including on phones and tablets.
 
 A Section ID, such as Viridia or Greenill, is assigned when a character is created. Different Section IDs produce different item drops.
 
+In the Chinese viewer, Viridia is labeled `深绿` and Greenill is labeled `黄绿`.
+
 ## Dreamcast-specific content
 
 Rare drops exclusive to the Dreamcast version include:
