@@ -61,6 +61,7 @@ Rare drops exclusive to the Dreamcast version include:
 
 - **Sega hardware series:** 68000, SH2, SH4, Modem, Power VR, and Sourd Source FM, which are used for Mag evolution
 - **Weapons:** Heart of Opa Opa, Chain Sword, Lavis Blade, and others
+- **Combination parts:** Joint Parts (`结合部件`)
 - **Four Gods shields:** Suzaku, Genbu, Byakko, and Seiryu
 
 These items cannot be obtained in the BB or NGC versions.
