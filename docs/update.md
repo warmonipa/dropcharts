@@ -27,7 +27,7 @@ npm run build
 npm run update:bb      # Refresh BB, then align, mark SS drops, and validate.
 npm run update:dc      # Refresh and localize DC, then align, mark, and validate.
 npm run update:ngc     # Refresh and localize NGC, then align, mark, and validate.
-npm run update:i18n    # Rebuild DC/NGC localizations and derived data.
+npm run update:i18n    # Rebuild BB/DC/NGC localizations and validate all names.
 npm run update:reorder # Reorder BB, then realign, mark, and validate.
 npm run update:ss      # Realign, rebuild SS markers, and validate.
 ```
@@ -84,6 +84,17 @@ replaces every matching Chinese name with the exact mixed-width Unitxt value.
 Localization depends on the BB and NGC datasets, so update those inputs first.
 A full update enforces the correct order automatically.
 
+`update:i18n` regenerates BB Chinese from Unitxt before rebuilding DC/NGC, then
+validates coordinates and every generated name against the current source.
+It does not fetch new drop charts. Reviewed legacy spellings resolve to canonical
+English Unitxt identities; their Chinese text is always read from that source.
+Monster and item lookups are separate, including normalized and Japanese names.
+NGC weapon families `DB'S SWORD` and `FLOWEN'S SWORD` resolve through the
+paired Japanese item label before translation. The Japanese year distinguishes
+ordinary and dated weapons; DB 3069 also uses the Section ID for its manufacturer.
+The ambiguous DB family has no single authority entry. See
+[the alignment review](unitxt-alignment-review.md) for identity evidence.
+
 BB monster rows encode standard and Ultimate names as the first and second parts of a
 compound label. When both parts share one English name but have different translations,
 `build_i18n.py` uses the second, Ultimate translation in its flat cross-version mapping.
@@ -121,6 +132,22 @@ python3 tools/validate_alignment.py
 `sync_coordinates.py` treats each version's English dataset as the language-independent coordinate source. It synchronizes row drop rates, per-cell probabilities, and SS markers. If a translation is missing, it preserves the English item name rather than replacing a valid coordinate with an empty value.
 
 `validate_alignment.py` verifies that BB, DC, and NGC have matching difficulties, types, episodes, row counts, ten Section ID columns, localized Section ID labels, cell entry counts, probabilities, empty/nonempty states, and SS markers across English, Japanese, and Chinese.
+
+`validate_names.py` checks every DC/NGC generated row and item name against
+`i18n_names.json`, including unchanged names. Missing or blank target-language
+mappings fail even when the generated output repeats the source. Intentional
+same-text identifiers such as SH2 remain valid through explicit authority entries.
+A separate Japanese-source check
+requires every dated NGC item to retain its year, even when English labels agree. `npm test` runs this gate without
+requiring a localization checkout in CI. For source verification, run:
+
+```bash
+python3 tools/validate_names.py --localization-repo ../psobb-localization
+```
+
+This additionally checks the authority's Unitxt projections and every BB Chinese
+name. It verifies generation consistency; alias identity and translation wording
+still require review against independent evidence.
 
 Do not add parallel supplemental translation files. Add uncovered names to
 `i18n_names.json`; subsequent rebuilds retain them and Unitxt wins wherever an

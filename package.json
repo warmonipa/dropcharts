@@ -13,7 +13,7 @@
     "update:align": "uv run bash tools/update.sh align",
     "update:ss": "uv run bash tools/update.sh ss",
     "build": "uv run python3 tools/build_site.py",
-    "test": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py"
+    "test": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py && uv run python3 tools/validate_names.py"
   },
   "keywords": [],
   "author": "",

@@ -109,8 +109,10 @@ case "$TARGET" in
   dc)    update_dc ;;
   ngc)   update_ngc ;;
   i18n)
+    python3 "$TOOLS/gen_zh.py"
     update_i18n dc ngc
-    finalize_versions dc ngc
+    finalize_versions
+    python3 "$TOOLS/validate_names.py" --localization-repo "${PSOBB_LOCALIZATION_REPO:-$ROOT/../psobb-localization}"
     ;;
   align)
     update_align

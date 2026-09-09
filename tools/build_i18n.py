@@ -12,12 +12,14 @@ import json
 import os
 import re
 import unicodedata
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
 from drop_data import (
     DROP_TYPES,
     iter_entry_drops,
+    iter_cell_drops,
     localize_section_ids,
     load_js_data,
     write_json,
@@ -30,6 +32,99 @@ TRANSLATED_VERSIONS = ("dc", "ngc")
 DEFAULT_LOCALIZATION_REPO = Path(
     os.environ.get("PSOBB_LOCALIZATION_REPO", ROOT.parent / "psobb-localization")
 ).expanduser()
+
+
+# Source spellings from the checked-in legacy charts and authority. Values are
+# canonical English Unitxt identities, never a second Chinese translation list.
+ITEM_ALIASES = {
+    "G-ASSASIN'S ARMS": "Grass Assassin's Arms",
+    "Delsabre's Right Arm": "Delsaber's Right Arm",
+    "Delsabre's Left Arm": "Delsaber's Left Arm",
+    "C-bringer's Right Arm": "Bringer's Right Arm",
+    "Belra's Right Arms": "Belra's Right Arm",
+    "BOOMA'S RIGHT ARMS": "Booma's Right Arm",
+    "GOBOOMA'S RIGHT ARMS": "Gobooma's Right Arm",
+    "GIGOBOOMA'S RIGHT ARMS": "Gigobooma's Right Arm",
+    "S-BERILL'S ARMS": "Sinow Berill's Arms",
+    "GIGUE'S ARMS": "Gi Gue's Body",
+    "Gal Gryphon Wing": "Gal Gryphon's Wing",
+    "PART OF EGG BLASTER": "Parts of Egg Blaster",
+    "KALADGOLG": "Kaladbolg",
+    "ANGLE HARP": "Angel Harp",
+    "NUG-2000 BAZOOKA": "NUG2000-Bazooka",
+    "GREENNILL CARD": "Greenill Card",
+    "BRUEFULL CARD": "Bluefull Card",
+    "CURE SHOCK": "Cure/Shock",
+    "CURE POISON": "Cure/Poison",
+    "CURE CONFUSION": "Cure/Confuse",
+    "CURE PARALYSIS": "Cure/Paralysis",
+    "CURE FROZEN": "Cure/Freeze",
+    "CURE SLOW": "Cure/Slow",
+    "PARASITIC GENE FLOW": 'Parasitic Gene "Flow"',
+    "CUSTOM RAY Ver.00": "Custom Ray ver.OO",
+    "CUSTOM FRAME Ver.00": "Custom Frame ver.OO",
+    "CUSTOM BARRIER Ver.00": "Custom Barrier ver.OO",
+    "HP/Ressurection": "HP/Resurrection",
+    "TP/Ressurection": "TP/Resurrection",
+    "ADD SLOT": "AddSlot",
+    "DISKA OF BRAVEMEN": "Diska of Braveman",
+    "METEOR CUDGE": "Meteor Cudgel",
+    "PARTISAN OF LIGHTING": "Partisan of Lightning",
+    "MAGIC ROCK MOOLA": 'Magic Rock "Moola"',
+    "MAGICSTONE IRITISTA": 'Magic Stone "Iritista"',
+    "Magic Rock Heart Key": 'Magic Rock "Heart Key"',
+    "FIRE SCEPTER:AGNI": "Fire Scepter: Agni",
+    "STORM VAND:INDRA": "Storm Wand: Indra",
+    "STORM WAND:INDRA": "Storm Wand: Indra",
+    "EARTH WAND BROWNIE": "Earth Wand: Brownie",
+    "PARASITE WEAR:De Rol": "Parasite Wear: De Rol",
+    "PARASITE WEAR:Nelgal": "Parasite Wear: Nelgal",
+    "PARASITE WEAR:Vajulla": "Parasite Wear: Vajulla",
+    "VIRUS ARMOR:Lafuteria": "Virus Armor: Lafuteria",
+    "GODS SHIELD BYAKKO": 'Gods Shield "Byakko"',
+    "GODS SHIELD GENBU": 'Gods Shield "Genbu"',
+    "GODS SHIELD SEIRYU": 'Gods Shield "Seiryu"',
+    "GODS SHIELD SUZAKU": 'Gods Shield "Suzaku"',
+    "GOD'S SHIELD \"KOURYU\"": 'Gods Shield "Kouryu"',
+    "PROTON LAUNCHER": "Photon Launcher",
+    "THE SIGH OF GOD": "The Sigh of a God",
+    "GAME MAGAZNE": "Game Magazine",
+    "Mr.Naka's Business Card": "Mr. Naka's Business Card",
+    "SONICTEAM ARMOR": "Sonic Team Armor",
+    "TypeGU/HANDGUN": "TypeGU/Hand",
+    "TypeN-SL/CLAW": "TypeSL/Claw",
+    "TypeN-SL/J-SWORD": "TypeSL/Katana",
+    "TypeN-SL/SABER": "TypeSL/Saber",
+    "TypeN-SL/SLICER": "TypeSL/Slicer",
+}
+
+MONSTER_NAME_ALIASES = {
+    "Hidelt": "Hildelt",
+    "Hildetor": "Hildetorr",
+    "Pouifully Slime": "Pofuilly Slime",
+    "ゴルドラゴン": "Gol Dragon",
+    "Dark Falz?": "Dark Falz",
+    "ダークファルス?": "Dark Falz",
+    "Olga Flow?": "Olga Flow",
+    "オルガ・フロウ?": "Olga Flow",
+}
+
+# These legacy English family labels lose the year carried by the paired
+# Japanese source. Only DB 3069 also needs its Section ID to select a maker.
+LEGACY_WEAPON_FAMILIES = {
+    "DB'S SWORD": ("DBの剣", "DB's Saber"),
+    "FLOWEN'S SWORD": ("フロウウェンの剣", "Flowen's Sword"),
+}
+DB_3069_MANUFACTURERS = {"Bluefull": "Chris", "Pinkal": "Torato"}
+
+
+@dataclass(frozen=True)
+class NameLookup:
+    """Exact, normalized and Japanese indexes for one kind of name."""
+
+    exact: dict
+    normalized: dict
+    japanese: dict
 
 
 def normalize_key(name):
@@ -138,6 +233,18 @@ def merge_names(source, target_map, target_norm, *, replace):
                 target_map[canonical][language] = value
 
 
+def merge_source_aliases(source, target_map, target_norm, aliases):
+    """Replace an existing alias from its canonical source, preserving metadata."""
+    for alias, canonical in aliases.items():
+        target = target_norm.get(normalize_key(alias))
+        if target is None:
+            continue
+        if canonical not in source:
+            raise ValueError(f"Unitxt canonical identity missing for {alias!r}: {canonical!r}")
+        suffix = "?" if alias.endswith("?") else ""
+        target_map[target]["zh"] = source[canonical] + suffix
+
+
 def merge_unitxt_item_names(source, target_map, target_norm):
     """Merge Unitxt items without collapsing case-sensitive name identities."""
     groups = {}
@@ -158,9 +265,64 @@ def merge_unitxt_item_names(source, target_map, target_norm):
         target_map.setdefault(name, {})["zh"] = zh_name
         target_norm.setdefault(normalize_key(name), name)
 
+    merge_source_aliases(source, target_map, target_norm, ITEM_ALIASES)
+
+
+def resolve_ngc_item_name(name, japanese_name, section_id):
+    """Recover a legacy weapon identity from its paired Japanese label."""
+    family = LEGACY_WEAPON_FAMILIES.get(name)
+    if family is None:
+        return name
+    japanese_base, canonical_base = family
+    if name == "FLOWEN'S SWORD" and japanese_name == japanese_base:
+        return canonical_base
+    match = re.fullmatch(re.escape(japanese_base) + r"\[(\d{4})\]", japanese_name)
+    if match is None:
+        raise ValueError(f"Missing or invalid Japanese variant for {name!r}: {japanese_name!r}")
+    year = match[1]
+    if name == "DB'S SWORD" and year == "3069":
+        maker = DB_3069_MANUFACTURERS.get(section_id)
+        if maker is None:
+            raise ValueError(f"Unknown DB 3069 manufacturer: {section_id!r}")
+        year += f" {maker}"
+    return f"{canonical_base} ({year})"
+
+
+def resolve_ngc_item_names(data, japanese_data, known_items):
+    """Resolve family labels before authority merging or display translation."""
+    result = copy.deepcopy(data)
+    for difficulty, types in result["data"].items():
+        for kind in DROP_TYPES:
+            for episode, rows in types.get(kind, {}).items():
+                for row_index, row in enumerate(rows):
+                    for column, cell in enumerate(row.get("drops", [])):
+                        drops = list(iter_cell_drops(cell))
+                        if not any(drop.get("item") in LEGACY_WEAPON_FAMILIES for drop in drops):
+                            continue
+                        try:
+                            ja_row = japanese_data["data"][difficulty][kind][episode][row_index]
+                            ja_drops = list(iter_cell_drops(ja_row["drops"][column]))
+                        except (KeyError, IndexError) as error:
+                            raise ValueError("Missing paired Japanese weapon cell") from error
+                        if len(drops) != len(ja_drops):
+                            raise ValueError("Paired Japanese weapon cell cardinality differs")
+                        for drop, ja_drop in zip(drops, ja_drops):
+                            name = drop.get("item", "")
+                            if name not in LEGACY_WEAPON_FAMILIES:
+                                continue
+                            canonical = resolve_ngc_item_name(
+                                name, ja_drop.get("item", ""), data["sectionIds"][column]
+                            )
+                            if canonical not in known_items:
+                                raise ValueError(f"Unitxt weapon variant missing: {canonical!r}")
+                            drop["item"] = canonical
+    return result
+
 
 def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     """Build unified i18n mapping from all sources."""
+    unitxt = load_unitxt_name_maps(Path(localization_repo))
+
     # Mapping: normalized_en -> {"en": original_en, "ja": ja, "zh": zh}
     # We track both monsters and items separately
     monsters_map = {}  # en_name -> {"ja": ..., "zh": ...}
@@ -249,6 +411,7 @@ def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     print("Loading NGC data...")
     ngc_en = load_js_data(ROOT / "ngc" / "data" / "en.js", "en")
     ngc_ja = load_js_data(ROOT / "ngc" / "data" / "ja.js", "ja")
+    ngc_en = resolve_ngc_item_names(ngc_en, ngc_ja, unitxt.items)
 
     # NGC: monster names are the same in EN and JA (JA for normal, EN for ultimate)
     # Items differ between EN and JA
@@ -275,8 +438,8 @@ def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
                         for c in monster_name
                         if ord(c) > 127
                     )
-                    if not has_jp:
-                        # English monster name (ultimate) - register it
+                    if not has_jp or monster_name in MONSTER_NAME_ALIASES:
+                        # Register English names and reviewed Japanese aliases.
                         ensure_monster(monster_name)
 
                     # Items - pair EN and JA by position
@@ -310,7 +473,6 @@ def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     # Unitxt controls Chinese wording and per-name character width wherever an
     # aligned English identity exists. Uncovered authority entries are kept.
     print("Aligning authoritative Chinese names from mixed-width Unitxt...")
-    unitxt = load_unitxt_name_maps(Path(localization_repo))
     merge_unitxt_item_names(unitxt.items, items_map, item_norm)
     monster_names = {
         name: {"zh": zh} for name, zh in unitxt.standard_monsters.items()
@@ -323,69 +485,49 @@ def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
         f"  Authority: {len(monsters_map)} monsters, {len(items_map)} items"
     )
 
-    # ========== Handle special matching variations ==========
-    # Some names differ slightly between sources. Build a fuzzy alias map.
-    ALIASES = {
-        "db-s sword": "db-s saber",
-        "diska of bravemen": "diska of braveman",
-    }
-
-    for alias_norm, target_norm_key in ALIASES.items():
-        if alias_norm in item_norm and target_norm_key in item_norm:
-            alias_canonical = item_norm[alias_norm]
-            target_canonical = item_norm[target_norm_key]
-            # Merge translations from target into alias
-            for lang in ("ja", "zh"):
-                if lang not in items_map[alias_canonical] and lang in items_map[target_canonical]:
-                    items_map[alias_canonical][lang] = items_map[target_canonical][lang]
-                if lang not in items_map[target_canonical] and lang in items_map[alias_canonical]:
-                    items_map[target_canonical][lang] = items_map[alias_canonical][lang]
+    merge_source_aliases(
+        {name: translations["zh"] for name, translations in monster_names.items()},
+        monsters_map, monster_norm, MONSTER_NAME_ALIASES,
+    )
 
     # Store ja_to_en_items for DC translation
     return monsters_map, items_map, ja_to_en_items
 
 
 def build_translation_lookup(monsters_map, items_map, ja_to_en_items):
-    """Build a flat lookup dict for translating names: en->ja, en->zh, ja->en->zh, etc."""
-    # Returns: lookup[name] -> {"ja": ..., "zh": ...}
-    lookup = {}
+    """Build separate indexes so item names cannot replace monster names."""
+    result = {}
+    for role, source in (("monsters", monsters_map), ("items", items_map)):
+        lookup = {name: dict(trans) for name, trans in source.items() if trans}
+        normalized = {}
+        ambiguous = set()
+        for name, trans in lookup.items():
+            key = normalize_key(name)
+            previous = normalized.get(key)
+            if previous is not None and previous.get("zh") != trans.get("zh"):
+                ambiguous.add(key)
+            normalized[key] = trans
+        for key in ambiguous:
+            normalized.pop(key, None)
 
-    for name, trans in monsters_map.items():
-        if trans:
-            lookup[name] = dict(trans)
-    for name, trans in items_map.items():
-        if trans:
-            lookup[name] = dict(trans)
-
-    # Also index by normalized key for fuzzy matching
-    norm_lookup = {}
-    for name in lookup:
-        nk = normalize_key(name)
-        norm_lookup[nk] = lookup[name]
-        # Also store original EN name
-        norm_lookup[nk]["_en"] = name
-
-    # JA -> translations (for DC/NGC items and monsters in Japanese)
-    ja_lookup = {}
-    for ja_name, en_name in ja_to_en_items.items():
-        if en_name in lookup:
-            ja_lookup[ja_name] = {"en": en_name, **lookup[en_name]}
-
-    # Also add JA names -> translations for both monsters and items
-    for src_map in (monsters_map, items_map):
-        for en_name, trans in src_map.items():
+        japanese = {}
+        if role == "items":
+            for ja_name, en_name in ja_to_en_items.items():
+                if en_name in lookup:
+                    japanese[ja_name] = lookup[en_name]
+        for trans in source.values():
             if "ja" in trans:
-                ja_name = trans["ja"]
-                if ja_name not in ja_lookup:
-                    ja_lookup[ja_name] = {"en": en_name, **trans}
-
-    return lookup, norm_lookup, ja_lookup
+                japanese.setdefault(trans["ja"], dict(trans))
+        result[role] = NameLookup(lookup, normalized, japanese)
+    return result
 
 
-def translate_name(name, lookup, norm_lookup, ja_lookup, target_lang):
+def translate_name(name, names, target_lang):
     """Translate a single name to target language. Returns translated name or original."""
     if not name:
         return name
+
+    lookup, norm_lookup, ja_lookup = names.exact, names.normalized, names.japanese
 
     # Direct lookup
     if name in lookup and target_lang in lookup[name]:
@@ -418,7 +560,7 @@ def translate_name(name, lookup, norm_lookup, ja_lookup, target_lang):
     return name
 
 
-def translate_data(data, lookup, norm_lookup, ja_lookup, target_lang):
+def translate_data(data, lookups, target_lang):
     """Translate all names in drop data to target language."""
     result = copy.deepcopy(data)
     localize_section_ids(result, target_lang)
@@ -430,16 +572,16 @@ def translate_data(data, lookup, norm_lookup, ja_lookup, target_lang):
                     # Monster/box name - may be compound
                     parts = entry["name"].split("/")
                     translated_parts = [
-                        translate_name(p.strip(), lookup, norm_lookup, ja_lookup, target_lang)
+                        translate_name(
+                            p.strip(), lookups["monsters" if section_key == "monsters" else "items"],
+                            target_lang,
+                        )
                         for p in parts
                     ]
                     entry["name"] = "/".join(translated_parts)
-                    # Items
                     for drop in iter_entry_drops(entry):
-                        if drop.get("item"):
-                            drop["item"] = translate_name(
-                                drop["item"], lookup, norm_lookup, ja_lookup, target_lang
-                            )
+                        if name := drop.get("item"):
+                            drop["item"] = translate_name(name, lookups["items"], target_lang)
     return result
 
 
@@ -476,7 +618,7 @@ def _is_already_target_lang(name, target_lang):
     return False
 
 
-def count_coverage(data, lookup, norm_lookup, ja_lookup, target_lang):
+def count_coverage(data, lookups, target_lang):
     """Count how many names can be translated vs total."""
     total_monsters = 0
     translated_monsters = 0
@@ -496,7 +638,10 @@ def count_coverage(data, lookup, norm_lookup, ja_lookup, target_lang):
                         if not p:
                             continue
                         total_monsters += 1
-                        translated = translate_name(p, lookup, norm_lookup, ja_lookup, target_lang)
+                        translated = translate_name(
+                            p, lookups["monsters" if section_key == "monsters" else "items"],
+                            target_lang,
+                        )
                         if translated != p or _is_already_target_lang(p, target_lang):
                             translated_monsters += 1
                         else:
@@ -507,7 +652,7 @@ def count_coverage(data, lookup, norm_lookup, ja_lookup, target_lang):
                         if not item:
                             continue
                         total_items += 1
-                        translated = translate_name(item, lookup, norm_lookup, ja_lookup, target_lang)
+                        translated = translate_name(item, lookups["items"], target_lang)
                         if translated != item or _is_already_target_lang(item, target_lang):
                             translated_items += 1
                         else:
@@ -546,7 +691,7 @@ def main():
     print("=" * 60)
 
     monsters_map, items_map, ja_to_en_items = build_mapping(args.localization_repo)
-    lookup, norm_lookup, ja_lookup = build_translation_lookup(
+    lookups = build_translation_lookup(
         monsters_map, items_map, ja_to_en_items
     )
 
@@ -574,9 +719,7 @@ def main():
         for lang in ("ja", "zh"):
             translated = translate_data(
                 dc_en,
-                lookup,
-                norm_lookup,
-                ja_lookup,
+                lookups,
                 lang,
             )
             out_path = ROOT / "dc" / "data" / f"{lang}.js"
@@ -593,12 +736,14 @@ def main():
     # ========== Generate NGC zh.js ==========
     if "ngc" in versions:
         print("\nGenerating NGC zh translation...")
-        ngc_en = load_js_data(ROOT / "ngc" / "data" / "en.js", "en")
+        ngc_en = resolve_ngc_item_names(
+            load_js_data(ROOT / "ngc" / "data" / "en.js", "en"),
+            load_js_data(ROOT / "ngc" / "data" / "ja.js", "ja"),
+            items_map,
+        )
         ngc_zh = translate_data(
             ngc_en,
-            lookup,
-            norm_lookup,
-            ja_lookup,
+            lookups,
             "zh",
         )
         out_path = ROOT / "ngc" / "data" / "zh.js"
@@ -619,7 +764,7 @@ def main():
 
     all_gaps = {}
     for label, data, lang in sources:
-        cov = count_coverage(data, lookup, norm_lookup, ja_lookup, lang)
+        cov = count_coverage(data, lookups, lang)
         m_pct = (
             cov["translated_monsters"] / cov["total_monsters"] * 100
             if cov["total_monsters"] else 0

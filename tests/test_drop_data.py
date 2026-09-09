@@ -185,22 +185,43 @@ class MultiItemConsumerTest(unittest.TestCase):
             "Vjaya": {"zh": "维加亚"},
             "AddSlot": {"zh": "追加插槽"},
         }
-        norm_lookup = {
-            build_i18n.normalize_key(name): translations
-            for name, translations in lookup.items()
-        }
-        translated = build_i18n.translate_data(
-            sample_data(),
-            lookup,
-            norm_lookup,
-            {},
-            "zh",
-        )
+        lookups = build_i18n.build_translation_lookup({}, lookup, {})
+        translated = build_i18n.translate_data(sample_data(), lookups, "zh")
         entry = translated["data"]["Ultimate"]["boxes"]["Episode 1"][0]
         self.assertEqual(
             [drop["item"] for drop in iter_entry_drops(entry)],
             ["维加亚", "追加插槽"],
         )
+
+    def test_monster_item_collision_keeps_both_identities(self):
+        lookups = build_i18n.build_translation_lookup(
+            {"Claw": {"zh": "爪虫", "ja": "クロー"}},
+            {"Claw": {"zh": "光子爪"}},
+            {},
+        )
+        data = sample_name_data("Claw")
+        data["data"]["Ultimate"]["monsters"]["Episode 2"][0]["drops"] = [
+            {"item": "Claw", "rate": "1/10"}
+        ]
+        result = build_i18n.translate_data(data, lookups, "zh")
+        row = result["data"]["Ultimate"]["monsters"]["Episode 2"][0]
+        self.assertEqual(row["name"], "爪虫")
+        self.assertEqual(row["drops"][0]["item"], "光子爪")
+
+    def test_unitxt_alias_replaces_existing_stale_chinese(self):
+        target = {
+            "CURE SHOCK": {"zh": "感电回复", "ja": "キュア/ショック"},
+            "KALADGOLG": {"zh": "冰之剑", "ja": "カラドボルグ"},
+        }
+        normalized = {build_i18n.normalize_key(name): name for name in target}
+        build_i18n.merge_unitxt_item_names(
+            {"Cure/Shock": "解除/感电", "Kaladbolg": "卡拉德波加"},
+            target,
+            normalized,
+        )
+        self.assertEqual(target["CURE SHOCK"]["zh"], "解除/感电")
+        self.assertEqual(target["KALADGOLG"]["zh"], "卡拉德波加")
+        self.assertEqual(target["CURE SHOCK"]["ja"], "キュア/ショック")
 
     def test_authority_merge_preserves_uncovered_names_and_replaces_values(self):
         target = {"Existing": {"zh": "旧译名"}}
