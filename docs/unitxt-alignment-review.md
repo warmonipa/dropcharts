@@ -18,7 +18,8 @@ boss aliases and the nine DB variants before closing it.
 
 ## Identity evidence
 
-The aligned Chinese Unitxt is psobb-localization's `localization/zh/unitxt_j.prs`,
+The aligned Chinese Unitxt is psobb-localization commit
+`5a679c5e2f9857f54b83a9b8b415931ac172324e`, `localization/zh/unitxt_j.prs`,
 SHA-256 `720cfd525b5645198d89661ea71c628696df6e024e4a03ef4db75bf1110cf401`.
 EN, JP and ZH resources were decoded separately with newserv and compared by
 Unitxt group/index. This is independent of the droptable translation generator.
@@ -361,3 +362,40 @@ under their canonical names. No live version-only item is removed.
 | `Dragonフレーム` | `Dragon Frame` |
 
 Removed unused keys: `1975ドウセツ`, `1977ジョウウン[偽]`, `1980テンガイ[偽]`, `1983ドウセツ[偽]`, `1991キコク[偽]`, `1991キコク[偽])(AGITO 1991 Kikoku[fake]`, `2001キコク[偽])(AGITO 2001 Kikoku[fake]`, `アギト(1975)`, `アギト(1975)(※1)`, `アギト(1977)`, `アギト(1977))`, `アギト(1980)`, `アギト(1983`, `アギト(1983)`, `アギト(1983))`, `アギト(1991)`, `アギト(1991))`, `アギト(2001)`, `アギト(2001))`, `AGITO`, `DB’S Saber 3069`, `Sinow Redの両手`.
+
+
+## Final downstream handoff (2026-09-09)
+
+UA-01 / UA-03 are closed after the whole-dictionary and downstream checks.
+The dictionary repair is published in commit
+`62cdfbdbe011ae33ecd3927a6118e371ab7d8878`: 107 Chinese labels corrected,
+22 malformed or ambiguous aliases removed, and 1,566 item-dictionary entries
+retained. The authority SHA-256 is
+`cbb4b89da0cfb213494edba99eccc2aabc7c1660bf5b52022b6575ee82c753ed`.
+This documentation follow-up does not change that authority or the nine datasets.
+
+The absence of a BB/DC/NGC drop consumer did not prove an alias was unused by
+Haven. Its Black Paper's Deal table still referenced unqualified DB 3069.
+The [Ephinea quest chart, revision 42514](https://wiki.pioneer2.net/index.php?title=Black_Paper%27s_Dangerous_Deal&oldid=42514)
+identifies Dorphon Normal's reward as DB's Saber (3069 Chris). Haven now uses
+`db_s_saber_3069_chris`; the ambiguous alias is not restored. Its regression
+checks all 218 Black Paper and 329 Coren structured references, plus the exact
+manufacturer in Chinese and English in the browser.
+
+Final local verification:
+
+- `npm test`: 55 tests passed, followed by coordinate and name gates.
+- `.venv/bin/python tools/validate_names.py --localization-repo ../psobb-localization`:
+  current-source projections and all generated names passed.
+- `npm run update:i18n`: regeneration reached the same semantic result; all nine
+  BB/DC/NGC datasets and built copies preserve their reviewed values.
+- `npm run build`: 410 files built successfully.
+- Haven's final build and 122 browser tests passed, including its complete
+  dictionary, exact item identities, archived events and dynamic responses.
+
+Current Caduceus, Excalibur and Glide Divine names remain inherited from
+localization. The subsequent naming-strategy discussion did not authorize new
+translations. Cross-repository consistency is not independent proof of a newly
+proposed translation or in-game rendering. The user's follow-up authorizes
+committing and pushing the documentation handoff on master; publication results
+must be checked separately from these local review results.

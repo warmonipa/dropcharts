@@ -145,6 +145,11 @@ requiring a localization checkout in CI. For source verification, run:
 python3 tools/validate_names.py --localization-repo ../psobb-localization
 ```
 
+The default gate also checks reviewed aliases across the entire authority,
+including entries with no active drop cell. The source-backed check includes
+existing monster/area labels in the item dictionary while preserving actual
+item identities after normalization, such as CLAW / Claw.
+
 This additionally checks the authority's Unitxt projections and every BB Chinese
 name. It verifies generation consistency; alias identity and translation wording
 still require review against independent evidence.
@@ -237,3 +242,16 @@ npm run build
 npm run update:dc # Use update:ngc for GameCube data.
 npm run build
 ```
+
+
+### Handoff to Haven
+
+Validate and publish localization first, then record its source commit and
+resource hash in [the alignment review](unitxt-alignment-review.md). After this
+repository's checks pass and its authority commit is pushed, update Haven's
+`.github/workflows/pages.yml` to that immutable commit and run `npm run sync:i18n`
+in Haven. Verify its structured reward IDs, generated dictionary and Mag names,
+status equipment, authored labels, and dynamic/archived event consumers before
+building and pushing Haven. Removing an alias requires checking these downstream
+consumers as well as BB/DC/NGC drop cells; resolve their precise item identities
+instead of restoring an ambiguous alias.
