@@ -295,5 +295,46 @@ class NameAlignmentTests(unittest.TestCase):
         self.assertTrue(any("authority/items/KALADGOLG" in error for error in errors))
 
 
+    def test_inactive_dictionary_aliases_follow_canonical_names(self):
+        authority = json.loads((ROOT / "i18n_names.json").read_text())["items"]
+        pairs = {
+            "DB'S SABER 3062": "DB's Saber (3062)",
+            "Book of KATANA1": "Book of Katana 1",
+            "AGITO 1983": "Agito (1983)",
+            "MARK3": "Mark III",
+            "Kit of MARK3": "Kit of Mark III",
+            "キュア/ポイズン": "Cure/Poison",
+            "マグ細胞２１３": "Cell of Mag 213",
+            "Silver Badge": "Weapons Silver Badge",
+        }
+        for alias, canonical in pairs.items():
+            with self.subTest(alias=alias):
+                matches = [value for name, value in authority.items() if name.casefold() == canonical.casefold()]
+                self.assertEqual(len(matches), 1)
+                self.assertEqual(authority[alias]["zh"], matches[0]["zh"])
+
+    def test_authority_gate_checks_aliases_without_any_drop_consumer(self):
+        items = {"DB'S SABER 3062": {"zh": "DB剑 3062"},
+                 "DB's Saber (3062)": {"zh": "DB 之剑「3062」"}}
+        self.assertEqual(len(validate_names.validate_authority_aliases(items)), 1)
+        items["DB'S SABER 3062"]["zh"] = "DB 之剑「3062」"
+        self.assertEqual(validate_names.validate_authority_aliases(items), [])
+        del items["DB's Saber (3062)"]
+        self.assertEqual(len(validate_names.validate_authority_aliases(items)), 1)
+
+    def test_context_projection_does_not_replace_a_same_named_item(self):
+        source = gen_zh.UnitxtNameMaps(
+            {"CLAW": "光子爪"}, {"Claw": "爪虫", "Olga Flow": "奥尔加·弗洛"},
+            {}, {"Forest 1": "森林区１"},
+        )
+        items = {"Claw": {"zh": "光子爪"}, "Olga Flow": {"zh": "旧名", "ja": "オルガ・フロウ"},
+                 "Forest 1": {"zh": "Forest 1"}, "SH2": {"zh": "SH2"}}
+        build_i18n.merge_unitxt_context_names(source, items)
+        self.assertEqual(items["Claw"]["zh"], "光子爪")
+        self.assertEqual(items["Olga Flow"], {"zh": "奥尔加·弗洛", "ja": "オルガ・フロウ"})
+        self.assertEqual(items["Forest 1"]["zh"], "森林区１")
+        self.assertEqual(items["SH2"]["zh"], "SH2")
+
+
 if __name__ == "__main__":
     unittest.main()

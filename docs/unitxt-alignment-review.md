@@ -238,3 +238,126 @@ added or replaced. Generation changes 13 DC Chinese drop occurrences (10 FM,
 2 Power VR, 1 Special Gene); every other name and all language-independent
 fields are preserved. Validation uses `npm test` (52 tests), the current-Unitxt
 name gate, full regeneration stability, and the final local Pages build.
+
+## Whole-dictionary consumer review (2026-09-09)
+
+UA-01 / UA-03 reopened: Haven's item lookup renders the complete authority,
+including historical labels that no current drop cell uses. The earlier active-
+dataset census and explicit alias set missed these consumers. Default tests now
+validate every reviewed alias against its canonical dictionary identity, and the
+live-source gate also refreshes existing monster/area labels in the dictionary.
+Real item identities take precedence over context labels after normalization:
+`CLAW` / `Claw` must remain the weapon in the item dictionary and the enemy in
+the monster dictionary.
+
+Identity evidence:
+
+- Same-index EN/JP Unitxt confirms the Japanese-key aliases below, including
+  Cure/Poison, Mag cells, ordinary equipment, Four Heavens volumes and parts.
+- Japanese `ＤＢの剣(3062)` identifies DB's Saber (3062). Explicit English years
+  select the corresponding Agito and DB entries; an unqualified DB 3069 cannot
+  select Chris versus Torato and is removed from the unused flat aliases.
+- newserv `names-v2.json` / `names-v3.json` identify MARK3, Kit of MARK3,
+  Book of KATANA1–3 and P-ARMS'S BLADE. The six legacy badge names match v3/v4
+  codes 031403–031405 and 031407–031409; their BB identities are Weapons badges.
+- Reviewed English/Japanese body-part spellings retain the named enemy and
+  Arm/Head role. Tyrell's Parasol is Japanese 総督恩賜パラソル, matching the
+  legacy PRINCIPAL'S GIFT PARASOL identity.
+- Existing context labels use the current source's standard/Ultimate monster
+  and area maps. They cannot override a normalized item identity.
+- Ten repository-owned legacy labels (Mag factors 503–507, L&K15 COMBAT and
+  four Pen labels) receive only half-width/boundary-spacing normalization;
+  their identities are not equated with a different BB item. The all-years
+  Agito category uses the common reviewed 颚刀 stem, without choosing a year.
+
+The reviewed unused import aliases removed below have no BB/DC/NGC drop
+consumer. They are malformed/annotated duplicate labels or cannot identify one
+item. The six dated Agito names and both DB 3069 manufacturers remain available
+under their canonical names. No live version-only item is removed.
+
+| Historical dictionary key | Canonical Unitxt identity |
+| --- | --- |
+| `DB'S SABER 3062` | `DB's Saber (3062)` |
+| `DB’S Saber 3077` | `DB's Saber (3077)` |
+| `DB’S Saber (No 9*)` | `DB's Saber` |
+| `MARK3` | `Mark III` |
+| `Kit of MARK3` | `Kit of Mark III` |
+| `P-ARMS'S BLADE` | `P-Arms' Blade` |
+| `PRINCIPAL'S GIFT PARASOL` | `Tyrell's Parasol` |
+| `Unused Item0` | `Unused Item01` |
+| `AGITO 1975` | `Agito (1975)` |
+| `AGITO 1977` | `Agito (1977)` |
+| `AGITO 1980` | `Agito (1980)` |
+| `AGITO 1983` | `Agito (1983)` |
+| `AGITO 1991` | `Agito (1991)` |
+| `AGITO 2001` | `Agito (2001)` |
+| `Book of KATANA1` | `Book of Katana 1` |
+| `Book of KATANA2` | `Book of Katana 2` |
+| `Book of KATANA3` | `Book of Katana 3` |
+| `Bronze Weapons Badge` | `Weapons Bronze Badge` |
+| `Silver Weapons Badge` | `Weapons Silver Badge` |
+| `Gold Weapons Badge` | `Weapons Gold Badge` |
+| `Crystal Weapons Badge` | `Weapons Crystal Badge` |
+| `Steel Weapons Badge` | `Weapons Steel Badge` |
+| `Aluminum Weapons Badge` | `Weapons Aluminum Badge` |
+| `Leather Weapons Badge` | `Weapons Leather Badge` |
+| `Bone Weapons Badge` | `Weapons Bone Badge` |
+| `Silver Badge` | `Weapons Silver Badge` |
+| `Gold Badge` | `Weapons Gold Badge` |
+| `Crystal Badge` | `Weapons Crystal Badge` |
+| `Aluminum Badge` | `Weapons Aluminum Badge` |
+| `Leather Badge` | `Weapons Leather Badge` |
+| `Bone Badge` | `Weapons Bone Badge` |
+| `エンジェル/ＴＰ` | `Angel/TP` |
+| `オパオパの心` | `Heart of Opa Opa` |
+| `オモチャオのパーツ` | `Parts of RoboChao` |
+| `カラドボルグ` | `Kaladbolg` |
+| `キュア/ポイズン` | `Cure/Poison` |
+| `クラブ` | `Club` |
+| `サイキックバリア` | `Psychic Barrier` |
+| `セレスティアルシールド` | `Celestial Shield` |
+| `チャオの心` | `Heart of Chao` |
+| `ディグラインダー` | `Digrinder` |
+| `ディヴィニティアーマー` | `Divinity Armor` |
+| `ハンターウォル` | `Hunter Wall` |
+| `ハンターフィールド` | `Hunter Field` |
+| `パラッシュ` | `Pallasch` |
+| `ピアンの心` | `Heart of Pian` |
+| `フォースウォル` | `Force Wall` |
+| `フォースフィールド` | `Force Field` |
+| `マグ細胞２１３` | `Cell of Mag 213` |
+| `マグ細胞５０２` | `Cell of Mag 502` |
+| `マジカルピース` | `Magical Piece` |
+| `レンジャーウォル` | `Ranger Wall` |
+| `レールガン` | `Railgun` |
+| `ロックガン` | `Lockgun` |
+| `四天　参の巻` | `Book of Katana 3` |
+| `四天　壱の巻` | `Book of Katana 1` |
+| `四天　弐の巻` | `Book of Katana 2` |
+| `四神盾「朱雀」` | `Gods Shield "Suzaku"` |
+| `四神盾「玄武」` | `Gods Shield "Genbu"` |
+| `四神盾「白虎」` | `Gods Shield "Byakko"` |
+| `四神盾「青龍」` | `Gods Shield "Seiryu"` |
+| `寄生防具「デ・ロル」` | `Parasite Wear: De Rol` |
+| `寄生防具「ネルガル」` | `Parasite Wear: Nelgal` |
+| `寄生防具「ヴァジュラ」` | `Parasite Wear: Vajulla` |
+| `秋子おばさんの中華鍋` | `Akiko's Wok` |
+| `細菌防具「ラフテリア」` | `Virus Armor: Lafuteria` |
+| `雷杖「インドラ」` | `Storm Wand: Indra` |
+| `ＨＰ/ジェネレイト` | `HP/Generate` |
+| `ＴＰ/ジェネレイト` | `TP/Generate` |
+| `ウィジャヤ` | `Vjaya` |
+| `グレイヴ` | `Glaive` |
+| `フロウウウェンの盾` | `Flowen's Shield` |
+| `レンジャーフールド` | `Ranger Field` |
+| `Chaos Bringerの右手` | `Bringer's Right Arm` |
+| `Chaos Sorcererの右手` | `Sorcerer's Right Arm` |
+| `Delsaberの右手` | `Delsaber's Right Arm` |
+| `Delsaberの左手` | `Delsaber's Left Arm` |
+| `Hildebearの頭` | `Hildebear's Head` |
+| `Hildeblueの頭` | `Hildeblue's Head` |
+| `Pan Armsの両手` | `P-arm's Arms` |
+| `Sinow Beatの両手` | `S-beat's Arms` |
+| `Dragonフレーム` | `Dragon Frame` |
+
+Removed unused keys: `1975ドウセツ`, `1977ジョウウン[偽]`, `1980テンガイ[偽]`, `1983ドウセツ[偽]`, `1991キコク[偽]`, `1991キコク[偽])(AGITO 1991 Kikoku[fake]`, `2001キコク[偽])(AGITO 2001 Kikoku[fake]`, `アギト(1975)`, `アギト(1975)(※1)`, `アギト(1977)`, `アギト(1977))`, `アギト(1980)`, `アギト(1983`, `アギト(1983)`, `アギト(1983))`, `アギト(1991)`, `アギト(1991))`, `アギト(2001)`, `アギト(2001))`, `AGITO`, `DB’S Saber 3069`, `Sinow Redの両手`.

@@ -96,6 +96,89 @@ ITEM_ALIASES = {
     "TypeN-SL/J-SWORD": "TypeSL/Katana",
     "TypeN-SL/SABER": "TypeSL/Saber",
     "TypeN-SL/SLICER": "TypeSL/Slicer",
+    # Historical dictionary spellings, reviewed beyond active drop cells.
+    "DB'S SABER 3062": "DB's Saber (3062)",
+    "DB’S Saber 3077": "DB's Saber (3077)",
+    "DB’S Saber (No 9*)": "DB's Saber",
+    "MARK3": "Mark III",
+    "Kit of MARK3": "Kit of Mark III",
+    "P-ARMS'S BLADE": "P-Arms' Blade",
+    "PRINCIPAL'S GIFT PARASOL": "Tyrell's Parasol",
+    "Unused Item0": "Unused Item01",
+    "AGITO 1975": "Agito (1975)",
+    "AGITO 1977": "Agito (1977)",
+    "AGITO 1980": "Agito (1980)",
+    "AGITO 1983": "Agito (1983)",
+    "AGITO 1991": "Agito (1991)",
+    "AGITO 2001": "Agito (2001)",
+    "Book of KATANA1": "Book of Katana 1",
+    "Book of KATANA2": "Book of Katana 2",
+    "Book of KATANA3": "Book of Katana 3",
+    "Bronze Weapons Badge": "Weapons Bronze Badge",
+    "Silver Weapons Badge": "Weapons Silver Badge",
+    "Gold Weapons Badge": "Weapons Gold Badge",
+    "Crystal Weapons Badge": "Weapons Crystal Badge",
+    "Steel Weapons Badge": "Weapons Steel Badge",
+    "Aluminum Weapons Badge": "Weapons Aluminum Badge",
+    "Leather Weapons Badge": "Weapons Leather Badge",
+    "Bone Weapons Badge": "Weapons Bone Badge",
+    "Silver Badge": "Weapons Silver Badge",
+    "Gold Badge": "Weapons Gold Badge",
+    "Crystal Badge": "Weapons Crystal Badge",
+    "Aluminum Badge": "Weapons Aluminum Badge",
+    "Leather Badge": "Weapons Leather Badge",
+    "Bone Badge": "Weapons Bone Badge",
+    "エンジェル/ＴＰ": "Angel/TP",
+    "オパオパの心": "Heart of Opa Opa",
+    "オモチャオのパーツ": "Parts of RoboChao",
+    "カラドボルグ": "Kaladbolg",
+    "キュア/ポイズン": "Cure/Poison",
+    "クラブ": "Club",
+    "サイキックバリア": "Psychic Barrier",
+    "セレスティアルシールド": "Celestial Shield",
+    "チャオの心": "Heart of Chao",
+    "ディグラインダー": "Digrinder",
+    "ディヴィニティアーマー": "Divinity Armor",
+    "ハンターウォル": "Hunter Wall",
+    "ハンターフィールド": "Hunter Field",
+    "パラッシュ": "Pallasch",
+    "ピアンの心": "Heart of Pian",
+    "フォースウォル": "Force Wall",
+    "フォースフィールド": "Force Field",
+    "マグ細胞２１３": "Cell of Mag 213",
+    "マグ細胞５０２": "Cell of Mag 502",
+    "マジカルピース": "Magical Piece",
+    "レンジャーウォル": "Ranger Wall",
+    "レールガン": "Railgun",
+    "ロックガン": "Lockgun",
+    "四天　参の巻": "Book of Katana 3",
+    "四天　壱の巻": "Book of Katana 1",
+    "四天　弐の巻": "Book of Katana 2",
+    "四神盾「朱雀」": "Gods Shield \"Suzaku\"",
+    "四神盾「玄武」": "Gods Shield \"Genbu\"",
+    "四神盾「白虎」": "Gods Shield \"Byakko\"",
+    "四神盾「青龍」": "Gods Shield \"Seiryu\"",
+    "寄生防具「デ・ロル」": "Parasite Wear: De Rol",
+    "寄生防具「ネルガル」": "Parasite Wear: Nelgal",
+    "寄生防具「ヴァジュラ」": "Parasite Wear: Vajulla",
+    "秋子おばさんの中華鍋": "Akiko's Wok",
+    "細菌防具「ラフテリア」": "Virus Armor: Lafuteria",
+    "雷杖「インドラ」": "Storm Wand: Indra",
+    "ＨＰ/ジェネレイト": "HP/Generate",
+    "ＴＰ/ジェネレイト": "TP/Generate",
+    "ウィジャヤ": "Vjaya",
+    "グレイヴ": "Glaive",
+    "フロウウウェンの盾": "Flowen's Shield",
+    "レンジャーフールド": "Ranger Field",
+    "Chaos Bringerの右手": "Bringer's Right Arm",
+    "Chaos Sorcererの右手": "Sorcerer's Right Arm",
+    "Delsaberの右手": "Delsaber's Right Arm",
+    "Delsaberの左手": "Delsaber's Left Arm",
+    "Hildebearの頭": "Hildebear's Head",
+    "Hildeblueの頭": "Hildeblue's Head",
+    "Pan Armsの両手": "P-arm's Arms",
+    "Sinow Beatの両手": "S-beat's Arms",
+    "Dragonフレーム": "Dragon Frame",
 }
 
 MONSTER_NAME_ALIASES = {
@@ -266,6 +349,18 @@ def merge_unitxt_item_names(source, target_map, target_norm):
         target_norm.setdefault(normalize_key(name), name)
 
     merge_source_aliases(source, target_map, target_norm, ITEM_ALIASES)
+
+
+def merge_unitxt_context_names(unitxt, items_map):
+    """Refresh existing non-item labels without crossing a real item identity."""
+    context = unitxt.standard_monsters | unitxt.ultimate_monsters | unitxt.areas
+    for alias, canonical in MONSTER_NAME_ALIASES.items():
+        if canonical in context:
+            context[alias] = context[canonical] + ("?" if alias.endswith("?") else "")
+    item_identities = {normalize_key(name) for name in unitxt.items}
+    for name in items_map.keys() & context.keys():
+        if normalize_key(name) not in item_identities:
+            items_map[name]["zh"] = context[name]
 
 
 def resolve_ngc_item_name(name, japanese_name, section_id):
@@ -474,6 +569,7 @@ def build_mapping(localization_repo=DEFAULT_LOCALIZATION_REPO):
     # aligned English identity exists. Uncovered authority entries are kept.
     print("Aligning authoritative Chinese names from mixed-width Unitxt...")
     merge_unitxt_item_names(unitxt.items, items_map, item_norm)
+    merge_unitxt_context_names(unitxt, items_map)
     monster_names = {
         name: {"zh": zh} for name, zh in unitxt.standard_monsters.items()
     }

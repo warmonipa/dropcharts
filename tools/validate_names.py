@@ -79,9 +79,29 @@ def validate_translation_coverage(data, lookups, language, label):
     return errors
 
 
+def validate_authority_aliases(items):
+    """Check all reviewed dictionary aliases, including names absent from drops."""
+    errors = []
+    for alias, canonical in build_i18n.ITEM_ALIASES.items():
+        aliases = [name for name in items
+                   if build_i18n.normalize_key(name) == build_i18n.normalize_key(alias)]
+        if not aliases:
+            continue
+        candidates = ([items[canonical]] if canonical in items else
+                      [value for name, value in items.items()
+                       if build_i18n.normalize_key(name) == build_i18n.normalize_key(canonical)])
+        if len(candidates) != 1 or not candidates[0].get("zh"):
+            errors.append(f"authority/items/{alias}: missing or ambiguous canonical {canonical!r}")
+            continue
+        for name in aliases:
+            if items[name].get("zh") != candidates[0]["zh"]:
+                errors.append(f"authority/items/{name}: stale canonical alias for {canonical!r}")
+    return errors
+
+
 def validate_names(*, root=ROOT, localization_repo=None):
     authority = json.loads((root / "i18n_names.json").read_text(encoding="utf-8"))
-    errors = []
+    errors = validate_authority_aliases(authority["items"])
     unitxt = None
     if localization_repo is not None:
         unitxt = build_i18n.load_unitxt_name_maps(localization_repo)
@@ -89,6 +109,7 @@ def validate_names(*, root=ROOT, localization_repo=None):
         item_norm = {build_i18n.normalize_key(k): k for k in expected["items"]}
         monster_norm = {build_i18n.normalize_key(k): k for k in expected["monsters"]}
         build_i18n.merge_unitxt_item_names(unitxt.items, expected["items"], item_norm)
+        build_i18n.merge_unitxt_context_names(unitxt, expected["items"])
         monsters = unitxt.standard_monsters | unitxt.ultimate_monsters
         build_i18n.merge_names(
             {k: {"zh": v} for k, v in monsters.items()},
