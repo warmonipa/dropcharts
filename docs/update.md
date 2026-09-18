@@ -30,6 +30,7 @@ npm run update:ngc     # Refresh and localize NGC, then align, mark, and validat
 npm run update:i18n    # Rebuild BB/DC/NGC localizations and validate all names.
 npm run update:reorder # Reorder BB, then realign, mark, and validate.
 npm run update:ss      # Realign, rebuild SS markers, and validate.
+npm run update:wiki -- ../ephinea4haven.github.io # Refresh BB Wiki identities, detail links and artwork.
 ```
 
 The pipeline can also be invoked directly:
@@ -37,6 +38,12 @@ The pipeline can also be invoked directly:
 ```bash
 ./tools/update.sh [all|bb|dc|ngc|i18n|reorder|align|ss]
 ```
+
+After changing BB drop rows, Wiki catalog IDs/artwork, or monster translations
+in `i18n_names.json`, run `update:wiki` and `npm test` before building. The Wiki
+checkout must contain its generated monster/item catalogs. Commit
+`bb/data/monsters.js` and `bb/images/monsters` together. This separate sync does
+not fetch remote content; deployment uses these checked-in assets.
 
 ## Data pipeline
 
@@ -142,7 +149,7 @@ requires every dated NGC item to retain its year, even when English labels agree
 requiring a localization checkout in CI. For source verification, run:
 
 ```bash
-python3 tools/validate_names.py --localization-repo ../psobb-localization
+npm run verify:localization
 ```
 
 The default gate also checks reviewed aliases across the entire authority,
@@ -150,7 +157,11 @@ including entries with no active drop cell. The source-backed check includes
 existing monster/area labels in the item dictionary while preserving actual
 item identities after normalization, such as CLAW / Claw.
 
-This additionally checks the authority's Unitxt projections and every BB Chinese
+This runs the complete offline suite, then requires `PSOBB_LOCALIZATION_REPO`
+or the sibling `../psobb-localization` checkout. A missing source fails the check.
+For a custom source, set that environment variable or run
+`python3 tools/validate_names.py --localization-repo /path/to/psobb-localization`.
+It additionally checks the authority's Unitxt projections and every BB Chinese
 name. It verifies generation consistency; alias identity and translation wording
 still require review against independent evidence.
 
@@ -233,6 +244,7 @@ npm run build
 
 ```bash
 npm run update:i18n
+npm run verify:localization
 npm run build
 ```
 
@@ -255,3 +267,13 @@ status equipment, authored labels, and dynamic/archived event consumers before
 building and pushing Haven. Removing an alias requires checking these downstream
 consumers as well as BB/DC/NGC drop cells; resolve their precise item identities
 instead of restoring an ambiguous alias.
+
+### September 18, 2026 release scope
+
+This release includes BB Normal/Ultimate names and portraits, Haven monster/item
+detail links, readable table typography, URL-preserved table context, and the
+UN-10/UN-11 Chinese name refresh. Local verification passed 58 Python and 11 Node
+tests plus the actual Unitxt source gate. Pushing master triggers this repository's
+Pages build and deployment; check both jobs and the live BB assets. Publish
+droptable before updating Haven's immutable authority reference and publishing
+Haven. Bulk and Death Gunner retain documented portrait placeholders.

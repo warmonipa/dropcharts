@@ -43,6 +43,17 @@ class ViewerLayoutTest(unittest.TestCase):
         self.assertIn("text.normalize('NFKC').toLowerCase()", self.viewer)
         self.assertIn("term.normalize('NFKC').toLowerCase()", self.viewer)
 
+    def test_rainbow_item_links_keep_a_visible_focus_color(self):
+        block = re.search(
+            r"\.drop-cell \.ss-rare-item \{(?P<body>.*?)\n\}",
+            self.styles,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(block)
+        self.assertNotRegex(block.group("body"), r"(?m)^\s*color:\s*transparent")
+        self.assertIn("-webkit-text-fill-color: transparent", block.group("body"))
+        self.assertRegex(self.styles, r"a\.item-name:focus-visible\s*\{[^}]*outline:\s*2px solid currentColor")
+
 
 if __name__ == "__main__":
     unittest.main()

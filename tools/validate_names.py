@@ -151,17 +151,25 @@ def validate_names(*, root=ROOT, localization_repo=None):
     return errors
 
 
-def main():
+def main(argv=None):
+    """Run the generated-data gate or explicitly require current Unitxt inputs."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--localization-repo", type=Path)
-    args = parser.parse_args()
-    errors = validate_names(localization_repo=args.localization_repo)
+    parser.add_argument(
+        "--unitxt", action="store_true",
+        help="require PSOBB_LOCALIZATION_REPO or the sibling psobb-localization checkout",
+    )
+    args = parser.parse_args(argv)
+    localization_repo = args.localization_repo
+    if args.unitxt and localization_repo is None:
+        localization_repo = build_i18n.DEFAULT_LOCALIZATION_REPO
+    errors = validate_names(localization_repo=localization_repo)
     if errors:
         for error in errors:
             print(f"ERROR: {error}")
         raise SystemExit(1)
     print("All DC/NGC generated names match the authority.")
-    if args.localization_repo is not None:
+    if localization_repo is not None:
         print("Authority and all BB Chinese names match the current Unitxt source.")
 
 

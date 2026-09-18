@@ -186,6 +186,21 @@
     return cell && Array.isArray(cell.items) ? cell.items : [cell];
   }
 
+  function monsterProfile(episode, englishName) {
+    if (CFG.version !== 'bb' || currentType !== 'monsters') return null;
+    return window.BB_MONSTERS[episode][englishName];
+  }
+
+  function monsterVariant(profile) {
+    return profile[currentDifficulty === 'Ultimate' ? 'ultimate' : 'normal'];
+  }
+
+  function escapeHtml(value) {
+    return value.replace(/[&<>"']/g, function (char) {
+      return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char];
+    });
+  }
+
   // --- controls ---
 
   function buildControls() {
@@ -269,6 +284,7 @@
 
   function setLang(code) {
     lang = code;
+    document.documentElement.lang = lang;
     buildControls();
     render();
   }
@@ -307,22 +323,12 @@
 
   /** Return '#000' or '#fff' for best contrast against a hex background. */
   function contrastText(hex) {
-    hex = hex.replace('#', '');
-    var r = parseInt(hex.substring(0, 2), 16);
-    var g = parseInt(hex.substring(2, 4), 16);
-    var b = parseInt(hex.substring(4, 6), 16);
-    // W3C relative luminance
-    var L = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    return L > 0.5 ? '#000' : '#fff';
-  }
-
-  function contrastSub(hex) {
-    hex = hex.replace('#', '');
-    var r = parseInt(hex.substring(0, 2), 16);
-    var g = parseInt(hex.substring(2, 4), 16);
-    var b = parseInt(hex.substring(4, 6), 16);
-    var L = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    return L > 0.5 ? '#555' : '#eee';
+    var channels = hex.replace('#', '').match(/../g).map(function (value) {
+      var channel = parseInt(value, 16) / 255;
+      return channel <= 0.04045 ? channel / 12.92 : Math.pow((channel + 0.055) / 1.055, 2.4);
+    });
+    var luminance = 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+    return (luminance + 0.05) / 0.05 >= 1.05 / (luminance + 0.05) ? '#000' : '#fff';
   }
 
   function fuzzyMatch(text, term) {
@@ -348,9 +354,27 @@
     });
   }
 
+  function saveContext() {
+    var url = new URL(window.location.href);
+    var values = {
+      lang: lang === 'en' ? '' : lang,
+      diff: currentDifficulty === 'Normal' ? '' : currentDifficulty,
+      ep: currentEpisode === 'all' ? '' : currentEpisode,
+      type: currentType === 'monsters' ? '' : currentType,
+      rate: CFG.hasRateToggle && rateFormat !== 'percent' ? rateFormat : '',
+      q: document.getElementById('searchBox').value
+    };
+    Object.keys(values).forEach(function (key) {
+      if (values[key]) url.searchParams.set(key, values[key]);
+      else url.searchParams.delete(key);
+    });
+    if (url.href !== window.location.href) window.history.replaceState(null, '', url.href);
+  }
+
   // --- render ---
 
   function render() {
+    saveContext();
     var data = D();
     var enData = DATA_MAP.en;
     var diffData = data.data[currentDifficulty];
@@ -382,7 +406,9 @@
       var filteredWithIdx = [];
       entries.forEach(function (e, idx) {
         if (!searchTerm) { filteredWithIdx.push({ entry: e, idx: idx }); return; }
-        if (fuzzyMatch(e.name, searchTerm)) { filteredWithIdx.push({ entry: e, idx: idx }); return; }
+        var profile = monsterProfile(ep, enEntries[idx].name);
+        var names = profile ? Object.values(profile.normal.names).concat(Object.values(profile.ultimate.names)) : [e.name];
+        if (names.some(function (name) { return fuzzyMatch(name, searchTerm); })) { filteredWithIdx.push({ entry: e, idx: idx }); return; }
         if (e.drops.some(function (cell) {
           return cellDrops(cell).some(function (d) {
             return d && d.item && fuzzyMatch(d.item, searchTerm);
@@ -424,8 +450,20 @@
         }
         html += '<tr>';
         var drTag = entry.dropRate ? '<br><span class="drop-rate-tag">(' + fmtRate(entry.dropRate) + ')</span>' : '';
-        var displayName = entry.name.replace(/\//g, '<br>');
-        html += '<td class="monster-name" title="' + entry.name + '"><span class="mob-name">' + displayName + '</span>' + drTag + '</td>';
+        var profile = monsterProfile(ep, enEntry.name);
+        var variant = profile && monsterVariant(profile);
+        var displayName = variant ? escapeHtml(variant.names[lang]) : escapeHtml(entry.name).replace(/\//g, '<br>');
+        var portrait = variant ? (variant.image
+          ? '<img class="monster-icon" src="images/monsters/' + variant.image + '" width="48" height="48" alt="" loading="lazy">'
+          : '<span class="monster-icon missing" aria-hidden="true">—</span>') : '';
+        var label = portrait + '<div><span class="mob-name">' + displayName + '</span>' + drTag + '</div>';
+        if (profile) {
+          var diff = {Normal:'n', Hard:'h', 'Very Hard':'vh', Ultimate:'u'}[currentDifficulty];
+          label = '<a class="monster-link monster-label" href="https://www.psohaven.com/data/enemies/' + profile.id + '.html?diff=' + diff + '&amp;lang=' + lang + '">' + label + '</a>';
+        } else {
+          label = '<div class="monster-label">' + label + '</div>';
+        }
+        html += '<td class="monster-name">' + label + '</td>';
         for (var di = 0; di < entry.drops.length; di++) {
           var drops = cellDrops(entry.drops[di]).filter(Boolean);
           var enDrops = enEntry && enEntry.drops[di] ? cellDrops(enEntry.drops[di]) : [];
@@ -433,7 +471,7 @@
           var isSsRare = drops.some(function (drop) { return !!drop.ss; });
           var bg = data.sectionColors[di];
           var txtColor = contrastText(bg);
-          var subColor = contrastSub(bg);
+          var subColor = txtColor;
           var cellStyle = 'background-color:' + bg + ';color:' + txtColor;
           if (hasItem) {
             html += '<td class="drop-cell' + (isSsRare ? ' ss-rare-cell' : '') + '" style="' + cellStyle + '">';
@@ -443,7 +481,11 @@
               var itemIsHL = searchTerm && fuzzyMatch(drop.item, searchTerm);
               var itemIsSsRare = !!drop.ss;
               html += '<span class="drop-option' + (itemIsHL ? ' highlight' : '') + '">';
-              html += '<span class="item-name' + (itemIsSsRare ? ' ss-rare-item' : '') + '">' + drop.item + '</span>';
+              var itemId = CFG.version === 'bb' && window.BB_ITEMS[enItem];
+              var itemClass = 'item-name' + (itemIsSsRare ? ' ss-rare-item' : '');
+              html += itemId
+                ? '<a class="' + itemClass + '" href="https://www.psohaven.com/data/items/' + itemId + '.html?lang=' + lang + '">' + escapeHtml(drop.item) + '</a>'
+                : '<span class="' + itemClass + '">' + escapeHtml(drop.item) + '</span>';
               var imgFile = IMG_MAP && (IMG_MAP[drop.item] || (enItem && IMG_MAP[enItem]));
               if (imgFile) html += '<img class="item-tooltip-img" src="../shared/images/' + encodeURIComponent(imgFile) + '" alt="" loading="lazy">';
               if (drop.rate) {
@@ -489,13 +531,21 @@
     // Read URL params
     var params = new URLSearchParams(window.location.search);
     var diffParam = params.get('diff');
-    if (diffParam && DATA_MAP[lang] && DATA_MAP[lang].data[diffParam]) {
+    if (diffParam && Object.keys(DATA_MAP[lang].data).includes(diffParam)) {
       currentDifficulty = diffParam;
     }
     var langParam = params.get('lang');
-    if (langParam && I18N_DATA[langParam]) {
+    if (langParam && config.languages.includes(langParam)) {
       lang = langParam;
     }
+    if (CFG.hasTypes && params.get('type') === 'boxes') currentType = 'boxes';
+    if (CFG.episodes && CFG.episodes.includes(params.get('ep'))) currentEpisode = params.get('ep');
+    if (CFG.hasRateToggle && params.get('rate') === 'fraction') rateFormat = 'fraction';
+    var query = params.get('q') || '';
+    document.getElementById('searchBox').value = query;
+    searchTerm = query.toLowerCase().trim();
+
+    document.documentElement.lang = lang;
 
     // Load image mapping
     var xhr = new XMLHttpRequest();

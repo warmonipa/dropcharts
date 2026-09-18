@@ -19,6 +19,47 @@ from drop_data import iter_cell_drops, load_js_data
 
 
 class NameAlignmentTests(unittest.TestCase):
+    def test_confirmed_unitxt_names_do_not_revert_with_a_stale_dictionary(self):
+        """Lock representative UN-10/UN-11 decisions independently of generated data."""
+        items = json.loads((ROOT / "i18n_names.json").read_text(encoding="utf-8"))["items"]
+        expected = {
+            "D-Parts ver1.01": "D组件 Ver1.01",
+            "D-Parts ver2.10": "D组件 Ver2.10",
+            "S-Parts ver1.16": "S组件 Ver1.16",
+            "S-Parts ver2.01": "S组件 Ver2.01",
+            "Game Magazine": "ファミ通",
+            "GAME MAGAZNE": "ファミ通",
+            "Thirteen": "暗杀者迷彩",
+            "Yahoo!'s engine": "雅虎!引擎",
+            'DISK Vol.7 "Ending Theme (Piano ver.)"': "音乐CD Vol.7「片尾曲(钢琴版)」",
+            "TypeSA/SABER": "光剑式光剑",
+            "TypeSW/SWORD": "大剑式大剑",
+            "Heart of TypeDS/D.Saber": "双头剑式双头剑之心",
+            "Heart of TypeSS/Swords": "双刀式双刀之心",
+        }
+        for name, chinese in expected.items():
+            with self.subTest(name=name):
+                self.assertEqual(items[name]["zh"], chinese)
+        for name, translations in items.items():
+            if name.startswith(("Type", "Heart of Type")):
+                with self.subTest(name=name):
+                    self.assertNotIn("「皓光」", translations["zh"])
+
+    def test_unitxt_cli_requires_the_configured_source(self):
+        """The explicit upstream gate must not silently become an offline check."""
+        configured = ROOT / "configured-localization"
+        with (
+            patch.object(build_i18n, "DEFAULT_LOCALIZATION_REPO", configured),
+            patch.object(validate_names, "validate_names", return_value=[]) as check,
+        ):
+            validate_names.main(["--unitxt"])
+        check.assert_called_once_with(localization_repo=configured)
+        with patch.object(validate_names, "validate_names", return_value=[]) as check:
+            validate_names.main(["--unitxt", "--localization-repo", str(ROOT / "explicit")])
+        check.assert_called_once_with(localization_repo=ROOT / "explicit")
+        with self.assertRaises(FileNotFoundError):
+            validate_names.main(["--unitxt", "--localization-repo", str(configured)])
+
     def test_role_collision_cannot_cross_normalized_or_japanese_indexes(self):
         lookups = build_i18n.build_translation_lookup(
             {"Claw": {"ja": "クロー", "zh": "爪虫"}},

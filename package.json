@@ -13,7 +13,9 @@
     "update:align": "uv run bash tools/update.sh align",
     "update:ss": "uv run bash tools/update.sh ss",
     "build": "uv run python3 tools/build_site.py",
-    "test": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py && uv run python3 tools/validate_names.py"
+    "test": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py && uv run python3 tools/validate_names.py && node --test tests/test_viewer.cjs tests/test_wiki_catalog.cjs",
+    "update:wiki": "node tools/sync_wiki_catalog.cjs",
+    "verify:localization": "npm test && uv run python3 tools/validate_names.py --unitxt"
   },
   "keywords": [],
   "author": "",

@@ -1733,11 +1733,11 @@
     },
     "D-Parts ver1.01": {
       "ja": "Ｄパーツ ver1.01",
-      "zh": "D 组件 ver1.01"
+      "zh": "D组件 Ver1.01"
     },
     "D-Parts ver2.10": {
       "ja": "Ｄパーツ ver2.10",
-      "zh": "D 组件 ver2.10"
+      "zh": "D组件 Ver2.10"
     },
     "D-Photon Core": {
       "ja": "Ｄフォトンコア",
@@ -1875,7 +1875,7 @@
       "zh": "音乐CD Vol.6「飞天幽梦」"
     },
     "DISK Vol.7 \"Ending Theme (Piano ver.)\"": {
-      "zh": "音乐CD Vol.7「片尾曲（钢琴版）」"
+      "zh": "音乐CD Vol.7「片尾曲(钢琴版)」"
     },
     "DISK Vol.8 \"Heart to Heart\"": {
       "zh": "音乐CD Vol.8「心连心」"
@@ -2484,7 +2484,7 @@
       "zh": "加尔之风"
     },
     "GAME MAGAZNE": {
-      "zh": "FAMI通"
+      "zh": "ファミ通"
     },
     "GENESIS": {
       "zh": "GENESIS"
@@ -2592,7 +2592,7 @@
       "zh": "太阳之剑「嘉拉汀」"
     },
     "Game Magazine": {
-      "zh": "FAMI通"
+      "zh": "ファミ通"
     },
     "Garanz": {
       "zh": "机甲堡垒"
@@ -3166,11 +3166,11 @@
     },
     "Heart of TypeDS/D.Saber": {
       "ja": "TypeDS/D.Saberの心",
-      "zh": "「皓光」双头剑式双头剑之心"
+      "zh": "双头剑式双头剑之心"
     },
     "Heart of TypeSS/Swords": {
       "ja": "TypeSS/Swordsの心",
-      "zh": "「皓光」双刀式双刀之心"
+      "zh": "双刀式双刀之心"
     },
     "Heart of Wok of Akiko's Shop": {
       "ja": "秋子飯店の中華鍋の心",
@@ -4777,11 +4777,11 @@
     },
     "S-Parts ver1.16": {
       "ja": "Ｓパーツ ver1.16",
-      "zh": "S 组件 ver1.16"
+      "zh": "S组件 Ver1.16"
     },
     "S-Parts ver2.01": {
       "ja": "Ｓパーツ ver2.01",
-      "zh": "S 组件 ver2.01"
+      "zh": "S组件 Ver2.01"
     },
     "S-RED'S BLADE": {
       "zh": "红机忍双刃"
@@ -5425,7 +5425,7 @@
     },
     "Thirteen": {
       "ja": "サーティーン",
-      "zh": "暗杀者迷彩「十三」"
+      "zh": "暗杀者迷彩"
     },
     "Three Seals": {
       "ja": "スリーシール",
@@ -5482,109 +5482,109 @@
       "zh": "意念双枪"
     },
     "TypeBL/BLADE": {
-      "zh": "「皓光」匕首式匕首"
+      "zh": "匕首式匕首"
     },
     "TypeCL/CLAW": {
-      "zh": "「皓光」光子爪式光子爪"
+      "zh": "光子爪式光子爪"
     },
     "TypeDS/D.SABER": {
-      "zh": "「皓光」双头剑式双头剑"
+      "zh": "双头剑式双头剑"
     },
     "TypeDS/ROD": {
-      "zh": "「皓光」双头剑式长杖"
+      "zh": "双头剑式长杖"
     },
     "TypeDS/WAND": {
-      "zh": "「皓光」双头剑式魔杖"
+      "zh": "双头剑式魔杖"
     },
     "TypeGU/HANDGUN": {
-      "zh": "「皓光」光枪式光枪"
+      "zh": "光枪式光枪"
     },
     "TypeGU/Hand": {
-      "zh": "「皓光」光枪式光枪"
+      "zh": "光枪式光枪"
     },
     "TypeGU/MECHGUN": {
-      "zh": "「皓光」光枪式机枪"
+      "zh": "光枪式机枪"
     },
     "TypeHA/HALBERT": {
-      "zh": "「皓光」长刀式长刀"
+      "zh": "长刀式长刀"
     },
     "TypeHA/ROD": {
-      "zh": "「皓光」长刀式长杖"
+      "zh": "长刀式长杖"
     },
     "TypeJS/J-SWORD": {
-      "zh": "「皓光」日本刀式日本刀"
+      "zh": "日本刀式日本刀"
     },
     "TypeJS/SABER": {
-      "zh": "「皓光」日本刀式光剑"
+      "zh": "日本刀式光剑"
     },
     "TypeJS/SLICER": {
-      "zh": "「皓光」日本刀式投刃"
+      "zh": "日本刀式投刃"
     },
     "TypeKN/BLADE": {
-      "zh": "「皓光」拳套式匕首"
+      "zh": "拳套式匕首"
     },
     "TypeKN/CLAW": {
-      "zh": "「皓光」拳套式光子爪"
+      "zh": "拳套式光子爪"
     },
     "TypeME/MECHGUN": {
-      "zh": "「皓光」机枪式机枪"
+      "zh": "机枪式机枪"
     },
     "TypeN-SL/CLAW": {
-      "zh": "「皓光」投刃式光子爪"
+      "zh": "投刃式光子爪"
     },
     "TypeN-SL/J-SWORD": {
-      "zh": "「皓光」投刃式日本刀"
+      "zh": "投刃式日本刀"
     },
     "TypeN-SL/SABER": {
-      "zh": "「皓光」投刃式光剑"
+      "zh": "投刃式光剑"
     },
     "TypeN-SL/SLICER": {
-      "zh": "「皓光」投刃式投刃"
+      "zh": "投刃式投刃"
     },
     "TypeRI/RIFLE": {
-      "zh": "「皓光」步枪式步枪"
+      "zh": "步枪式步枪"
     },
     "TypeRO/HALBERT": {
-      "zh": "「皓光」长杖式长刀"
+      "zh": "长杖式长刀"
     },
     "TypeRO/ROD": {
-      "zh": "「皓光」长杖式长杖"
+      "zh": "长杖式长杖"
     },
     "TypeRO/SWORD": {
-      "zh": "「皓光」长杖式大剑"
+      "zh": "长杖式大剑"
     },
     "TypeSA/SABER": {
-      "zh": "「皓光」光剑式光剑"
+      "zh": "光剑式光剑"
     },
     "TypeSH/SHOT": {
-      "zh": "「皓光」霰弹枪式霰弹枪"
+      "zh": "霰弹枪式霰弹枪"
     },
     "TypeSL/Claw": {
-      "zh": "「皓光」投刃式光子爪"
+      "zh": "投刃式光子爪"
     },
     "TypeSL/Katana": {
-      "zh": "「皓光」投刃式日本刀"
+      "zh": "投刃式日本刀"
     },
     "TypeSL/Saber": {
-      "zh": "「皓光」投刃式光剑"
+      "zh": "投刃式光剑"
     },
     "TypeSL/Slicer": {
-      "zh": "「皓光」投刃式投刃"
+      "zh": "投刃式投刃"
     },
     "TypeSS/SWORDS": {
-      "zh": "「皓光」双刀式双刀"
+      "zh": "双刀式双刀"
     },
     "TypeSW/J-SWORD": {
-      "zh": "「皓光」大剑式日本刀"
+      "zh": "大剑式日本刀"
     },
     "TypeSW/SLICER": {
-      "zh": "「皓光」大剑式投刃"
+      "zh": "大剑式投刃"
     },
     "TypeSW/SWORD": {
-      "zh": "「皓光」大剑式大剑"
+      "zh": "大剑式大剑"
     },
     "TypeWA/WAND": {
-      "zh": "「皓光」魔杖式魔杖"
+      "zh": "魔杖式魔杖"
     },
     "Tyrell's Parasol": {
       "ja": "総督恩賜パラソル",
@@ -5861,7 +5861,7 @@
     },
     "Yahoo!'s engine": {
       "ja": "Ｙａｈｏｏ！エンジン",
-      "zh": "雅虎！引擎"
+      "zh": "雅虎!引擎"
     },
     "Yaksa": {
       "zh": "夜叉"

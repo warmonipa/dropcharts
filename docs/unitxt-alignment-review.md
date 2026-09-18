@@ -16,7 +16,33 @@ identity. The first two focused regressions reproduced the old alias and Claw bu
 before their implementation was changed. Later review expanded UA-01 to Japanese
 boss aliases and the nine DB variants before closing it.
 
-## Identity evidence
+## UN-10 / UN-11 downstream refresh (2026-09-18)
+
+The current refresh follows the confirmed decisions in psobb-localization commit
+`a0081273bb4f523b1c2d7f73613d4a462ed1caa9`. Its Chinese Unitxt SHA-256 is
+`681f4a69785d2a976ac115d2611c6ee81d08790ec3888aa17b69b8f1d487f75c`;
+the English reference SHA-256 is
+`0588bfb68512f73c30720486fc70166a4d88d56ef32ef40e29466b6d616fc774`.
+
+Regeneration updates 46 authority entries and 89 BB, 30 DC and 28 NGC Chinese
+occurrences. It removes the confirmed TypeM prefix, retains the confirmed action
+style names and applies the locked magazine, armor, parts, engine and music-disc
+spellings. English/Japanese data, numeric drops, coordinates and identities are
+unchanged. No upstream resource edit is needed.
+
+The previous offline gate could accept a stale dictionary and equally stale
+generated data. Independent regressions now lock representative UN-10/UN-11
+decisions; `npm run verify:localization` runs all tests and explicitly requires
+the current Unitxt source. These regressions failed against the previous names
+and pass after regeneration. Ordinary `npm test` remains usable without private
+localization resources.
+
+The maintainer approved separate commits, pushes and production deployment on
+2026-09-18. Publish this droptable revision first; Haven must then pin its actual
+immutable commit before its own release. Both Pages workflows must pass, and
+production assets must be checked before publication is reported as complete.
+
+## Original identity evidence
 
 The aligned Chinese Unitxt is psobb-localization commit
 `5a679c5e2f9857f54b83a9b8b415931ac172324e`, `localization/zh/unitxt_j.prs`,
