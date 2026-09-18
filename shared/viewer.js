@@ -87,8 +87,12 @@
     rateTip.id = 'rate-tooltip';
     document.body.appendChild(rateTip);
     var lastCell = null;
+    var dismissed = null;
+    var pendingHide = null;
+    tip.alt = '';
 
-    document.addEventListener('mousemove', function (e) {
+    function previewAt(e) {
+      if (e.target === tip) { clearTimeout(pendingHide); pendingHide = null; return; }
       var rate = e.target.closest('.drop-rate.has-rdr');
       if (rate) {
         rateTip.textContent = rate.dataset.rdr;
@@ -109,26 +113,56 @@
       }
       rateTip.style.display = 'none';
 
-      var option = e.target.closest('.drop-option');
-      if (option) {
-        var img = option.querySelector('.item-tooltip-img');
+      var option = e.target.closest('.drop-option, .monster-link');
+      if (option !== dismissed) dismissed = null;
+      if (option && option !== dismissed) {
+        var img = option.querySelector('.item-tooltip-img, .monster-tooltip-img');
         if (img) {
-          if (option !== lastCell) {
+          clearTimeout(pendingHide);
+          pendingHide = null;
+          var changed = option !== lastCell;
+          if (changed) {
             tip.src = img.src;
             lastCell = option;
           }
+          var wasVisible = tip.style.display === 'block';
           tip.style.display = 'block';
           var x = e.clientX + 12;
           var y = e.clientY - 90;
           if (y < 4) y = e.clientY + 16;
           if (x + 90 > window.innerWidth) x = e.clientX - 92;
-          tip.style.left = x + 'px';
-          tip.style.top = y + 'px';
+          if (changed || !wasVisible) {
+            tip.style.left = Math.max(4, Math.min(x, window.innerWidth - 92)) + 'px';
+            tip.style.top = Math.max(4, Math.min(y, window.innerHeight - 92)) + 'px';
+          }
           return;
         }
       }
-      tip.style.display = 'none';
-      lastCell = null;
+      if (!pendingHide) pendingHide = setTimeout(function () {
+        tip.style.display = 'none';
+        lastCell = null;
+        pendingHide = null;
+      }, 120);
+    }
+    document.addEventListener('mousemove', previewAt);
+    document.addEventListener('focusin', function (e) {
+      var rect = e.target.getBoundingClientRect();
+      previewAt({target: e.target, clientX: rect.right, clientY: rect.bottom});
+    });
+    document.addEventListener('scroll', function () { tip.style.display = 'none'; rateTip.style.display = 'none'; }, true);
+    document.addEventListener('focusout', function () { tip.style.display = 'none'; });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dismissed = lastCell;
+        tip.style.display = 'none';
+        rateTip.style.display = 'none';
+      }
+    });
+    document.addEventListener('mouseout', function (e) {
+      if (!e.relatedTarget) {
+        tip.style.display = 'none';
+        rateTip.style.display = 'none';
+      }
     });
   }
 
@@ -374,6 +408,11 @@
   // --- render ---
 
   function render() {
+    document.querySelectorAll('.btn').forEach(function (button) {
+      button.setAttribute('aria-pressed', button.classList.contains('active') ? 'true' : 'false');
+    });
+    document.getElementById('item-tooltip').style.display = 'none';
+    document.getElementById('rate-tooltip').style.display = 'none';
     saveContext();
     var data = D();
     var enData = DATA_MAP.en;
@@ -425,7 +464,7 @@
       var label = (CFG.hasTypes && currentType === 'boxes') ? (ep + ' - ' + t('boxes')) : ep;
       html += '<div class="episode-section">';
       html += '<div class="episode-title">' + label + '</div>';
-      html += '<div class="table-wrap">';
+      html += '<div class="table-wrap" tabindex="0" role="region" aria-label="' + escapeHtml(ep) + '">';
       html += '<table class="drop-table">';
 
       var colLabel = (CFG.hasTypes && currentType === 'boxes') ? t('location') : t('monster');
@@ -453,10 +492,9 @@
         var profile = monsterProfile(ep, enEntry.name);
         var variant = profile && monsterVariant(profile);
         var displayName = variant ? escapeHtml(variant.names[lang]) : escapeHtml(entry.name).replace(/\//g, '<br>');
-        var portrait = variant ? (variant.image
-          ? '<img class="monster-icon" src="images/monsters/' + variant.image + '" width="48" height="48" alt="" loading="lazy">'
-          : '<span class="monster-icon missing" aria-hidden="true">—</span>') : '';
-        var label = portrait + '<div><span class="mob-name">' + displayName + '</span>' + drTag + '</div>';
+        var portrait = variant && variant.image
+          ? '<img class="monster-tooltip-img" src="images/monsters/' + variant.image + '" alt="" loading="lazy">' : '';
+        var label = '<span class="mob-name">' + displayName + '</span>' + drTag + portrait;
         if (profile) {
           var diff = {Normal:'n', Hard:'h', 'Very Hard':'vh', Ultimate:'u'}[currentDifficulty];
           label = '<a class="monster-link monster-label" href="https://www.psohaven.com/data/enemies/' + profile.id + '.html?diff=' + diff + '&amp;lang=' + lang + '">' + label + '</a>';
@@ -469,12 +507,8 @@
           var enDrops = enEntry && enEntry.drops[di] ? cellDrops(enEntry.drops[di]) : [];
           var hasItem = drops.some(function (drop) { return !!drop.item; });
           var isSsRare = drops.some(function (drop) { return !!drop.ss; });
-          var bg = data.sectionColors[di];
-          var txtColor = contrastText(bg);
-          var subColor = txtColor;
-          var cellStyle = 'background-color:' + bg + ';color:' + txtColor;
           if (hasItem) {
-            html += '<td class="drop-cell' + (isSsRare ? ' ss-rare-cell' : '') + '" style="' + cellStyle + '">';
+            html += '<td class="drop-cell' + (isSsRare ? ' ss-rare-cell' : '') + '">';
             drops.forEach(function (drop, dropIndex) {
               if (!drop.item) return;
               var enItem = enDrops[dropIndex] ? enDrops[dropIndex].item : null;
@@ -491,13 +525,13 @@
               if (drop.rate) {
                 var rdr = typeKey === 'monsters' ? rdrTooltip(drop.rate, entry.dropRate) : '';
                 var rdrAttr = rdr ? ' data-rdr="' + rdr + '"' : '';
-                html += '<span class="drop-rate' + (rdr ? ' has-rdr' : '') + '" style="color:' + subColor + '"' + rdrAttr + '>' + fmtRate(drop.rate) + '</span>';
+                html += '<span class="drop-rate' + (rdr ? ' has-rdr' : '') + '"' + rdrAttr + '>' + fmtRate(drop.rate) + '</span>';
               }
               html += '</span>';
             });
             html += '</td>';
           } else {
-            html += '<td class="drop-cell empty" style="' + cellStyle + '">\u2014</td>';
+            html += '<td class="drop-cell empty">\u2014</td>';
           }
         }
         html += '</tr>';

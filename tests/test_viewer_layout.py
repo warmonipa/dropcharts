@@ -43,15 +43,10 @@ class ViewerLayoutTest(unittest.TestCase):
         self.assertIn("text.normalize('NFKC').toLowerCase()", self.viewer)
         self.assertIn("term.normalize('NFKC').toLowerCase()", self.viewer)
 
-    def test_rainbow_item_links_keep_a_visible_focus_color(self):
-        block = re.search(
-            r"\.drop-cell \.ss-rare-item \{(?P<body>.*?)\n\}",
-            self.styles,
-            re.DOTALL,
-        )
-        self.assertIsNotNone(block)
-        self.assertNotRegex(block.group("body"), r"(?m)^\s*color:\s*transparent")
-        self.assertIn("-webkit-text-fill-color: transparent", block.group("body"))
+    def test_rare_items_keep_readable_text_and_an_explicit_marker(self):
+        self.assertNotIn("-webkit-text-fill-color: transparent", self.styles)
+        self.assertIn(".drop-cell .ss-rare-item::after", self.styles)
+        self.assertIn("content: 'SS'", self.styles)
         self.assertRegex(self.styles, r"a\.item-name:focus-visible\s*\{[^}]*outline:\s*2px solid currentColor")
 
 

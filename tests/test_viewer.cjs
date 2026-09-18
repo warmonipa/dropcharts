@@ -33,6 +33,11 @@ test('every BB row uses the selected form and locally available artwork in all l
       }
     }
     assert.deepEqual(names, expected);
+    const previews = [...app.html().matchAll(/class="monster-tooltip-img" src="images\/monsters\/([^"<>]+)"/g)].map(match => match[1]);
+    const expectedPreviews = Object.entries(app.window.DROP_DATA_EN.data[diff].monsters).flatMap(([episode, rows]) =>
+      rows.map(row => app.window.BB_MONSTERS[episode][row.name][diff === 'Ultimate' ? 'ultimate' : 'normal'].image).filter(Boolean));
+    assert.deepEqual(previews, expectedPreviews);
+    assert.doesNotMatch(app.html(), /class="monster-icon/);
     assert.equal(app.document.documentElement.lang, lang);
   }
 });
@@ -99,7 +104,7 @@ test('alternate form and language searches survive difficulty changes', () => {
 test('box rows retain their location names and have no monster portraits', () => {
   const app = viewer();
   app.window._viewer.setType('boxes');
-  assert.doesNotMatch(app.html(), /class="monster-icon/);
+  assert.doesNotMatch(app.html(), /class="monster-tooltip-img/);
   for (const rows of Object.values(app.window.DROP_DATA_EN.data.Normal.boxes)) for (const row of rows) {
     assert.ok(app.html().includes(row.name.replaceAll('/', '<br>')));
   }
@@ -110,7 +115,7 @@ test('DC and GameCube render without the BB identity map', () => {
     delete app.window.BB_MONSTERS;
     app.window.onSearch();
     assert.match(app.html(), /class="mob-name"/);
-    assert.doesNotMatch(app.html(), /class="monster-icon/);
+    assert.doesNotMatch(app.html(), /class="monster-tooltip-img/);
   }
 });
 test('every BB monster and item links to its Wiki identity with the selected context', () => {

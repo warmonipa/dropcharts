@@ -38,8 +38,9 @@ This project is licensed under the ISC License. See [LICENSE](LICENSE).
 
 ## BB Wiki identities and artwork
 
-BB monster labels and portraits select the Normal or Ultimate form with the
-current difficulty. Names and artwork come from the maintained Haven Wiki
+BB monster labels and hover previews select the Normal or Ultimate form with the
+current difficulty. Portraits appear on hover, using the same preview as items;
+rows show only names and drop rates. Names and artwork come from the maintained Haven Wiki
 catalog; Chinese monster names use this repository's i18n_names.json authority.
 Both forms and all three languages remain searchable. Monster links preserve
 difficulty and language; item links preserve language. Detail URLs use catalog
@@ -55,8 +56,8 @@ npm run update:wiki -- /path/to/ephinea4haven.github.io
 
 Commit the generated bb/data/monsters.js and bb/images/monsters assets together.
 Each portrait records its Ephinea Wiki source page in the generated data. Bulk
-and Death Gunner currently have no verified independent artwork and show a
-placeholder. The sync rejects missing monster identities, translations and item
+and Death Gunner currently have no verified independent artwork and therefore have
+no image preview. The sync rejects missing monster identities, translations and item
 detail IDs; npm test checks every current BB row and link in all languages and
 difficulties. The deploy build uses the checked-in assets and needs no Wiki
 checkout or runtime request to another site to render the table.
@@ -67,3 +68,19 @@ Source discrepancy checked on 2026-09-18: the [Ephinea Wiki Gillchic page](https
 labels EP1 Ultimate as `ギルチッチ` and EP2 Ultimate as `ギルチック`, while the
 Japanese drop-chart row uses `ギルチッチ` in both episodes. The catalog retains
 the Wiki's episode-specific labels; this difference is not silently normalized.
+
+## Reading and interaction
+
+The body uses neutral dark surfaces with light-blue underlined detail links and
+secondary, tabular-number drop rates. Section ID colors remain in column headers;
+SS items use a readable text badge rather than animated rainbow text. Row hover
+and keyboard focus highlight the current row. The table freezes its header and
+monster column within a keyboard-scrollable region. Mobile filters scroll away
+instead of permanently covering the reading area; touch controls retain 44px
+minimum heights.
+
+Monster and item images share a hover/focus preview. Escape dismisses it; unknown
+portraits have no preview. Clicking names still opens details, including on touch
+screens. Images are supplemental and are never required to identify a drop.
+See [the interaction review](docs/viewer-interaction-review.md) for rationale and
+verification boundaries.
