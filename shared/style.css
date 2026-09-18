@@ -15,6 +15,8 @@ body {
   min-height: 100vh;
   line-height: 1.5;
 }
+html:lang(zh) body { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }
+html:lang(ja) body { font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, system-ui, sans-serif; }
 button, input { font-family: inherit; }
 .header {
   background: var(--bg2);
@@ -126,9 +128,9 @@ button, input { font-family: inherit; }
 .drop-table td.monster-name {
   background: #444;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   position: sticky;
   left: 0;
   z-index: 2;
@@ -139,12 +141,12 @@ button, input { font-family: inherit; }
 .drop-table td.monster-name .drop-rate-tag {
   color: #f0c040;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .drop-table td.drop-cell {
   background: #20283b;
   color: #edf3ff;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
@@ -213,7 +215,7 @@ button, input { font-family: inherit; }
   padding-top: 5px;
 }
 .drop-cell .item-name {
-  font-weight: 600;
+  font-weight: 400;
   display: block;
 }
 .drop-cell.ss-rare-cell {
@@ -237,12 +239,12 @@ button, input { font-family: inherit; }
 .drop-cell .drop-rate {
   color: #b8c5d9;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   font-variant-numeric: tabular-nums;
 }
 .drop-cell .drop-rate.has-rdr {
   cursor: help;
-  text-decoration: underline dotted;
+  text-decoration: none;
   text-underline-offset: 2px;
 }
 .drop-cell.empty { color: #a0aec4; }
@@ -270,7 +272,7 @@ button, input { font-family: inherit; }
   z-index: 1;
 }
 .drop-option.highlight > .item-name {
-  font-weight: 800 !important;
+  font-weight: 600 !important;
   text-decoration: underline;
 }
 
@@ -300,8 +302,8 @@ button, input { font-family: inherit; }
 }
 
 .monster-link { color: #b8d8ff; text-decoration: none; }
-.monster-link .mob-name, a.item-name { color: #b8d8ff; text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-.monster-link:hover .mob-name, a.item-name:hover { text-decoration-thickness: 2px; }
+.monster-link .mob-name, a.item-name { color: #b8d8ff; text-decoration: none; text-decoration-color: currentColor; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.monster-link:hover .mob-name, a.item-name:hover, .monster-link:focus-visible .mob-name, a.item-name:focus-visible { text-decoration: underline; }
 .monster-link:focus-visible, a.item-name:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
 
 /* The grid keeps both row identities and column identities in view. */

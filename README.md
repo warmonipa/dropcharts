@@ -71,7 +71,7 @@ the Wiki's episode-specific labels; this difference is not silently normalized.
 
 ## Reading and interaction
 
-The body uses neutral dark surfaces with light-blue underlined detail links and
+The body uses neutral dark surfaces with light-blue detail links (underlined on hover or keyboard focus) and
 secondary, tabular-number drop rates. Section ID colors remain in column headers;
 SS items use a readable text badge rather than animated rainbow text. Row hover
 and keyboard focus highlight the current row. The table freezes its header and
