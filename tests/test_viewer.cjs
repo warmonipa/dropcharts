@@ -144,3 +144,81 @@ test('every BB monster and item links to its Wiki identity with the selected con
     }
   }
 });
+// Area expectations reviewed against Ephinea Wiki; see docs/monster-area-review.md.
+const reviewedAreas = {
+  'Episode 1': {
+    Forest: 'Booma|Gobooma|Gigobooma|Rag Rappy|Al Rappy|Mothmant|Monest|Savage Wolf|Barbarous Wolf|Hildebear|Hildeblue|Dragon',
+    Cave: 'Evil Shark|Pal Shark|Guil Shark|Poison Lily|Nar Lily|Grass Assassin|Nano Dragon|Pofuilly Slime|Pouilly Slime|Pan Arms|Migium|Hidoom|De Rol Le',
+    Mine: 'Gilchic|Dubchic|Canadine|Canane|Sinow Beat|Sinow Gold|Garanz|Vol Opt',
+    Ruins: 'Dimenian|La Dimenian|So Dimenian|Delsaber|Claw|Bulk|Bulclaw|Dark Belra|Dark Gunner|Death Gunner|Chaos Sorcerer|Chaos Bringer|Dark Falz',
+  },
+  'Episode 2': {
+    'VR Temple': 'Dimenian|La Dimenian|So Dimenian|Rag Rappy|Love Rappy|Egg Rappy|Halo Rappy|St. Rappy|Hildebear|Hildeblue|Mothmant|Monest|Grass Assassin|Poison Lily|Nar Lily|Dark Belra|Barba Ray',
+    'VR Spaceship': 'Dubchic|Gilchic|Savage Wolf|Barbarous Wolf|Pan Arms|Migium|Hidoom|Garanz|Delsaber|Chaos Sorcerer|Gol Dragon',
+    'Central Control Area': 'Ul Gibbon|Zol Gibbon|Merillia|Meriltas|Gee|Sinow Berill|Sinow Spigell|Mericarol|Merikle|Mericus|Gibbles|Gi Gue|Gal Gryphon',
+    Seabed: 'Dolmolm|Dolmdarl|Recon|Morfos|Sinow Zoa|Sinow Zele|Deldepth|Delbiter|Olga Flow',
+    Tower: 'Ill Gill|Del Lily|Epsilon',
+  },
+  'Episode 4': {
+    Crater: 'Boota|Ze Boota|Ba Boota|Astark|Dorphon|Dorphon Eclair',
+    'Crater / Subterranean Desert': 'Sand Rappy|Del Rappy|Satellite Lizard|Yowie|Zu|Pazuzu',
+    'Subterranean Desert': 'Goran|Pyro Goran|Goran Detonator|Merissa A|Merissa AA|Girtablulu|Saint Million|Shambertin|Kondrieu',
+  },
+};
+
+test('all BB rows render under reviewed areas in every language and difficulty', () => {
+  for (const lang of ['en', 'ja', 'zh']) for (const diff of ['Normal', 'Hard', 'Very Hard', 'Ultimate']) {
+    const app = viewer('bb', `?lang=${lang}&diff=${diff}`);
+    const expected = [];
+    for (const [ep, rows] of Object.entries(app.window.DROP_DATA_EN.data[diff].monsters)) {
+      const areas = new Map(Object.entries(reviewedAreas[ep]).flatMap(([area, names]) => names.split('|').map(name => [name, area])));
+      const visited = new Set();
+      let previous;
+      for (const row of rows) {
+        const area = areas.get(row.name.split('/')[0]);
+        assert.ok(area, `${ep}: ${row.name}`);
+        if (area !== previous) {
+          assert.ok(!visited.has(area), `split area: ${ep}/${area}`);
+          visited.add(area);
+          previous = area;
+        }
+        expected.push(area);
+      }
+    }
+    const actual = [];
+    let area;
+    for (const match of app.html().matchAll(/class="area-label">([^<]+)<|class="mob-name">/g)) {
+      if (match[1]) area = match[1];
+      else actual.push(area);
+    }
+    assert.deepEqual(actual, expected);
+  }
+});
+
+test('every version and difficulty resolves each monster without inheriting the previous area', () => {
+  const context = vm.createContext({window: {}});
+  const source = fs.readFileSync(path.join(root, 'shared/viewer.js'), 'utf8');
+  vm.runInContext(source.replace(/\}\)\(\);\s*$/, 'window.testAreaFor = areaFor; })();'), context);
+  for (const version of ['bb', 'dc', 'ngc']) {
+    vm.runInContext(fs.readFileSync(path.join(root, version, 'data/en.js'), 'utf8'), context);
+    for (const [diff, types] of Object.entries(context.window.DROP_DATA_EN.data)) {
+      for (const [ep, rows] of Object.entries(types.monsters)) {
+        const visited = new Set();
+        let previous;
+        for (const row of rows) {
+          const area = context.window.testAreaFor(ep, row.name);
+          assert.ok(area, `${version}/${diff}/${ep}: ${row.name}`);
+          if (area !== previous) {
+            assert.ok(!visited.has(area), `${version}/${diff}/${ep}: repeated ${area}`);
+            visited.add(area);
+            previous = area;
+          }
+        }
+      }
+    }
+  }
+  assert.equal(context.window.testAreaFor('Episode 2', 'Recon'), 'Seabed');
+  assert.equal(context.window.testAreaFor('Episode 1', 'Dark Falz?'), 'Ruins');
+  assert.equal(context.window.testAreaFor('Episode 2', 'Olga Flow?'), 'Seabed');
+  assert.equal(context.window.testAreaFor('Episode 2', 'Hildelt'), 'VR Temple');
+});

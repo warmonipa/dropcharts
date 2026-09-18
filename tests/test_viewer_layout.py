@@ -43,10 +43,15 @@ class ViewerLayoutTest(unittest.TestCase):
         self.assertIn("text.normalize('NFKC').toLowerCase()", self.viewer)
         self.assertIn("term.normalize('NFKC').toLowerCase()", self.viewer)
 
-    def test_rare_items_keep_readable_text_and_an_explicit_marker(self):
-        self.assertNotIn("-webkit-text-fill-color: transparent", self.styles)
-        self.assertIn(".drop-cell .ss-rare-item::after", self.styles)
-        self.assertIn("content: 'SS'", self.styles)
+    def test_rare_items_use_rainbow_text_with_reduced_motion_support(self):
+        self.assertIn("-webkit-text-fill-color: transparent", self.styles)
+        self.assertIn("animation: ssRareRainbow 4s linear infinite", self.styles)
+        self.assertIn("@keyframes ssRareRainbow", self.styles)
+        self.assertRegex(
+            self.styles,
+            r"@media \(prefers-reduced-motion: reduce\)\s*\{\s*"
+            r"\.drop-cell \.ss-rare-item\s*\{[^}]*animation: none",
+        )
         self.assertRegex(self.styles, r"a\.item-name:focus-visible\s*\{[^}]*outline:\s*2px solid currentColor")
 
 

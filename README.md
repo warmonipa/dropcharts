@@ -71,9 +71,11 @@ the Wiki's episode-specific labels; this difference is not silently normalized.
 
 ## Reading and interaction
 
-The body uses neutral dark surfaces with light-blue detail links (underlined on hover or keyboard focus) and
-secondary, tabular-number drop rates. Section ID colors remain in column headers;
-SS items use a readable text badge rather than animated rainbow text. Row hover
+The original blue/purple interface palette is preserved. Names use soft-white text,
+with secondary gray, tabular-number probabilities. Name links change color on hover
+or keyboard focus without underlines; keyboard focus retains a visible outline.
+Section ID colors remain in column headers. SS items use animated rainbow text
+without an extra badge; reduced-motion preferences keep the rainbow static. Row hover
 and keyboard focus highlight the current row. The table freezes its header and
 monster column within a keyboard-scrollable region. Mobile filters scroll away
 instead of permanently covering the reading area; touch controls retain 44px
@@ -84,3 +86,6 @@ portraits have no preview. Clicking names still opens details, including on touc
 screens. Images are supplemental and are never required to identify a drop.
 See [the interaction review](docs/viewer-interaction-review.md) for rationale and
 verification boundaries.
+
+Monster area groups follow the [area review](docs/monster-area-review.md): Recon is
+in Seabed, and six Episode 4 enemies share a Crater / Subterranean Desert group.

@@ -51,9 +51,9 @@ Select `%` or `Fraction` to change the probability format.
 - **%:** Percentage, such as `0.45%`
 - **Fraction:** The game's underlying fractional probability, such as `1/222`
 
-For monster rows, the yellow probability below the monster name is the Drop Anything Rate
+For monster rows, the probability below the monster name is the Drop Anything Rate
 (DAR). The probability below an item is its final per-kill Drop Rate (DR), where
-`DR = DAR × RDR`. Item rates with a dotted underline can be hovered to show the inferred Rare
+`DR = DAR × RDR`. Where DAR is available, hover an item rate to show the inferred Rare
 Drop Rate (RDR). The tooltip uses `≈` because the source DAR and DR values are rounded before
 the viewer calculates `RDR = DR / DAR`. RDR tooltips do not apply to box rows.
 
@@ -99,3 +99,15 @@ Blue Burst is the most comprehensive version in this viewer. Compared with NGC, 
 ## Data sources
 
 English and Japanese BB data is scraped from the [Ephinea Drop Charts](https://ephinea.pioneer2.net/drop-charts). Chinese names are generated from psobb-localization's unified mixed-width Unitxt resource.
+
+### Text and rarity styling
+
+The original interface colors are preserved. Names use soft-white text and
+probabilities use secondary gray text. Name links have no underlines, including
+hover, focus and search matches. Links retain hover/focus color feedback and
+keyboard focus outlines. SS items use animated rainbow names without a separate
+SS badge; reduced-motion preferences keep the gradient static.
+
+Recon belongs to Seabed. Episode 4 uses a shared `Crater / Subterranean Desert`
+group for Sand Rappy, Del Rappy, Satellite Lizard, Yowie, Zu and Pazuzu. These
+are chart groups rather than exhaustive quest spawn lists.

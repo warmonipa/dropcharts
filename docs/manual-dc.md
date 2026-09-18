@@ -34,9 +34,9 @@ Enter text in the search box to filter monster and item names as you type. Match
 
 DC drop rates are displayed as percentages, such as `0.134277%`.
 
-The yellow probability below the monster name is the Drop Anything Rate (DAR). The probability
-below an item is its final per-kill Drop Rate (DR), where `DR = DAR × RDR`. Item rates with a
-dotted underline can be hovered to show the inferred Rare Drop Rate (RDR). The tooltip uses
+The probability below the monster name is the Drop Anything Rate (DAR). The probability
+below an item is its final per-kill Drop Rate (DR), where `DR = DAR × RDR`. Where DAR is available,
+hover an item rate to show the inferred Rare Drop Rate (RDR). The tooltip uses
 `≈` because the source DAR and DR values are rounded before the viewer calculates
 `RDR = DR / DAR`.
 
@@ -65,3 +65,11 @@ Rare drops exclusive to the Dreamcast version include:
 - **Four Gods shields:** Suzaku, Genbu, Byakko, and Seiryu
 
 These items cannot be obtained in the BB or NGC versions.
+
+### Text and rarity styling
+
+The original interface colors are preserved. Names use soft-white text and
+probabilities use secondary gray text. Name links have no underlines, including
+hover, focus and search matches. Links retain hover/focus color feedback and
+keyboard focus outlines. SS items use animated rainbow names without a separate
+SS badge; reduced-motion preferences keep the gradient static.

@@ -114,7 +114,7 @@ This preserves the Ultimate-tier names expected by the DC and NGC derived datase
 | `reorder.py` | `bb/data/*.js` in all languages | The same files in canonical monster order |
 
 - Ephinea's source pages use their own monster order. `reorder.py` rearranges each area into common enemies, elite enemies, then bosses, matching DC and NGC.
-- `ORDER` in `reorder.py` is the canonical definition. Episodes 1 and 2 follow DC/NGC, while Episode 4's Crater grouping mirrors Episode 1's Forest structure. Only BB is reordered because DC and NGC already arrive in canonical order.
+- `ORDER` in `reorder.py` is the canonical definition. Episodes 1 and 2 follow the reviewed area groups (including Recon in Seabed); Episode 4 separates Crater-only enemies, enemies shared with Subterranean Desert, and desert enemies/bosses. See [the area review](monster-area-review.md). Only BB is reordered because DC and NGC already arrive in canonical order.
 - The permutation is calculated from English data and applied identically to English, Japanese, and Chinese. Unknown monsters produce a warning and remain at the end so no data is discarded.
 - This step runs automatically at the end of `update:bb`.
 
@@ -279,3 +279,17 @@ droptable before updating Haven's immutable authority reference and publishing
 Haven. The initial release used portrait placeholders for Bulk and Death Gunner.
 The hover-preview revision omits previews for missing artwork; see
 [the interaction review](viewer-interaction-review.md).
+
+## Source comparison on 2026-09-19
+
+A read-only comparison with Ephinea's live English Normal, Hard, Very Hard and
+Ultimate drop charts covered all three episodes, monsters and boxes: 596 rows
+and 5,960 Section ID cells. Rows were matched by difficulty, type, episode and
+name, ignoring local ordering and derived SS flags. All item/rate pairs and row
+DAR values matched, with no added or removed rows. The area fixes only reorder
+existing rows in the three BB language files; they do not change drop content.
+
+The BB English file's generation header remains 2026-07-17. This comparison did
+not regenerate the source data. DC/NGC retain their 2026-04-10 generation headers
+and pinned historical HTML sources; this audit did not verify them against a
+current external source.

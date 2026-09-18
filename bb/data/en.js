@@ -3017,51 +3017,6 @@ window.DROP_DATA_EN = {
             "dropRate": "1/3.3"
           },
           {
-            "name": "Recon/Recon",
-            "drops": [
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              }
-            ]
-          },
-          {
             "name": "Savage Wolf/Gulgus",
             "drops": [
               {
@@ -4166,6 +4121,51 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Recon/Recon",
+            "drops": [
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              }
+            ]
+          },
+          {
             "name": "Morfos/Morfos",
             "drops": [
               {
@@ -4716,6 +4716,143 @@ window.DROP_DATA_EN = {
             ]
           },
           {
+            "name": "Astark",
+            "drops": [
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              }
+            ]
+          },
+          {
+            "name": "Dorphon",
+            "drops": [
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              },
+              {
+                "item": "AddSlot",
+                "rate": "1/256"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon Eclair",
+            "drops": [
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              }
+            ],
+            "dropRate": "1/1"
+          },
+          {
             "name": "Sand Rappy",
             "drops": [
               {
@@ -4944,143 +5081,6 @@ window.DROP_DATA_EN = {
           },
           {
             "name": "Pazuzu",
-            "drops": [
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              }
-            ],
-            "dropRate": "1/1"
-          },
-          {
-            "name": "Astark",
-            "drops": [
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              }
-            ]
-          },
-          {
-            "name": "Dorphon",
-            "drops": [
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              },
-              {
-                "item": "AddSlot",
-                "rate": "1/256"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon Eclair",
             "drops": [
               {
                 "item": "Photon Crystal",
@@ -10858,51 +10858,6 @@ window.DROP_DATA_EN = {
             "dropRate": "1/3.3"
           },
           {
-            "name": "Recon/Recon",
-            "drops": [
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              }
-            ]
-          },
-          {
             "name": "Savage Wolf/Gulgus",
             "drops": [
               {
@@ -12007,6 +11962,51 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Recon/Recon",
+            "drops": [
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              }
+            ]
+          },
+          {
             "name": "Morfos/Morfos",
             "drops": [
               {
@@ -12560,6 +12560,144 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Astark",
+            "drops": [
+              {
+                "item": "DB's Saber",
+                "rate": "1/320"
+              },
+              {
+                "item": "Justy-23ST",
+                "rate": "1/256"
+              },
+              {
+                "item": "Flowen's Sword",
+                "rate": "1/256"
+              },
+              {
+                "item": "Brave Hammer",
+                "rate": "1/256"
+              },
+              {
+                "item": "Custom Ray ver.OO",
+                "rate": "1/256"
+              },
+              {
+                "item": "Talis",
+                "rate": "1/106.7"
+              },
+              {
+                "item": "Guilty Light",
+                "rate": "1/256"
+              },
+              {
+                "item": "DB's Saber",
+                "rate": "1/320"
+              },
+              {
+                "item": "Custom Ray ver.OO",
+                "rate": "1/256"
+              },
+              {
+                "item": "Flowen's Sword",
+                "rate": "1/256"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon",
+            "drops": [
+              {
+                "item": "Meteor Smash",
+                "rate": "1/49.2"
+              },
+              {
+                "item": "Varista",
+                "rate": "1/98.5"
+              },
+              {
+                "item": "Stag Cutlery",
+                "rate": "1/64"
+              },
+              {
+                "item": "H&S25 Justice",
+                "rate": "1/106.7"
+              },
+              {
+                "item": "Cross Scar",
+                "rate": "1/91.4"
+              },
+              {
+                "item": "M&A60 Vise",
+                "rate": "1/98.5"
+              },
+              {
+                "item": "Stag Cutlery",
+                "rate": "1/64"
+              },
+              {
+                "item": "Cross Scar",
+                "rate": "1/91.4"
+              },
+              {
+                "item": "Bravace",
+                "rate": "1/80"
+              },
+              {
+                "item": "Meteor Smash",
+                "rate": "1/49.2"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon Eclair",
+            "drops": [
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              }
+            ],
+            "dropRate": "1/1"
+          },
+          {
             "name": "Sand Rappy",
             "drops": [
               {
@@ -12791,144 +12929,6 @@ window.DROP_DATA_EN = {
           },
           {
             "name": "Pazuzu",
-            "drops": [
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              }
-            ],
-            "dropRate": "1/1"
-          },
-          {
-            "name": "Astark",
-            "drops": [
-              {
-                "item": "DB's Saber",
-                "rate": "1/320"
-              },
-              {
-                "item": "Justy-23ST",
-                "rate": "1/256"
-              },
-              {
-                "item": "Flowen's Sword",
-                "rate": "1/256"
-              },
-              {
-                "item": "Brave Hammer",
-                "rate": "1/256"
-              },
-              {
-                "item": "Custom Ray ver.OO",
-                "rate": "1/256"
-              },
-              {
-                "item": "Talis",
-                "rate": "1/106.7"
-              },
-              {
-                "item": "Guilty Light",
-                "rate": "1/256"
-              },
-              {
-                "item": "DB's Saber",
-                "rate": "1/320"
-              },
-              {
-                "item": "Custom Ray ver.OO",
-                "rate": "1/256"
-              },
-              {
-                "item": "Flowen's Sword",
-                "rate": "1/256"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon",
-            "drops": [
-              {
-                "item": "Meteor Smash",
-                "rate": "1/49.2"
-              },
-              {
-                "item": "Varista",
-                "rate": "1/98.5"
-              },
-              {
-                "item": "Stag Cutlery",
-                "rate": "1/64"
-              },
-              {
-                "item": "H&S25 Justice",
-                "rate": "1/106.7"
-              },
-              {
-                "item": "Cross Scar",
-                "rate": "1/91.4"
-              },
-              {
-                "item": "M&A60 Vise",
-                "rate": "1/98.5"
-              },
-              {
-                "item": "Stag Cutlery",
-                "rate": "1/64"
-              },
-              {
-                "item": "Cross Scar",
-                "rate": "1/91.4"
-              },
-              {
-                "item": "Bravace",
-                "rate": "1/80"
-              },
-              {
-                "item": "Meteor Smash",
-                "rate": "1/49.2"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon Eclair",
             "drops": [
               {
                 "item": "Photon Crystal",
@@ -19320,51 +19320,6 @@ window.DROP_DATA_EN = {
             "dropRate": "1/3.3"
           },
           {
-            "name": "Recon/Recon",
-            "drops": [
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              },
-              {
-                "item": "",
-                "rate": ""
-              }
-            ]
-          },
-          {
             "name": "Savage Wolf/Gulgus",
             "drops": [
               {
@@ -20469,6 +20424,51 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Recon/Recon",
+            "drops": [
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              },
+              {
+                "item": "",
+                "rate": ""
+              }
+            ]
+          },
+          {
             "name": "Morfos/Morfos",
             "drops": [
               {
@@ -21022,6 +21022,144 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Astark",
+            "drops": [
+              {
+                "item": "Snake Spire",
+                "rate": "1/438.1"
+              },
+              {
+                "item": "Infantry Mantle",
+                "rate": "1/438.1"
+              },
+              {
+                "item": "Last Survivor",
+                "rate": "1/219.0"
+              },
+              {
+                "item": "Caduceus",
+                "rate": "1/370.7"
+              },
+              {
+                "item": "Bloody Art",
+                "rate": "1/370.7"
+              },
+              {
+                "item": "Caduceus",
+                "rate": "1/370.7"
+              },
+              {
+                "item": "Mahu",
+                "rate": "1/267.7"
+              },
+              {
+                "item": "Infantry Mantle",
+                "rate": "1/438.1"
+              },
+              {
+                "item": "Heavenly/Arms",
+                "rate": "1/1070.8"
+              },
+              {
+                "item": "Diska of Liberator",
+                "rate": "1/370.7"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon",
+            "drops": [
+              {
+                "item": "Red Scorpio",
+                "rate": "1/393.9"
+              },
+              {
+                "item": "Guilty Light",
+                "rate": "1/49.2"
+              },
+              {
+                "item": "Cursed Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Select Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Select Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Cursed Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Cursed Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Select Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Tempest Cloak",
+                "rate": "1/1861.8"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/196.9"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon Eclair",
+            "drops": [
+              {
+                "item": "God/Battle",
+                "rate": "1/2"
+              },
+              {
+                "item": "Holy Ray",
+                "rate": "1/2"
+              },
+              {
+                "item": "Chain Sawd",
+                "rate": "1/2"
+              },
+              {
+                "item": "Cure/Confuse",
+                "rate": "1/2"
+              },
+              {
+                "item": "Heavenly/Power",
+                "rate": "1/2"
+              },
+              {
+                "item": "Heavenly/Mind",
+                "rate": "1/2"
+              },
+              {
+                "item": "Heart of Diska of Liberator",
+                "rate": "1/9.8"
+              },
+              {
+                "item": "Photon Crystal",
+                "rate": "1/2"
+              },
+              {
+                "item": "Congeal Cloak",
+                "rate": "1/6.4"
+              },
+              {
+                "item": "Heavenly/Body",
+                "rate": "1/2"
+              }
+            ],
+            "dropRate": "1/1"
+          },
+          {
             "name": "Sand Rappy",
             "drops": [
               {
@@ -21292,144 +21430,6 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Tanegashima",
-                "rate": "1/2"
-              }
-            ],
-            "dropRate": "1/1"
-          },
-          {
-            "name": "Astark",
-            "drops": [
-              {
-                "item": "Snake Spire",
-                "rate": "1/438.1"
-              },
-              {
-                "item": "Infantry Mantle",
-                "rate": "1/438.1"
-              },
-              {
-                "item": "Last Survivor",
-                "rate": "1/219.0"
-              },
-              {
-                "item": "Caduceus",
-                "rate": "1/370.7"
-              },
-              {
-                "item": "Bloody Art",
-                "rate": "1/370.7"
-              },
-              {
-                "item": "Caduceus",
-                "rate": "1/370.7"
-              },
-              {
-                "item": "Mahu",
-                "rate": "1/267.7"
-              },
-              {
-                "item": "Infantry Mantle",
-                "rate": "1/438.1"
-              },
-              {
-                "item": "Heavenly/Arms",
-                "rate": "1/1070.8"
-              },
-              {
-                "item": "Diska of Liberator",
-                "rate": "1/370.7"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon",
-            "drops": [
-              {
-                "item": "Red Scorpio",
-                "rate": "1/393.9"
-              },
-              {
-                "item": "Guilty Light",
-                "rate": "1/49.2"
-              },
-              {
-                "item": "Cursed Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Select Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Select Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Cursed Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Cursed Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Select Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Tempest Cloak",
-                "rate": "1/1861.8"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/196.9"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon Eclair",
-            "drops": [
-              {
-                "item": "God/Battle",
-                "rate": "1/2"
-              },
-              {
-                "item": "Holy Ray",
-                "rate": "1/2"
-              },
-              {
-                "item": "Chain Sawd",
-                "rate": "1/2"
-              },
-              {
-                "item": "Cure/Confuse",
-                "rate": "1/2"
-              },
-              {
-                "item": "Heavenly/Power",
-                "rate": "1/2"
-              },
-              {
-                "item": "Heavenly/Mind",
-                "rate": "1/2"
-              },
-              {
-                "item": "Heart of Diska of Liberator",
-                "rate": "1/9.8"
-              },
-              {
-                "item": "Photon Crystal",
-                "rate": "1/2"
-              },
-              {
-                "item": "Congeal Cloak",
-                "rate": "1/6.4"
-              },
-              {
-                "item": "Heavenly/Body",
                 "rate": "1/2"
               }
             ],
@@ -28388,52 +28388,6 @@ window.DROP_DATA_EN = {
             "dropRate": "1/3.3"
           },
           {
-            "name": "Recon/Recon",
-            "drops": [
-              {
-                "item": "Maser Beam",
-                "rate": "1/3150.8"
-              },
-              {
-                "item": "Justy-23ST",
-                "rate": "1/640"
-              },
-              {
-                "item": "Guilty Light",
-                "rate": "1/640"
-              },
-              {
-                "item": "Twin Brand",
-                "rate": "1/3150.8"
-              },
-              {
-                "item": "L&K14 Combat",
-                "rate": "1/640"
-              },
-              {
-                "item": "Storm Wand: Indra",
-                "rate": "1/640"
-              },
-              {
-                "item": "Stag Cutlery",
-                "rate": "1/640"
-              },
-              {
-                "item": "Cross Scar",
-                "rate": "1/640"
-              },
-              {
-                "item": "Guilty Light",
-                "rate": "1/640"
-              },
-              {
-                "item": "L&K14 Combat",
-                "rate": "1/640"
-              }
-            ],
-            "dropRate": "1/10"
-          },
-          {
             "name": "Savage Wolf/Gulgus",
             "drops": [
               {
@@ -29550,6 +29504,52 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Recon/Recon",
+            "drops": [
+              {
+                "item": "Maser Beam",
+                "rate": "1/3150.8"
+              },
+              {
+                "item": "Justy-23ST",
+                "rate": "1/640"
+              },
+              {
+                "item": "Guilty Light",
+                "rate": "1/640"
+              },
+              {
+                "item": "Twin Brand",
+                "rate": "1/3150.8"
+              },
+              {
+                "item": "L&K14 Combat",
+                "rate": "1/640"
+              },
+              {
+                "item": "Storm Wand: Indra",
+                "rate": "1/640"
+              },
+              {
+                "item": "Stag Cutlery",
+                "rate": "1/640"
+              },
+              {
+                "item": "Cross Scar",
+                "rate": "1/640"
+              },
+              {
+                "item": "Guilty Light",
+                "rate": "1/640"
+              },
+              {
+                "item": "L&K14 Combat",
+                "rate": "1/640"
+              }
+            ],
+            "dropRate": "1/10"
+          },
+          {
             "name": "Morfos/Morfos",
             "drops": [
               {
@@ -30113,6 +30113,144 @@ window.DROP_DATA_EN = {
             "dropRate": "1/2.9"
           },
           {
+            "name": "Astark",
+            "drops": [
+              {
+                "item": "Yata Mirror",
+                "rate": "1/401.6"
+              },
+              {
+                "item": "Sacred Duster",
+                "rate": "1/438.1"
+              },
+              {
+                "item": "Yasakani Magatama",
+                "rate": "1/438.1"
+              },
+              {
+                "item": "Limiter",
+                "rate": "1/2409.4"
+              },
+              {
+                "item": "Yata Mirror",
+                "rate": "1/401.6"
+              },
+              {
+                "item": "Heavenly/Mind",
+                "rate": "1/876.1"
+              },
+              {
+                "item": "Striker Plus",
+                "rate": "1/688.4"
+              },
+              {
+                "item": "Musashi",
+                "rate": "1/219.0"
+              },
+              {
+                "item": "Striker Plus",
+                "rate": "1/688.4"
+              },
+              {
+                "item": "Yasakani Magatama",
+                "rate": "1/438.1"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon",
+            "drops": [
+              {
+                "item": "Gratia",
+                "rate": "1/426.7"
+              },
+              {
+                "item": "Black Hound Cuirass",
+                "rate": "1/320"
+              },
+              {
+                "item": "Electro Frame",
+                "rate": "1/1024"
+              },
+              {
+                "item": "Heavenly/HP",
+                "rate": "1/426.7"
+              },
+              {
+                "item": "Heavenly/Battle",
+                "rate": "1/284.4"
+              },
+              {
+                "item": "Heavenly/HP",
+                "rate": "1/426.7"
+              },
+              {
+                "item": "Heavenly/Battle",
+                "rate": "1/284.4"
+              },
+              {
+                "item": "Heavenly/Battle",
+                "rate": "1/284.4"
+              },
+              {
+                "item": "Black Hound Cuirass",
+                "rate": "1/320"
+              },
+              {
+                "item": "Black Hound Cuirass",
+                "rate": "1/320"
+              }
+            ],
+            "dropRate": "1/1.2"
+          },
+          {
+            "name": "Dorphon Eclair",
+            "drops": [
+              {
+                "item": "Lame d'Argent",
+                "rate": "1/3.2"
+              },
+              {
+                "item": "Cannon Rouge",
+                "rate": "1/2"
+              },
+              {
+                "item": "Liberta Kit",
+                "rate": "1/4"
+              },
+              {
+                "item": "Asteron Belt",
+                "rate": "1/2"
+              },
+              {
+                "item": "Rage de Feu",
+                "rate": "1/2"
+              },
+              {
+                "item": "Clio",
+                "rate": "1/2"
+              },
+              {
+                "item": "Crimson Coat",
+                "rate": "1/2"
+              },
+              {
+                "item": "Blue Odoshi Violet Nimaidou",
+                "rate": "1/2"
+              },
+              {
+                "item": "Cannon Rouge",
+                "rate": "1/2"
+              },
+              {
+                "item": "Liberta Kit",
+                "rate": "1/4"
+              }
+            ],
+            "dropRate": "1/1"
+          },
+          {
             "name": "Sand Rappy",
             "drops": [
               {
@@ -30384,144 +30522,6 @@ window.DROP_DATA_EN = {
               {
                 "item": "Ophelie Seize",
                 "rate": "1/2"
-              }
-            ],
-            "dropRate": "1/1"
-          },
-          {
-            "name": "Astark",
-            "drops": [
-              {
-                "item": "Yata Mirror",
-                "rate": "1/401.6"
-              },
-              {
-                "item": "Sacred Duster",
-                "rate": "1/438.1"
-              },
-              {
-                "item": "Yasakani Magatama",
-                "rate": "1/438.1"
-              },
-              {
-                "item": "Limiter",
-                "rate": "1/2409.4"
-              },
-              {
-                "item": "Yata Mirror",
-                "rate": "1/401.6"
-              },
-              {
-                "item": "Heavenly/Mind",
-                "rate": "1/876.1"
-              },
-              {
-                "item": "Striker Plus",
-                "rate": "1/688.4"
-              },
-              {
-                "item": "Musashi",
-                "rate": "1/219.0"
-              },
-              {
-                "item": "Striker Plus",
-                "rate": "1/688.4"
-              },
-              {
-                "item": "Yasakani Magatama",
-                "rate": "1/438.1"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon",
-            "drops": [
-              {
-                "item": "Gratia",
-                "rate": "1/426.7"
-              },
-              {
-                "item": "Black Hound Cuirass",
-                "rate": "1/320"
-              },
-              {
-                "item": "Electro Frame",
-                "rate": "1/1024"
-              },
-              {
-                "item": "Heavenly/HP",
-                "rate": "1/426.7"
-              },
-              {
-                "item": "Heavenly/Battle",
-                "rate": "1/284.4"
-              },
-              {
-                "item": "Heavenly/HP",
-                "rate": "1/426.7"
-              },
-              {
-                "item": "Heavenly/Battle",
-                "rate": "1/284.4"
-              },
-              {
-                "item": "Heavenly/Battle",
-                "rate": "1/284.4"
-              },
-              {
-                "item": "Black Hound Cuirass",
-                "rate": "1/320"
-              },
-              {
-                "item": "Black Hound Cuirass",
-                "rate": "1/320"
-              }
-            ],
-            "dropRate": "1/1.2"
-          },
-          {
-            "name": "Dorphon Eclair",
-            "drops": [
-              {
-                "item": "Lame d'Argent",
-                "rate": "1/3.2"
-              },
-              {
-                "item": "Cannon Rouge",
-                "rate": "1/2"
-              },
-              {
-                "item": "Liberta Kit",
-                "rate": "1/4"
-              },
-              {
-                "item": "Asteron Belt",
-                "rate": "1/2"
-              },
-              {
-                "item": "Rage de Feu",
-                "rate": "1/2"
-              },
-              {
-                "item": "Clio",
-                "rate": "1/2"
-              },
-              {
-                "item": "Crimson Coat",
-                "rate": "1/2"
-              },
-              {
-                "item": "Blue Odoshi Violet Nimaidou",
-                "rate": "1/2"
-              },
-              {
-                "item": "Cannon Rouge",
-                "rate": "1/2"
-              },
-              {
-                "item": "Liberta Kit",
-                "rate": "1/4"
               }
             ],
             "dropRate": "1/1"

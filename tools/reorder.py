@@ -11,9 +11,8 @@ source.
 
 The canonical order is defined per episode below, keyed on the monster's
 English name (the part before '/' in BB's combined "Normal/Ultimate"
-name). Episode 1/2 follow the DC/NGC order; Episode 4's Crater segment
-mirrors the Episode 1 Forest progression (it is a reskin), with the
-Subterranean Desert and bosses kept as-is.
+name). Episode 1/2 follow the DC/NGC area order; Episode 4 separates Crater-only
+monsters, monsters shared with the desert, and desert monsters/bosses.
 
 ja.js / zh.js entry names are localized, so they can't be keyed by English
 name directly. Instead the index permutation is computed once from en.js
@@ -51,24 +50,22 @@ ORDER = {
         "Love Rappy", "Egg Rappy", "Halo Rappy", "St. Rappy",
         "Hildebear", "Hildeblue", "Mothmant", "Monest",
         "Grass Assassin", "Poison Lily", "Nar Lily", "Dark Belra",
-        "Barba Ray", "Dubchic", "Gilchic", "Recon",
+        "Barba Ray", "Dubchic", "Gilchic",
         "Savage Wolf", "Barbarous Wolf", "Pan Arms", "Migium",
         "Hidoom", "Garanz", "Delsaber", "Chaos Sorcerer",
         "Gol Dragon", "Ul Gibbon", "Zol Gibbon", "Merillia",
         "Meriltas", "Gee", "Sinow Berill", "Sinow Spigell",
         "Mericarol", "Merikle", "Mericus", "Gibbles",
         "Gi Gue", "Gal Gryphon", "Dolmolm", "Dolmdarl",
-        "Morfos", "Sinow Zoa", "Sinow Zele", "Deldepth",
+        "Recon", "Morfos", "Sinow Zoa", "Sinow Zele", "Deldepth",
         "Delbiter", "Olga Flow", "Ill Gill", "Del Lily",
         "Epsilon",
     ],
     "Episode 4": [
-        # Crater -- mirrors Ep1 Forest reskin (Boota=Booma, Sand Rappy=Rag
-        # Rappy, Satellite Lizard=Savage Wolf, Dorphon=Hildebear), with the
-        # Crater-only Zu/Pazuzu/Astark placed before the Dorphon pair.
-        "Boota", "Ze Boota", "Ba Boota", "Sand Rappy",
-        "Del Rappy", "Satellite Lizard", "Yowie", "Zu",
-        "Pazuzu", "Astark", "Dorphon", "Dorphon Eclair",
+        # Crater-only monsters, then monsters shared with the desert.
+        # https://wiki.pioneer2.net/w/Template:Episode4Monsters
+        "Boota", "Ze Boota", "Ba Boota", "Astark", "Dorphon", "Dorphon Eclair",
+        "Sand Rappy", "Del Rappy", "Satellite Lizard", "Yowie", "Zu", "Pazuzu",
         # Subterranean Desert + bosses (kept as scraped)
         "Goran", "Pyro Goran", "Goran Detonator", "Merissa A",
         "Merissa AA", "Girtablulu", "Saint Million", "Shambertin",
