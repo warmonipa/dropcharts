@@ -118,16 +118,16 @@ This preserves the Ultimate-tier names expected by the DC and NGC derived datase
 - The permutation is calculated from English data and applied identically to English, Japanese, and Chinese. Unknown monsters produce a warning and remain at the end so no data is discarded.
 - This step runs automatically at the end of `update:bb`.
 
-### 6. SS rarity markers
+### 6. Banner and SS highlight metadata
 
 | Script | Input | Output |
 | --- | --- | --- |
-| `mark_ss.py` | Every `*/data/*.js` language dataset | The same files with `"ss": true` on SS-rarity drops |
+| `mark_ss.py` | Every `*/data/*.js` language dataset | The same files with `ss` / `bannerHit` presentation metadata |
 
-- The canonical English item list in `mark_ss.py` is the single source of truth for SS rarity.
+- BB uses the named Ephinea announcement rules in `banner_rules.py`; DC/NGC use the legacy English SS list in `mark_ss.py`. See [banner highlights](banner-highlights.md).
 - English names act as language-independent keys, allowing markers to be copied by coordinate to the English, Japanese, and Chinese datasets.
-- The viewer reads only `drop.ss` and does not hard-code item names.
-- The operation is idempotent: repeated runs add or remove only SS markers. Run it after all data and localization files have been generated.
+- The viewer reads `drop.ss` (rainbow) and BB `drop.bannerHit` (steady gold and untekked Hit tooltip), without hard-coded item names.
+- The operation is idempotent: repeated runs add or remove only highlight metadata. Run it after all data and localization files have been generated.
 
 ### 7. Cross-language coordinate alignment
 
@@ -136,9 +136,9 @@ npm run update:align
 python3 tools/validate_alignment.py
 ```
 
-`sync_coordinates.py` treats each version's English dataset as the language-independent coordinate source. It synchronizes row drop rates, per-cell probabilities, and SS markers. If a translation is missing, it preserves the English item name rather than replacing a valid coordinate with an empty value.
+`sync_coordinates.py` treats each version's English dataset as the language-independent coordinate source. It synchronizes row drop rates, per-cell probabilities, and SS/Hit metadata. If a translation is missing, it preserves the English item name rather than replacing a valid coordinate with an empty value.
 
-`validate_alignment.py` verifies that BB, DC, and NGC have matching difficulties, types, episodes, row counts, ten Section ID columns, localized Section ID labels, cell entry counts, probabilities, empty/nonempty states, and SS markers across English, Japanese, and Chinese.
+`validate_alignment.py` verifies that BB, DC, and NGC have matching difficulties, types, episodes, row counts, ten Section ID columns, localized Section ID labels, cell entry counts, probabilities, empty/nonempty states, and SS/Hit metadata across English, Japanese, and Chinese.
 
 `validate_names.py` checks every DC/NGC generated row and item name against
 `i18n_names.json`, including unchanged names. Missing or blank target-language

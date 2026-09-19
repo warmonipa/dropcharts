@@ -182,7 +182,7 @@
   // --- helpers ---
 
   function t(key) {
-    return (I18N_DATA[lang] || I18N_DATA.en)[key] || key;
+    return (I18N_DATA[lang] || {})[key] || (I18N_DATA.en || {})[key] || '';
   }
 
   function fmtPercent(probability) {
@@ -529,10 +529,14 @@
               var itemIsSsRare = !!drop.ss;
               html += '<span class="drop-option' + (itemIsHL ? ' highlight' : '') + '">';
               var itemId = CFG.version === 'bb' && window.BB_ITEMS[enItem];
-              var itemClass = 'item-name' + (itemIsSsRare ? ' ss-rare-item' : '');
+              var needsHit = CFG.version === 'bb' && Number.isInteger(drop.bannerHit) && drop.bannerHit > 0;
+              var bannerHint = needsHit ? t('bannerHitHint').replace('{hit}', drop.bannerHit)
+                : CFG.version === 'bb' && itemIsSsRare ? t('bannerNoHitHint') : '';
+              var bannerAttrs = bannerHint ? ' title="' + escapeHtml(bannerHint) + '" aria-label="' + escapeHtml(drop.item + '. ' + bannerHint) + '"' : '';
+              var itemClass = 'item-name' + (itemIsSsRare ? ' ss-rare-item' : needsHit ? ' banner-hit-item' : '');
               html += itemId
-                ? '<a class="' + itemClass + '" href="https://www.psohaven.com/data/items/' + itemId + '.html?lang=' + lang + '">' + escapeHtml(drop.item) + '</a>'
-                : '<span class="' + itemClass + '">' + escapeHtml(drop.item) + '</span>';
+                ? '<a class="' + itemClass + '" href="https://www.psohaven.com/data/items/' + itemId + '.html?lang=' + lang + '"' + bannerAttrs + '>' + escapeHtml(drop.item) + '</a>'
+                : '<span class="' + itemClass + '"' + bannerAttrs + '>' + escapeHtml(drop.item) + '</span>';
               var imgFile = IMG_MAP && (IMG_MAP[drop.item] || (enItem && IMG_MAP[enItem]));
               if (imgFile) html += '<img class="item-tooltip-img" src="../shared/images/' + encodeURIComponent(imgFile) + '" alt="" loading="lazy">';
               if (drop.rate) {

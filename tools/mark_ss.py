@@ -1,27 +1,31 @@
 #!/usr/bin/env python3
-"""Mark SS-tier (FFSKY) rare drops in the generated data files.
+"""Mark BB banner highlights and legacy DC/NGC SS-tier drops.
 
-Single source of truth for which items are SS rare. Runs as the final
-pipeline step, after all language data files exist.
+Runs as the final pipeline step after all language data files exist. BB
+uses banner_rules.py; the legacy SS name list below applies to DC/NGC.
 
 Rarity is a property of the *item*, not of its localized name, so the
 canonical English name is the language-independent key. For each version
 the English file decides which (difficulty, type, episode, entry, drop)
-coordinates are SS; that flag is then stamped onto the en/ja/zh files in
+coordinates receive highlights; that metadata is then stamped onto the en/ja/zh files in
 lockstep (their structures are parallel by construction).
 
-Result: every SS drop in every language file gains `"ss": true`. The
-viewer reads `drop.ss` directly and hard-codes no item names.
+BB uses the named main-server banner list in banner_rules.py: no-Hit items
+get `ss: true`, and conditional weapons get `bannerHit`. DC/NGC retain the
+legacy FFSKY list. The viewer hard-codes no item names.
 """
 import argparse
 import re
 from pathlib import Path
+from banner_rules import banner_hit
 
 from drop_data import (
     LANGUAGES,
+    DROP_TYPES,
     VERSIONS,
     dump_framed_js,
     iter_data_drops,
+    iter_cell_drops,
     load_framed_js,
     load_js_data,
 )
@@ -87,9 +91,20 @@ def mark_version(version):
     if not en_path.exists():
         return None
     en_data = load_js_data(en_path, "en")
-    # Per-coordinate SS verdict, derived once from the English names.
-    flags = [is_ss(drop.get("item", "")) for drop in iter_drops(en_data)]
-    total = sum(flags)
+    # Per-coordinate presentation metadata, derived from English identities.
+    flags = []
+    for types in en_data["data"].values():
+        for kind in DROP_TYPES:
+            episodes = types.get(kind, {})
+            for entries in episodes.values():
+                for entry in entries:
+                    for cell in entry["drops"]:
+                        for drop in iter_cell_drops(cell):
+                            name = drop.get("item", "")
+                            hit = banner_hit(name, kind) if version == "bb" else None
+                            ss = hit == 0 if version == "bb" else is_ss(name)
+                            flags.append((ss, hit if hit else None))
+    total = sum(ss or hit is not None for ss, hit in flags)
 
     for language in LANGUAGES:
         path = ROOT / version / "data" / f"{language}.js"
@@ -101,11 +116,15 @@ def mark_version(version):
             raise ValueError(
                 f"{path}: structure drift vs en ({len(drops)} != {len(flags)})"
             )
-        for drop, ss in zip(drops, flags):
+        for drop, (ss, hit) in zip(drops, flags):
             if ss:
                 drop["ss"] = True
             else:
                 drop.pop("ss", None)  # idempotent: clear stale flags
+            if hit is not None:
+                drop["bannerHit"] = hit
+            else:
+                drop.pop("bannerHit", None)
         dump_framed_js(path, prefix, data, suffix)
     return total
 
@@ -124,7 +143,7 @@ def main():
         if total is None:
             print(f"  {version}: skipped (no en.js)")
         else:
-            print(f"  {version}: marked {total} SS drops across languages")
+            print(f"  {version}: marked {total} highlighted drops across languages")
 
 
 if __name__ == "__main__":

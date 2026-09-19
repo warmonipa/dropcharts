@@ -98,6 +98,13 @@ def sync_dataset(english, localized):
                                     localized_drop.pop("ss", None)
                                 else:
                                     localized_drop["ss"] = english_ss
+                            english_hit = english_drop.get("bannerHit")
+                            if localized_drop.get("bannerHit") != english_hit:
+                                changes["ss_flags"] += 1
+                                if english_hit is None:
+                                    localized_drop.pop("bannerHit", None)
+                                else:
+                                    localized_drop["bannerHit"] = english_hit
     return changes
 
 

@@ -222,3 +222,30 @@ test('every version and difficulty resolves each monster without inheriting the 
   assert.equal(context.window.testAreaFor('Episode 2', 'Olga Flow?'), 'Seabed');
   assert.equal(context.window.testAreaFor('Episode 2', 'Hildelt'), 'VR Temple');
 });
+
+test('BB banner colors and localized Hit conditions follow drop metadata', () => {
+  for (const lang of ['en', 'ja', 'zh']) {
+    const app = viewer('bb', `?lang=${lang}&diff=Ultimate`);
+    const html = app.html();
+    assert.doesNotMatch(html, /bannerHitHint|bannerNoHitHint|bannerRainbow|bannerGold|bannerRules|drop-legend/);
+    const hintPrefix = {en: 'Banner requirement:', ja: '全体告知条件：', zh: '公告条件：'}[lang];
+    assert.ok(html.includes('title="' + hintPrefix));
+    const allDrops = Object.values(app.window.DROP_DATA_EN.data.Ultimate.monsters)
+      .flatMap(rows => rows.flatMap(row => row.drops.flatMap(cell => cell.items || [cell])));
+    assert.equal([...html.matchAll(/class="item-name banner-hit-item"/g)].length, allDrops.filter(d => d.bannerHit).length);
+    assert.equal([...html.matchAll(/class="item-name ss-rare-item"/g)].length, allDrops.filter(d => d.ss).length);
+    const gold = [...html.matchAll(/<a class="item-name banner-hit-item"[^>]+>/g)].map(m => m[0]);
+    assert.ok(gold.length > 0);
+    assert.ok(gold.every(tag => tag.includes('title="') && tag.includes('aria-label="')));
+    assert.ok(gold.some(tag => tag.includes('frozen-shooter.html') && tag.includes('≥ 30%')));
+    assert.ok(gold.some(tag => tag.includes('spread-needle.html') && tag.includes('≥ 40%')));
+    assert.ok(!html.includes('ss-rare-item banner-hit-item'));
+    app.window._viewer.setType('boxes');
+    assert.doesNotMatch(app.html(), /banner-hit-item/);
+  }
+  for (const version of ['dc', 'ngc']) {
+    const app = viewer(version, '?diff=Ultimate');
+    assert.doesNotMatch(app.html(), /banner-hit-item|drop-legend|wiki\.pioneer2\.net\/w\/Banners/);
+    assert.match(app.html(), /ss-rare-item/);
+  }
+});

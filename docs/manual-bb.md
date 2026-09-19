@@ -105,8 +105,11 @@ English and Japanese BB data is scraped from the [Ephinea Drop Charts](https://e
 The original interface colors are preserved. Names use soft-white text and
 probabilities use secondary gray text. Name links have no underlines, including
 hover, focus and search matches. Links retain hover/focus color feedback and
-keyboard focus outlines. SS items use animated rainbow names without a separate
-SS badge; reduced-motion preferences keep the gradient static.
+keyboard focus outlines. Named banner items without a Hit requirement use rainbow names. Weapons with a
+Hit requirement use steady gold; hover the name to read the untekked Hit threshold.
+Neither effect adds an item badge. Reduced-motion preferences keep the rainbow
+static. Technique disks are excluded. See [banner highlights](banner-highlights.md)
+for the complete scope; gold does not imply every drop will trigger an announcement.
 
 Recon belongs to Seabed. Episode 4 uses a shared `Crater / Subterranean Desert`
 group for Sand Rappy, Del Rappy, Satellite Lizard, Yowie, Zu and Pazuzu. These

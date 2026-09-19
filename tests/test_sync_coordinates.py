@@ -55,6 +55,19 @@ class SyncDatasetTest(unittest.TestCase):
         self.assertEqual(localized, before)
         self.assertEqual(sum(changes.values()), 0)
 
+    def test_syncs_and_clears_banner_hit_without_changing_translation(self):
+        english = dataset("Frozen Shooter")
+        localized = dataset("冷射枪")
+        source = english["data"]["Normal"]["monsters"]["Episode 1"][0]["drops"][0]
+        target = localized["data"]["Normal"]["monsters"]["Episode 1"][0]["drops"][0]
+        source["bannerHit"] = 30
+        target["ss"] = True
+        sync_dataset(english, localized)
+        self.assertEqual(target, {"item": "冷射枪", "rate": "1/10", "bannerHit": 30})
+        del source["bannerHit"]
+        sync_dataset(english, localized)
+        self.assertNotIn("bannerHit", target)
+
 
 if __name__ == "__main__":
     unittest.main()

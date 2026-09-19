@@ -1181,15 +1181,18 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "ブリューナク",
@@ -1197,7 +1200,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/16718.4"
+                "rate": "1/16718.4",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -1205,11 +1209,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "ＤＢの剣",
@@ -1217,7 +1223,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               }
             ],
             "dropRate": "1/3.6"
@@ -1945,7 +1952,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/7447.3"
+                "rate": "1/7447.3",
+                "ss": true
               },
               {
                 "item": "インビジブルガード",
@@ -1991,7 +1999,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/7447.3"
+                "rate": "1/7447.3",
+                "ss": true
               },
               {
                 "item": "インビジブルガード",
@@ -4298,7 +4307,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/5201.3"
+                "rate": "1/5201.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -8003,7 +8013,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/104.5"
+                "rate": "1/104.5",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -8303,7 +8314,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -8345,7 +8357,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -8533,7 +8546,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/243.8"
+                "rate": "1/243.8",
+                "bannerHit": 50
               },
               {
                 "item": "ブリューナク",
@@ -8553,7 +8567,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/243.8"
+                "rate": "1/243.8",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/6.7"
@@ -8609,7 +8624,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "ウォルス－ＭＫ２",
@@ -8621,7 +8637,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -8717,7 +8734,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -8805,7 +8823,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "パクパクのエダ",
@@ -9177,7 +9196,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/118.0"
+                "rate": "1/118.0",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -9269,7 +9289,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "ブリューナク",
@@ -9285,11 +9306,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2"
@@ -9637,7 +9660,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -9683,7 +9707,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/320"
+                "rate": "1/320",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -9729,7 +9754,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/91.4"
+                "rate": "1/91.4",
+                "bannerHit": 50
               },
               {
                 "item": "ブリューナク",
@@ -10098,7 +10124,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -10370,7 +10397,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -10416,7 +10444,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -10576,7 +10605,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.5"
@@ -10644,7 +10674,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -10690,7 +10721,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/104.5"
+                "rate": "1/104.5",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -10786,7 +10818,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -10944,7 +10977,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -10970,7 +11004,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -11012,7 +11047,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -11154,7 +11190,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -11170,7 +11207,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "暗殺者のスライサー",
@@ -11196,7 +11234,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -11338,7 +11377,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -11588,7 +11628,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/284.4"
+                "rate": "1/284.4",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.2"
@@ -11610,7 +11651,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -11656,7 +11698,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -11676,7 +11719,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "解放者のディスカ",
@@ -11702,7 +11746,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -11752,7 +11797,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "ハッパ",
@@ -11794,7 +11840,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -12023,7 +12070,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -12139,7 +12187,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -12165,7 +12214,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -12298,7 +12348,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -12344,7 +12395,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -12390,7 +12442,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -12462,7 +12515,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.6"
@@ -12630,7 +12684,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/98.5"
+                "rate": "1/98.5",
+                "bannerHit": 50
               },
               {
                 "item": "スタッグカットラリ",
@@ -12794,7 +12849,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "フォトンクロー",
@@ -12898,7 +12954,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "ブラッディアート",
@@ -13132,7 +13189,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "ズミウランの杖",
@@ -13140,7 +13198,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "ラコニウムの杖",
@@ -13152,7 +13211,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.7"
@@ -16429,7 +16489,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "ブラッディアート",
@@ -16545,7 +16606,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "エリュシオン",
@@ -16557,7 +16619,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -16831,7 +16894,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -16899,7 +16963,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "ヴァリスタ",
@@ -16923,7 +16988,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -16953,7 +17019,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "解放者のディスカ",
@@ -17025,7 +17092,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/512"
+                "rate": "1/512",
+                "bannerHit": 50
               },
               {
                 "item": "ブレイドダンス",
@@ -17041,7 +17109,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/512"
+                "rate": "1/512",
+                "bannerHit": 50
               },
               {
                 "item": "ブリューナク",
@@ -17175,7 +17244,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/116.4"
+                "rate": "1/116.4",
+                "bannerHit": 50
               },
               {
                 "item": "アドスロット",
@@ -17337,7 +17407,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/40.6"
+                "rate": "1/40.6",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.1"
@@ -17359,7 +17430,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -17405,7 +17477,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -17425,7 +17498,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -17785,7 +17859,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/43.0"
+                "rate": "1/43.0",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -17797,7 +17872,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/43.0"
+                "rate": "1/43.0",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -17873,7 +17949,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "メテオスマッシュ",
@@ -17899,7 +17976,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "インフェルノバズーカ",
@@ -18211,7 +18289,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ＤＢの剣の心",
-                "rate": "1/6619.8"
+                "rate": "1/6619.8",
+                "ss": true
               }
             ],
             "dropRate": "1/2.2"
@@ -18464,7 +18543,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -18498,7 +18578,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/206.4"
+                "rate": "1/206.4",
+                "bannerHit": 50
               },
               {
                 "item": "ウォルス－ＭＫ２",
@@ -18580,7 +18661,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -18622,7 +18704,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/128"
+                "rate": "1/128",
+                "bannerHit": 50
               },
               {
                 "item": "解放者のディスカ",
@@ -18832,7 +18915,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -18902,7 +18986,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -19060,7 +19145,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -19130,7 +19216,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -19152,7 +19239,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "サイレンスクロー",
@@ -19168,7 +19256,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "アンシエントセイバーの心",
-                "rate": "1/6687.4"
+                "rate": "1/6687.4",
+                "ss": true
               },
               {
                 "item": "アライブアクゥー",
@@ -19232,7 +19321,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "ジャスティ－２３ＳＴ",
@@ -19244,7 +19334,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -19290,7 +19381,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -19340,7 +19432,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「アグニ」",
@@ -19382,7 +19475,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -19428,7 +19522,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -19620,7 +19715,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "フロウウェンの盾",
@@ -19632,7 +19728,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "デルセイバーの剣の心",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "解放者のディスカ",
@@ -19670,7 +19767,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -19682,7 +19780,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/4"
@@ -19704,7 +19803,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ブレイドダンスの心",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "ギルティライト",
@@ -19796,7 +19896,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -19842,7 +19943,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "ブラッディアート",
@@ -19850,7 +19952,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "解放者のディスカ",
@@ -19908,11 +20011,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -20402,7 +20507,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "ＨＰ/リバイバル",
@@ -20531,7 +20637,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｈ＆Ｓ２５ ジャスティス",
@@ -20565,7 +20672,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "ウォルス－ＭＫ２",
@@ -20577,7 +20685,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "アギト",
@@ -20611,7 +20720,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "ライトリリーフ",
@@ -20772,7 +20882,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -20784,7 +20895,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.5"
@@ -20864,7 +20976,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "ドラゴンスレイヤー",
@@ -20876,7 +20989,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -21122,11 +21236,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ホーリーレイ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "チェインソード",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "キュア/コンフューズ",
@@ -21142,7 +21258,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "解放者のディスカの心",
-                "rate": "1/9.8"
+                "rate": "1/9.8",
+                "ss": true
               },
               {
                 "item": "フォトンクリスタル",
@@ -21476,7 +21593,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -21502,15 +21620,18 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "ヤマト",
@@ -21518,7 +21639,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "Ｌ＆Ｋ１４ コンバット",
@@ -21556,11 +21678,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "バショウセンの心",
-                "rate": "1/6687.4"
+                "rate": "1/6687.4",
+                "ss": true
               },
               {
                 "item": "輝石「ムーラ」",
@@ -21590,7 +21714,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "空間機動歩兵第３２分隊上等兵軍服",
@@ -21632,7 +21757,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "神の吐息の心",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "神氷鉄",
@@ -25405,7 +25531,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -25427,7 +25554,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "デイジーチェインの心",
-                "rate": "1/12318.8"
+                "rate": "1/12318.8",
+                "ss": true
               },
               {
                 "item": "スタッグカットラリ",
@@ -25489,7 +25617,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ルミナスフィールド",
@@ -25509,7 +25638,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "短銃「ミラ」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               }
             ],
             "dropRate": "1/2.9"
@@ -25573,7 +25703,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "エンジェルハープ",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "ＨＰ/リバイバル",
@@ -25647,7 +25778,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/4"
@@ -25722,7 +25854,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "エンジェルハープの心",
-                "rate": "1/13653.3"
+                "rate": "1/13653.3",
+                "ss": true
               },
               {
                 "item": "フロウウェンの鎧",
@@ -25844,7 +25977,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "フローズンシューター",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "赤のセイバー",
@@ -25857,7 +25991,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "フローズンシューター",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "スターアンプ",
@@ -25865,19 +26000,23 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "魔石「イリティスタ」",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "シンセスタ",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "フローズンシューター",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "フローズンシューター",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               }
             ],
             "dropRate": "1/1"
@@ -25899,7 +26038,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ホーリーレイ",
-                "rate": "1/36.6"
+                "rate": "1/36.6",
+                "bannerHit": 40
               },
               {
                 "item": "ドラゴンのツメ",
@@ -25941,15 +26081,18 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "チェインソード",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "雷杖「インドラ」",
@@ -25987,7 +26130,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "赤のソード",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "パクパクのエダ",
@@ -26030,7 +26174,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "デモリションコメット",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "ゴッド/ＨＰ",
@@ -26050,19 +26195,23 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "赤のソード",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "TypeSS/Swordsの心",
-                "rate": "1/13653.3"
+                "rate": "1/13653.3",
+                "ss": true
               },
               {
                 "item": "赤のソード",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "赤のソード",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/6.7"
@@ -26126,11 +26275,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "サンゲ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "デモリションコメット",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "サイコウォンド",
@@ -26143,7 +26294,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "デモリションコメット",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "センスプレート",
@@ -26151,7 +26303,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "サンゲ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "アギト",
@@ -26169,7 +26322,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "青蓮",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               },
               {
                 "item": "赤のダガー",
@@ -26202,7 +26356,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "青蓮",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/1.8"
@@ -26212,7 +26367,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "赤のソード",
-                "rate": "1/572.9"
+                "rate": "1/572.9",
+                "bannerHit": 50
               },
               {
                 "item": "ゴッド/アーム",
@@ -26279,7 +26435,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/37342.4"
+                "rate": "1/37342.4",
+                "ss": true
               },
               {
                 "item": "ガードウェイブ",
@@ -26313,7 +26470,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "デモリションコメット",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "カジューシース",
@@ -26329,7 +26487,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "ガードウェイブ",
@@ -26351,7 +26510,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "サンゲ",
-                "rate": "1/350.1"
+                "rate": "1/350.1",
+                "bannerHit": 50
               },
               {
                 "item": "赤のダガー",
@@ -26359,7 +26519,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "フランベルジュの心",
-                "rate": "1/4045.4"
+                "rate": "1/4045.4",
+                "ss": true
               },
               {
                 "item": "パンアームズの両手",
@@ -26375,7 +26536,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "サンゲ",
-                "rate": "1/350.1"
+                "rate": "1/350.1",
+                "bannerHit": 50
               },
               {
                 "item": "フォトンフィルター",
@@ -26383,7 +26545,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "テンションブラスターの心",
-                "rate": "1/4045.4"
+                "rate": "1/4045.4",
+                "ss": true
               },
               {
                 "item": "パンアームズの両手",
@@ -26489,11 +26652,13 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "Ｌ＆Ｋ３８ コンバット",
-                "rate": "1/39.4"
+                "rate": "1/39.4",
+                "bannerHit": 40
               },
               {
                 "item": "ホーリーレイ",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "ラコニウムアクス",
@@ -26501,7 +26666,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "アステロンベルト",
-                "rate": "1/39.4"
+                "rate": "1/39.4",
+                "bannerHit": 40
               },
               {
                 "item": "フォノンメーザー",
@@ -26509,7 +26675,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ホーリーレイ",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "デ・ロル・レの殻",
@@ -26521,7 +26688,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ホーリーレイ",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "ヘヴンリー/レジスト",
@@ -26547,23 +26715,28 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "フロウウェンの大剣(3073)",
-                "rate": "1/33608.2"
+                "rate": "1/33608.2",
+                "ss": true
               },
               {
                 "item": "イズマエラの心",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "ソーサラーの杖の心",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "Ｓパーツ ver2.01",
-                "rate": "1/10922.7"
+                "rate": "1/10922.7",
+                "ss": true
               },
               {
                 "item": "ガエボルグ",
@@ -26628,7 +26801,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヴィリディアカード",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ジャスティ－２３ＳＴ",
@@ -26644,7 +26818,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "雷杖「インドラ」",
@@ -26660,11 +26835,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Nug2000バズーカ",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ホワイティルカード",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               }
             ],
             "dropRate": "1/2.9"
@@ -26690,7 +26867,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ9000M",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "スモーキングプレート",
@@ -26772,7 +26950,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Nug2000バズーカ",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "シノワレッドの両手",
@@ -26780,11 +26959,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "シンセスタ",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "ヘブンパニッシャー",
@@ -26797,11 +26978,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "ラムダージャン",
-                "rate": "1/1655.0"
+                "rate": "1/1655.0",
+                "bannerHit": 20
               },
               {
                 "item": "シノワレッドの両手",
@@ -26823,7 +27006,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "シンセスタ",
-                "rate": "1/11861.7"
+                "rate": "1/11861.7",
+                "ss": true
               },
               {
                 "item": "サイレンスクロー",
@@ -26923,7 +27107,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "雷杖「インドラ」",
@@ -26931,7 +27116,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "ムサシ",
@@ -26957,7 +27143,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "スプレッドニードル",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "ゴッド/ボディ",
@@ -26965,11 +27152,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "スプレッドニードル",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "ＤＢの剣(3069・トラト社)",
@@ -26985,7 +27174,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "スプレッドニードル",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "赤のマシンガン",
@@ -27007,11 +27197,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ヘブンストライカー",
-                "rate": "1/4255.6"
+                "rate": "1/4255.6",
+                "bannerHit": 20
               },
               {
                 "item": "赤のマシンガン",
@@ -27245,7 +27437,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "真瑚経書",
-                "rate": "1/22405.5"
+                "rate": "1/22405.5",
+                "ss": true
               },
               {
                 "item": "ヘヴンリー/アーム",
@@ -27253,7 +27446,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "流星棍",
@@ -27261,7 +27455,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "ヘヴンリー/アーム",
@@ -27308,11 +27503,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "迅雷の心",
-                "rate": "1/6068.1"
+                "rate": "1/6068.1",
+                "ss": true
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "赤のスライサー",
@@ -27355,11 +27552,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "迅雷の心",
-                "rate": "1/6068.1"
+                "rate": "1/6068.1",
+                "ss": true
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "赤のスライサー",
@@ -27373,7 +27572,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "サイコウォンド",
@@ -27391,7 +27591,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "真瑚経書",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ソーサラーの右手",
@@ -27404,7 +27605,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "真瑚経書",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ソーサラーの右手",
@@ -27427,7 +27629,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ニョイボウ",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "流星棍",
@@ -27435,7 +27638,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ニョイボウ",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "ブリンガーの右手",
@@ -27447,7 +27651,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "スプレッドニードル",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "モタブの予言書",
@@ -27470,15 +27675,18 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "レッドリング",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "レッドリング",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "レッドリング",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "ＤＦの盾",
@@ -27494,7 +27702,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "レッドリング",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "ＤＦの盾",
@@ -27506,7 +27715,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "レッドリング",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -27542,7 +27752,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -27554,7 +27765,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -27576,7 +27788,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/206.4"
+                "rate": "1/206.4",
+                "bannerHit": 50
               },
               {
                 "item": "対アンドロイド用ライフル",
@@ -27626,7 +27839,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "サプレストガンの心",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "オーラフィールド",
@@ -27692,7 +27906,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ＤＢの剣(3077)",
-                "rate": "1/10082.5"
+                "rate": "1/10082.5",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -27710,7 +27925,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィヴィアン",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "ラビットウォンド",
@@ -27722,11 +27938,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィヴィアン",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "ランブリングメイ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "神の吐息",
@@ -27738,7 +27956,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ランブリングメイ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               }
             ],
             "dropRate": "1/1"
@@ -27932,7 +28151,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "フローズンシューター",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "カムイ",
@@ -27956,11 +28176,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "魔石「イリティスタ」",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "シンセスタ",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "フライトカッター",
@@ -28002,7 +28224,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/1575.4"
+                "rate": "1/1575.4",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -28085,7 +28308,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ9000M",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "アングルフィスト",
@@ -28147,11 +28371,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "フロウウェンの大剣(3084)",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28181,7 +28407,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ランブリングメイ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "クリムゾンコート",
@@ -28207,11 +28434,13 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "Nug2000バズーカ",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "短銃「ミラ」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ヤシャ",
@@ -28254,7 +28483,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "Ｌ＆Ｋ３８ コンバット",
-                "rate": "1/46.5"
+                "rate": "1/46.5",
+                "bannerHit": 40
               },
               {
                 "item": "ヘヴンリー/レジスト",
@@ -28308,7 +28538,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "チェインソード",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "リジェネレイトギアＢ．Ｐ",
@@ -28336,7 +28567,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28416,7 +28648,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "フロウウェンの盾",
@@ -28520,7 +28753,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/128"
+                "rate": "1/128",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2"
@@ -28562,7 +28796,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "アングルフィスト",
@@ -28622,23 +28857,28 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "パンツァーファースト",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "パンツァーファースト",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "デイライトスカー",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "ソウルバニッシュの心",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "パンツァーファースト",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "バランゾの部品",
@@ -28646,15 +28886,18 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "パンツァーファースト",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "パンツァーファースト",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "デイライトスカー",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "バランゾの部品",
@@ -28677,7 +28920,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "紅蓮",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               },
               {
                 "item": "Ｖ５０１",
@@ -28697,15 +28941,18 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "デイライトスカー",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/40329.8"
+                "rate": "1/40329.8",
+                "ss": true
               },
               {
                 "item": "紅蓮",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/4"
@@ -28715,7 +28962,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "クレイジーチューンの心",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "グリーニルカード",
@@ -28746,7 +28994,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "紅蓮",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               },
               {
                 "item": "ラジュ・デ・フォドル",
@@ -28827,11 +29076,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "ラムダージャン",
-                "rate": "1/4201.0"
+                "rate": "1/4201.0",
+                "bannerHit": 20
               },
               {
                 "item": "スタッグカットラリ",
@@ -28847,7 +29098,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28877,7 +29129,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "ブライトネスサークル",
@@ -28893,7 +29146,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -28915,7 +29169,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "クロススケア",
@@ -29032,7 +29287,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -29135,7 +29391,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "Ｖ５０２",
@@ -29143,7 +29400,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ニョイボウ",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "神の吐息",
@@ -29168,7 +29426,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｌ＆Ｋ３８ コンバット",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "アスカ",
@@ -29182,7 +29441,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "カメレオンサイズの心",
-                "rate": "1/3150.8"
+                "rate": "1/3150.8",
+                "ss": true
               },
               {
                 "item": "バルディッシュ",
@@ -29206,7 +29466,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ツインブレイズ",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "キュア/フリーズ",
@@ -29214,11 +29475,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ツインブレイズ",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "ヤスミノコフ7000V",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -29236,7 +29499,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ7000V",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "バルディッシュ",
@@ -29248,7 +29512,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "短銃「ミラ」",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "レッドスコルピオ",
@@ -29280,7 +29545,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "エンジェルハープ",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "迅雷",
@@ -29288,7 +29554,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "ヘヴンリー/アビリティ",
@@ -29296,7 +29563,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "総督恩賜パラソル",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "ヘヴンリー/バトル",
@@ -29309,11 +29577,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               }
             ],
             "dropRate": "1/1.2"
@@ -29374,7 +29644,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラビットウォンドの心",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "ゴッドハンド",
@@ -29394,7 +29665,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ルビーバレットの心",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "ガル・グリフォンのハネ",
@@ -29402,7 +29674,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガラティーン",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "ヘヴンリー/ＴＰ",
@@ -29440,7 +29713,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ニョイボウ",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 40
               },
               {
                 "item": "ドラゴンスレイヤー",
@@ -29478,11 +29752,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ＤＢの剣(3064)",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "ニョイボウ",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "パーフェクト/レジスト",
@@ -29494,7 +29770,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "TypeDS/D.Saberの心",
-                "rate": "1/14403.5"
+                "rate": "1/14403.5",
+                "ss": true
               },
               {
                 "item": "匂う鎧",
@@ -29554,19 +29831,23 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "雲長",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "ラヴィス＝カノン",
-                "rate": "1/25206.2"
+                "rate": "1/25206.2",
+                "ss": true
               },
               {
                 "item": "ツインブレイズ",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "雲長",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "トリポリックシールド",
@@ -29578,7 +29859,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "雲長",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "スタンドスティル",
@@ -29586,7 +29868,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ7000V",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "スティングティップ",
@@ -29620,7 +29903,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "フロウウェンの大剣(3077)",
-                "rate": "1/33608.2"
+                "rate": "1/33608.2",
+                "ss": true
               },
               {
                 "item": "アノライフル",
@@ -29632,11 +29916,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ザンバ",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 40
               },
               {
                 "item": "ヘブンストライカー",
-                "rate": "1/2275.6"
+                "rate": "1/2275.6",
+                "bannerHit": 20
               }
             ],
             "dropRate": "1/3.3"
@@ -29650,19 +29936,23 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ7000V",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "ザンバ",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "ザンバ",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "ヤスミノコフ7000V",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "サイコウォンド",
@@ -29676,7 +29966,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ザンバ",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "ヒトガタ",
@@ -29684,7 +29975,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤミガラス",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -29694,11 +29986,13 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ヤミガラス",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "エッグブラスターの心",
-                "rate": "1/6301.5"
+                "rate": "1/6301.5",
+                "ss": true
               },
               {
                 "item": "ブライトネスサークル",
@@ -29710,7 +30004,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ9000Mの心",
-                "rate": "1/6301.5"
+                "rate": "1/6301.5",
+                "ss": true
               },
               {
                 "item": "Ｖ５０１",
@@ -29791,7 +30086,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "侵食遺伝子「フロウ」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Ｄフォトンコア",
@@ -29803,15 +30099,18 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "侵食遺伝子「フロウ」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "侵食遺伝子「フロウ」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "侵食遺伝子「フロウ」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Ｄフォトンコア",
@@ -29819,11 +30118,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "侵食遺伝子「フロウ」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "侵食遺伝子「フロウ」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Ｄフォトンコア",
@@ -29846,7 +30147,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤミガラス",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "デモニックフォーク",
@@ -29870,7 +30172,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤミガラス",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｖ５０２",
@@ -29884,7 +30187,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "真瑚経書",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "アスカ",
@@ -29904,7 +30208,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ロリポップの心",
-                "rate": "1/8511.2"
+                "rate": "1/8511.2",
+                "ss": true
               },
               {
                 "item": "スタンドスティル",
@@ -29935,7 +30240,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ライアーノフ303SNRの心",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "ss": true
               },
               {
                 "item": "ファルクロー",
@@ -29991,7 +30297,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "ディヴァインプロテクション",
@@ -30041,7 +30348,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/168.4"
+                "rate": "1/168.4",
+                "bannerHit": 50
               },
               {
                 "item": "ライアーノフ303SNR-3",
@@ -30049,7 +30357,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/168.4"
+                "rate": "1/168.4",
+                "bannerHit": 50
               },
               {
                 "item": "モーニングプレイヤー",
@@ -30095,7 +30404,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "カノンルージュ",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 30
               },
               {
                 "item": "赤糸威胴丸",
@@ -30209,11 +30519,13 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "ラムダージャン",
-                "rate": "1/3.2"
+                "rate": "1/3.2",
+                "bannerHit": 20
               },
               {
                 "item": "カノンルージュ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "リベルタユニット",
@@ -30221,7 +30533,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "アステロンベルト",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "ラジュ・デ・フェ",
@@ -30229,7 +30542,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "クレイオー",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "クリムゾンコート",
@@ -30241,7 +30555,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "カノンルージュ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "リベルタユニット",
@@ -30375,7 +30690,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "狂信者のスライサー",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               },
               {
                 "item": "フォトンクリスタル",
@@ -30405,7 +30721,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ジラソーレ",
-                "rate": "1/910.2"
+                "rate": "1/910.2",
+                "bannerHit": 40
               },
               {
                 "item": "フォトンクリスタル",
@@ -30475,7 +30792,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -30485,7 +30803,8 @@ window.DROP_DATA_JA = {
             "drops": [
               {
                 "item": "Ｌ＆Ｋ３８ コンバット",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "ライアーノフ303SNR-5",
@@ -30493,11 +30812,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ジラソーレ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "オフェリセーズ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Ｖ８０１",
@@ -30517,11 +30838,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ジラソーレ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "オフェリセーズ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/1"
@@ -30539,7 +30862,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "チェインソード",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "空間機動歩兵中尉外套",
@@ -30547,11 +30871,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヤスミノコフ9000M",
-                "rate": "1/1517.0"
+                "rate": "1/1517.0",
+                "bannerHit": 40
               },
               {
                 "item": "ガディアンナ",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "スタッグカットラリ",
@@ -30567,7 +30893,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "狂信者のスライサー",
-                "rate": "1/1517.0"
+                "rate": "1/1517.0",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/3.3"
@@ -30581,7 +30908,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヘブンストライカー",
-                "rate": "1/3343.7"
+                "rate": "1/3343.7",
+                "bannerHit": 20
               },
               {
                 "item": "黒糸威朱塗桶側二枚胴",
@@ -30601,7 +30929,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヘブンストライカー",
-                "rate": "1/3343.7"
+                "rate": "1/3343.7",
+                "bannerHit": 20
               },
               {
                 "item": "カースクローク",
@@ -30631,7 +30960,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラムダージャン",
-                "rate": "1/1462.9"
+                "rate": "1/1462.9",
+                "bannerHit": 20
               },
               {
                 "item": "バルディッシュ",
@@ -30647,7 +30977,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "空間機動歩兵中尉外套",
@@ -30681,15 +31012,18 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヴィジャヤ",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "Ｍ＆Ａ６０ ヴァイス",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "狂信者のスライサー",
-                "rate": "1/1379.1"
+                "rate": "1/1379.1",
+                "bannerHit": 40
               },
               {
                 "item": "解放者のディスカ",
@@ -30705,7 +31039,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "勇者のディスカ",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.7"
@@ -30731,11 +31066,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "オフェリセーズ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "オフェリセーズ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "フランベルジュ",
@@ -30743,7 +31080,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "オフェリセーズ",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "フランベルジュ",
@@ -30790,7 +31128,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "シンセスタ",
-                "rate": "1/1137.8"
+                "rate": "1/1137.8",
+                "ss": true
               },
               {
                 "item": "剣士の心得",
@@ -30812,11 +31151,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガラティーン",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "ラコニウムアクスの心",
-                "rate": "1/128"
+                "rate": "1/128",
+                "ss": true
               },
               {
                 "item": "セイレーングラスハンマー",
@@ -30840,11 +31181,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ガラティーン",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "サンバマラカスの心",
-                "rate": "1/128"
+                "rate": "1/128",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -30916,7 +31259,8 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ヘブンストライカー",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 20
               },
               {
                 "item": "マザーガーブ＋",
@@ -30928,11 +31272,13 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "ラムダージャン",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 20
               },
               {
                 "item": "デイライトスカー",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 30
               },
               {
                 "item": "リミッター",

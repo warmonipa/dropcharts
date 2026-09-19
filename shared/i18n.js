@@ -2,6 +2,8 @@
 window.I18N = {
   bb: {
     en: {
+      bannerHitHint: "Banner requirement: untekked Hit ≥ {hit}%.",
+      bannerNoHitHint: "Named banner item: no Hit requirement.",
       title: "Ephinea PSOBB Drop Charts",
       subtitle: "Monster drop charts for Phantasy Star Online Blue Burst (Ephinea Server)",
       difficulty: "Difficulty",
@@ -22,6 +24,8 @@ window.I18N = {
       entries: "{diff} \u2014 {total} entries"
     },
     ja: {
+      bannerHitHint: "全体告知条件：未鑑定Hit ≥ {hit}%。",
+      bannerNoHitHint: "全体告知対象：Hit条件なし。",
       title: "Ephinea PSOBB \u30c9\u30ed\u30c3\u30d7\u30c1\u30e3\u30fc\u30c8",
       subtitle: "PSO Blue Burst\uff08Ephinea\u30b5\u30fc\u30d0\u30fc\uff09\u306e\u30e2\u30f3\u30b9\u30bf\u30fc\u30c9\u30ed\u30c3\u30d7\u8868",
       difficulty: "\u96e3\u6613\u5ea6",
@@ -42,6 +46,8 @@ window.I18N = {
       entries: "{diff} \u2014 {total} \u4ef6"
     },
     zh: {
+      bannerHitHint: "公告条件：未鉴定 Hit ≥ {hit}%。",
+      bannerNoHitHint: "公告名单物品：无 Hit 门槛。",
       title: "Ephinea PSOBB \u6389\u843d\u8868",
       subtitle: "\u68a6\u5e7b\u4e4b\u661fOnline Blue Burst\uff08Ephinea\u670d\u52a1\u5668\uff09\u602a\u7269\u6389\u843d\u56fe\u8868",
       difficulty: "\u96be\u5ea6",

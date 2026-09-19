@@ -1,5 +1,8 @@
 # Item Rarity Tiers
 
+This historical FFSKY classification supplies DC/NGC SS effects. BB now uses
+[Ephinea banner highlights](banner-highlights.md) instead.
+
 Source: the item-acquisition difficulty table on the FFSKY PSO Section ID page at `http://pso.ffsky.cn/id.htm`.
 
 The original `SS/S/A/B/C/D/E` tiers and the `1` through `5`, `3+`, and `×` difficulty markers are preserved. The two item-name columns intentionally contain Chinese localization data: the first uses names from `dc/bb/ngc/data/zh.js` where a reliable match exists, and the second preserves the legacy FFSKY wording. Unresolved mappings are listed at the end.

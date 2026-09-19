@@ -299,10 +299,9 @@ button, input { font-family: inherit; }
   font-size: 0.8em;
 }
 .highlight {
-  outline: 3px solid var(--accent);
-  outline-offset: -3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
   position: relative;
-  z-index: 1;
 }
 .drop-option.highlight > .item-name {
   font-weight: 600 !important;
@@ -353,4 +352,13 @@ button, input { font-family: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
+}
+
+/* Named Ephinea weapons with Hit requirements use steady gold, never rainbow. */
+.drop-cell .banner-hit-item {
+  color: #f0cf83;
+  font-weight: 500;
+}
+.drop-cell .banner-hit-item:hover, .drop-cell .banner-hit-item:focus-visible {
+  color: #ffe4a3;
 }

@@ -32,6 +32,10 @@ npm run build
 
 See [the update and deployment guide](docs/update.md) for the complete data pipeline.
 
+Preview source files locally with `python tools/serve.py`, then open
+<http://127.0.0.1:8766/bb/>. The preview server disables browser caching so script
+and translation changes appear together. Use `--port` to choose another port.
+
 ## License
 
 This project is licensed under the ISC License. See [LICENSE](LICENSE).
@@ -74,8 +78,10 @@ the Wiki's episode-specific labels; this difference is not silently normalized.
 The original blue/purple interface palette is preserved. Names use soft-white text,
 with secondary gray, tabular-number probabilities. Name links change color on hover
 or keyboard focus without underlines; keyboard focus retains a visible outline.
-Section ID colors remain in column headers. SS items use animated rainbow text
-without an extra badge; reduced-motion preferences keep the rainbow static. Row hover
+Section ID colors remain in column headers. BB named banner items without a Hit requirement use rainbow text; those requiring
+untekked Hit use steady gold with a condition tooltip. Technique disks are excluded.
+DC/NGC retain their legacy SS rainbow rule. There are no extra item badges;
+reduced-motion preferences keep the rainbow static. Row hover
 and keyboard focus highlight the current row. The table freezes its header and
 monster column within a keyboard-scrollable region. Mobile filters scroll away
 instead of permanently covering the reading area; touch controls retain 44px
@@ -89,3 +95,5 @@ verification boundaries.
 
 Monster area groups follow the [area review](docs/monster-area-review.md): Recon is
 in Seabed, and six Episode 4 enemies share a Crater / Subterranean Desert group.
+
+See [banner highlight rules](docs/banner-highlights.md) for thresholds and exclusions.

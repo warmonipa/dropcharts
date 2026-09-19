@@ -1181,15 +1181,18 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "Brionac",
@@ -1197,7 +1200,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/16718.4"
+                "rate": "1/16718.4",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -1205,11 +1209,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "DB's Saber",
@@ -1217,7 +1223,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               }
             ],
             "dropRate": "1/3.6"
@@ -1945,7 +1952,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/7447.3"
+                "rate": "1/7447.3",
+                "ss": true
               },
               {
                 "item": "Invisible Guard",
@@ -1991,7 +1999,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/7447.3"
+                "rate": "1/7447.3",
+                "ss": true
               },
               {
                 "item": "Invisible Guard",
@@ -4298,7 +4307,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/5201.3"
+                "rate": "1/5201.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -8003,7 +8013,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/104.5"
+                "rate": "1/104.5",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -8303,7 +8314,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -8345,7 +8357,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -8533,7 +8546,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/243.8"
+                "rate": "1/243.8",
+                "bannerHit": 50
               },
               {
                 "item": "Brionac",
@@ -8553,7 +8567,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/243.8"
+                "rate": "1/243.8",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/6.7"
@@ -8609,7 +8624,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Wals-MK2",
@@ -8621,7 +8637,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -8717,7 +8734,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -8805,7 +8823,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Branch of Pakupaku",
@@ -9177,7 +9196,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/118.0"
+                "rate": "1/118.0",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -9269,7 +9289,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "Brionac",
@@ -9285,11 +9306,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2"
@@ -9637,7 +9660,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -9683,7 +9707,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/320"
+                "rate": "1/320",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -9729,7 +9754,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/91.4"
+                "rate": "1/91.4",
+                "bannerHit": 50
               },
               {
                 "item": "Brionac",
@@ -10098,7 +10124,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -10370,7 +10397,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -10416,7 +10444,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -10576,7 +10605,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.5"
@@ -10644,7 +10674,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -10690,7 +10721,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/104.5"
+                "rate": "1/104.5",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -10786,7 +10818,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -10944,7 +10977,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -10970,7 +11004,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -11012,7 +11047,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -11154,7 +11190,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -11170,7 +11207,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "Slicer of Assassin",
@@ -11196,7 +11234,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -11338,7 +11377,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -11588,7 +11628,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/284.4"
+                "rate": "1/284.4",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.2"
@@ -11610,7 +11651,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -11656,7 +11698,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -11676,7 +11719,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Diska of Liberator",
@@ -11702,7 +11746,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -11752,7 +11797,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "Plantain Leaf",
@@ -11794,7 +11840,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -12023,7 +12070,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -12139,7 +12187,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -12165,7 +12214,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -12298,7 +12348,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -12344,7 +12395,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -12390,7 +12442,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -12462,7 +12515,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.6"
@@ -12630,7 +12684,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/98.5"
+                "rate": "1/98.5",
+                "bannerHit": 50
               },
               {
                 "item": "Stag Cutlery",
@@ -12794,7 +12849,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "Photon Claw",
@@ -12898,7 +12954,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Bloody Art",
@@ -13132,7 +13189,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "Club of Zumiuran",
@@ -13140,7 +13198,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "Club of Laconium",
@@ -13152,7 +13211,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.7"
@@ -16429,7 +16489,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Bloody Art",
@@ -16545,7 +16606,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "Elysion",
@@ -16557,7 +16619,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -16831,7 +16894,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -16899,7 +16963,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Varista",
@@ -16923,7 +16988,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -16953,7 +17019,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "Diska of Liberator",
@@ -17025,7 +17092,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/512"
+                "rate": "1/512",
+                "bannerHit": 50
               },
               {
                 "item": "Blade Dance",
@@ -17041,7 +17109,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/512"
+                "rate": "1/512",
+                "bannerHit": 50
               },
               {
                 "item": "Brionac",
@@ -17175,7 +17244,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/116.4"
+                "rate": "1/116.4",
+                "bannerHit": 50
               },
               {
                 "item": "AddSlot",
@@ -17337,7 +17407,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/40.6"
+                "rate": "1/40.6",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.1"
@@ -17359,7 +17430,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -17405,7 +17477,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -17425,7 +17498,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -17785,7 +17859,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/43.0"
+                "rate": "1/43.0",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -17797,7 +17872,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/43.0"
+                "rate": "1/43.0",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -17873,7 +17949,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Meteor Smash",
@@ -17899,7 +17976,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "Inferno Bazooka",
@@ -18211,7 +18289,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of DB's Saber",
-                "rate": "1/6619.8"
+                "rate": "1/6619.8",
+                "ss": true
               }
             ],
             "dropRate": "1/2.2"
@@ -18464,7 +18543,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -18498,7 +18578,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/206.4"
+                "rate": "1/206.4",
+                "bannerHit": 50
               },
               {
                 "item": "Wals-MK2",
@@ -18580,7 +18661,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -18622,7 +18704,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/128"
+                "rate": "1/128",
+                "bannerHit": 50
               },
               {
                 "item": "Diska of Liberator",
@@ -18832,7 +18915,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -18902,7 +18986,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -19060,7 +19145,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -19130,7 +19216,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -19152,7 +19239,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Silence Claw",
@@ -19168,7 +19256,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Ancient Saber",
-                "rate": "1/6687.4"
+                "rate": "1/6687.4",
+                "ss": true
               },
               {
                 "item": "Alive Aqhu",
@@ -19232,7 +19321,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Justy-23ST",
@@ -19244,7 +19334,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -19290,7 +19381,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -19340,7 +19432,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Fire Scepter: Agni",
@@ -19382,7 +19475,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -19428,7 +19522,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -19620,7 +19715,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "Flowen's Shield",
@@ -19632,7 +19728,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Delsaber's Buster",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "Diska of Liberator",
@@ -19670,7 +19767,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -19682,7 +19780,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/4"
@@ -19704,7 +19803,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Blade Dance",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Guilty Light",
@@ -19796,7 +19896,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -19842,7 +19943,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Bloody Art",
@@ -19850,7 +19952,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "Diska of Liberator",
@@ -19908,11 +20011,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -20402,7 +20507,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "HP/Revival",
@@ -20531,7 +20637,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 Justice",
@@ -20565,7 +20672,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Wals-MK2",
@@ -20577,7 +20685,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Agito (1991)",
@@ -20611,7 +20720,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Vjaya",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "Light Relief",
@@ -20772,7 +20882,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -20784,7 +20895,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.5"
@@ -20864,7 +20976,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Dragon Slayer",
@@ -20876,7 +20989,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -21122,11 +21236,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Holy Ray",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Chain Sawd",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Cure/Confuse",
@@ -21142,7 +21258,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Diska of Liberator",
-                "rate": "1/9.8"
+                "rate": "1/9.8",
+                "ss": true
               },
               {
                 "item": "Photon Crystal",
@@ -21476,7 +21593,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -21502,15 +21620,18 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "Yamato",
@@ -21518,7 +21639,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "L&K14 Combat",
@@ -21556,11 +21678,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "Heart of Plantain Huge Fan",
-                "rate": "1/6687.4"
+                "rate": "1/6687.4",
+                "ss": true
               },
               {
                 "item": "Magic Rock \"Moola\"",
@@ -21590,7 +21714,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "Infantry Gear",
@@ -21632,7 +21757,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of The Sigh of a God",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "Maguwa",
@@ -25405,7 +25531,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -25427,7 +25554,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Heart of Daisy Chain",
-                "rate": "1/12318.8"
+                "rate": "1/12318.8",
+                "ss": true
               },
               {
                 "item": "Stag Cutlery",
@@ -25489,7 +25617,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Luminous Field",
@@ -25509,7 +25638,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Handgun: Milla",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               }
             ],
             "dropRate": "1/2.9"
@@ -25573,7 +25703,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Angel Harp",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "HP/Revival",
@@ -25647,7 +25778,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/4"
@@ -25722,7 +25854,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Angel Harp",
-                "rate": "1/13653.3"
+                "rate": "1/13653.3",
+                "ss": true
               },
               {
                 "item": "Flowen's Frame",
@@ -25844,7 +25977,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Frozen Shooter",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Red Saber",
@@ -25857,7 +25991,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Frozen Shooter",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Star Amplifier",
@@ -25865,19 +26000,23 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Magic Stone \"Iritista\"",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "Syncesta",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "Frozen Shooter",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Frozen Shooter",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               }
             ],
             "dropRate": "1/1"
@@ -25899,7 +26038,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Holy Ray",
-                "rate": "1/36.6"
+                "rate": "1/36.6",
+                "bannerHit": 40
               },
               {
                 "item": "Dragon's Claw",
@@ -25941,15 +26081,18 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Chain Sawd",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Storm Wand: Indra",
@@ -25987,7 +26130,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Red Sword",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "Branch of Pakupaku",
@@ -26030,7 +26174,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Demolition Comet",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "God/HP",
@@ -26050,19 +26195,23 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Red Sword",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "Heart of TypeSS/Swords",
-                "rate": "1/13653.3"
+                "rate": "1/13653.3",
+                "ss": true
               },
               {
                 "item": "Red Sword",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "Red Sword",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/6.7"
@@ -26126,11 +26275,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Sange",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Demolition Comet",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Psycho Wand",
@@ -26143,7 +26294,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Demolition Comet",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Sense Plate",
@@ -26151,7 +26303,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Sange",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Agito (1975)",
@@ -26169,7 +26322,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Shouren",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               },
               {
                 "item": "Red Dagger",
@@ -26202,7 +26356,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Shouren",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/1.8"
@@ -26212,7 +26367,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Red Sword",
-                "rate": "1/572.9"
+                "rate": "1/572.9",
+                "bannerHit": 50
               },
               {
                 "item": "God/Arm",
@@ -26279,7 +26435,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/37342.4"
+                "rate": "1/37342.4",
+                "ss": true
               },
               {
                 "item": "Guard Wave",
@@ -26313,7 +26470,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Demolition Comet",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Caduceus",
@@ -26329,7 +26487,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "Guard Wave",
@@ -26351,7 +26510,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Sange",
-                "rate": "1/350.1"
+                "rate": "1/350.1",
+                "bannerHit": 50
               },
               {
                 "item": "Red Dagger",
@@ -26359,7 +26519,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Flamberge",
-                "rate": "1/4045.4"
+                "rate": "1/4045.4",
+                "ss": true
               },
               {
                 "item": "P-arm's Arms",
@@ -26375,7 +26536,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Sange",
-                "rate": "1/350.1"
+                "rate": "1/350.1",
+                "bannerHit": 50
               },
               {
                 "item": "Photon Filter",
@@ -26383,7 +26545,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Tension Blaster",
-                "rate": "1/4045.4"
+                "rate": "1/4045.4",
+                "ss": true
               },
               {
                 "item": "P-arm's Arms",
@@ -26489,11 +26652,13 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "L&K38 Combat",
-                "rate": "1/39.4"
+                "rate": "1/39.4",
+                "bannerHit": 40
               },
               {
                 "item": "Holy Ray",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "Laconium Axe",
@@ -26501,7 +26666,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Asteron Belt",
-                "rate": "1/39.4"
+                "rate": "1/39.4",
+                "bannerHit": 40
               },
               {
                 "item": "Phonon Maser",
@@ -26509,7 +26675,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Holy Ray",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "De Rol Le Shell",
@@ -26521,7 +26688,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Holy Ray",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "Heavenly/Resist",
@@ -26547,23 +26715,28 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Flowen's Sword (3073)",
-                "rate": "1/33608.2"
+                "rate": "1/33608.2",
+                "ss": true
               },
               {
                 "item": "Heart of Izmaela",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "Heart of Sorcerer's Cane",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "S-Parts ver2.01",
-                "rate": "1/10922.7"
+                "rate": "1/10922.7",
+                "ss": true
               },
               {
                 "item": "Gae Bolg",
@@ -26628,7 +26801,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Viridia Card",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Justy-23ST",
@@ -26644,7 +26818,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Storm Wand: Indra",
@@ -26660,11 +26835,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "NUG2000-Bazooka",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Whitill Card",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               }
             ],
             "dropRate": "1/2.9"
@@ -26690,7 +26867,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yasminkov 9000M",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "Smoking Plate",
@@ -26772,7 +26950,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "NUG2000-Bazooka",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "S-red's Arms",
@@ -26780,11 +26959,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "Syncesta",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "Heaven Punisher",
@@ -26797,11 +26978,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "Lame d'Argent",
-                "rate": "1/1655.0"
+                "rate": "1/1655.0",
+                "bannerHit": 20
               },
               {
                 "item": "S-red's Arms",
@@ -26823,7 +27006,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Syncesta",
-                "rate": "1/11861.7"
+                "rate": "1/11861.7",
+                "ss": true
               },
               {
                 "item": "Silence Claw",
@@ -26923,7 +27107,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Guardianna",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "Storm Wand: Indra",
@@ -26931,7 +27116,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Musashi",
@@ -26957,7 +27143,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Spread Needle",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "God/Body",
@@ -26965,11 +27152,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Guardianna",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "Spread Needle",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "DB's Saber (3069 Torato)",
@@ -26985,7 +27174,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Spread Needle",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "Red Mechgun",
@@ -27007,11 +27197,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Heaven Striker",
-                "rate": "1/4255.6"
+                "rate": "1/4255.6",
+                "bannerHit": 20
               },
               {
                 "item": "Red Mechgun",
@@ -27245,7 +27437,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Book of Hitogata",
-                "rate": "1/22405.5"
+                "rate": "1/22405.5",
+                "ss": true
               },
               {
                 "item": "Heavenly/Arms",
@@ -27253,7 +27446,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Guardianna",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "Meteor Cudgel",
@@ -27261,7 +27455,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Guardianna",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "Heavenly/Arms",
@@ -27308,11 +27503,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Partisan of Lightning",
-                "rate": "1/6068.1"
+                "rate": "1/6068.1",
+                "ss": true
               },
               {
                 "item": "Guardianna",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "Red Slicer",
@@ -27355,11 +27552,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Partisan of Lightning",
-                "rate": "1/6068.1"
+                "rate": "1/6068.1",
+                "ss": true
               },
               {
                 "item": "Guardianna",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "Red Slicer",
@@ -27373,7 +27572,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Lavis Cannon",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Psycho Wand",
@@ -27391,7 +27591,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Book of Hitogata",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Sorcerer's Right Arm",
@@ -27404,7 +27605,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Book of Hitogata",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Sorcerer's Right Arm",
@@ -27427,7 +27629,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Monkey King Bar",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "Meteor Cudgel",
@@ -27435,7 +27638,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Monkey King Bar",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "Bringer's Right Arm",
@@ -27447,7 +27651,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Spread Needle",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "Prophets of Motav",
@@ -27470,15 +27675,18 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Red Ring",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "Red Ring",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "Red Ring",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "DF Shield",
@@ -27494,7 +27702,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Red Ring",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "DF Shield",
@@ -27506,7 +27715,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Red Ring",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -27542,7 +27752,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -27554,7 +27765,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -27576,7 +27788,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/206.4"
+                "rate": "1/206.4",
+                "bannerHit": 50
               },
               {
                 "item": "Anti Android Rifle",
@@ -27626,7 +27839,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Suppressed Gun",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "Aura Field",
@@ -27692,7 +27906,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "DB's Saber (3077)",
-                "rate": "1/10082.5"
+                "rate": "1/10082.5",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -27710,7 +27925,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vivienne",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Rabbit Wand",
@@ -27722,11 +27938,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vivienne",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Rambling May",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "The Sigh of a God",
@@ -27738,7 +27956,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Rambling May",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               }
             ],
             "dropRate": "1/1"
@@ -27932,7 +28151,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Frozen Shooter",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Kamui",
@@ -27956,11 +28176,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Magic Stone \"Iritista\"",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "Syncesta",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "Flight Cutter",
@@ -28002,7 +28224,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/1575.4"
+                "rate": "1/1575.4",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -28085,7 +28308,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yasminkov 9000M",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "Angry Fist",
@@ -28147,11 +28371,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Flowen's Sword (3084)",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28181,7 +28407,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Rambling May",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Crimson Coat",
@@ -28207,11 +28434,13 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "NUG2000-Bazooka",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Handgun: Milla",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Yasha",
@@ -28254,7 +28483,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "L&K38 Combat",
-                "rate": "1/46.5"
+                "rate": "1/46.5",
+                "bannerHit": 40
               },
               {
                 "item": "Heavenly/Resist",
@@ -28308,7 +28538,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Chain Sawd",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "Regenerate Gear B.P.",
@@ -28336,7 +28567,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28416,7 +28648,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Flowen's Shield",
@@ -28520,7 +28753,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/128"
+                "rate": "1/128",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2"
@@ -28562,7 +28796,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "Angry Fist",
@@ -28622,23 +28857,28 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Panzer Faust",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "Panzer Faust",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "Daylight Scar",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "Heart of Soul Banish",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "Panzer Faust",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "Parts of Baranz",
@@ -28646,15 +28886,18 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Panzer Faust",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "Panzer Faust",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "Daylight Scar",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "Parts of Baranz",
@@ -28677,7 +28920,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Guren",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               },
               {
                 "item": "V501",
@@ -28697,15 +28941,18 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Daylight Scar",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/40329.8"
+                "rate": "1/40329.8",
+                "ss": true
               },
               {
                 "item": "Guren",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/4"
@@ -28715,7 +28962,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Heart of Crazy Tune",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "Greenill Card",
@@ -28746,7 +28994,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Guren",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               },
               {
                 "item": "Rage de Foudre",
@@ -28827,11 +29076,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Lame d'Argent",
-                "rate": "1/4201.0"
+                "rate": "1/4201.0",
+                "bannerHit": 20
               },
               {
                 "item": "Stag Cutlery",
@@ -28847,7 +29098,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28877,7 +29129,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Brightness Circle",
@@ -28893,7 +29146,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -28915,7 +29169,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Cross Scar",
@@ -29032,7 +29287,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -29135,7 +29391,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "V502",
@@ -29143,7 +29400,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Monkey King Bar",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "The Sigh of a God",
@@ -29168,7 +29426,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "L&K38 Combat",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "Asuka",
@@ -29182,7 +29441,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Heart of Chameleon Scythe",
-                "rate": "1/3150.8"
+                "rate": "1/3150.8",
+                "ss": true
               },
               {
                 "item": "Berdysh",
@@ -29206,7 +29466,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Twin Blaze",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "Cure/Freeze",
@@ -29214,11 +29475,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Twin Blaze",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "Yasminkov 7000V",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -29236,7 +29499,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yasminkov 7000V",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "Berdysh",
@@ -29248,7 +29512,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Handgun: Milla",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "Red Scorpio",
@@ -29280,7 +29545,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Angel Harp",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "Partisan of Lightning",
@@ -29288,7 +29554,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "Heavenly/Ability",
@@ -29296,7 +29563,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Tyrell's Parasol",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "Heavenly/Battle",
@@ -29309,11 +29577,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               }
             ],
             "dropRate": "1/1.2"
@@ -29374,7 +29644,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Rabbit Wand",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "God Hand",
@@ -29394,7 +29665,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Ruby Bullet",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "Gal Gryphon's Wing",
@@ -29402,7 +29674,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Galatine",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "Heavenly/TP",
@@ -29440,7 +29713,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Monkey King Bar",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 40
               },
               {
                 "item": "Dragon Slayer",
@@ -29478,11 +29752,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "DB's Saber (3064)",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Monkey King Bar",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "Perfect/Resist",
@@ -29494,7 +29770,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of TypeDS/D.Saber",
-                "rate": "1/14403.5"
+                "rate": "1/14403.5",
+                "ss": true
               },
               {
                 "item": "Stink Frame",
@@ -29554,19 +29831,23 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Yunchang",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "Lavis Cannon",
-                "rate": "1/25206.2"
+                "rate": "1/25206.2",
+                "ss": true
               },
               {
                 "item": "Twin Blaze",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "Yunchang",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "Tripolic Shield",
@@ -29578,7 +29859,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yunchang",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "Standstill Shield",
@@ -29586,7 +29868,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yasminkov 7000V",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "Sting Tip",
@@ -29620,7 +29903,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Flowen's Sword (3077)",
-                "rate": "1/33608.2"
+                "rate": "1/33608.2",
+                "ss": true
               },
               {
                 "item": "Ano Rifle",
@@ -29632,11 +29916,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Zanba",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 40
               },
               {
                 "item": "Heaven Striker",
-                "rate": "1/2275.6"
+                "rate": "1/2275.6",
+                "bannerHit": 20
               }
             ],
             "dropRate": "1/3.3"
@@ -29650,19 +29936,23 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yasminkov 7000V",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "Zanba",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "Zanba",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "Yasminkov 7000V",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "Psycho Wand",
@@ -29676,7 +29966,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Zanba",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "Hitogata",
@@ -29684,7 +29975,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yamigarasu",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -29694,11 +29986,13 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Yamigarasu",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "Heart of Egg Blaster",
-                "rate": "1/6301.5"
+                "rate": "1/6301.5",
+                "ss": true
               },
               {
                 "item": "Brightness Circle",
@@ -29710,7 +30004,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Yasminkov 9000M",
-                "rate": "1/6301.5"
+                "rate": "1/6301.5",
+                "ss": true
               },
               {
                 "item": "V501",
@@ -29791,7 +30086,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Parasitic Gene \"Flow\"",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "D-Photon Core",
@@ -29803,15 +30099,18 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Parasitic Gene \"Flow\"",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Parasitic Gene \"Flow\"",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Parasitic Gene \"Flow\"",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "D-Photon Core",
@@ -29819,11 +30118,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Parasitic Gene \"Flow\"",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "Parasitic Gene \"Flow\"",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "D-Photon Core",
@@ -29846,7 +30147,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yamigarasu",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "Demonic Fork",
@@ -29870,7 +30172,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yamigarasu",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "V502",
@@ -29884,7 +30187,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Book of Hitogata",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "Asuka",
@@ -29904,7 +30208,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Lollipop",
-                "rate": "1/8511.2"
+                "rate": "1/8511.2",
+                "ss": true
               },
               {
                 "item": "Standstill Shield",
@@ -29935,7 +30240,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heart of Rianov 303SNR",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "ss": true
               },
               {
                 "item": "Rika's Claw",
@@ -29991,7 +30297,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "Divine Protection",
@@ -30041,7 +30348,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/168.4"
+                "rate": "1/168.4",
+                "bannerHit": 50
               },
               {
                 "item": "Rianov 303SNR-3",
@@ -30049,7 +30357,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/168.4"
+                "rate": "1/168.4",
+                "bannerHit": 50
               },
               {
                 "item": "Morning Prayer",
@@ -30095,7 +30404,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Cannon Rouge",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 30
               },
               {
                 "item": "Red Odoshi Domaru",
@@ -30209,11 +30519,13 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "Lame d'Argent",
-                "rate": "1/3.2"
+                "rate": "1/3.2",
+                "bannerHit": 20
               },
               {
                 "item": "Cannon Rouge",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Liberta Kit",
@@ -30221,7 +30533,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Asteron Belt",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Rage de Feu",
@@ -30229,7 +30542,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Clio",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "Crimson Coat",
@@ -30241,7 +30555,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Cannon Rouge",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "Liberta Kit",
@@ -30375,7 +30690,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Slicer of Fanatic",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               },
               {
                 "item": "Photon Crystal",
@@ -30405,7 +30721,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Girasole",
-                "rate": "1/910.2"
+                "rate": "1/910.2",
+                "bannerHit": 40
               },
               {
                 "item": "Photon Crystal",
@@ -30475,7 +30792,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -30485,7 +30803,8 @@ window.DROP_DATA_EN = {
             "drops": [
               {
                 "item": "L&K38 Combat",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Rianov 303SNR-5",
@@ -30493,11 +30812,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Girasole",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Ophelie Seize",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "V801",
@@ -30517,11 +30838,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Girasole",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Ophelie Seize",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/1"
@@ -30539,7 +30862,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Chain Sawd",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "Lieutenant Mantle",
@@ -30547,11 +30871,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Yasminkov 9000M",
-                "rate": "1/1517.0"
+                "rate": "1/1517.0",
+                "bannerHit": 40
               },
               {
                 "item": "Guardianna",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "Stag Cutlery",
@@ -30567,7 +30893,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Slicer of Fanatic",
-                "rate": "1/1517.0"
+                "rate": "1/1517.0",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/3.3"
@@ -30581,7 +30908,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heaven Striker",
-                "rate": "1/3343.7"
+                "rate": "1/3343.7",
+                "bannerHit": 20
               },
               {
                 "item": "Black Odoshi Red Nimaidou",
@@ -30601,7 +30929,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heaven Striker",
-                "rate": "1/3343.7"
+                "rate": "1/3343.7",
+                "bannerHit": 20
               },
               {
                 "item": "Cursed Cloak",
@@ -30631,7 +30960,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lame d'Argent",
-                "rate": "1/1462.9"
+                "rate": "1/1462.9",
+                "bannerHit": 20
               },
               {
                 "item": "Berdysh",
@@ -30647,7 +30977,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "Lieutenant Mantle",
@@ -30681,15 +31012,18 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Vjaya",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 Vise",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "Slicer of Fanatic",
-                "rate": "1/1379.1"
+                "rate": "1/1379.1",
+                "bannerHit": 40
               },
               {
                 "item": "Diska of Liberator",
@@ -30705,7 +31039,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Diska of Braveman",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.7"
@@ -30731,11 +31066,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Ophelie Seize",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Ophelie Seize",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Flamberge",
@@ -30743,7 +31080,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Ophelie Seize",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "Flamberge",
@@ -30790,7 +31128,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Syncesta",
-                "rate": "1/1137.8"
+                "rate": "1/1137.8",
+                "ss": true
               },
               {
                 "item": "Swordsman Lore",
@@ -30812,11 +31151,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Galatine",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "Heart of Laconium Axe",
-                "rate": "1/128"
+                "rate": "1/128",
+                "ss": true
               },
               {
                 "item": "Siren Glass Hammer",
@@ -30840,11 +31181,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Galatine",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "Heart of Samba Maracas",
-                "rate": "1/128"
+                "rate": "1/128",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -30916,7 +31259,8 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Heaven Striker",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 20
               },
               {
                 "item": "Mother Garb+",
@@ -30928,11 +31272,13 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Lame d'Argent",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 20
               },
               {
                 "item": "Daylight Scar",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 30
               },
               {
                 "item": "Limiter",

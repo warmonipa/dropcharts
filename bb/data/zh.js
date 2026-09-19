@@ -1181,15 +1181,18 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "纯正长刀",
@@ -1197,7 +1200,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/16718.4"
+                "rate": "1/16718.4",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -1205,11 +1209,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               },
               {
                 "item": "DB 之剑",
@@ -1217,7 +1223,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10639.0"
+                "rate": "1/10639.0",
+                "ss": true
               }
             ],
             "dropRate": "1/3.6"
@@ -1945,7 +1952,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/7447.3"
+                "rate": "1/7447.3",
+                "ss": true
               },
               {
                 "item": "隐形盾",
@@ -1991,7 +1999,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/7447.3"
+                "rate": "1/7447.3",
+                "ss": true
               },
               {
                 "item": "隐形盾",
@@ -4298,7 +4307,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/5201.3"
+                "rate": "1/5201.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -8003,7 +8013,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/104.5"
+                "rate": "1/104.5",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -8303,7 +8314,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -8345,7 +8357,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -8533,7 +8546,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/243.8"
+                "rate": "1/243.8",
+                "bannerHit": 50
               },
               {
                 "item": "纯正长刀",
@@ -8553,7 +8567,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/243.8"
+                "rate": "1/243.8",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/6.7"
@@ -8609,7 +8624,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "瓦尔斯-MK2",
@@ -8621,7 +8637,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -8717,7 +8734,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -8805,7 +8823,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "帕库帕库之枝",
@@ -9177,7 +9196,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/118.0"
+                "rate": "1/118.0",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -9269,7 +9289,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "纯正长刀",
@@ -9285,11 +9306,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2"
@@ -9637,7 +9660,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -9683,7 +9707,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/320"
+                "rate": "1/320",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -9729,7 +9754,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/91.4"
+                "rate": "1/91.4",
+                "bannerHit": 50
               },
               {
                 "item": "纯正长刀",
@@ -10098,7 +10124,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -10370,7 +10397,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -10416,7 +10444,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -10576,7 +10605,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.5"
@@ -10644,7 +10674,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -10690,7 +10721,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/104.5"
+                "rate": "1/104.5",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -10786,7 +10818,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -10944,7 +10977,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -10970,7 +11004,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -11012,7 +11047,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -11154,7 +11190,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -11170,7 +11207,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "暗杀者的投刃",
@@ -11196,7 +11234,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -11338,7 +11377,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -11588,7 +11628,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/284.4"
+                "rate": "1/284.4",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.2"
@@ -11610,7 +11651,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -11656,7 +11698,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -11676,7 +11719,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "解放者的飞碟",
@@ -11702,7 +11746,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -11752,7 +11797,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "芭蕉叶",
@@ -11794,7 +11840,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -12023,7 +12070,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -12139,7 +12187,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -12165,7 +12214,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -12298,7 +12348,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -12344,7 +12395,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -12390,7 +12442,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -12462,7 +12515,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.6"
@@ -12630,7 +12684,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/98.5"
+                "rate": "1/98.5",
+                "bannerHit": 50
               },
               {
                 "item": "雄风之剑",
@@ -12794,7 +12849,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "光子爪",
@@ -12898,7 +12954,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "血之艺",
@@ -13132,7 +13189,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "兹米乌兰之杖",
@@ -13140,7 +13198,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "拉克尼姆之杖",
@@ -13152,7 +13211,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.7"
@@ -16429,7 +16489,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "血之艺",
@@ -16545,7 +16606,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               },
               {
                 "item": "魔法剑",
@@ -16557,7 +16619,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -16831,7 +16894,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -16899,7 +16963,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "麻醉枪",
@@ -16923,7 +16988,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -16953,7 +17019,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "解放者的飞碟",
@@ -17025,7 +17092,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/512"
+                "rate": "1/512",
+                "bannerHit": 50
               },
               {
                 "item": "剑之舞",
@@ -17041,7 +17109,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/512"
+                "rate": "1/512",
+                "bannerHit": 50
               },
               {
                 "item": "纯正长刀",
@@ -17175,7 +17244,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/116.4"
+                "rate": "1/116.4",
+                "bannerHit": 50
               },
               {
                 "item": "扩展插槽",
@@ -17337,7 +17407,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/40.6"
+                "rate": "1/40.6",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.1"
@@ -17359,7 +17430,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -17405,7 +17477,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -17425,7 +17498,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -17785,7 +17859,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/43.0"
+                "rate": "1/43.0",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -17797,7 +17872,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/43.0"
+                "rate": "1/43.0",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -17873,7 +17949,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "陨石枪",
@@ -17899,7 +17976,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "地狱火箭筒",
@@ -18211,7 +18289,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "DB 之剑之心",
-                "rate": "1/6619.8"
+                "rate": "1/6619.8",
+                "ss": true
               }
             ],
             "dropRate": "1/2.2"
@@ -18464,7 +18543,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -18498,7 +18578,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/206.4"
+                "rate": "1/206.4",
+                "bannerHit": 50
               },
               {
                 "item": "瓦尔斯-MK2",
@@ -18580,7 +18661,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -18622,7 +18704,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/128"
+                "rate": "1/128",
+                "bannerHit": 50
               },
               {
                 "item": "解放者的飞碟",
@@ -18832,7 +18915,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/45.7"
+                "rate": "1/45.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -18902,7 +18986,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -19060,7 +19145,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -19130,7 +19216,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1.1"
+                "rate": "1/1.1",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1"
@@ -19152,7 +19239,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "静默爪",
@@ -19168,7 +19256,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "古代剑之心",
-                "rate": "1/6687.4"
+                "rate": "1/6687.4",
+                "ss": true
               },
               {
                 "item": "生命壶",
@@ -19232,7 +19321,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "伽斯帝-23ST",
@@ -19244,7 +19334,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -19290,7 +19381,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -19340,7 +19432,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "炎杖「阿耆尼」",
@@ -19382,7 +19475,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -19428,7 +19522,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/73.1"
+                "rate": "1/73.1",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -19620,7 +19715,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/256"
+                "rate": "1/256",
+                "bannerHit": 50
               },
               {
                 "item": "弗洛文之盾",
@@ -19632,7 +19728,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "剑魔之剑之心",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "解放者的飞碟",
@@ -19670,7 +19767,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -19682,7 +19780,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/4"
@@ -19704,7 +19803,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "剑之舞之心",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "罪恶之光",
@@ -19796,7 +19896,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -19842,7 +19943,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "血之艺",
@@ -19850,7 +19952,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/426.7"
+                "rate": "1/426.7",
+                "bannerHit": 50
               },
               {
                 "item": "解放者的飞碟",
@@ -19908,11 +20011,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -20402,7 +20507,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/365.7"
+                "rate": "1/365.7",
+                "bannerHit": 50
               },
               {
                 "item": "HP/重生",
@@ -20531,7 +20637,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "H&S25 正义制裁",
@@ -20565,7 +20672,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "瓦尔斯-MK2",
@@ -20577,7 +20685,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "颚刀「1991」",
@@ -20611,7 +20720,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "富豪长刀",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "浮光盾",
@@ -20772,7 +20882,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -20784,7 +20895,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/160"
+                "rate": "1/160",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.5"
@@ -20864,7 +20976,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "斩龙剑",
@@ -20876,7 +20989,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -21122,11 +21236,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣光枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "电锯",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "解除/混乱",
@@ -21142,7 +21258,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "解放者的飞碟之心",
-                "rate": "1/9.8"
+                "rate": "1/9.8",
+                "ss": true
               },
               {
                 "item": "光子水晶 PC",
@@ -21476,7 +21593,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -21502,15 +21620,18 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "大和",
@@ -21518,7 +21639,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/1950.5"
+                "rate": "1/1950.5",
+                "bannerHit": 50
               },
               {
                 "item": "L&K14 战场之狼",
@@ -21556,11 +21678,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/146.3"
+                "rate": "1/146.3",
+                "bannerHit": 50
               },
               {
                 "item": "芭蕉扇之心",
-                "rate": "1/6687.4"
+                "rate": "1/6687.4",
+                "ss": true
               },
               {
                 "item": "辉石「月晖」",
@@ -21590,7 +21714,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/379.3"
+                "rate": "1/379.3",
+                "bannerHit": 50
               },
               {
                 "item": "空间机动步兵军服",
@@ -21632,7 +21757,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "神之吐息之心",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "神冰铁",
@@ -25405,7 +25531,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -25427,7 +25554,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "雏菊之剑之心",
-                "rate": "1/12318.8"
+                "rate": "1/12318.8",
+                "ss": true
               },
               {
                 "item": "雄风之剑",
@@ -25489,7 +25617,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "辉光力场",
@@ -25509,7 +25638,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "小枪「米拉」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               }
             ],
             "dropRate": "1/2.9"
@@ -25573,7 +25703,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "天使竖琴",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "HP/重生",
@@ -25647,7 +25778,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/4"
@@ -25722,7 +25854,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "天使竖琴之心",
-                "rate": "1/13653.3"
+                "rate": "1/13653.3",
+                "ss": true
               },
               {
                 "item": "弗洛文之铠",
@@ -25844,7 +25977,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "极冻枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "红色光剑",
@@ -25857,7 +25991,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "极冻枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "星型增幅器",
@@ -25865,19 +26000,23 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "魔石「伊利提斯塔」",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "真空波石",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "极冻枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "极冻枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               }
             ],
             "dropRate": "1/1"
@@ -25899,7 +26038,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣光枪",
-                "rate": "1/36.6"
+                "rate": "1/36.6",
+                "bannerHit": 40
               },
               {
                 "item": "龙之爪",
@@ -25941,15 +26081,18 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "电锯",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "雷杖「因陀罗」",
@@ -25987,7 +26130,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "红色大剑",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "帕库帕库之枝",
@@ -26030,7 +26174,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "破坏彗星",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "天神级/HP",
@@ -26050,19 +26195,23 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "红色大剑",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "双刀式双刀之心",
-                "rate": "1/13653.3"
+                "rate": "1/13653.3",
+                "ss": true
               },
               {
                 "item": "红色大剑",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               },
               {
                 "item": "红色大剑",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/6.7"
@@ -26126,11 +26275,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "散华",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "破坏彗星",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "意念杖",
@@ -26143,7 +26294,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "破坏彗星",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "感知铠",
@@ -26151,7 +26303,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "散华",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "颚刀「1975」",
@@ -26169,7 +26322,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "青莲",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               },
               {
                 "item": "红色双刃",
@@ -26202,7 +26356,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "青莲",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/1.8"
@@ -26212,7 +26367,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "红色大剑",
-                "rate": "1/572.9"
+                "rate": "1/572.9",
+                "bannerHit": 50
               },
               {
                 "item": "天神级/命中",
@@ -26279,7 +26435,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/37342.4"
+                "rate": "1/37342.4",
+                "ss": true
               },
               {
                 "item": "波动护甲",
@@ -26313,7 +26470,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "破坏彗星",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "赫尔墨斯杖",
@@ -26329,7 +26487,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "波动护甲",
@@ -26351,7 +26510,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "散华",
-                "rate": "1/350.1"
+                "rate": "1/350.1",
+                "bannerHit": 50
               },
               {
                 "item": "红色双刃",
@@ -26359,7 +26519,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "波刃剑之心",
-                "rate": "1/4045.4"
+                "rate": "1/4045.4",
+                "ss": true
               },
               {
                 "item": "合体怪双臂",
@@ -26375,7 +26536,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "散华",
-                "rate": "1/350.1"
+                "rate": "1/350.1",
+                "bannerHit": 50
               },
               {
                 "item": "光子滤镜",
@@ -26383,7 +26545,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "压力波动枪之心",
-                "rate": "1/4045.4"
+                "rate": "1/4045.4",
+                "ss": true
               },
               {
                 "item": "合体怪双臂",
@@ -26489,11 +26652,13 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "L&K38 战场之狼",
-                "rate": "1/39.4"
+                "rate": "1/39.4",
+                "bannerHit": 40
               },
               {
                 "item": "圣光枪",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "拉克尼姆战斧",
@@ -26501,7 +26666,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "十文字枪",
-                "rate": "1/39.4"
+                "rate": "1/39.4",
+                "bannerHit": 40
               },
               {
                 "item": "声子激射炮",
@@ -26509,7 +26675,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣光枪",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "迪·洛尔·雷之壳",
@@ -26521,7 +26688,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣光枪",
-                "rate": "1/32"
+                "rate": "1/32",
+                "bannerHit": 40
               },
               {
                 "item": "天堂级/抗性",
@@ -26547,23 +26715,28 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "弗洛文大剑「3073」",
-                "rate": "1/33608.2"
+                "rate": "1/33608.2",
+                "ss": true
               },
               {
                 "item": "依兹玛艾拉之心",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "混沌法师之杖之心",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "S组件 Ver2.01",
-                "rate": "1/10922.7"
+                "rate": "1/10922.7",
+                "ss": true
               },
               {
                 "item": "战斗长刀",
@@ -26628,7 +26801,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "深绿卡片",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "伽斯帝-23ST",
@@ -26644,7 +26818,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "雷杖「因陀罗」",
@@ -26660,11 +26835,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "NUG2000 火箭筒",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "羽白卡片",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               }
             ],
             "dropRate": "1/2.9"
@@ -26690,7 +26867,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 9000M",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "烟幕铠",
@@ -26772,7 +26950,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "NUG2000 火箭筒",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "红机忍双臂",
@@ -26780,11 +26959,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "真空波石",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "圣枪「天罚」",
@@ -26797,11 +26978,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/18331.8"
+                "rate": "1/18331.8",
+                "ss": true
               },
               {
                 "item": "银月之剑",
-                "rate": "1/1655.0"
+                "rate": "1/1655.0",
+                "bannerHit": 20
               },
               {
                 "item": "红机忍双臂",
@@ -26823,7 +27006,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "真空波石",
-                "rate": "1/11861.7"
+                "rate": "1/11861.7",
+                "ss": true
               },
               {
                 "item": "静默爪",
@@ -26923,7 +27107,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "守护之扇",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "雷杖「因陀罗」",
@@ -26931,7 +27116,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "武藏",
@@ -26957,7 +27143,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "魔弹弓",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "天神级/防御",
@@ -26965,11 +27152,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "守护之扇",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "魔弹弓",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "DB 之剑「3069·Torato 公司」",
@@ -26985,7 +27174,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "魔弹弓",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "红色机枪",
@@ -27007,11 +27197,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "天堂冲击",
-                "rate": "1/4255.6"
+                "rate": "1/4255.6",
+                "bannerHit": 20
               },
               {
                 "item": "红色机枪",
@@ -27245,7 +27437,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "真瑚经书",
-                "rate": "1/22405.5"
+                "rate": "1/22405.5",
+                "ss": true
               },
               {
                 "item": "天堂级/命中",
@@ -27253,7 +27446,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "守护之扇",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "流星棍",
@@ -27261,7 +27455,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "守护之扇",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "天堂级/命中",
@@ -27308,11 +27503,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "迅雷之心",
-                "rate": "1/6068.1"
+                "rate": "1/6068.1",
+                "ss": true
               },
               {
                 "item": "守护之扇",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "红色投刃",
@@ -27355,11 +27552,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "迅雷之心",
-                "rate": "1/6068.1"
+                "rate": "1/6068.1",
+                "ss": true
               },
               {
                 "item": "守护之扇",
-                "rate": "1/700.2"
+                "rate": "1/700.2",
+                "bannerHit": 50
               },
               {
                 "item": "红色投刃",
@@ -27373,7 +27572,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "意念杖",
@@ -27391,7 +27591,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "真瑚经书",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "混沌法师右臂",
@@ -27404,7 +27605,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "真瑚经书",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "混沌法师右臂",
@@ -27427,7 +27629,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "如意金箍棒",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "流星棍",
@@ -27435,7 +27638,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "如意金箍棒",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "混沌骑士右臂",
@@ -27447,7 +27651,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "魔弹弓",
-                "rate": "1/358.0"
+                "rate": "1/358.0",
+                "bannerHit": 40
               },
               {
                 "item": "莫塔夫预言书",
@@ -27470,15 +27675,18 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "红色手镯",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "红色手镯",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "红色手镯",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "DF 之盾",
@@ -27494,7 +27702,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "红色手镯",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "DF 之盾",
@@ -27506,7 +27715,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "红色手镯",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -27542,7 +27752,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -27554,7 +27765,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -27576,7 +27788,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/206.4"
+                "rate": "1/206.4",
+                "bannerHit": 50
               },
               {
                 "item": "反机器人步枪",
@@ -27626,7 +27839,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "消音枪之心",
-                "rate": "1/9102.2"
+                "rate": "1/9102.2",
+                "ss": true
               },
               {
                 "item": "奥拉力场",
@@ -27692,7 +27906,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "DB 之剑「3077」",
-                "rate": "1/10082.5"
+                "rate": "1/10082.5",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -27710,7 +27925,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "维维安",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "兔子杖",
@@ -27722,11 +27938,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "维维安",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "漫步少女",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "神之吐息",
@@ -27738,7 +27956,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "漫步少女",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               }
             ],
             "dropRate": "1/1"
@@ -27932,7 +28151,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "极冻枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "神威",
@@ -27956,11 +28176,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "魔石「伊利提斯塔」",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "真空波石",
-                "rate": "1/21.3"
+                "rate": "1/21.3",
+                "ss": true
               },
               {
                 "item": "手里剑",
@@ -28002,7 +28224,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/1575.4"
+                "rate": "1/1575.4",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -28085,7 +28308,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 9000M",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "愤怒之拳",
@@ -28147,11 +28371,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "弗洛文大剑「3084」",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28181,7 +28407,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "漫步少女",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "真红外套",
@@ -28207,11 +28434,13 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "NUG2000 火箭筒",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "小枪「米拉」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "夜叉",
@@ -28254,7 +28483,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "L&K38 战场之狼",
-                "rate": "1/46.5"
+                "rate": "1/46.5",
+                "bannerHit": 40
               },
               {
                 "item": "天堂级/抗性",
@@ -28308,7 +28538,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "电锯",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "再生盾 B.P",
@@ -28336,7 +28567,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28416,7 +28648,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "弗洛文之盾",
@@ -28520,7 +28753,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/128"
+                "rate": "1/128",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2"
@@ -28562,7 +28796,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/81.3"
+                "rate": "1/81.3",
+                "bannerHit": 50
               },
               {
                 "item": "愤怒之拳",
@@ -28622,23 +28857,28 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "装甲之拳",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "装甲之拳",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "晓之刻印",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "驱魂者之心",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "装甲之拳",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "机甲堡垒零件",
@@ -28646,15 +28886,18 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "装甲之拳",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "装甲之拳",
-                "rate": "1/630.1"
+                "rate": "1/630.1",
+                "bannerHit": 50
               },
               {
                 "item": "晓之刻印",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "机甲堡垒零件",
@@ -28677,7 +28920,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "红莲",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               },
               {
                 "item": "V501",
@@ -28697,15 +28941,18 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "晓之刻印",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 30
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/40329.8"
+                "rate": "1/40329.8",
+                "ss": true
               },
               {
                 "item": "红莲",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/4"
@@ -28715,7 +28962,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "疯狂旋律之心",
-                "rate": "1/6553.6"
+                "rate": "1/6553.6",
+                "ss": true
               },
               {
                 "item": "黄绿卡片",
@@ -28746,7 +28994,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "红莲",
-                "rate": "1/1260.3"
+                "rate": "1/1260.3",
+                "bannerHit": 40
               },
               {
                 "item": "雷霆之怒",
@@ -28827,11 +29076,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "银月之剑",
-                "rate": "1/4201.0"
+                "rate": "1/4201.0",
+                "bannerHit": 20
               },
               {
                 "item": "雄风之剑",
@@ -28847,7 +29098,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -28877,7 +29129,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "圣光环",
@@ -28893,7 +29146,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -28915,7 +29169,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "十字疤",
@@ -29032,7 +29287,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.3"
@@ -29135,7 +29391,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "V502",
@@ -29143,7 +29400,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "如意金箍棒",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "神之吐息",
@@ -29168,7 +29426,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "L&K38 战场之狼",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "飞鸟",
@@ -29182,7 +29441,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "变色龙镰刀之心",
-                "rate": "1/3150.8"
+                "rate": "1/3150.8",
+                "ss": true
               },
               {
                 "item": "破坏者之斧",
@@ -29206,7 +29466,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "烈焰双刃",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "解除/冻结",
@@ -29214,11 +29475,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "烈焰双刃",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 40
               },
               {
                 "item": "雅斯米诺科夫 7000V",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -29236,7 +29499,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 7000V",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "破坏者之斧",
@@ -29248,7 +29512,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "小枪「米拉」",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "红蝎",
@@ -29280,7 +29545,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "天使竖琴",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "迅雷",
@@ -29288,7 +29554,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "天堂级/全能力",
@@ -29296,7 +29563,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "总督恩赐阳伞",
-                "rate": "1/393.9"
+                "rate": "1/393.9",
+                "bannerHit": 50
               },
               {
                 "item": "天堂级/战斗",
@@ -29309,11 +29577,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/12603.1"
+                "rate": "1/12603.1",
+                "ss": true
               }
             ],
             "dropRate": "1/1.2"
@@ -29374,7 +29644,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "兔子杖之心",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "神之手",
@@ -29394,7 +29665,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "宝石枪之心",
-                "rate": "1/186.2"
+                "rate": "1/186.2",
+                "ss": true
               },
               {
                 "item": "加尔狮鹫之翼",
@@ -29402,7 +29674,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "太阳之剑「嘉拉汀」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "天堂级/TP",
@@ -29440,7 +29713,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "如意金箍棒",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 40
               },
               {
                 "item": "斩龙剑",
@@ -29478,11 +29752,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "DB 之剑「3064」",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "如意金箍棒",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "完美/抗性",
@@ -29494,7 +29770,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "双头剑式双头剑之心",
-                "rate": "1/14403.5"
+                "rate": "1/14403.5",
+                "ss": true
               },
               {
                 "item": "腥臭铠",
@@ -29554,19 +29831,23 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "云长",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "圣剑「拉维斯·迦农」",
-                "rate": "1/25206.2"
+                "rate": "1/25206.2",
+                "ss": true
               },
               {
                 "item": "烈焰双刃",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "云长",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "特里波利盾",
@@ -29578,7 +29859,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "云长",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 40
               },
               {
                 "item": "叹息之墙",
@@ -29586,7 +29868,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 7000V",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "针芒杖",
@@ -29620,7 +29903,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "弗洛文大剑「3077」",
-                "rate": "1/33608.2"
+                "rate": "1/33608.2",
+                "ss": true
               },
               {
                 "item": "阿诺步枪",
@@ -29632,11 +29916,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "斩马刀",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 40
               },
               {
                 "item": "天堂冲击",
-                "rate": "1/2275.6"
+                "rate": "1/2275.6",
+                "bannerHit": 20
               }
             ],
             "dropRate": "1/3.3"
@@ -29650,19 +29936,23 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 7000V",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "斩马刀",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "斩马刀",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "雅斯米诺科夫 7000V",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               },
               {
                 "item": "意念杖",
@@ -29676,7 +29966,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "斩马刀",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 40
               },
               {
                 "item": "式神",
@@ -29684,7 +29975,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "妖刀·暗鸦",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/2.9"
@@ -29694,11 +29986,13 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "妖刀·暗鸦",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "爆蛋枪之心",
-                "rate": "1/6301.5"
+                "rate": "1/6301.5",
+                "ss": true
               },
               {
                 "item": "圣光环",
@@ -29710,7 +30004,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 9000M 之心",
-                "rate": "1/6301.5"
+                "rate": "1/6301.5",
+                "ss": true
               },
               {
                 "item": "V501",
@@ -29791,7 +30086,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "侵蚀基因「弗洛」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "D型光子核心",
@@ -29803,15 +30099,18 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "侵蚀基因「弗洛」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "侵蚀基因「弗洛」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "侵蚀基因「弗洛」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "D型光子核心",
@@ -29819,11 +30118,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "侵蚀基因「弗洛」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "侵蚀基因「弗洛」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "ss": true
               },
               {
                 "item": "D型光子核心",
@@ -29846,7 +30147,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "妖刀·暗鸦",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "恶魔之叉",
@@ -29870,7 +30172,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "妖刀·暗鸦",
-                "rate": "1/787.7"
+                "rate": "1/787.7",
+                "bannerHit": 50
               },
               {
                 "item": "V502",
@@ -29884,7 +30187,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "真瑚经书",
-                "rate": "1/28807.0"
+                "rate": "1/28807.0",
+                "ss": true
               },
               {
                 "item": "飞鸟",
@@ -29904,7 +30208,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "棒棒糖之心",
-                "rate": "1/8511.2"
+                "rate": "1/8511.2",
+                "ss": true
               },
               {
                 "item": "叹息之墙",
@@ -29935,7 +30240,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "莱阿诺夫 303SNR 之心",
-                "rate": "1/2100.5"
+                "rate": "1/2100.5",
+                "ss": true
               },
               {
                 "item": "里卡之爪",
@@ -29991,7 +30297,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/213.3"
+                "rate": "1/213.3",
+                "bannerHit": 50
               },
               {
                 "item": "神圣守护",
@@ -30041,7 +30348,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/168.4"
+                "rate": "1/168.4",
+                "bannerHit": 50
               },
               {
                 "item": "莱阿诺夫 303SNR-3",
@@ -30049,7 +30357,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/168.4"
+                "rate": "1/168.4",
+                "bannerHit": 50
               },
               {
                 "item": "晨曦之祷",
@@ -30095,7 +30404,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "绯红加农",
-                "rate": "1/900.2"
+                "rate": "1/900.2",
+                "bannerHit": 30
               },
               {
                 "item": "将军战衣",
@@ -30209,11 +30519,13 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "银月之剑",
-                "rate": "1/3.2"
+                "rate": "1/3.2",
+                "bannerHit": 20
               },
               {
                 "item": "绯红加农",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "利贝尔塔组件",
@@ -30221,7 +30533,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "十文字枪",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "烈焰之怒",
@@ -30229,7 +30542,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "克莱奥",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 50
               },
               {
                 "item": "真红外套",
@@ -30241,7 +30555,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "绯红加农",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 30
               },
               {
                 "item": "利贝尔塔组件",
@@ -30375,7 +30690,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "狂信者的投刃",
-                "rate": "1/1241.2"
+                "rate": "1/1241.2",
+                "bannerHit": 40
               },
               {
                 "item": "光子水晶 PC",
@@ -30405,7 +30721,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "向日葵",
-                "rate": "1/910.2"
+                "rate": "1/910.2",
+                "bannerHit": 40
               },
               {
                 "item": "光子水晶 PC",
@@ -30475,7 +30792,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/1.2"
@@ -30485,7 +30803,8 @@ window.DROP_DATA_ZH = {
             "drops": [
               {
                 "item": "L&K38 战场之狼",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "莱阿诺夫 303SNR-5",
@@ -30493,11 +30812,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "向日葵",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "欧菲丽·塞兹",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "V801",
@@ -30517,11 +30838,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "向日葵",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "欧菲丽·塞兹",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/1"
@@ -30539,7 +30862,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "电锯",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "空间机动步兵中尉外套",
@@ -30547,11 +30871,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "雅斯米诺科夫 9000M",
-                "rate": "1/1517.0"
+                "rate": "1/1517.0",
+                "bannerHit": 40
               },
               {
                 "item": "守护之扇",
-                "rate": "1/1050.3"
+                "rate": "1/1050.3",
+                "bannerHit": 50
               },
               {
                 "item": "雄风之剑",
@@ -30567,7 +30893,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "狂信者的投刃",
-                "rate": "1/1517.0"
+                "rate": "1/1517.0",
+                "bannerHit": 40
               }
             ],
             "dropRate": "1/3.3"
@@ -30581,7 +30908,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "天堂冲击",
-                "rate": "1/3343.7"
+                "rate": "1/3343.7",
+                "bannerHit": 20
               },
               {
                 "item": "天神战衣",
@@ -30601,7 +30929,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "天堂冲击",
-                "rate": "1/3343.7"
+                "rate": "1/3343.7",
+                "bannerHit": 20
               },
               {
                 "item": "冥咒披风",
@@ -30631,7 +30960,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "银月之剑",
-                "rate": "1/1462.9"
+                "rate": "1/1462.9",
+                "bannerHit": 20
               },
               {
                 "item": "破坏者之斧",
@@ -30647,7 +30977,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/182.9"
+                "rate": "1/182.9",
+                "bannerHit": 50
               },
               {
                 "item": "空间机动步兵中尉外套",
@@ -30681,15 +31012,18 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "富豪长刀",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "M&A60 老虎钳",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               },
               {
                 "item": "狂信者的投刃",
-                "rate": "1/1379.1"
+                "rate": "1/1379.1",
+                "bannerHit": 40
               },
               {
                 "item": "解放者的飞碟",
@@ -30705,7 +31039,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "勇者的飞碟",
-                "rate": "1/210.7"
+                "rate": "1/210.7",
+                "bannerHit": 50
               }
             ],
             "dropRate": "1/3.7"
@@ -30731,11 +31066,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "欧菲丽·塞兹",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "欧菲丽·塞兹",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "波刃剑",
@@ -30743,7 +31080,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "欧菲丽·塞兹",
-                "rate": "1/2"
+                "rate": "1/2",
+                "bannerHit": 40
               },
               {
                 "item": "波刃剑",
@@ -30790,7 +31128,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "真空波石",
-                "rate": "1/1137.8"
+                "rate": "1/1137.8",
+                "ss": true
               },
               {
                 "item": "剑士的心得",
@@ -30812,11 +31151,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "太阳之剑「嘉拉汀」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "拉克尼姆战斧之心",
-                "rate": "1/128"
+                "rate": "1/128",
+                "ss": true
               },
               {
                 "item": "塞壬玻璃锤",
@@ -30840,11 +31181,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "太阳之剑「嘉拉汀」",
-                "rate": "1/64"
+                "rate": "1/64",
+                "bannerHit": 20
               },
               {
                 "item": "桑巴沙锤之心",
-                "rate": "1/128"
+                "rate": "1/128",
+                "ss": true
               }
             ],
             "dropRate": "1/1"
@@ -30916,7 +31259,8 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "天堂冲击",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 20
               },
               {
                 "item": "母亲的外套+",
@@ -30928,11 +31272,13 @@ window.DROP_DATA_ZH = {
               },
               {
                 "item": "银月之剑",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 20
               },
               {
                 "item": "晓之刻印",
-                "rate": "1/8"
+                "rate": "1/8",
+                "bannerHit": 30
               },
               {
                 "item": "限幅器",

@@ -11,11 +11,15 @@ Section IDs and probabilities.
   15px regular weight; rates are 13px with tabular numerals and a small gap below
   the name. Monster DAR uses the rate color rather than a separate gold accent.
 - Keep language-specific Chinese/Japanese font stacks and 1.5 line height.
-- Restore SS rainbow names with their outline, glow and four-second animation.
+- BB banner highlighting now follows [the named-banner rules](banner-highlights.md):
+  no-Hit items use rainbow; Hit-conditional weapons use steady gold with a tooltip.
+  DC/NGC retain legacy SS classification.
+- Keep rainbow names with their outline, glow and four-second animation.
   There is no extra SS badge. Reduced-motion preferences keep the rainbow static.
 - Name links have no underlines in normal, hover, keyboard-focus or search-match
   states. Hover/focus changes their color; keyboard focus retains a visible
-  outline. Search matches use a border and increased text weight.
+  outline. Search matches use a subtle background lift and increased text weight, without
+  a colored outline.
 
 ## Interaction
 

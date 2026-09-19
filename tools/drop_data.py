@@ -89,6 +89,11 @@ def cell_shape_errors(cell):
             errors.append(f"{label}.rate must be a string")
         if "ss" in drop and not isinstance(drop["ss"], bool):
             errors.append(f"{label}.ss must be a boolean")
+        if "bannerHit" in drop:
+            if type(drop["bannerHit"]) is not int or drop["bannerHit"] not in (20, 30, 40, 50):
+                errors.append(f"{label}.bannerHit must be a named banner Hit threshold")
+            if drop.get("ss"):
+                errors.append(f"{label} cannot be both rainbow and Hit-conditional")
     return errors
 
 

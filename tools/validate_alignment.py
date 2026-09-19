@@ -27,6 +27,7 @@ def _drop_signature(cell):
         "present": [bool(drop.get("item")) for drop in drops],
         "rates": [drop.get("rate", "") for drop in drops],
         "ss": [bool(drop.get("ss")) for drop in drops],
+        "bannerHit": [drop.get("bannerHit") for drop in drops],
     }
 
 
