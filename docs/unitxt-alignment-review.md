@@ -425,3 +425,23 @@ translations. Cross-repository consistency is not independent proof of a newly
 proposed translation or in-game rendering. The user's follow-up authorizes
 committing and pushing the documentation handoff on master; publication results
 must be checked separately from these local review results.
+
+## UN-12 handgun family refresh (2026-09-26)
+
+psobb-localization UN-12 (`e626ab877ad62f73480052f773348aae3cf8fef9`) unifies the handgun family as 光枪 under the user's
+2026-09-26 decision: `Handgun: Guld → 光枪「伽尔德」`, `Handgun: Milla →
+光枪「米拉」`, `Red Handgun → 红色光枪` and the S-Rank / ES category
+`GUN → 光枪`. The Chinese Unitxt SHA-256 is
+`e47686edb8cd24f9f387c3d8ae6e4c884570b8d8bf2960c3410bf7892462f246`.
+
+The first regeneration left DC/NGC on 小枪 because their legacy spellings
+`HANDGUN:GULD` and `HANDGUN:MILLA` normalize differently from the Unitxt
+identities. Both are now source-backed `ITEM_ALIASES`. Regeneration updates six
+authority entries and 11 BB, 14 DC and 8 NGC Chinese item occurrences; no
+小枪 or 手枪 remains in the authority or generated Chinese data. English and
+Japanese data, drops, coordinates and identities are unchanged apart from the
+generated timestamp in `dc/data/ja.js`.
+
+The UN-10/UN-11 lock test now also covers both spellings of Guld and Milla,
+Red Handgun and GUN. It failed against the previous authority and passes after
+regeneration; `npm run verify:localization` passes.

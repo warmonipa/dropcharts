@@ -74,6 +74,8 @@ ITEM_ALIASES = {
     "MAGICSTONE IRITISTA": 'Magic Stone "Iritista"',
     "Magic Rock Heart Key": 'Magic Rock "Heart Key"',
     "FIRE SCEPTER:AGNI": "Fire Scepter: Agni",
+    "HANDGUN:GULD": "Handgun: Guld",
+    "HANDGUN:MILLA": "Handgun: Milla",
     "STORM VAND:INDRA": "Storm Wand: Indra",
     "STORM WAND:INDRA": "Storm Wand: Indra",
     "EARTH WAND BROWNIE": "Earth Wand: Brownie",

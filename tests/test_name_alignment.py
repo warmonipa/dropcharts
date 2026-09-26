@@ -20,7 +20,7 @@ from drop_data import iter_cell_drops, load_js_data
 
 class NameAlignmentTests(unittest.TestCase):
     def test_confirmed_unitxt_names_do_not_revert_with_a_stale_dictionary(self):
-        """Lock representative UN-10/UN-11 decisions independently of generated data."""
+        """Lock representative UN-10/UN-11/UN-12 decisions independently of generated data."""
         items = json.loads((ROOT / "i18n_names.json").read_text(encoding="utf-8"))["items"]
         expected = {
             "D-Parts ver1.01": "D组件 Ver1.01",
@@ -36,6 +36,13 @@ class NameAlignmentTests(unittest.TestCase):
             "TypeSW/SWORD": "大剑式大剑",
             "Heart of TypeDS/D.Saber": "双头剑式双头剑之心",
             "Heart of TypeSS/Swords": "双刀式双刀之心",
+            # UN-12: the handgun family is 光枪, including DC/NGC legacy spellings.
+            "Handgun: Guld": "光枪「伽尔德」",
+            "HANDGUN:GULD": "光枪「伽尔德」",
+            "Handgun: Milla": "光枪「米拉」",
+            "HANDGUN:MILLA": "光枪「米拉」",
+            "Red Handgun": "红色光枪",
+            "GUN": "光枪",
         }
         for name, chinese in expected.items():
             with self.subTest(name=name):
