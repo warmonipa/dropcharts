@@ -1336,9 +1336,6 @@
       "ja": "ブリューナク",
       "zh": "纯正长刀"
     },
-    "Bronze Badge": {
-      "zh": "铜制勋章"
-    },
     "Bronze Pen": {
       "zh": "公会点数 500"
     },
@@ -3396,6 +3393,9 @@
       "ja": "インビジブルガード",
       "zh": "隐形盾"
     },
+    "Iron Badge": {
+      "zh": "WEAPONS 钢制徽章"
+    },
     "Item Exchange Ticket": {
       "zh": "道具交换点券"
     },
@@ -5247,7 +5247,7 @@
       "zh": "隐形组件"
     },
     "Steel Badge": {
-      "zh": "铁制勋章"
+      "zh": "WEAPONS 钢制徽章"
     },
     "Steel Weapons Badge": {
       "zh": "WEAPONS 钢制徽章"
@@ -5796,27 +5796,35 @@
       "zh": "战士级/防御"
     },
     "Weapons Aluminum Badge": {
+      "ja": "ウェポンズバッヂアルミ",
       "zh": "WEAPONS 铝制徽章"
     },
     "Weapons Bone Badge": {
+      "ja": "ウェポンズバッヂ骨",
       "zh": "WEAPONS 骨制徽章"
     },
     "Weapons Bronze Badge": {
+      "ja": "ウェポンズバッヂ銅",
       "zh": "WEAPONS 铜制徽章"
     },
     "Weapons Crystal Badge": {
+      "ja": "ウェポンズバッヂクリスタル",
       "zh": "WEAPONS 水晶徽章"
     },
     "Weapons Gold Badge": {
+      "ja": "ウェポンズバッヂ金",
       "zh": "WEAPONS 金制徽章"
     },
     "Weapons Leather Badge": {
+      "ja": "ウェポンズバッヂ皮",
       "zh": "WEAPONS 皮制徽章"
     },
     "Weapons Silver Badge": {
+      "ja": "ウェポンズバッヂ銀",
       "zh": "WEAPONS 银制徽章"
     },
     "Weapons Steel Badge": {
+      "ja": "ウェポンズバッヂ鉄",
       "zh": "WEAPONS 钢制徽章"
     },
     "Weaver": {

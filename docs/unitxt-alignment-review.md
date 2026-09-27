@@ -285,15 +285,28 @@ Identity evidence:
   select the corresponding Agito and DB entries; an unqualified DB 3069 cannot
   select Chris versus Torato and is removed from the unused flat aliases.
 - newserv `names-v2.json` / `names-v3.json` identify MARK3, Kit of MARK3,
-  Book of KATANA1–3 and P-ARMS'S BLADE. The six legacy badge names match v3/v4
-  codes 031403–031405 and 031407–031409; their BB identities are Weapons badges.
+  Book of KATANA1–3 and P-ARMS'S BLADE.
+- Weapons badges are two item sets with the same BB names. The first set
+  (v2 030E07–030E0E, v3/v4 031200–031207) was the DC Maximum Attack reward;
+  BB ItemPMT names it with Unitxt 1:47–54. The second set exists from v3
+  (031403–031409); v3 names it Silver, Gold, Crystal, Iron, Aluminum, Leather
+  and Bone Badge, and BB ItemPMT points it at 1:125–131, whose EN/JP text
+  repeats the Weapons names. Those seven v3 names and the historical `Steel
+  Badge` (the former 1:128 label 铁制勋章) are aliases of the Weapons names.
+  Unitxt 1:124 is referenced by no item, so the former `Bronze Badge` label
+  identifies nothing and is removed. The canonical Japanese names are BB
+  Unitxt 1:47–54. Ephinea's anniversary badges (0310xx) are unrelated.
 - Reviewed English/Japanese body-part spellings retain the named enemy and
   Arm/Head role. Tyrell's Parasol is Japanese 総督恩賜パラソル, matching the
   legacy PRINCIPAL'S GIFT PARASOL identity.
 - Existing context labels use the current source's standard/Ultimate monster
   and area maps. They cannot override a normalized item identity.
-- Ten repository-owned legacy labels (Mag factors 503–507, L&K15 COMBAT and
-  four Pen labels) receive only half-width/boundary-spacing normalization;
+- The legacy Bronze, Silver, Gold and Platinum Pen labels carried the former
+  Unitxt 1:170–173 Chinese text 公会点数５００–１００００ verbatim. BB ItemPMT
+  names items 031900–031903 with those entries, so the labels are aliases of
+  Team Points 500–10000. No versioned name table uses the Pen spelling.
+- Six repository-owned legacy labels (Mag factors 503–507 and L&K15 COMBAT)
+  receive only half-width/boundary-spacing normalization;
   their identities are not equated with a different BB item. The all-years
   Agito category uses the common reviewed 颚刀 stem, without choosing a year.
 
@@ -332,6 +345,12 @@ under their canonical names. No live version-only item is removed.
 | `Silver Badge` | `Weapons Silver Badge` |
 | `Gold Badge` | `Weapons Gold Badge` |
 | `Crystal Badge` | `Weapons Crystal Badge` |
+| `Iron Badge` | `Weapons Steel Badge` |
+| `Steel Badge` | `Weapons Steel Badge` |
+| `Bronze Pen` | `Team Points 500` |
+| `Silver Pen` | `Team Points 1000` |
+| `Gold Pen` | `Team Points 5000` |
+| `Platinum Pen` | `Team Points 10000` |
 | `Aluminum Badge` | `Weapons Aluminum Badge` |
 | `Leather Badge` | `Weapons Leather Badge` |
 | `Bone Badge` | `Weapons Bone Badge` |

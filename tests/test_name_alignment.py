@@ -354,12 +354,38 @@ class NameAlignmentTests(unittest.TestCase):
             "キュア/ポイズン": "Cure/Poison",
             "マグ細胞２１３": "Cell of Mag 213",
             "Silver Badge": "Weapons Silver Badge",
+            "Bronze Pen": "Team Points 500",
+            "Silver Pen": "Team Points 1000",
+            "Gold Pen": "Team Points 5000",
+            "Platinum Pen": "Team Points 10000",
         }
         for alias, canonical in pairs.items():
             with self.subTest(alias=alias):
                 matches = [value for name, value in authority.items() if name.casefold() == canonical.casefold()]
                 self.assertEqual(len(matches), 1)
                 self.assertEqual(authority[alias]["zh"], matches[0]["zh"])
+
+    def test_weapons_badge_names_follow_item_codes(self):
+        # BB ItemPMT: 031200-031207 use Unitxt 1:47-54 and 031403-031409 use
+        # 1:125-131, the same Weapons names. v3 spells the second set Silver,
+        # Gold, Crystal, Iron, Aluminum, Leather and Bone Badge; Unitxt 1:124
+        # names no item, so no plain Bronze Badge exists.
+        authority = json.loads((ROOT / "i18n_names.json").read_text())["items"]
+        metals = ("Bronze", "Silver", "Gold", "Crystal", "Steel", "Aluminum", "Leather", "Bone")
+        japanese = ("銅", "銀", "金", "クリスタル", "鉄", "アルミ", "皮", "骨")
+        for metal, suffix in zip(metals, japanese):
+            with self.subTest(metal=metal):
+                self.assertEqual(authority[f"Weapons {metal} Badge"]["ja"], f"ウェポンズバッヂ{suffix}")
+        v3_names = {"Silver": "Silver", "Gold": "Gold", "Crystal": "Crystal", "Iron": "Steel",
+                    "Steel": "Steel", "Aluminum": "Aluminum", "Leather": "Leather", "Bone": "Bone"}
+        for metal, canonical in v3_names.items():
+            with self.subTest(alias=f"{metal} Badge"):
+                self.assertEqual(build_i18n.ITEM_ALIASES[f"{metal} Badge"], f"Weapons {canonical} Badge")
+                self.assertEqual(authority[f"{metal} Badge"]["zh"], authority[f"Weapons {canonical} Badge"]["zh"])
+        self.assertNotIn("Bronze Badge", authority)
+        # Ephinea's anniversary badges (0310xx) are a separate currency.
+        for tier in ("Bronze", "Silver", "Gold", "Platinum"):
+            self.assertNotIn("WEAPONS", authority[f"Anniv. {tier} Badge"]["zh"])
 
     def test_authority_gate_checks_aliases_without_any_drop_consumer(self):
         items = {"DB'S SABER 3062": {"zh": "DB剑 3062"},
