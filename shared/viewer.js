@@ -369,6 +369,16 @@
   }
 
   /** Return '#000' or '#fff' for best contrast against a hex background. */
+  // Ephinea's drop charts fix the text color per Section ID column.
+  var EPHINEA_SECTION_TEXT = {
+    '#00A562': '#fff', '#76FE43': '#000', '#59F9F9': '#000', '#4488FF': '#fff', '#CC00FF': '#fff',
+    '#FF87CB': '#000', '#F70F0F': '#fff', '#F7830F': '#000', '#F7F715': '#000', '#FFFFFF': '#000'
+  };
+
+  function sectionStyle(hex) {
+    return 'background-color:' + hex + ';color:' + (EPHINEA_SECTION_TEXT[hex.toUpperCase()] || contrastText(hex));
+  }
+
   function contrastText(hex) {
     var channels = hex.replace('#', '').match(/../g).map(function (value) {
       var channel = parseInt(value, 16) / 255;
@@ -483,7 +493,7 @@
       var colLabel = (CFG.hasTypes && currentType === 'boxes') ? t('location') : t('monster');
       html += '<thead><tr><th class="monster-col">' + colLabel + '</th>';
       data.sectionIds.forEach(function (sid, i) {
-        html += '<th class="section-header" style="background-color:' + data.sectionColors[i] + ';color:' + contrastText(data.sectionColors[i]) + '">' + sid + '</th>';
+        html += '<th class="section-header" style="' + sectionStyle(data.sectionColors[i]) + '">' + sid + '</th>';
       });
       html += '</tr></thead>';
 
@@ -520,7 +530,7 @@
           var enDrops = enEntry && enEntry.drops[di] ? cellDrops(enEntry.drops[di]) : [];
           var hasItem = drops.some(function (drop) { return !!drop.item; });
           var isSsRare = drops.some(function (drop) { return !!drop.ss; });
-          var sidStyle = '--sid:' + data.sectionColors[di];
+          var sidStyle = sectionStyle(data.sectionColors[di]);
           if (hasItem) {
             html += '<td class="drop-cell' + (isSsRare ? ' ss-rare-cell' : '') + '" style="' + sidStyle + '">';
             drops.forEach(function (drop, dropIndex) {
