@@ -49,3 +49,11 @@ reduced-motion CSS. See [the area review](monster-area-review.md) for source
 references and the boundary between chart groups and quest spawn locations.
 
 Reference: [WCAG text contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum).
+
+## Later changes (2026-09-28)
+
+This review describes the 2026-09-19 appearance. Section ID colors now fill
+every cell as on Ephinea's charts, with Ephinea's fixed text color per column;
+names, rates and links inherit it, links underline instead of changing color,
+banner gold gains a dark outline, and row hover darkens the cells. Headers add
+the Section ID symbols, and DC/NGC percentages show three significant digits.

@@ -1,0 +1,5 @@
+Section ID icons copied unchanged from ephinea4haven.github.io
+https://github.com/ephinea4haven/ephinea4haven.github.io
+Source commit: f34125bc095b11a7bab3ac4c80c6cf531706d362
+assets/img/section/icon/*.png (64x64 inline icons)
+Phantasy Star Online and Section ID symbols are property of SEGA.

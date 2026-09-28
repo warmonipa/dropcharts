@@ -301,3 +301,5 @@ The BB English file's generation header remains 2026-07-17. This comparison did
 not regenerate the source data. DC/NGC retain their 2026-04-10 generation headers
 and pinned historical HTML sources; this audit did not verify them against a
 current external source.
+NGC has since been regenerated and audited against the GameCube rare tables;
+see [the NGC source audit](ngc-source-audit.md).

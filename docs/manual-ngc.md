@@ -36,7 +36,7 @@ Enter text in the search box to filter monster and item names as you type. Searc
 
 ### Drop rates
 
-NGC drop rates are displayed as percentages, such as `1.5625%`.
+NGC drop rates are displayed as percentages with three significant digits; for example the source value `1.5625%` is shown as `1.56%`.
 
 The probability below the monster name is the Drop Anything Rate (DAR). The probability
 below an item is its final per-kill Drop Rate (DR), where `DR = DAR × RDR`. Where DAR is available,

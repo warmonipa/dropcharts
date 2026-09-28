@@ -260,3 +260,26 @@ test('DC and GameCube percentages are shortened to three significant digits', ()
   const dc = viewer('dc', '?diff=Ultimate').html();
   assert.match(dc, />0\.000119%</);
 });
+test('Section ID headers show the canonical icon beside each localized name', () => {
+  const canonical = ['Viridia', 'Greenill', 'Skyly', 'Bluefull', 'Purplenum', 'Pinkal', 'Redria', 'Oran', 'Yellowboze', 'Whitill'];
+  for (const version of ['bb', 'dc', 'ngc']) for (const lang of ['en', 'ja', 'zh']) {
+    const app = viewer(version, `?lang=${lang}`);
+    const header = app.html().match(/<thead>.*?<\/thead>/)[0];
+    const icons = [...header.matchAll(/section-ids\/([A-Za-z]+)\.png/g)].map(match => match[1]);
+    assert.deepEqual(icons, canonical, `${version}/${lang}`);
+    const labels = [...header.matchAll(/height="22">([^<]+)<\/span>/g)].map(match => match[1]);
+    assert.deepEqual(labels, [...app.window[`DROP_DATA_${lang.toUpperCase()}`].sectionIds], `${version}/${lang}`);
+  }
+  for (const name of canonical) assert.ok(fs.existsSync(path.join(root, 'shared/images/section-ids', `${name}.png`)));
+});
+test('empty drop cells keep the full Section ID background and fade only the dash', () => {
+  const html = viewer('ngc', '?lang=zh').html();
+  const empty = html.match(/<td class="drop-cell empty" style="([^"]*)">(.*?)<\/td>/);
+  assert.ok(empty);
+  assert.match(empty[1], /^background-color:#[0-9A-F]{6};color:#(000|fff)$/);
+  assert.equal(empty[2], '<span class="empty-mark">—</span>');
+  const css = fs.readFileSync(path.join(root, 'shared/style.css'), 'utf8');
+  for (const rule of css.matchAll(/([^{}]*\.drop-cell[^{}]*)\{([^}]*)\}/g)) {
+    if (/opacity/.test(rule[2])) assert.doesNotMatch(rule[1], /\.drop-cell(\.empty)?\s*$/, rule[1]);
+  }
+});

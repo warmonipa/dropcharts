@@ -378,7 +378,10 @@
     render();
   }
 
-  /** Return '#000' or '#fff' for best contrast against a hex background. */
+  // Canonical Section ID order, shared by every dataset; names the header icons.
+  var SECTION_ID_ICONS = ['Viridia', 'Greenill', 'Skyly', 'Bluefull', 'Purplenum',
+    'Pinkal', 'Redria', 'Oran', 'Yellowboze', 'Whitill'];
+
   // Ephinea's drop charts fix the text color per Section ID column.
   var EPHINEA_SECTION_TEXT = {
     '#00A562': '#fff', '#76FE43': '#000', '#59F9F9': '#000', '#4488FF': '#fff', '#CC00FF': '#fff',
@@ -389,6 +392,7 @@
     return 'background-color:' + hex + ';color:' + (EPHINEA_SECTION_TEXT[hex.toUpperCase()] || contrastText(hex));
   }
 
+  /** Return '#000' or '#fff' for best contrast against a hex background. */
   function contrastText(hex) {
     var channels = hex.replace('#', '').match(/../g).map(function (value) {
       var channel = parseInt(value, 16) / 255;
@@ -503,7 +507,9 @@
       var colLabel = (CFG.hasTypes && currentType === 'boxes') ? t('location') : t('monster');
       html += '<thead><tr><th class="monster-col">' + colLabel + '</th>';
       data.sectionIds.forEach(function (sid, i) {
-        html += '<th class="section-header" style="' + sectionStyle(data.sectionColors[i]) + '">' + sid + '</th>';
+        html += '<th class="section-header" style="' + sectionStyle(data.sectionColors[i]) + '">' +
+          '<span class="section-label"><img class="section-icon" src="../shared/images/section-ids/' +
+          SECTION_ID_ICONS[i] + '.png" alt="" width="22" height="22">' + sid + '</span></th>';
       });
       html += '</tr></thead>';
 
@@ -569,7 +575,7 @@
             });
             html += '</td>';
           } else {
-            html += '<td class="drop-cell empty" style="' + sidStyle + '">\u2014</td>';
+            html += '<td class="drop-cell empty" style="' + sidStyle + '"><span class="empty-mark">\u2014</span></td>';
           }
         }
         html += '</tr>';

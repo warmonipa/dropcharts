@@ -75,11 +75,19 @@ the Wiki's episode-specific labels; this difference is not silently normalized.
 
 ## Reading and interaction
 
-The original blue/purple interface palette is preserved. Names use soft-white text,
-with secondary gray, tabular-number probabilities. Name links change color on hover
-or keyboard focus without underlines; keyboard focus retains a visible outline.
-Section ID columns follow Ephinea's drop charts: headers and cells are filled with the Section ID color, with Ephinea's fixed white or black text per column. BB named banner items without a Hit requirement use rainbow text; those requiring
-untekked Hit use steady gold with a condition tooltip. Technique disks are excluded.
+The original blue/purple interface palette is preserved around the table.
+Section ID columns follow Ephinea's drop charts: headers and cells, empty ones
+included, are filled with the Section ID color and use Ephinea's fixed white or
+black text per column. Item names, rates and item links inherit that text
+color; item links underline on hover or keyboard focus, monster links change
+color, and keyboard focus keeps a visible outline.
+Each header shows the Section ID symbol above its localized name (Japanese and
+Chinese use the Unitxt Section ID card names). The symbols are copied unchanged
+from ephinea4haven's `assets/img/section/icon/`; see
+`shared/images/section-ids/NOTICE.txt`. Phantasy Star Online and the Section ID
+symbols are property of SEGA. DC/NGC source percentages display three
+significant digits. BB named banner items without a Hit requirement use rainbow text; those requiring
+untekked Hit use steady gold with a dark outline and a condition tooltip. Technique disks are excluded.
 DC/NGC retain their legacy SS rainbow rule. There are no extra item badges;
 reduced-motion preferences keep the rainbow static. Row hover
 and keyboard focus highlight the current row. The table freezes its header and
