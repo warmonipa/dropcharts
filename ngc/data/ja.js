@@ -13689,7 +13689,7 @@ window.DROP_DATA_JA = {
               },
               {
                 "item": "アギト",
-                "rate": "AGITO"
+                "rate": "0.009918212890625%"
               },
               {
                 "item": "ラヴィス=カノン",

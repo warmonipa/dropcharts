@@ -55,6 +55,15 @@ def extract_ja_name(td):
     return lines[0] if lines else ""
 
 
+# Malformed rate cells in the preserved source, keyed by their leading text.
+# Ultimate Sinow Red / Redria prints the item name instead of its rate; the
+# value comes from Ephinea's classic (unmodified) Ultimate chart, which lists
+# Agito (1975) at a 1/10082.46 (0.00992%) rare rate.
+SOURCE_RATE_ERRATA = {
+    "AGITO 1975 Dousetsu%": "0.009918212890625%",
+}
+
+
 def extract_rate(td):
     """Extract rate from NGC percentage cell.
     Format: '1.5625%(0.46875%)' or '0.042724609375% (0.011962890625%)'
@@ -63,9 +72,14 @@ def extract_rate(td):
     text = td.get_text(separator=" ", strip=True)
     if not text:
         return ""
+    for malformed, rate in SOURCE_RATE_ERRATA.items():
+        if text.startswith(malformed):
+            return rate
     # Match first percentage value
     m = re.match(r"([\d.]+%)", text)
-    return m.group(1) if m else text.split()[0] if text else ""
+    if not m:
+        raise ValueError(f"Unrecognized NGC rate cell: {text!r}")
+    return m.group(1)
 
 
 def parse_ngc_html(html, lang="en"):

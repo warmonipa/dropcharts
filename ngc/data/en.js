@@ -13689,7 +13689,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Agito (1975)",
-                "rate": "AGITO"
+                "rate": "0.009918212890625%"
               },
               {
                 "item": "LAVIS CANNON",

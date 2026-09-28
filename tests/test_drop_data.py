@@ -11,6 +11,7 @@ sys.path.insert(0, str(TOOLS))
 import build_i18n  # noqa: E402
 import gen_zh  # noqa: E402
 import mark_ss  # noqa: E402
+import parse_ngc  # noqa: E402
 from drop_data import (  # noqa: E402
     LANGUAGES,
     SECTION_ID_LABELS,
@@ -124,6 +125,23 @@ class MultiItemConsumerTest(unittest.TestCase):
     def test_unknown_section_id_is_rejected_instead_of_passed_through(self):
         with self.assertRaises(KeyError):
             localize_section_ids({"sectionIds": ["Viridia", "Mystery"]}, "zh")
+
+    def test_ngc_rate_cells_apply_source_errata_and_reject_other_text(self):
+        from bs4 import BeautifulSoup
+
+        def cell(text):
+            return BeautifulSoup(f"<td>{text}</td>", "html.parser").td
+
+        self.assertEqual(
+            parse_ngc.extract_rate(cell("0.3173828125% <br> (0.174560546875%)")),
+            "0.3173828125%",
+        )
+        self.assertEqual(
+            parse_ngc.extract_rate(cell("AGITO 1975 Dousetsu% <br> (0%)")),
+            "0.009918212890625%",
+        )
+        with self.assertRaises(ValueError):
+            parse_ngc.extract_rate(cell("SOMETHING ELSE"))
 
     def test_gen_zh_translates_every_item_in_cell(self):
         name_maps = gen_zh.UnitxtNameMaps(
