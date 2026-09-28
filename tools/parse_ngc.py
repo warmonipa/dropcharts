@@ -56,9 +56,10 @@ def extract_ja_name(td):
 
 
 # Malformed rate cells in the preserved source, keyed by their leading text.
-# Ultimate Sinow Red / Redria prints the item name instead of its rate; the
-# value comes from Ephinea's classic (unmodified) Ultimate chart, which lists
-# Agito (1975) at a 1/10082.46 (0.00992%) rare rate.
+# Ultimate Sinow Red / Redria prints the item name instead of its rate (already
+# so in the 2019 source). ephinea4haven's droptable/droptable.sql (d9f96ff) and
+# Ephinea's classic Ultimate chart both list Agito (1975) there at a
+# 1/10082.46 (0.00992%) rare rate.
 SOURCE_RATE_ERRATA = {
     "AGITO 1975 Dousetsu%": "0.009918212890625%",
 }
