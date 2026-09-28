@@ -78,3 +78,30 @@ class NgcSourceAuditTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NgcRegenerationTest(unittest.TestCase):
+    """Parsing the preserved pages must reproduce the checked-in inputs."""
+
+    def test_parsed_source_matches_checked_in_data(self):
+        import parse_ngc
+        import ngc_source_errata
+        from source_html import read_legacy_html
+
+        for filename, difficulty in parse_ngc.DIFFICULTIES:
+            try:
+                html = read_legacy_html("ngc", filename)
+            except (FileNotFoundError, RuntimeError) as error:
+                self.skipTest(f"legacy NGC source unavailable: {error}")
+            for language in ("en", "ja"):
+                parsed = ngc_source_errata.apply(
+                    difficulty, parse_ngc.parse_ngc_html(html, lang=language), language
+                )
+                checked_in = load_js_data(ROOT / "ngc" / "data" / f"{language}.js", language)
+                expected = checked_in["data"][difficulty]["monsters"]
+                for rows_ in expected.values():
+                    for row in rows_:
+                        for cell in row["drops"]:
+                            for drop in iter_cell_drops(cell):
+                                drop.pop("ss", None)  # added later by mark_ss.py
+                self.assertEqual(parsed["monsters"], expected, (difficulty, language))

@@ -46,8 +46,12 @@ chart; all three NGC languages were changed together.
 
 ## Regeneration
 
-`tools/update.sh ngc` does not reproduce the checked-in NGC data even before
-this audit: it reverts Unitxt-aligned names such as `Agito (2001)` and
-`L&K14 Combat` to raw source labels. The corrections above are therefore made
-in the data files and guarded by `tests/test_ngc_source_audit.py`; the Agito
-rate erratum is also applied by `parse_ngc.py`.
+`tools/update.sh ngc` reproduces the checked-in NGC data; only the generator
+timestamps change. `tools/ngc_source_errata.py` applies every correction above
+during parsing, together with the name normalizations the checked-in data
+already carried: Agito cells become `Agito (year)`, the source typos
+`L&K15 COMBAT` and `STORM VAND:INDRA` become `L&K14 Combat` and
+`Storm Wand: Indra`, and Ultimate monsters get Japanese names from
+`i18n_names.json`. Five source spellings without an authority entry keep their
+existing Japanese names, including `Gulgus-gue` as `ガルグス・グー` although the
+authority spells Gulgus-Gue `グルグス・グー`.

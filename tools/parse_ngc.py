@@ -8,6 +8,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 from drop_data import SECTION_IDS, localize_section_ids, make_drop_cell, write_generated_js
+import ngc_source_errata
 from source_html import read_legacy_html
 
 OUT_DIR = Path(__file__).parent.parent / "ngc" / "data"
@@ -55,17 +56,6 @@ def extract_ja_name(td):
     return lines[0] if lines else ""
 
 
-# Malformed rate cells in the preserved source, keyed by their leading text.
-# Ultimate Sinow Red / Redria prints the item name instead of its rate (already
-# so in the 2019 source). The GameCube Episode 1 rare item list at
-# http://www.dcn.ne.jp/~plastic/pso/ListFiles/ItemList_GC_EP1.htm gives
-# アギト(1975) 0.00992% there; ephinea4haven's droptable/droptable.sql
-# (d9f96ff) and Ephinea's classic Ultimate chart agree (1/10082.46).
-SOURCE_RATE_ERRATA = {
-    "AGITO 1975 Dousetsu%": "0.009918212890625%",
-}
-
-
 def extract_rate(td):
     """Extract rate from NGC percentage cell.
     Format: '1.5625%(0.46875%)' or '0.042724609375% (0.011962890625%)'
@@ -74,9 +64,9 @@ def extract_rate(td):
     text = td.get_text(separator=" ", strip=True)
     if not text:
         return ""
-    for malformed, rate in SOURCE_RATE_ERRATA.items():
-        if text.startswith(malformed):
-            return rate
+    corrected = ngc_source_errata.correct_rate(text)
+    if corrected:
+        return corrected
     # Match first percentage value
     m = re.match(r"([\d.]+%)", text)
     if not m:
@@ -167,10 +157,18 @@ def parse_ngc_html(html, lang="en"):
             item = name_func(ic)
             if item in ("未定義", "undefined", "-----"):
                 item = ""
+            if item:
+                item = ngc_source_errata.correct_item_name(
+                    item, lang, extract_ja_name(ic), ic.get_text(" ", strip=True)
+                )
             rate = ""
             if idx < len(rate_cells_data):
                 rate = extract_rate(rate_cells_data[idx])
-            drops.append(make_drop_cell([{"item": item, "rate": rate}]))
+            drop = {"item": item, "rate": rate}
+            if lang == "ja":
+                # Paired English label, used by the errata and then removed.
+                drop["en"] = extract_en_name(ic)
+            drops.append(make_drop_cell([drop]))
 
         while len(drops) < 10:
             drops.append({"item": "", "rate": ""})
@@ -202,7 +200,7 @@ def main():
         for filename, label in DIFFICULTIES:
             print(f"Parsing NGC {label} ({filename}) [{lang_code}]...")
             html = read_legacy_html("ngc", filename)
-            parsed = parse_ngc_html(html, lang=lang_code)
+            parsed = ngc_source_errata.apply(label, parse_ngc_html(html, lang=lang_code), lang_code)
             m_count = sum(len(v) for v in parsed["monsters"].values())
             print(f"  {m_count} monsters")
             all_data[label] = parsed

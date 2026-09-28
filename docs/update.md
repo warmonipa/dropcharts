@@ -79,6 +79,14 @@ Every version and every monster or area/box row uses one cell protocol. Each `dr
 | --- | --- | --- |
 | `parse_ngc.py` | `ngc/*.html` from the local `ephinea4haven` repository | `ngc/data/en.js`, `ngc/data/ja.js` |
 
+The preserved pages contain known errors. `ngc_source_errata.py` corrects them
+while parsing (missing and duplicated rows, drop rates, mislabeled cells, Agito
+years, two label typos) and names Ultimate monsters in Japanese from
+`i18n_names.json`. Each correction checks that the source still holds the
+expected error and fails otherwise. `tests/test_ngc_source_audit.py` requires
+the parsed pages to reproduce the checked-in `en.js` and `ja.js`; it is skipped
+when the source checkout is unavailable. See [the NGC source audit](ngc-source-audit.md).
+
 ### 4. Localization rebuild
 
 | Script | Input | Output |
