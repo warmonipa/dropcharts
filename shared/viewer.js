@@ -194,9 +194,19 @@
     return pct.toFixed(4) + '%';
   }
 
+  // Trim long source percentages such as 0.009918212890625% to three significant digits.
+  function shortPercent(raw) {
+    var match = /^([<>]?)(\d+(?:\.\d+)?)%$/.exec(raw);
+    if (!match || !parseFloat(match[2])) return raw;
+    var digits = parseFloat(match[2]).toPrecision(3);
+    if (digits.indexOf('e') !== -1) return raw;
+    if (digits.indexOf('.') !== -1) digits = digits.replace(/0+$/, '').replace(/\.$/, '');
+    return match[1] + digits + '%';
+  }
+
   function fmtRate(raw) {
     if (!raw) return '';
-    if (!CFG.hasRateToggle) return raw;           // DC/NGC: show as-is (percentages)
+    if (!CFG.hasRateToggle) return shortPercent(raw); // DC/NGC: source percentages
     if (rateFormat === 'fraction') return raw;     // BB fraction mode
     // Convert fraction to percent
     var parts = raw.split('/');

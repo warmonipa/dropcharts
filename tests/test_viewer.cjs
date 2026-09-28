@@ -21,7 +21,7 @@ function viewer(version = 'bb', query = '') {
 test('every BB row uses the selected form and locally available artwork in all languages and difficulties', () => {
   for (const lang of ['en','ja','zh']) for (const diff of ['Normal','Hard','Very Hard','Ultimate']) {
     const app = viewer('bb', `?lang=${lang}&diff=${diff}`);
-    const names = [...app.html().matchAll(/class="mob-name">([^<]*)</g)].map(match => match[1]);
+    const names = [...app.html().matchAll(/class="mob-name">([^<]*)</g)].map(match => match[match.length - 1]);
     const expected = [];
     for (const [episode, rows] of Object.entries(app.window.DROP_DATA_EN.data[diff].monsters)) for (const row of rows) {
       const profile = app.window.BB_MONSTERS[episode][row.name];
@@ -33,7 +33,7 @@ test('every BB row uses the selected form and locally available artwork in all l
       }
     }
     assert.deepEqual(names, expected);
-    const previews = [...app.html().matchAll(/class="monster-tooltip-img" src="images\/monsters\/([^"<>]+)"/g)].map(match => match[1]);
+    const previews = [...app.html().matchAll(/class="monster-tooltip-img" src="images\/monsters\/([^"<>]+)"/g)].map(match => match[match.length - 1]);
     const expectedPreviews = Object.entries(app.window.DROP_DATA_EN.data[diff].monsters).flatMap(([episode, rows]) =>
       rows.map(row => app.window.BB_MONSTERS[episode][row.name][diff === 'Ultimate' ? 'ultimate' : 'normal'].image).filter(Boolean));
     assert.deepEqual(previews, expectedPreviews);
@@ -248,4 +248,15 @@ test('BB banner colors and localized Hit conditions follow drop metadata', () =>
     assert.doesNotMatch(app.html(), /banner-hit-item|drop-legend|wiki\.pioneer2\.net\/w\/Banners/);
     assert.match(app.html(), /ss-rare-item/);
   }
+});
+test('DC and GameCube percentages are shortened to three significant digits', () => {
+  const ngc = viewer('ngc', '?diff=Ultimate').html();
+  // Only percentage-shaped source values are reformatted; malformed source text is left visible.
+  const rates = [...ngc.matchAll(/class="drop-rate( has-rdr)?"[^>]*>([^<]*%)</g)].map(match => match[match.length - 1]);
+  assert.ok(rates.length > 0);
+  for (const rate of rates) assert.ok(rate.replace(/[<>%]/g, '').replace(/^0\.0*/, '').replace('.', '').length <= 3, rate);
+  assert.ok(rates.includes('0.00992%'));
+  assert.ok(rates.includes('1.56%'));
+  const dc = viewer('dc', '?diff=Ultimate').html();
+  assert.match(dc, />0\.000119%</);
 });
