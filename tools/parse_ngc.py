@@ -57,9 +57,10 @@ def extract_ja_name(td):
 
 # Malformed rate cells in the preserved source, keyed by their leading text.
 # Ultimate Sinow Red / Redria prints the item name instead of its rate (already
-# so in the 2019 source). ephinea4haven's droptable/droptable.sql (d9f96ff) and
-# Ephinea's classic Ultimate chart both list Agito (1975) there at a
-# 1/10082.46 (0.00992%) rare rate.
+# so in the 2019 source). The GameCube Episode 1 rare item list at
+# http://www.dcn.ne.jp/~plastic/pso/ListFiles/ItemList_GC_EP1.htm gives
+# アギト(1975) 0.00992% there; ephinea4haven's droptable/droptable.sql
+# (d9f96ff) and Ephinea's classic Ultimate chart agree (1/10082.46).
 SOURCE_RATE_ERRATA = {
     "AGITO 1975 Dousetsu%": "0.009918212890625%",
 }
