@@ -17,3 +17,4 @@ _site/
 .idea/
 .vscode/
 .DS_Store
+.playwright-mcp/
