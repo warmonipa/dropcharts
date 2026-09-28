@@ -53,7 +53,7 @@ scrolling region, including on phones and tablets.
 
 A Section ID, such as Viridia or Greenill, is assigned when a character is created. Different Section IDs produce different item drops.
 
-In the Chinese viewer, Viridia is labeled `深绿` and Greenill is labeled `黄绿`.
+Section ID labels are one complete set per language, taken from the Unitxt Section ID card names. Japanese: ヴィリディア, グリーニル, スカイリー, ブルーフル, パープルナム, ピンカル, レッドリア, オラン, イエローブーズ, ホワイティル. Chinese: 深绿, 黄绿, 天青, 纯蓝, 淡紫, 粉红, 真红, 橙黄, 金黄, 羽白.
 
 ## Dreamcast-specific content
 

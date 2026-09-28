@@ -78,7 +78,7 @@ the Wiki's episode-specific labels; this difference is not silently normalized.
 The original blue/purple interface palette is preserved. Names use soft-white text,
 with secondary gray, tabular-number probabilities. Name links change color on hover
 or keyboard focus without underlines; keyboard focus retains a visible outline.
-Section ID colors remain in column headers. BB named banner items without a Hit requirement use rainbow text; those requiring
+Section ID colors fill the column headers and lightly tint each column's cells. BB named banner items without a Hit requirement use rainbow text; those requiring
 untekked Hit use steady gold with a condition tooltip. Technique disks are excluded.
 DC/NGC retain their legacy SS rainbow rule. There are no extra item badges;
 reduced-motion preferences keep the rainbow static. Row hover

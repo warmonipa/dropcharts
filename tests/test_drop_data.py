@@ -11,7 +11,13 @@ sys.path.insert(0, str(TOOLS))
 import build_i18n  # noqa: E402
 import gen_zh  # noqa: E402
 import mark_ss  # noqa: E402
-from drop_data import iter_entry_drops, localize_section_ids  # noqa: E402
+from drop_data import (  # noqa: E402
+    LANGUAGES,
+    SECTION_ID_LABELS,
+    SECTION_IDS,
+    iter_entry_drops,
+    localize_section_ids,
+)
 
 
 def sample_data():
@@ -97,12 +103,27 @@ class MultiItemConsumerTest(unittest.TestCase):
             ["Vjaya", "AddSlot"],
         )
 
-    def test_chinese_section_id_labels_distinguish_the_two_greens(self):
+    def test_section_id_labels_use_unitxt_names(self):
         data = {"sectionIds": ["Viridia", "Greenill", "Skyly"]}
+        self.assertEqual(
+            localize_section_ids(dict(data), "ja")["sectionIds"],
+            ["ヴィリディア", "グリーニル", "スカイリー"],
+        )
+        self.assertEqual(
+            localize_section_ids(dict(data), "zh")["sectionIds"],
+            ["深绿", "黄绿", "天青"],
+        )
 
-        localize_section_ids(data, "zh")
+    def test_each_language_has_its_own_complete_section_id_set(self):
+        self.assertEqual(set(SECTION_ID_LABELS), set(LANGUAGES))
+        for language, labels in SECTION_ID_LABELS.items():
+            self.assertEqual(tuple(labels), SECTION_IDS, language)
+            if language != "en":
+                self.assertFalse(set(labels.values()) & set(SECTION_IDS), language)
 
-        self.assertEqual(data["sectionIds"], ["深绿", "黄绿", "Skyly"])
+    def test_unknown_section_id_is_rejected_instead_of_passed_through(self):
+        with self.assertRaises(KeyError):
+            localize_section_ids({"sectionIds": ["Viridia", "Mystery"]}, "zh")
 
     def test_gen_zh_translates_every_item_in_cell(self):
         name_maps = gen_zh.UnitxtNameMaps(

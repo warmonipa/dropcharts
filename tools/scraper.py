@@ -18,7 +18,13 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-from drop_data import load_js_data, make_drop_cell, write_generated_js
+from drop_data import (
+    SECTION_IDS,
+    load_js_data,
+    localize_section_ids,
+    make_drop_cell,
+    write_generated_js,
+)
 
 # Language configs: (lang_code, base_url, difficulty_slugs)
 LANGUAGES = {
@@ -42,10 +48,6 @@ LANGUAGES = {
     },
 }
 
-SECTION_IDS = [
-    "Viridia", "Greenill", "Skyly", "Bluefull", "Purplenum",
-    "Pinkal", "Redria", "Oran", "Yellowboze", "Whitill",
-]
 SECTION_COLORS = [
     "#00A562", "#76FE43", "#59F9F9", "#4488FF", "#CC00FF",
     "#FF87CB", "#F70F0F", "#F7830F", "#F7F715", "#FFFFFF",
@@ -250,10 +252,11 @@ def main():
                 data_obj["data"][difficulty]["boxes"] = parsed["boxes"]
         else:
             data_obj = {
-                "sectionIds": SECTION_IDS,
+                "sectionIds": list(SECTION_IDS),
                 "sectionColors": SECTION_COLORS,
                 "data": all_data,
             }
+            localize_section_ids(data_obj, lang_code)
 
         size = write_generated_js(
             out_path,

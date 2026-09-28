@@ -8,6 +8,7 @@ from pathlib import Path
 from drop_data import (
     DROP_TYPES,
     LANGUAGES,
+    SECTION_IDS,
     VERSIONS,
     cell_shape_errors,
     iter_cell_drops,
@@ -49,8 +50,9 @@ def validate_version(version, *, root=ROOT):
     }
 
     section_ids = english.get("sectionIds", [])
-    if len(section_ids) != 10:
-        errors.append(f"{version}/en: expected 10 section IDs, got {len(section_ids)}")
+    if section_ids != list(SECTION_IDS):
+        errors.append(f"{version}/en: section IDs must be the canonical ten, got {section_ids}")
+        section_ids = list(SECTION_IDS)
     if len(english.get("sectionColors", [])) != len(section_ids):
         errors.append(f"{version}/en: section color count mismatch")
 

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from drop_data import make_drop_cell, write_generated_js
+from drop_data import SECTION_IDS, make_drop_cell, write_generated_js
 from source_html import read_legacy_html
 
 OUT_DIR = Path(__file__).parent.parent / "dc" / "data"
@@ -18,10 +18,6 @@ DIFFICULTIES = [
     ("u.html", "Ultimate"),
 ]
 
-SECTION_IDS = [
-    "Viridia", "Greenill", "Skyly", "Bluefull", "Purplenum",
-    "Pinkal", "Redria", "Oran", "Yellowboze", "Whitill",
-]
 SECTION_COLORS = [
     "#00A562", "#76FE43", "#59F9F9", "#4488FF", "#CC00FF",
     "#FF87CB", "#F70F0F", "#F7830F", "#F7F715", "#FFFFFF",
@@ -116,7 +112,7 @@ def main():
         all_data[label] = parsed
 
     data_obj = {
-        "sectionIds": SECTION_IDS,
+        "sectionIds": list(SECTION_IDS),
         "sectionColors": SECTION_COLORS,
         "data": all_data,
     }

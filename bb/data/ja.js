@@ -2,16 +2,16 @@
 // Language: ja
 window.DROP_DATA_JA = {
   "sectionIds": [
-    "Viridia",
-    "Greenill",
-    "Skyly",
-    "Bluefull",
-    "Purplenum",
-    "Pinkal",
-    "Redria",
-    "Oran",
-    "Yellowboze",
-    "Whitill"
+    "ヴィリディア",
+    "グリーニル",
+    "スカイリー",
+    "ブルーフル",
+    "パープルナム",
+    "ピンカル",
+    "レッドリア",
+    "オラン",
+    "イエローブーズ",
+    "ホワイティル"
   ],
   "sectionColors": [
     "#00A562",

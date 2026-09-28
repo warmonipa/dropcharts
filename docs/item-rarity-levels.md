@@ -7,7 +7,7 @@ Source: the item-acquisition difficulty table on the FFSKY PSO Section ID page a
 
 The original `SS/S/A/B/C/D/E` tiers and the `1` through `5`, `3+`, and `×` difficulty markers are preserved. The two item-name columns intentionally contain Chinese localization data: the first uses names from `dc/bb/ngc/data/zh.js` where a reliable match exists, and the second preserves the legacy FFSKY wording. Unresolved mappings are listed at the end.
 
-Section IDs in this reference remain canonical English identifiers. The Chinese viewer displays Viridia as `深绿` and Greenill as `黄绿`.
+Section IDs in this reference remain canonical English identifiers. The Japanese and Chinese viewers display them with their Unitxt names (for example Viridia as `ヴィリディア` / `深绿`).
 
 ## SS
 

@@ -17,9 +17,23 @@ VERSIONS = ("bb", "dc", "ngc")
 LANGUAGES = ("en", "ja", "zh")
 DROP_TYPES = ("monsters", "boxes")
 
-ZH_SECTION_ID_LABELS = {
-    "Viridia": "深绿",
-    "Greenill": "黄绿",
+SECTION_IDS = (
+    "Viridia", "Greenill", "Skyly", "Bluefull", "Purplenum",
+    "Pinkal", "Redria", "Oran", "Yellowboze", "Whitill",
+)
+
+# One complete label set per language; Japanese and Chinese follow the
+# Section ID card names in Unitxt.
+SECTION_ID_LABELS = {
+    "en": dict(zip(SECTION_IDS, SECTION_IDS)),
+    "ja": dict(zip(SECTION_IDS, (
+        "ヴィリディア", "グリーニル", "スカイリー", "ブルーフル", "パープルナム",
+        "ピンカル", "レッドリア", "オラン", "イエローブーズ", "ホワイティル",
+    ))),
+    "zh": dict(zip(SECTION_IDS, (
+        "深绿", "黄绿", "天青", "纯蓝", "淡紫",
+        "粉红", "真红", "橙黄", "金黄", "羽白",
+    ))),
 }
 
 _ASSIGNMENT_RE = re.compile(
@@ -30,12 +44,10 @@ _ASSIGNMENT_RE = re.compile(
 
 
 def localize_section_ids(data, language):
-    """Replace translated Section ID display labels in-place."""
-    if language == "zh" and "sectionIds" in data:
-        data["sectionIds"] = [
-            ZH_SECTION_ID_LABELS.get(section_id, section_id)
-            for section_id in data["sectionIds"]
-        ]
+    """Replace canonical Section IDs with the language's display labels in-place."""
+    labels = SECTION_ID_LABELS[language]
+    if "sectionIds" in data:
+        data["sectionIds"] = [labels[section_id] for section_id in data["sectionIds"]]
     return data
 
 

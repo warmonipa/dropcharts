@@ -76,7 +76,7 @@ scrolling region, including on phones and tablets.
 
 A Section ID is assigned when a character is created and determines which rare items can drop. A single Section ID cell may contain several independent drops. The viewer displays each item with its own probability. For example, an Ultimate Episode 4 area box may list both ordinary equipment and a `Photon Crystal`; these are separate drops, not alternate localized names for one item.
 
-In the Chinese viewer, Viridia is labeled `深绿` and Greenill is labeled `黄绿`.
+Section ID labels are one complete set per language, taken from the Unitxt Section ID card names. Japanese: ヴィリディア, グリーニル, スカイリー, ブルーフル, パープルナム, ピンカル, レッドリア, オラン, イエローブーズ, ホワイティル. Chinese: 深绿, 黄绿, 天青, 纯蓝, 淡紫, 粉红, 真红, 橙黄, 金黄, 羽白.
 
 ### URL parameters
 

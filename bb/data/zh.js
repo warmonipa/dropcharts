@@ -4,14 +4,14 @@ window.DROP_DATA_ZH = {
   "sectionIds": [
     "深绿",
     "黄绿",
-    "Skyly",
-    "Bluefull",
-    "Purplenum",
-    "Pinkal",
-    "Redria",
-    "Oran",
-    "Yellowboze",
-    "Whitill"
+    "天青",
+    "纯蓝",
+    "淡紫",
+    "粉红",
+    "真红",
+    "橙黄",
+    "金黄",
+    "羽白"
   ],
   "sectionColors": [
     "#00A562",

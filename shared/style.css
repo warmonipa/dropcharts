@@ -153,6 +153,9 @@ button, input { font-family: inherit; }
 }
 .drop-table td.drop-cell {
   background: #20283b;
+  /* Section ID column tint, layered so row hover still changes the base color. */
+  --sid-tint: color-mix(in srgb, var(--sid, transparent) 14%, transparent);
+  background-image: linear-gradient(var(--sid-tint), var(--sid-tint));
   color: var(--text);
   font-size: 15px;
   line-height: 1.5;

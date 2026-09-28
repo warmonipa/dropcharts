@@ -520,8 +520,9 @@
           var enDrops = enEntry && enEntry.drops[di] ? cellDrops(enEntry.drops[di]) : [];
           var hasItem = drops.some(function (drop) { return !!drop.item; });
           var isSsRare = drops.some(function (drop) { return !!drop.ss; });
+          var sidStyle = '--sid:' + data.sectionColors[di];
           if (hasItem) {
-            html += '<td class="drop-cell' + (isSsRare ? ' ss-rare-cell' : '') + '">';
+            html += '<td class="drop-cell' + (isSsRare ? ' ss-rare-cell' : '') + '" style="' + sidStyle + '">';
             drops.forEach(function (drop, dropIndex) {
               if (!drop.item) return;
               var enItem = enDrops[dropIndex] ? enDrops[dropIndex].item : null;
@@ -548,7 +549,7 @@
             });
             html += '</td>';
           } else {
-            html += '<td class="drop-cell empty">\u2014</td>';
+            html += '<td class="drop-cell empty" style="' + sidStyle + '">\u2014</td>';
           }
         }
         html += '</tr>';
