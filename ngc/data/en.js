@@ -766,6 +766,52 @@ window.DROP_DATA_EN = {
             "dropRate": "100%"
           },
           {
+            "name": "ナノノドラゴ",
+            "drops": [
+              {
+                "item": "Sol Atomizer",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Trimate",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Trimate",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Sol Atomizer",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Sol Atomizer",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Trimate",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Sol Atomizer",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Sol Atomizer",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Sol Atomizer",
+                "rate": "56.25%"
+              },
+              {
+                "item": "Trimate",
+                "rate": "56.25%"
+              }
+            ],
+            "dropRate": "50%"
+          },
+          {
             "name": "プフィスライム",
             "drops": [
               {
@@ -2515,47 +2561,47 @@ window.DROP_DATA_EN = {
             "dropRate": "100%"
           },
           {
-            "name": "ダブチック",
+            "name": "ギルチック",
             "drops": [
               {
-                "item": "Evade Material",
-                "rate": "0.13427734375%"
-              },
-              {
                 "item": "Monogrinder",
                 "rate": "0.054931640625%"
-              },
-              {
-                "item": "HP Material",
-                "rate": "0.13427734375%"
-              },
-              {
-                "item": "HP Material",
-                "rate": "0.13427734375%"
-              },
-              {
-                "item": "Scape Doll",
-                "rate": "0.0213623046875%"
-              },
-              {
-                "item": "Monogrinder",
-                "rate": "0.054931640625%"
-              },
-              {
-                "item": "Def Material",
-                "rate": "0.13427734375%"
               },
               {
                 "item": "",
                 "rate": "0.0%"
               },
               {
-                "item": "Def Material",
-                "rate": "0.13427734375%"
+                "item": "",
+                "rate": "0.0%"
               },
               {
                 "item": "Monogrinder",
                 "rate": "0.054931640625%"
+              },
+              {
+                "item": "",
+                "rate": "0.0%"
+              },
+              {
+                "item": "",
+                "rate": "0.0%"
+              },
+              {
+                "item": "",
+                "rate": "0.0%"
+              },
+              {
+                "item": "",
+                "rate": "0.0%"
+              },
+              {
+                "item": "",
+                "rate": "0.0%"
+              },
+              {
+                "item": "",
+                "rate": "0.0%"
               }
             ],
             "dropRate": "30%"
@@ -3431,7 +3477,8 @@ window.DROP_DATA_EN = {
                 "item": "Star Atomizer",
                 "rate": "87.5%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "メリキュス",
@@ -3476,7 +3523,8 @@ window.DROP_DATA_EN = {
                 "item": "Star Atomizer",
                 "rate": "87.5%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "ギブルス",
@@ -4026,7 +4074,8 @@ window.DROP_DATA_EN = {
                 "item": "General/Arm",
                 "rate": "0.0213623046875%"
               }
-            ]
+            ],
+            "dropRate": "40%"
           },
           {
             "name": "デルリリー",
@@ -4071,7 +4120,8 @@ window.DROP_DATA_EN = {
                 "item": "General/Power",
                 "rate": "0.0213623046875%"
               }
-            ]
+            ],
+            "dropRate": "35%"
           },
           {
             "name": "イプシロン",
@@ -4116,7 +4166,8 @@ window.DROP_DATA_EN = {
                 "item": "TP/Restorate",
                 "rate": "0.0213623046875%"
               }
-            ]
+            ],
+            "dropRate": "30%"
           }
         ]
       },
@@ -7527,7 +7578,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF LIBERATOR",
                 "rate": "2.734375%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "メリキュス",
@@ -7572,7 +7624,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF LIBERATOR",
                 "rate": "2.734375%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "ギブルス",
@@ -8122,7 +8175,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF LIBERATOR",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "40%"
           },
           {
             "name": "デルリリー",
@@ -8167,7 +8221,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF LIBERATOR",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "35%"
           },
           {
             "name": "イプシロン",
@@ -8212,7 +8267,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF LIBERATOR",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "30%"
           }
         ]
       },
@@ -9057,7 +9113,7 @@ window.DROP_DATA_EN = {
                 "rate": "87.5%"
               },
               {
-                "item": "CURE SHOCK",
+                "item": "CURE PARALYSIS",
                 "rate": "87.5%"
               },
               {
@@ -9073,7 +9129,7 @@ window.DROP_DATA_EN = {
                 "rate": "87.5%"
               },
               {
-                "item": "CURE PARALYSIS",
+                "item": "CURE SLOW",
                 "rate": "87.5%"
               },
               {
@@ -9085,11 +9141,11 @@ window.DROP_DATA_EN = {
                 "rate": "87.5%"
               },
               {
-                "item": "CURE FROZEN",
+                "item": "CURE SHOCK",
                 "rate": "87.5%"
               },
               {
-                "item": "CURE SLOW",
+                "item": "CURE FROZEN",
                 "rate": "87.5%"
               }
             ],
@@ -9353,7 +9409,7 @@ window.DROP_DATA_EN = {
                 "rate": "1.5625%"
               },
               {
-                "item": "CURE SHOCK",
+                "item": "CURE PARALYSIS",
                 "rate": "1.5625%"
               },
               {
@@ -9421,7 +9477,7 @@ window.DROP_DATA_EN = {
             "name": "カナン",
             "drops": [
               {
-                "item": "SENSE PLATE",
+                "item": "SMOKING PLATE",
                 "rate": "0.09765625%"
               },
               {
@@ -10964,7 +11020,7 @@ window.DROP_DATA_EN = {
                 "rate": "2.734375%"
               },
               {
-                "item": "CURE SLOW",
+                "item": "CURE FROZEN",
                 "rate": "2.734375%"
               },
               {
@@ -11623,7 +11679,8 @@ window.DROP_DATA_EN = {
                 "item": "YAMATO",
                 "rate": "2.734375%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "メリキュス",
@@ -11668,7 +11725,8 @@ window.DROP_DATA_EN = {
                 "item": "Fatsia",
                 "rate": "2.734375%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "ギブルス",
@@ -12218,7 +12276,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF BRAVEMEN",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "40%"
           },
           {
             "name": "デルリリー",
@@ -12263,7 +12322,8 @@ window.DROP_DATA_EN = {
                 "item": "L&K14 Combat",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "35%"
           },
           {
             "name": "イプシロン",
@@ -12308,7 +12368,8 @@ window.DROP_DATA_EN = {
                 "item": "DISKA OF BRAVEMEN",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "30%"
           }
         ]
       },
@@ -12541,7 +12602,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.1953125%"
               },
               {
-                "item": "CURE SLOW",
+                "item": "CURE FROZEN",
                 "rate": "0.1953125%"
               }
             ],
@@ -12729,7 +12790,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.3173828125%"
               }
             ],
-            "dropRate": "80%"
+            "dropRate": "85%"
           },
           {
             "name": "Hildetor",
@@ -13332,7 +13393,7 @@ window.DROP_DATA_EN = {
                 "rate": "1.5625%"
               }
             ],
-            "dropRate": "5%"
+            "dropRate": "45%"
           },
           {
             "name": "Hidoom",
@@ -13509,7 +13570,7 @@ window.DROP_DATA_EN = {
                 "ss": true
               },
               {
-                "item": "CURE FROZEN",
+                "item": "CURE SHOCK",
                 "rate": "0.1953125%"
               },
               {
@@ -13635,7 +13696,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.3173828125%"
               },
               {
-                "item": "CURE PARALYSIS",
+                "item": "CURE SLOW",
                 "rate": "0.1953125%"
               },
               {
@@ -13852,7 +13913,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.09765625%"
               },
               {
-                "item": "CURE SHOCK",
+                "item": "CURE PARALYSIS",
                 "rate": "0.1953125%"
               },
               {
@@ -14433,7 +14494,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.09765625%"
               },
               {
-                "item": "CURE PARALYSIS",
+                "item": "CURE SLOW",
                 "rate": "0.3173828125%"
               },
               {
@@ -15565,7 +15626,7 @@ window.DROP_DATA_EN = {
             "name": "Meriltas",
             "drops": [
               {
-                "item": "CURE FROZEN",
+                "item": "CURE SHOCK",
                 "rate": "0.1953125%"
               },
               {
@@ -15615,7 +15676,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.3173828125%"
               },
               {
-                "item": "CURE PARALYSIS",
+                "item": "CURE SLOW",
                 "rate": "0.1953125%"
               },
               {
@@ -15825,7 +15886,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.3173828125%"
               },
               {
-                "item": "CURE SLOW",
+                "item": "CURE FROZEN",
                 "rate": "0.3173828125%"
               },
               {
@@ -15836,7 +15897,8 @@ window.DROP_DATA_EN = {
                 "item": "MONKEY KING BAR",
                 "rate": "0.3173828125%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "Mericus",
@@ -15881,7 +15943,8 @@ window.DROP_DATA_EN = {
                 "item": "RED SCORPIO",
                 "rate": "1.5625%"
               }
-            ]
+            ],
+            "dropRate": "80%"
           },
           {
             "name": "Gibbles",
@@ -16036,7 +16099,7 @@ window.DROP_DATA_EN = {
                 "rate": "1.5625%"
               },
               {
-                "item": "CURE SHOCK",
+                "item": "CURE PARALYSIS",
                 "rate": "0.1953125%"
               },
               {
@@ -16488,7 +16551,8 @@ window.DROP_DATA_EN = {
                 "item": "YAMIGARASU",
                 "rate": "0.3173828125%"
               }
-            ]
+            ],
+            "dropRate": "40%"
           },
           {
             "name": "Del Lily",
@@ -16534,7 +16598,8 @@ window.DROP_DATA_EN = {
                 "rate": "0.00095367431640625%",
                 "ss": true
               }
-            ]
+            ],
+            "dropRate": "35%"
           },
           {
             "name": "Epsilon",
@@ -16579,7 +16644,8 @@ window.DROP_DATA_EN = {
                 "item": "RIKA'S CLAW",
                 "rate": "0.3173828125%"
               }
-            ]
+            ],
+            "dropRate": "30%"
           }
         ]
       },

@@ -78,6 +78,8 @@ not sufficient evidence of identity preservation.
   account for the 15 unchanged item occurrences in DC's coverage report.
 - A conflicting Japanese Flowen shield/armor source label is not allowed to
   override its unambiguous English equipment identity.
+  The Japanese label itself was later corrected to フロウウェンの盾
+  (see `ngc-source-audit.md`).
 - Japanese boss spelling aliases and Hidelt/Hildetor/Pouifully Slime resolve
   through monster identities. Existing `?` annotations remain visible.
 
@@ -164,7 +166,8 @@ DB indexes 546–554). The GC rare table confirms the following Flowen identitie
 The census of every English item with multiple Japanese labels found exactly five
 families: DB sword, Flowen sword, VISK'235W, P-arm's Arms, and Flowen shield. The
 first two carry distinct item identities. VISK and P-arm's labels are spelling
-variants. Flowen shield contains the already documented shield/armor source typo.
+variants. Flowen shield contained the documented shield/armor source typo,
+since corrected (see `ngc-source-audit.md`), which leaves four families.
 Tests now require review when another family enters this census and independently
 check every dated Japanese item against its generated Chinese name.
 

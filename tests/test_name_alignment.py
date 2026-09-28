@@ -216,10 +216,11 @@ class NameAlignmentTests(unittest.TestCase):
             if "item" in key and name:
                 pairs.setdefault(name, set()).add(ja_fields[key])
         multiple = {name for name, labels in pairs.items() if len(labels) > 1}
-        # Families, punctuation/transliteration variants, and the documented
-        # shield/armor source error. New cases require an identity review.
+        # Families and punctuation/transliteration variants. The Flowen
+        # shield/armor source typo is corrected (docs/ngc-source-audit.md).
+        # New cases require an identity review.
         self.assertEqual(multiple, {
-            "DB'S SWORD", "FLOWEN'S SWORD", "VISK'235W", "P-arm's Arms", "FLOWEN'S SHIELD",
+            "DB'S SWORD", "FLOWEN'S SWORD", "VISK'235W", "P-arm's Arms",
         })
 
     def test_name_gate_rejects_missing_authority_even_when_output_matches_fallback(self):
@@ -238,7 +239,7 @@ class NameAlignmentTests(unittest.TestCase):
                                 if drop["item"] == "CURE SHOCK":
                                     list(iter_cell_drops(zh_row["drops"][column]))[item_index]["item"] = "CURE SHOCK"
                                     replaced += 1
-        self.assertEqual(replaced, 5)
+        self.assertEqual(replaced, 4)
 
         def read_without_alias(path, *args, **kwargs):
             text = original_read(path, *args, **kwargs)
@@ -257,7 +258,7 @@ class NameAlignmentTests(unittest.TestCase):
             validate_names, "load_js_data", load_mutated
         ):
             errors = validate_names.validate_names(root=ROOT)
-        self.assertEqual(sum("missing zh translation" in e and "CURE SHOCK" in e for e in errors), 5)
+        self.assertEqual(sum("missing zh translation" in e and "CURE SHOCK" in e for e in errors), 4)
 
     def test_coverage_accepts_explicit_same_text_and_role_specific_indexes(self):
         data = {"data": {"Normal": {"monsters": {"Episode 1": [{
