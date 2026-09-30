@@ -467,3 +467,25 @@ generated timestamp in `dc/data/ja.js`.
 The UN-10/UN-11 lock test now also covers both spellings of Guld and Milla,
 Red Handgun and GUN. It failed against the previous authority and passes after
 regeneration; `npm run verify:localization` passes.
+
+## UN-13 Gol Dragon refresh (2026-09-30)
+
+The user confirmed `Gol Dragon / ゴル　ドラゴン → 戈尔龙`.
+The published source is psobb-localization `3ae0bc9b0b509ce22c260f3f46041fda84b5c8f2`,
+with the UN-13 change at Unitxt `2:76` and `4:76`.
+Chinese Unitxt SHA-256:
+`c857d313ceb9fbfff0f4664aef28f3842567bebcdd64ea8a1ea05988388631ac`.
+
+`npm run update:i18n` updates four authority entries and the BB/NGC Chinese
+rows; the BB hover catalog is synchronized from Haven with
+`node tools/sync_wiki_catalog.cjs ../ephinea4haven.github.io`.
+Unrelated generated timestamps and object-order changes were removed after
+checking semantic equality. Drops, coordinates, images and Laconium names do
+not change. Authority SHA-256:
+`e189c94e97e587d816269e4b0612ebdf7ee989791d9250332d8fcc6639009dc5`.
+
+`npm run verify:localization` passed, including the current Unitxt source check.
+The final build passed (570 files), and the 17 viewer/catalog tests passed again
+after removing order-only generation churn. The user accepted the result and
+authorized committing and pushing on master. Haven will pin this authority commit
+after publication. In-game display and localization installer releases remain separate.

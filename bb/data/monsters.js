@@ -1562,7 +1562,7 @@ window.BB_MONSTERS = {
       "normal": {
         "names": {
           "en": "Gol Dragon",
-          "zh": "数码冰龙",
+          "zh": "戈尔龙",
           "ja": "ゴル　ドラゴン"
         },
         "image": "30047833a043286e.png",
@@ -1571,7 +1571,7 @@ window.BB_MONSTERS = {
       "ultimate": {
         "names": {
           "en": "Gol Dragon",
-          "zh": "数码冰龙",
+          "zh": "戈尔龙",
           "ja": "ゴル　ドラゴン"
         },
         "image": "30047833a043286e.png",
