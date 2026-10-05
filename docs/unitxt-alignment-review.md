@@ -489,3 +489,30 @@ The final build passed (570 files), and the 17 viewer/catalog tests passed again
 after removing order-only generation churn. The user accepted the result and
 authorized committing and pushing on master. Haven will pin this authority commit
 after publication. In-game display and localization installer releases remain separate.
+
+## UN-14 Epsilon family refresh (2026-10-05)
+
+The user confirmed `Epsilon → 厄普西隆` globally, including Cladding of Epsilon
+(`厄普西隆外壳`), Epsiguard / EPSIGUARD / Epsigard (`厄普西隆之盾`)
+and Epsilon Plating (`厄普西隆之盾镀层`). English identities remain unchanged.
+The independently reviewed source is psobb-localization commit
+`cfeb6cacde0080c57af93d18e247b8c3e1bf2f1f`, with 12 changed Unitxt coordinates.
+Chinese Unitxt SHA-256: `50a70ef17a4e198ddb5820a67cbd335700863245a8e2970d60e318af2c115a45`.
+Authority SHA-256: `8040718807801581546fec996d7594236dc2d32da3f3e6092e3ad6dbd54cf4da`.
+
+The new independent family regression fails against the old dictionary.
+`npm run update:i18n` regenerated seven authority labels and BB/NGC Chinese
+drop names from Unitxt; DC data has no semantic changes and its timestamp-only
+churn was removed after comparing all remaining lines. The BB hover catalog
+is regenerated with `node tools/sync_wiki_catalog.cjs ../ephinea4haven.github.io`.
+Final local validation passed: `npm run verify:localization` (73 Python tests,
+17 viewer/catalog tests, coordinate/name gates and current Unitxt comparison)
+and `npm run build` (570 files). The corrected exact-key family regression
+rejects the original dictionary and accepts the generated authority. Fresh
+semantic comparison confirms only the seven intended Chinese authority labels,
+eight monster row labels, four item occurrences and two hover labels changed;
+drops, coordinates, English/Japanese identities and image bytes are preserved.
+The user accepted the result and authorized committing and pushing on master
+on 2026-10-05. Haven pins this authority revision for its release. Pages
+publication is verified separately through the matching workflow run; client
+display and localization installer packaging are outside this source update.

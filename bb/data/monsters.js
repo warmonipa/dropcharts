@@ -2066,7 +2066,7 @@ window.BB_MONSTERS = {
       "normal": {
         "names": {
           "en": "Epsilon",
-          "zh": "伊普西龙",
+          "zh": "厄普西隆",
           "ja": "イプシロン"
         },
         "image": "e840fe7d3e027666.png",
@@ -2075,7 +2075,7 @@ window.BB_MONSTERS = {
       "ultimate": {
         "names": {
           "en": "Epsilon",
-          "zh": "伊普西龙",
+          "zh": "厄普西隆",
           "ja": "イプシロン"
         },
         "image": "e840fe7d3e027666.png",

@@ -52,6 +52,19 @@ class NameAlignmentTests(unittest.TestCase):
                 with self.subTest(name=name):
                     self.assertNotIn("「皓光」", translations["zh"])
 
+    def test_confirmed_epsilon_family(self):
+        """A stale but internally consistent dictionary must reject old names."""
+        authority = json.loads((ROOT / "i18n_names.json").read_text(encoding="utf-8"))
+        for section, names in {
+            "monsters": {"Epsilon": "厄普西隆", "Epsigard": "厄普西隆之盾"},
+            "items": {"Epsilon": "厄普西隆", "Cladding of Epsilon": "厄普西隆外壳",
+                      "Epsigard": "厄普西隆之盾", "EPSIGUARD": "厄普西隆之盾",
+                      "Epsilon Plating": "厄普西隆之盾镀层"},
+        }.items():
+            for english, chinese in names.items():
+                with self.subTest(section=section, name=english):
+                    self.assertEqual(authority[section][english]["zh"], chinese)
+
     def test_unitxt_cli_requires_the_configured_source(self):
         """The explicit upstream gate must not silently become an offline check."""
         configured = ROOT / "configured-localization"
