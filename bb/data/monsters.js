@@ -2404,7 +2404,7 @@ window.BB_MONSTERS = {
       "normal": {
         "names": {
           "en": "Merissa A",
-          "zh": "媚影沙魔·Ａ",
+          "zh": "媚影沙魔·A",
           "ja": "メリッサ・エー"
         },
         "image": "ea439f833c93e1b4.png",
@@ -2413,7 +2413,7 @@ window.BB_MONSTERS = {
       "ultimate": {
         "names": {
           "en": "Merissa A",
-          "zh": "媚影沙魔·Ａ",
+          "zh": "媚影沙魔·A",
           "ja": "メリッサ・エー"
         },
         "image": "ea439f833c93e1b4.png",
@@ -2425,7 +2425,7 @@ window.BB_MONSTERS = {
       "normal": {
         "names": {
           "en": "Merissa AA",
-          "zh": "媚影沙魔·ＡＡ",
+          "zh": "媚影沙魔·AA",
           "ja": "メリッサ・エー・エー"
         },
         "image": "a0fe893a14dbc997.png",
@@ -2434,7 +2434,7 @@ window.BB_MONSTERS = {
       "ultimate": {
         "names": {
           "en": "Merissa AA",
-          "zh": "媚影沙魔·ＡＡ",
+          "zh": "媚影沙魔·AA",
           "ja": "メリッサ・エー・エー"
         },
         "image": "a0fe893a14dbc997.png",
