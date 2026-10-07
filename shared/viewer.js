@@ -567,9 +567,20 @@
               var imgFile = IMG_MAP && (IMG_MAP[drop.item] || (enItem && IMG_MAP[enItem]));
               if (imgFile) html += '<img class="item-tooltip-img" src="../shared/images/' + encodeURIComponent(imgFile) + '" alt="" loading="lazy">';
               if (drop.rate) {
-                var rdr = typeKey === 'monsters' ? rdrTooltip(drop.rate, entry.dropRate) : '';
+                var displayedRate = drop.rate;
+                var rdr;
+                if (CFG.version === 'dc') {
+                  // DC source cells contain conditional RDR, not per-kill DR.
+                  var rareProbability = parseRate(drop.rate);
+                  var anythingProbability = parseRate(entry.dropRate);
+                  displayedRate = (rareProbability * anythingProbability * 100)
+                    .toFixed(12).replace(/0+$/, '').replace(/\.$/, '') + '%';
+                  rdr = 'RDR = ' + fmtRate(drop.rate);
+                } else {
+                  rdr = typeKey === 'monsters' ? rdrTooltip(drop.rate, entry.dropRate) : '';
+                }
                 var rdrAttr = rdr ? ' data-rdr="' + rdr + '"' : '';
-                html += '<span class="drop-rate' + (rdr ? ' has-rdr' : '') + '"' + rdrAttr + '>' + fmtRate(drop.rate) + '</span>';
+                html += '<span class="drop-rate' + (rdr ? ' has-rdr' : '') + '"' + rdrAttr + '>' + fmtRate(displayedRate) + '</span>';
               }
               html += '</span>';
             });

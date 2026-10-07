@@ -32,13 +32,17 @@ Enter text in the search box to filter monster and item names as you type. Match
 
 ### Drop rates
 
-DC drop rates are displayed as percentages with three significant digits; for example the source value `0.134277%` is shown as `0.134%`.
+DC drop rates are displayed as percentages, normally with three significant digits.
+For example, Normal Dark Gunner has DAR `40%` and source RDR `0.219727%`:
+its final DR is `0.0878908%`, displayed as `0.0879%`. Very small values retain
+decimal notation rather than switching to scientific notation.
 
 The probability below the monster name is the Drop Anything Rate (DAR). The probability
 below an item is its final per-kill Drop Rate (DR), where `DR = DAR × RDR`. Where DAR is available,
-hover an item rate to show the inferred Rare Drop Rate (RDR). The tooltip uses
-`≈` because the source DAR and DR values are rounded before the viewer calculates
-`RDR = DR / DAR`.
+hover an item rate to show the source Rare Drop Rate (RDR). DC data stores RDR;
+the viewer multiplies it by DAR to display DR. These source percentages are rounded.
+An enemy with 0% DAR, including Dark Falz, has 0% final DR even when its data
+contains a nonzero RDR. Such entries do not imply obtainable items.
 
 ### Table layout
 

@@ -5,7 +5,7 @@ This guide describes how to refresh, rebuild, validate, and deploy the drop-tabl
 ## Prerequisites
 
 - Python 3.10 or later and `uv`; Python dependencies are managed by `pyproject.toml` and `uv.lock`.
-- A local checkout of the `ephinea4haven.github.io` source-data repository next to this repository. The DC and NGC source HTML is no longer stored in this working tree. The parsers read it from verified commit `7280fec3e435bf06b2d0a25659478ef5375eb86c`. Set `EPHINEA4HAVEN_REPO` to use another checkout.
+- To regenerate DC/NGC data, a local checkout of the `ephinea4haven.github.io` source-data repository next to this repository. The parsers read it from verified commit `7280fec3e435bf06b2d0a25659478ef5375eb86c`. Set `EPHINEA4HAVEN_REPO` to use another checkout. DC regression tests use pinned HTML fixtures in this repository and do not need this checkout.
 - A local checkout of `psobb-localization` next to this repository. Its aligned
   English reference and unified Chinese mixed-width Unitxt align the Chinese
   names in the sole authority, `i18n_names.json`. Set
@@ -72,6 +72,18 @@ Every version and every monster or area/box row uses one cell protocol. Each `dr
 | Script | Input | Output |
 | --- | --- | --- |
 | `parse_dc.py` | `dc/*.html` from the local `ephinea4haven` repository | `dc/data/en.js` |
+
+The DC v2 parser cleans malformed percentage tokens and resolves four source
+item labels to canonical identities. `dc_source_errata.py` corrects two Pinkal
+rates and six missing Dark Belra rates, rejecting unexpected source values.
+Stored item rates are conditional RDR; the DC viewer multiplies them by enemy
+DAR for final per-kill DR and shows source RDR in the tooltip.
+
+`tests/test_dc_source_audit.py` compares all 1,800 cells in each language with
+corrected ingestion from four pinned, unmodified HTML fixtures. The tests run
+without an external checkout and do not skip DC source coverage. Fixture
+provenance and hashes are in `tests/fixtures/dc-v2/README.txt`.
+See [the DC v2 source audit](dc-source-audit.md) for exact errors and corrections.
 
 ### 3. NGC (GameCube)
 
@@ -303,3 +315,6 @@ and pinned historical HTML sources; this audit did not verify them against a
 current external source.
 NGC has since been regenerated and audited against the GameCube rare tables;
 see [the NGC source audit](ngc-source-audit.md).
+DC v2 was subsequently compared with Lost Technology and its confirmed
+corrections checked against newserv's v2 table on 2026-10-07;
+see [the DC v2 source audit](dc-source-audit.md).

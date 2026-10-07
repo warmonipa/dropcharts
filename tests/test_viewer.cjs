@@ -18,6 +18,25 @@ function viewer(version = 'bb', query = '') {
   window.initViewer({version, languages: ['en','ja','zh'], episodes: version === 'dc' ? null : version === 'bb' ? ['Episode 1','Episode 2','Episode 4'] : ['Episode 1','Episode 2'], hasTypes: version === 'bb', hasRateToggle: version === 'bb'});
   return {window, document, nodes, html: () => document.getElementById('content').innerHTML};
 }
+test('DC v2 converts source RDR to per-kill DR and retains source RDR in tooltips', () => {
+  const normal = viewer('dc', '?diff=Normal&q=Dark%20Gunner').html();
+  assert.match(normal, /data-rdr="RDR = 0\.22%">0\.0879%/);
+  assert.doesNotMatch(normal, /RDR ≈ 0\.549%/);
+  const boss = viewer('dc', '?diff=Ultimate&q=Dark%20Falz').html();
+  assert.match(boss, /data-rdr="RDR = 0\.11%">0%/);
+  const guaranteed = viewer('dc', '?diff=Normal&q=Al%20Rappy').html();
+  assert.match(guaranteed, /data-rdr="RDR = 87\.5%">87\.5%/);
+  const small = viewer('dc', '?diff=Ultimate&q=Sinow%20Blue').html();
+  assert.match(small, /data-rdr="RDR = 0\.000119%">0\.0000714%/);
+  for (const lang of ['en', 'ja', 'zh']) {
+    for (const diff of ['Normal', 'Hard', 'Very Hard', 'Ultimate']) {
+      const html = viewer('dc', `?lang=${lang}&diff=${diff}`).html();
+      const rates = [...html.matchAll(/class="drop-rate(?: has-rdr)?"[^>]*>([^<]*)</g)].map(m => m[1]);
+      for (const rate of rates) assert.match(rate, /^\d+(?:\.\d+)?%$/);
+      assert.doesNotMatch(html, /NaN|Infinity|RDR ≈/);
+    }
+  }
+});
 test('every BB row uses the selected form and locally available artwork in all languages and difficulties', () => {
   for (const lang of ['en','ja','zh']) for (const diff of ['Normal','Hard','Very Hard','Ultimate']) {
     const app = viewer('bb', `?lang=${lang}&diff=${diff}`);
@@ -258,7 +277,7 @@ test('DC and GameCube percentages are shortened to three significant digits', ()
   assert.ok(rates.includes('0.00992%'));
   assert.ok(rates.includes('1.56%'));
   const dc = viewer('dc', '?diff=Ultimate').html();
-  assert.match(dc, />0\.000119%</);
+  assert.match(dc, /data-rdr="RDR = 0\.000119%"/);
 });
 test('Section ID headers show the canonical icon beside each localized name', () => {
   const canonical = ['Viridia', 'Greenill', 'Skyly', 'Bluefull', 'Purplenum', 'Pinkal', 'Redria', 'Oran', 'Yellowboze', 'Whitill'];

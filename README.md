@@ -85,8 +85,11 @@ Each header shows the Section ID symbol above its localized name (Japanese and
 Chinese use the Unitxt Section ID card names). The symbols are copied unchanged
 from ephinea4haven's `assets/img/section/icon/`; see
 `shared/images/section-ids/NOTICE.txt`. Phantasy Star Online and the Section ID
-symbols are property of SEGA. DC/NGC source percentages display three
-significant digits. BB named banner items without a Hit requirement use rainbow text; those requiring
+symbols are property of SEGA. DC displays per-kill rates calculated as DAR ×
+source RDR, with source RDR in the tooltip; 0% DAR means 0% final drop rate.
+DC/NGC percentages use three significant digits where supported by the formatter.
+See [the DC v2 source audit](docs/dc-source-audit.md) for corrected cells and validation.
+BB named banner items without a Hit requirement use rainbow text; those requiring
 untekked Hit use steady gold with a dark outline and a condition tooltip. Technique disks are excluded.
 DC/NGC retain their legacy SS rainbow rule. There are no extra item badges;
 reduced-motion preferences keep the rainbow static. Row hover

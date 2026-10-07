@@ -3,11 +3,22 @@
 
 from datetime import datetime
 from pathlib import Path
+import re
 
 from bs4 import BeautifulSoup
 
 from drop_data import SECTION_IDS, make_drop_cell, write_generated_js
 from source_html import read_legacy_html
+from dc_source_errata import correct_source_rows
+
+# Resolve these source identities before a translated label can select a
+# different item. Confirmed against the v2 item codes, not BB drop tables.
+SOURCE_ITEM_NAMES = {
+    "Dragonフレーム": "Dragon Frame",
+    "ロックガン": "Lockgun",
+    "ＨＰ/ジェネレイト": "HP/Generate",
+    "ＴＰ/ジェネレイト": "TP/Generate",
+}
 
 OUT_DIR = Path(__file__).parent.parent / "dc" / "data"
 
@@ -38,13 +49,16 @@ def parse_dc_cell(td):
     drops = []
     pending_item = ""
     for line in lines:
+        # Broken source markup left angle brackets / a parenthesis on rates.
+        if re.fullmatch(r">?\d+(?:\.\d+)?%[<)]?", line):
+            line = line.lstrip(">").rstrip("<)")
         if line.endswith("%") and pending_item:
             drops.append({"item": pending_item, "rate": line})
             pending_item = ""
         else:
             if pending_item:
                 drops.append({"item": pending_item, "rate": ""})
-            pending_item = line
+            pending_item = SOURCE_ITEM_NAMES.get(line, line)
     if pending_item:
         drops.append({"item": pending_item, "rate": ""})
     return make_drop_cell(drops)
@@ -107,6 +121,7 @@ def main():
         print(f"Parsing DC {label} ({filename})...")
         html = read_legacy_html("dc", filename)
         parsed = parse_dc_html(html)
+        correct_source_rows(parsed, label)
         m_count = sum(len(v) for v in parsed["monsters"].values())
         print(f"  {m_count} monsters")
         all_data[label] = parsed

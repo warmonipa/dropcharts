@@ -940,11 +940,11 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "HP/Restorate",
-                "rate": "40.625000%<"
+                "rate": "40.625000%"
               },
               {
                 "item": "HP/Restorate",
-                "rate": "40.625000%<"
+                "rate": "40.625000%"
               }
             ],
             "dropRate": "100%"
@@ -1575,11 +1575,11 @@ window.DROP_DATA_EN = {
                 "rate": "0.122070%"
               },
               {
-                "item": "Flowen's Frame",
+                "item": "Dragon Frame",
                 "rate": "0.122070%"
               },
               {
-                "item": "Railgun",
+                "item": "Lockgun",
                 "rate": "0.122070%"
               },
               {
@@ -1664,7 +1664,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Delsaber's Right Arm",
-                "rate": "1.367188%"
+                "rate": "1.269531%"
               },
               {
                 "item": "Delsaber's Right Arm",
@@ -1860,7 +1860,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Agito (1983)",
-                "rate": "0.781250%)"
+                "rate": "0.781250%"
               },
               {
                 "item": "Agito (2001)",
@@ -2032,7 +2032,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Double Saber",
-                "rate": "1.269531%"
+                "rate": "1.367188%"
               },
               {
                 "item": "Double Saber",
@@ -2809,35 +2809,35 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               },
               {
                 "item": "Hero/Ability",
-                "rate": "62.500000%<"
+                "rate": "62.500000%"
               }
             ],
             "dropRate": "100%"
@@ -3444,43 +3444,43 @@ window.DROP_DATA_EN = {
             "name": "Sinow Gold",
             "drops": [
               {
-                "item": "HP/Revival",
+                "item": "HP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "HP/Revival",
+                "item": "HP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "HP/Revival",
+                "item": "HP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "HP/Revival",
+                "item": "HP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "HP/Revival",
+                "item": "HP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "TP/Revival",
+                "item": "TP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "TP/Revival",
+                "item": "TP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "TP/Revival",
+                "item": "TP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "TP/Revival",
+                "item": "TP/Generate",
                 "rate": "0.219727%"
               },
               {
-                "item": "TP/Revival",
+                "item": "TP/Generate",
                 "rate": "0.219727%"
               }
             ],
@@ -3610,7 +3610,7 @@ window.DROP_DATA_EN = {
                 "rate": "0.001144%"
               },
               {
-                "item": "HP/Revival",
+                "item": "HP/Generate",
                 "rate": "0.001144%"
               },
               {
@@ -4476,7 +4476,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Agito (1991)",
-                "rate": "0.097656%<"
+                "rate": "0.097656%"
               },
               {
                 "item": "Agito (1977)",
@@ -4484,7 +4484,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Agito (1980)",
-                "rate": "0.097656%<"
+                "rate": "0.097656%"
               },
               {
                 "item": "Agito (1983)",
@@ -4492,7 +4492,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Agito (1991)",
-                "rate": "0.097656%<"
+                "rate": "0.097656%"
               },
               {
                 "item": "Agito (2001)",
@@ -4500,7 +4500,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Agito (1991)",
-                "rate": "0.097656%<"
+                "rate": "0.097656%"
               }
             ],
             "dropRate": "30%"
@@ -5987,7 +5987,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Celestial Armor",
-                "rate": ""
+                "rate": "0.000429%"
               },
               {
                 "item": "Agito (1975)",
@@ -5995,15 +5995,15 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Celestial Armor",
-                "rate": ""
+                "rate": "0.000429%"
               },
               {
                 "item": "Celestial Armor",
-                "rate": ""
+                "rate": "0.000429%"
               },
               {
                 "item": "Celestial Armor",
-                "rate": ""
+                "rate": "0.000429%"
               },
               {
                 "item": "Celestial Armor",
@@ -6015,11 +6015,11 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Celestial Armor",
-                "rate": ""
+                "rate": "0.000429%"
               },
               {
                 "item": "Celestial Armor",
-                "rate": ""
+                "rate": "0.000429%"
               }
             ],
             "dropRate": "45%"
@@ -6107,7 +6107,7 @@ window.DROP_DATA_EN = {
               },
               {
                 "item": "Frozen Shooter",
-                "rate": ">0.000191%"
+                "rate": "0.000191%"
               },
               {
                 "item": "S-Parts ver1.16",
