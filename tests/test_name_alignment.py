@@ -318,7 +318,7 @@ class NameAlignmentTests(unittest.TestCase):
     def test_name_gate_rejects_stale_rows_and_nested_items(self):
         data = {"data": {"Hard": {"monsters": {"Episode 1": [{
             "name": "爪虫", "drops": [{"items": [
-                {"item": "解除/感电", "rate": "1/2"},
+                {"item": "治愈/感电", "rate": "1/2"},
                 {"item": "卡拉德波加", "rate": "1/3"},
             ]}],
         }]}}}}

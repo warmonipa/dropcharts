@@ -254,11 +254,11 @@ class MultiItemConsumerTest(unittest.TestCase):
         }
         normalized = {build_i18n.normalize_key(name): name for name in target}
         build_i18n.merge_unitxt_item_names(
-            {"Cure/Shock": "解除/感电", "Kaladbolg": "卡拉德波加"},
+            {"Cure/Shock": "治愈/感电", "Kaladbolg": "卡拉德波加"},
             target,
             normalized,
         )
-        self.assertEqual(target["CURE SHOCK"]["zh"], "解除/感电")
+        self.assertEqual(target["CURE SHOCK"]["zh"], "治愈/感电")
         self.assertEqual(target["KALADGOLG"]["zh"], "卡拉德波加")
         self.assertEqual(target["CURE SHOCK"]["ja"], "キュア/ショック")
 

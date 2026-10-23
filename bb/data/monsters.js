@@ -1368,27 +1368,6 @@ window.BB_MONSTERS = {
         "source": "https://wiki.pioneer2.net/w/File:Gillchich_(E1).png"
       }
     },
-    "Recon/Recon": {
-      "id": "recon",
-      "normal": {
-        "names": {
-          "en": "Recon",
-          "zh": "爆防机",
-          "ja": "レコン"
-        },
-        "image": "383837bf6ca6dc04.png",
-        "source": "https://wiki.pioneer2.net/w/File:Recon.png"
-      },
-      "ultimate": {
-        "names": {
-          "en": "Recon",
-          "zh": "爆防机",
-          "ja": "レコン"
-        },
-        "image": "383837bf6ca6dc04.png",
-        "source": "https://wiki.pioneer2.net/w/File:Recon.png"
-      }
-    },
     "Savage Wolf/Gulgus": {
       "id": "savage-wolf-e2",
       "normal": {
@@ -1893,6 +1872,27 @@ window.BB_MONSTERS = {
         "source": "https://wiki.pioneer2.net/w/File:Dolmdarl.png"
       }
     },
+    "Recon/Recon": {
+      "id": "recon",
+      "normal": {
+        "names": {
+          "en": "Recon",
+          "zh": "爆防机",
+          "ja": "レコン"
+        },
+        "image": "383837bf6ca6dc04.png",
+        "source": "https://wiki.pioneer2.net/w/File:Recon.png"
+      },
+      "ultimate": {
+        "names": {
+          "en": "Recon",
+          "zh": "爆防机",
+          "ja": "レコン"
+        },
+        "image": "383837bf6ca6dc04.png",
+        "source": "https://wiki.pioneer2.net/w/File:Recon.png"
+      }
+    },
     "Morfos/Morfos": {
       "id": "morfos",
       "normal": {
@@ -2147,6 +2147,69 @@ window.BB_MONSTERS = {
         "source": "https://wiki.pioneer2.net/w/File:Ba_Boota.png"
       }
     },
+    "Astark": {
+      "id": "astark",
+      "normal": {
+        "names": {
+          "en": "Astark",
+          "zh": "异甲巨螳螂",
+          "ja": "アスターク"
+        },
+        "image": "2ca0a24b779fba78.png",
+        "source": "https://wiki.pioneer2.net/w/File:Astark.png"
+      },
+      "ultimate": {
+        "names": {
+          "en": "Astark",
+          "zh": "异甲巨螳螂",
+          "ja": "アスターク"
+        },
+        "image": "2ca0a24b779fba78.png",
+        "source": "https://wiki.pioneer2.net/w/File:Astark.png"
+      }
+    },
+    "Dorphon": {
+      "id": "dorphon",
+      "normal": {
+        "names": {
+          "en": "Dorphon",
+          "zh": "铁甲战车象",
+          "ja": "ドルフォン"
+        },
+        "image": "c0a3a57ab52767c6.png",
+        "source": "https://wiki.pioneer2.net/w/File:Dorphon.png"
+      },
+      "ultimate": {
+        "names": {
+          "en": "Dorphon",
+          "zh": "铁甲战车象",
+          "ja": "ドルフォン"
+        },
+        "image": "c0a3a57ab52767c6.png",
+        "source": "https://wiki.pioneer2.net/w/File:Dorphon.png"
+      }
+    },
+    "Dorphon Eclair": {
+      "id": "dorphon-eclair",
+      "normal": {
+        "names": {
+          "en": "Dorphon Eclair",
+          "zh": "白垩战车象",
+          "ja": "ドルフォン・エクレール"
+        },
+        "image": "01db0bb32ca33729.png",
+        "source": "https://wiki.pioneer2.net/w/File:Dorphon_Eclair.png"
+      },
+      "ultimate": {
+        "names": {
+          "en": "Dorphon Eclair",
+          "zh": "白垩战车象",
+          "ja": "ドルフォン・エクレール"
+        },
+        "image": "01db0bb32ca33729.png",
+        "source": "https://wiki.pioneer2.net/w/File:Dorphon_Eclair.png"
+      }
+    },
     "Sand Rappy": {
       "id": "sand-rappy-crater",
       "normal": {
@@ -2271,69 +2334,6 @@ window.BB_MONSTERS = {
         },
         "image": "b630e538019fe725.png",
         "source": "https://wiki.pioneer2.net/w/File:Pazuzu_(Crater).png"
-      }
-    },
-    "Astark": {
-      "id": "astark",
-      "normal": {
-        "names": {
-          "en": "Astark",
-          "zh": "异甲巨螳螂",
-          "ja": "アスターク"
-        },
-        "image": "2ca0a24b779fba78.png",
-        "source": "https://wiki.pioneer2.net/w/File:Astark.png"
-      },
-      "ultimate": {
-        "names": {
-          "en": "Astark",
-          "zh": "异甲巨螳螂",
-          "ja": "アスターク"
-        },
-        "image": "2ca0a24b779fba78.png",
-        "source": "https://wiki.pioneer2.net/w/File:Astark.png"
-      }
-    },
-    "Dorphon": {
-      "id": "dorphon",
-      "normal": {
-        "names": {
-          "en": "Dorphon",
-          "zh": "铁甲战车象",
-          "ja": "ドルフォン"
-        },
-        "image": "c0a3a57ab52767c6.png",
-        "source": "https://wiki.pioneer2.net/w/File:Dorphon.png"
-      },
-      "ultimate": {
-        "names": {
-          "en": "Dorphon",
-          "zh": "铁甲战车象",
-          "ja": "ドルフォン"
-        },
-        "image": "c0a3a57ab52767c6.png",
-        "source": "https://wiki.pioneer2.net/w/File:Dorphon.png"
-      }
-    },
-    "Dorphon Eclair": {
-      "id": "dorphon-eclair",
-      "normal": {
-        "names": {
-          "en": "Dorphon Eclair",
-          "zh": "白垩战车象",
-          "ja": "ドルフォン・エクレール"
-        },
-        "image": "01db0bb32ca33729.png",
-        "source": "https://wiki.pioneer2.net/w/File:Dorphon_Eclair.png"
-      },
-      "ultimate": {
-        "names": {
-          "en": "Dorphon Eclair",
-          "zh": "白垩战车象",
-          "ja": "ドルフォン・エクレール"
-        },
-        "image": "01db0bb32ca33729.png",
-        "source": "https://wiki.pioneer2.net/w/File:Dorphon_Eclair.png"
       }
     },
     "Goran": {
@@ -2584,8 +2584,8 @@ window.BB_ITEMS = {
   "S-Parts ver1.16": "s-parts-ver1-16",
   "Flowen's Sword": "flowens-sword",
   "Bloody Art": "bloody-art",
-  "Rappy's Beak": "rappys-beak",
   "Photon Crystal": "photon-crystal",
+  "Rappy's Beak": "rappys-beak",
   "Amplifier of Foie": "amplifier-of-foie",
   "Amplifier of Barta": "amplifier-of-barta",
   "Amplifier of Zonde": "amplifier-of-zonde",
@@ -2665,12 +2665,12 @@ window.BB_ITEMS = {
   "L&K14 Combat": "landk14-combat",
   "Silence Claw": "silence-claw",
   "Durandal": "durandal",
-  "Angry Fist": "angry-fist",
-  "Cross Scar": "cross-scar",
-  "Dragon Slayer": "dragon-slayer",
   "Justy-23ST": "justy-23st",
   "Guilty Light": "guilty-light",
   "Stag Cutlery": "stag-cutlery",
+  "Cross Scar": "cross-scar",
+  "Angry Fist": "angry-fist",
+  "Dragon Slayer": "dragon-slayer",
   "Yamato": "yamato",
   "Final Impact": "final-impact",
   "Diska of Braveman": "diska-of-braveman",
@@ -2747,19 +2747,19 @@ window.BB_ITEMS = {
   "Infantry Mantle": "infantry-mantle",
   "Commander Uniform": "commander-uniform",
   "Tempest Cloak": "tempest-cloak",
-  "Rianov 303SNR": "rianov-303snr",
-  "Ignition Cloak": "ignition-cloak",
-  "Heavenly/Arms": "heavenly-arms",
-  "Officer Uniform": "officer-uniform",
   "Snake Spire": "snake-spire",
-  "Heavenly/Luck": "heavenly-luck",
-  "Tanegashima": "tanegashima",
+  "Heavenly/Arms": "heavenly-arms",
   "Red Scorpio": "red-scorpio",
   "Holy Ray": "holy-ray",
   "Chain Sawd": "chain-sawd",
   "Heavenly/Power": "heavenly-power",
   "Heavenly/Mind": "heavenly-mind",
   "Heart of Diska of Liberator": "heart-of-diska-of-liberator",
+  "Rianov 303SNR": "rianov-303snr",
+  "Ignition Cloak": "ignition-cloak",
+  "Officer Uniform": "officer-uniform",
+  "Heavenly/Luck": "heavenly-luck",
+  "Tanegashima": "tanegashima",
   "Ano Bazooka": "ano-bazooka",
   "Infantry Gear": "infantry-gear",
   "Tyrell's Parasol": "tyrells-parasol",
@@ -2973,6 +2973,15 @@ window.BB_ITEMS = {
   "Red Odoshi Domaru": "red-odoshi-domaru",
   "Black Hound Cuirass": "black-hound-cuirass",
   "Cannon Rouge": "cannon-rouge",
+  "Yata Mirror": "yata-mirror",
+  "Sacred Duster": "sacred-duster",
+  "Yasakani Magatama": "yasakani-magatama",
+  "Limiter": "limiter",
+  "Striker Plus": "striker-plus",
+  "Gratia": "gratia",
+  "Rage de Feu": "rage-de-feu",
+  "Clio": "clio",
+  "Blue Odoshi Violet Nimaidou": "blue-odoshi-violet-nimaidou",
   "Lieutenant Gear": "lieutenant-gear",
   "Star Cuirass": "star-cuirass",
   "Rianov 303SNR-4": "rianov-303snr-4",
@@ -2981,15 +2990,6 @@ window.BB_ITEMS = {
   "V801": "v801",
   "Ophelie Seize": "ophelie-seize",
   "Kunai": "kunai",
-  "Rage de Feu": "rage-de-feu",
-  "Yata Mirror": "yata-mirror",
-  "Sacred Duster": "sacred-duster",
-  "Yasakani Magatama": "yasakani-magatama",
-  "Limiter": "limiter",
-  "Striker Plus": "striker-plus",
-  "Gratia": "gratia",
-  "Clio": "clio",
-  "Blue Odoshi Violet Nimaidou": "blue-odoshi-violet-nimaidou",
   "Lieutenant Mantle": "lieutenant-mantle",
   "Black Odoshi Red Nimaidou": "black-odoshi-red-nimaidou",
   "Mother Garb": "mother-garb",

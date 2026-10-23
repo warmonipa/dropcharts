@@ -516,3 +516,18 @@ The user accepted the result and authorized committing and pushing on master
 on 2026-10-05. Haven pins this authority revision for its release. Pages
 publication is verified separately through the matching workflow run; client
 display and localization installer packaging are outside this source update.
+
+## 2026-10-24 Cure terminology handoff (uncommitted)
+
+Authority: psobb-localization base `cd2dec29e33331e0be0269b80c648b27e6eb8859` plus
+the explicitly authorized two Slow trap-description changes, main ZH SHA-256
+`1ed4055ef1e4ad0376bb725d6749f80577799d7d24f18bc60f02ac463416a714`. Cure names are already locked upstream as 治愈/中毒、治愈/麻痹、
+治愈/减速、治愈/混乱、治愈/冻结、治愈/感电.
+`npm run update:i18n` regenerated the authority and BB/DC/NGC data;
+`npm run update:wiki -- ../ephinea4haven.github.io` refreshed monsters.js.
+`npm test` passed 79 Python and 18 Node tests; source-backed name validation
+and `npm run build` passed. Only 13 authority aliases change their Chinese names.
+The monster manifest refresh changes object ordering only, not values or artwork.
+Claude must commit/push localization first, then this repository, and replace
+Haven's two CI authority pins with the new published dropcharts commit before
+its final sync/verification/push. No future commit ID is fabricated here.
