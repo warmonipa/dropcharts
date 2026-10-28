@@ -4,7 +4,7 @@ This guide describes how to refresh, rebuild, validate, and deploy the drop-tabl
 
 ## Prerequisites
 
-- Python 3.10 or later and `uv`; Python dependencies are managed by `pyproject.toml` and `uv.lock`.
+- Node.js 24 (see `.nvmrc`), `npm ci`, Python 3.10 or later and `uv`; Python dependencies are managed by `pyproject.toml` and `uv.lock`.
 - To regenerate DC/NGC data, a local checkout of the `ephinea4haven.github.io` source-data repository next to this repository. The parsers read it from verified commit `7280fec3e435bf06b2d0a25659478ef5375eb86c`. Set `EPHINEA4HAVEN_REPO` to use another checkout. DC regression tests use pinned HTML fixtures in this repository and do not need this checkout.
 - A local checkout of `psobb-localization` next to this repository. Its aligned
   English reference and unified Chinese mixed-width Unitxt align the Chinese
@@ -65,7 +65,7 @@ not fetch remote content; deployment uses these checked-in assets.
   not generate or select separate full-width and half-width variants.
 - `reorder.py` runs automatically at the end of `update:bb`. It orders BB enemies as common enemies, elite enemies, then bosses within each area, matching DC and NGC.
 
-Every version and every monster or area/box row uses one cell protocol. Each `drops` array always corresponds to the ten Section ID columns. An empty or single-drop cell has the form `{"item": "...", "rate": "..."}`. A cell with several independent drops uses `{"items": [{"item": "...", "rate": "..."}, ...]}`. Consumers must iterate through `tools/drop_data.py` in Python or `cellDrops()` in the viewer instead of assuming a cell cardinality from the `monsters` or `boxes` type. Multi-drop cells currently occur in BB area boxes, but the model also supports future multi-drop monster cells.
+Every version and every monster or area/box row uses one cell protocol. Each `drops` array always corresponds to the ten Section ID columns. An empty or single-drop cell has the form `{"item": "...", "rate": "..."}`. A cell with several independent drops uses `{"items": [{"item": "...", "rate": "..."}, ...]}`. Consumers must iterate through `tools/drop_data.py` in Python or `cellDrops()` in `src/app/chart/chart-model.ts` instead of assuming a cell cardinality from the `monsters` or `boxes` type. Multi-drop cells currently occur in BB area boxes, but the model also supports future multi-drop monster cells.
 
 ### 2. DC (Dreamcast)
 
@@ -218,38 +218,63 @@ remain stationary while the Section ID cells move.
 ## Deployment
 
 ```bash
-# Validate first if no update command has already performed validation.
+npm ci
 npm test
-
 npm run build
+npx playwright install chromium
+npm run test:e2e
 ```
 
 Pushes to `master` are verified and published by GitHub Actions. The production entry point is `https://dropcharts.psohaven.com/`, configured through the repository's `CNAME` file and GitHub Pages settings.
 
-The build command completely replaces the repository's ignored `_site` directory. This guarantees that the viewer, styles, localization code, and all three platform datasets come from the same source revision.
+The Angular build regenerates typed application inputs from the checked-in data,
+prerenders the home page and three canonical chart routes, checks hydration and
+table content, then replaces _site only after validation succeeds. JavaScript and
+CSS use content-hashed filenames. Platform datasets load lazily as hashed Angular
+chunks; source data scripts are not published as browser globals.
 
-```bash
-npm run build
-```
+Canonical chart routes are /blue-burst/, /dreamcast/ and /gamecube/. The old
+/bb/, /dc/ and /ngc/ directories and their index.html entries remain valid HTTP
+requests. They serve canonical prerendered HTML so Angular can normalize the URL
+without losing query parameters or fragments. All internal navigation uses the
+canonical routes. The home /index.html entry also remains valid.
 
-Each deployment creates a UTC asset version and replaces every `__ASSET_VERSION__` placeholder in HTML with that value. CSS, viewer, localization, and English/Japanese/Chinese dataset URLs therefore share one version, such as `viewer.js?v=20260718072112`, preventing browser or CDN caches from combining new data with an old viewer.
+Run `npm run build` and `npm run test:e2e` before publishing. The GitHub Actions
+workflow installs locked dependencies, validates data, builds and runs browser
+tests before deploying that same _site artifact. The preview server reproduces
+Pages directory redirects and genuine HTTP 404 responses.
 
-Set an explicit asset version for reproducible builds:
-
-```bash
-DROPTABLE_ASSET_VERSION=20260718.2 npm run build
-```
-
-`npm run build` only writes `_site`. GitHub Pages deployment is triggered by pushing a verified source commit to `master`; generated files are not committed.
-
-The former `https://www.psohaven.com/data/droptable/` deployment and legacy `/droptable/{cn,en}/*.html` URLs remain compatibility entry points in the main-site repository. Maintain their redirects when changing routes; external sites still link to those historical URLs. Do not publish Drop Charts artifacts into the main-site repository.
+The old main-site /droptable links are managed in the Haven repository, outside
+this build. This migration does not add routes to that separate deployment.
 
 After publishing, verify at least the following:
 
 1. The latest GitHub Pages build corresponds to the pushed `master` commit and completed successfully.
-2. `https://dropcharts.psohaven.com/` references the deployment's single asset version.
+2. `https://dropcharts.psohaven.com/` references the deployment’s content-hashed Angular assets.
 3. BB Ultimate Episode 4 box cells display every independent drop in the cell.
-4. Historical `/droptable/{cn,en}/*.html` URLs redirect to the equivalent chart state.
+4. Original `/bb/`, `/dc/`, `/ngc/` and `index.html` entries open the equivalent chart state at canonical routes.
+
+## Angular release verification (2026-10-28)
+
+The migration replaces the standalone global Viewer and Python copy build with
+Angular routes, components, typed chart logic, per-platform lazy data chunks and
+build-time prerendering. Data ingestion and the nine source language datasets
+remain the existing Python pipeline inputs; the generated JSON in
+src/app/generated/ is ignored and recreated by every build.
+
+The route registry in src/app/platforms.ts owns the three semantic paths and
+old directory aliases. Original script/data endpoints are outside the approved
+compatibility scope. Existing page entries and supported query state are covered
+by browser tests: 301 for a missing directory slash; 200 for directory and
+index.html entries; Angular normalization retains meaningful lang/diff/ep/type/
+rate/q values, extra query parameters and fragments. Default/invalid filter
+values are normalized according to the platform's supported controls.
+
+Release checks comprise 77 Python tests, 11 Node tests, cross-language and name
+validation, five prerendered pages (home, three charts, not-found), and 12 browser
+tests. The compatibility tests exercise 11 original entry paths. npm ci verifies
+the checked-in dependency lock. GitHub Actions repeats the test/build/browser
+gates and deploys only the verified artifact.
 
 ## Common workflows
 

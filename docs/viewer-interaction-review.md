@@ -57,3 +57,23 @@ every cell as on Ephinea's charts, with Ephinea's fixed text color per column;
 names, rates and links inherit it, links underline instead of changing color,
 banner gold gains a dark outline, and row hover darkens the cells. Headers add
 the Section ID symbols, and DC/NGC percentages show three significant digits.
+
+## Angular migration (2026-10-28)
+
+Angular 22 now owns page rendering and interaction. The appearance and data rules
+above remain in effect, including the later Section ID color changes. Search
+matches use a current-text-color outline and heavier text. Preview images load
+on hover/focus; probabilities also expose their tooltip through keyboard focus.
+
+The pure chart model is tested in tests/test_chart.mjs. Browser tests in
+tests/e2e/charts.spec.mjs cover hydration, filter state, refresh, history,
+cross-platform navigation, previews and a 390px mobile scroll layout.
+tests/e2e/legacy-paths.spec.mjs checks all 11 original home/platform HTTP entries,
+including retained query parameters and fragments. The earlier 36-combination
+contrast/layout survey is historical evidence, not a new Angular audit.
+
+Canonical routes are /blue-burst/, /dreamcast/ and /gamecube/. Old /bb/, /dc/
+and /ngc/ directories and index.html entries serve the canonical prerendered
+page; Angular normalizes their URL while preserving chart state. Without
+JavaScript the default prerendered table remains readable, but URL-selected
+filters and interactive controls require JavaScript.

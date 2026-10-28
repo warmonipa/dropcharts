@@ -2,7 +2,6 @@
   "name": "dropcharts",
   "version": "1.0.0",
   "description": "Drop charts for Phantasy Star Online",
-  "main": "data.js",
   "scripts": {
     "update": "uv run bash tools/update.sh",
     "update:bb": "uv run bash tools/update.sh bb",
@@ -12,13 +11,48 @@
     "update:reorder": "uv run bash tools/update.sh reorder",
     "update:align": "uv run bash tools/update.sh align",
     "update:ss": "uv run bash tools/update.sh ss",
-    "build": "uv run python3 tools/build_site.py",
-    "test": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py && uv run python3 tools/validate_names.py && node --test tests/test_viewer.cjs tests/test_wiki_catalog.cjs",
+    "build": "node scripts/build-site.mjs",
+    "test": "npm run generate && npm run test:data && node --experimental-strip-types --test tests/test_chart.mjs",
     "update:wiki": "node tools/sync_wiki_catalog.cjs",
-    "verify:localization": "npm test && uv run python3 tools/validate_names.py --unitxt"
+    "verify:localization": "npm test && uv run python3 tools/validate_names.py --unitxt",
+    "generate": "node scripts/generate-data.mjs",
+    "dev": "npm run generate && ng serve",
+    "preview": "node scripts/serve-site.mjs",
+    "test:data": "uv run python3 -m unittest discover -s tests -v && uv run python3 tools/validate_alignment.py && uv run python3 tools/validate_names.py && node --test tests/test_wiki_catalog.cjs",
+    "test:e2e": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "dependencies": {
+    "@angular/common": "22.2.3",
+    "@angular/core": "22.2.3",
+    "@angular/compiler": "22.2.3",
+    "@angular/platform-browser": "22.2.3",
+    "@angular/platform-server": "22.2.3",
+    "@angular/router": "22.2.3",
+    "@angular/ssr": "22.2.2",
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "22.2.2",
+    "@angular/cli": "22.2.4",
+    "@angular/compiler-cli": "22.2.3",
+    "typescript": "6.0.3",
+    "@playwright/test": "1.64.1"
+  },
+  "overrides": {
+    "@angular/build": {
+      "vite": "8.3.3"
+    },
+    "@angular/cli": {
+      "@modelcontextprotocol/sdk": "1.30.0"
+    },
+    "@hono/node-server": "2.1.0"
+  }
 }

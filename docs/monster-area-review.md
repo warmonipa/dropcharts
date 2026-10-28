@@ -41,7 +41,7 @@ names is ignored for grouping only; displayed names and drop contents remain
 unchanged. Missing Ultimate aliases such as Hildelt/Hildetorr in VR Temple
 were also added.
 
-`tests/test_viewer.cjs` checks all BB rows against the reviewed groups across
+`tests/test_chart.mjs` checks all BB rows against the reviewed groups across
 three languages and four difficulties. It also checks every stored monster row
 in BB/DC/NGC for an explicit area match and detects split/repeated area groups.
 The data alignment and name validators verify the generated language files.

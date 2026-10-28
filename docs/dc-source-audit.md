@@ -8,7 +8,7 @@ it does not change BB or GameCube data.
 
 | Defect | Affected path | Result after correction |
 | --- | --- | --- |
-| Conditional RDR was displayed as final DR, then divided by DAR again for the tooltip | `shared/viewer.js`, DC branch; `docs/manual-dc.md` | Display `DAR × RDR`; tooltip reads source RDR directly; Dark Falz displays 0% final DR |
+| Conditional RDR was displayed as final DR, then divided by DAR again for the tooltip | `src/app/chart/chart-model.ts`, `dropRate()`; `docs/manual-dc.md` | Display `DAR × RDR`; tooltip reads source RDR directly; Dark Falz displays 0% final DR |
 | Two incorrect rates and six missing rates in preserved input | `tools/dc_source_errata.py`; all three `dc/data/*.js` files | Verified RDR values restored, with source-drift checks on future ingestion |
 | Sixteen rate tokens contain `<`, `)` or `>` from damaged source markup | `tools/parse_dc.py`; all three `dc/data/*.js` files | Numeric percentage tokens parse and render correctly |
 | Thirteen generated cells identify different items from the v2 reference | `tools/parse_dc.py`; all three `dc/data/*.js` files; Lockgun Japanese name in `i18n_names.json` | Canonical item identities and corresponding translations restored |
@@ -80,7 +80,7 @@ the affected item identities and malformed source tokens.
 Its four unmodified HTML inputs are pinned in `tests/fixtures/dc-v2`, with
 source revision and SHA-256 hashes in `README.txt`. Tests read these fixtures
 directly, so a clean checkout needs no sibling source repository or network.
-`tests/test_viewer.cjs` covers DAR 0%, 40% and 100%, source RDR tooltips,
+`tests/test_chart.mjs` covers DAR 0%, 40% and 100%, source RDR tooltips,
 small probabilities, and all DC difficulties and languages.
 
 Use `npm test` for the full regression suite. `tools/update.sh dc` applies the

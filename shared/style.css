@@ -211,9 +211,6 @@ button, input { font-family: inherit; }
   z-index: 10000;
   pointer-events: none;
 }
-.drop-cell .item-tooltip-img, .monster-tooltip-img {
-  display: none;
-}
 .drop-cell .drop-option {
   display: block;
 }
@@ -396,3 +393,10 @@ button, input { font-family: inherit; }
 .drop-cell a.item-name:not(.banner-hit-item) { color: inherit; }
 .drop-cell a.item-name:hover, .drop-cell a.item-name:focus-visible { text-decoration: underline; }
 .drop-cell a.item-name:not(.banner-hit-item):hover, .drop-cell a.item-name:not(.banner-hit-item):focus-visible { color: inherit; }
+
+/* Angular owns the table markup and supplemental previews. */
+drop-app, drop-chart, drop-preview { display: block; }
+.mob-name { white-space: pre-line; }
+.platform-nav { margin-bottom: 8px; font-size: 0.85rem; }
+.platform-nav a { color: var(--text2); }
+.no-results { text-align: center; padding: 40px; }

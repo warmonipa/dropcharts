@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "dropcharts": {
+      "projectType": "application", "root": "", "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts", "server": "src/main.server.ts", "index": "src/index.html",
+            "tsConfig": "tsconfig.json", "outputPath": "dist/dropcharts", "outputMode": "static",
+            "outputHashing": "all", "styles": ["shared/style.css"],
+            "assets": [
+              {"glob": "**/*", "input": "shared/images", "output": "shared/images"},
+              {"glob": "**/*", "input": "bb/images", "output": "bb/images"},
+              {"glob": "CNAME", "input": ".", "output": "/"}
+            ],
+            "budgets": [{"type": "initial", "maximumError": "350kB"}]
+          },
+          "configurations": {
+            "production": {"optimization": true, "sourceMap": false},
+            "development": {"optimization": false, "sourceMap": true, "extractLicenses": false}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {"builder": "@angular/build:dev-server", "options": {"buildTarget": "dropcharts:build:development", "host": "127.0.0.1", "port": 5173}}
+      }
+    }
+  }
+}

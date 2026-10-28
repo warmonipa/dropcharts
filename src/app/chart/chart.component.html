@@ -1,0 +1,64 @@
+<div class="header">
+  <nav class="platform-nav" aria-label="Platform"><a routerLink="/">PSO Drop Charts</a> · <a routerLink="/blue-burst/">BB</a> · <a routerLink="/dreamcast/">DC</a> · <a routerLink="/gamecube/">NGC</a></nav>
+  <h1 id="pageTitle">{{text().title}}</h1><p id="pageSubtitle">{{text().subtitle}}</p>
+</div>
+<div class="sticky-toolbar">
+  <div class="controls">
+    <div class="control-group"><label>{{text().lang}}</label><div class="btn-group" id="langBtns">
+      @for (lang of languages; track lang) {<button class="btn" [class.active]="state().lang === lang" [attr.aria-pressed]="state().lang === lang" [attr.data-lang]="lang" (click)="set('lang', lang)">{{languageNames[lang]}}</button>}
+    </div></div>
+    <div class="control-group"><label>{{text().difficulty}}</label><div class="btn-group" id="difficultyBtns">
+      @for (diff of difficulties(); track diff) {<button class="btn" [class.active]="state().diff === diff" [attr.aria-pressed]="state().diff === diff" [attr.data-diff]="diff" (click)="set('diff', diff)">{{diff}}</button>}
+    </div></div>
+    @if (bundle().version === 'bb') {
+      <div class="control-group"><label>{{text().type}}</label><div class="btn-group" id="typeBtns">
+        @for (type of ['monsters','boxes']; track type) {<button class="btn" [class.active]="state().type === type" [attr.aria-pressed]="state().type === type" [attr.data-type]="type" (click)="set('type',type)">{{type === 'monsters' ? text().monsters : text().boxes}}</button>}
+      </div></div>
+    }
+    @if (bundle().version !== 'dc') {
+      <div class="control-group"><label>{{text().episode}}</label><div class="btn-group" id="episodeBtns">
+        @for (ep of episodes(); track ep) {<button class="btn" [class.active]="state().ep === ep" [attr.aria-pressed]="state().ep === ep" [attr.data-ep]="ep" (click)="set('ep',ep)">{{ep === 'all' ? text().all : ep.replace('Episode ', 'Ep.')}}</button>}
+      </div></div>
+    }
+    @if (bundle().version === 'bb') {
+      <div class="control-group"><label>{{text().rate}}</label><div class="btn-group" id="rateBtns">
+        @for (rate of ['percent','fraction']; track rate) {<button class="btn" [class.active]="state().rate === rate" [attr.aria-pressed]="state().rate === rate" [attr.data-fmt]="rate" (click)="set('rate',rate)">{{rate === 'percent' ? text().percent : text().fraction}}</button>}
+      </div></div>
+    }
+  </div>
+  <div class="search-bar"><label for="searchBox">{{text().search}}</label><input #search id="searchBox" class="search-box" type="search" [value]="state().q" [placeholder]="text().searchPlaceholder" (input)="set('q',search.value)"></div>
+</div>
+<div class="stats" id="stats" aria-live="polite">{{chart().stats}}</div>
+<drop-preview #preview [context]="state()">
+<main class="content" id="content">
+  @for (table of chart().tables; track table.ep) {
+    <section class="episode-section"><h2 class="episode-title">{{table.label}}</h2>
+      <div class="table-wrap" tableViewport tabindex="0" role="region" [attr.aria-label]="table.ep" (scroll)="preview.close()">
+        <table class="drop-table"><thead><tr><th class="monster-col" scope="col">{{state().type === 'boxes' ? text().location : text().monster}}</th>
+          @for (section of chart().sections; track section.icon) {<th class="section-header" scope="col" [style.background-color]="section.color" [style.color]="section.text"><span class="section-label"><img class="section-icon" [src]="'/shared/images/section-ids/' + section.icon + '.png'" alt="" width="22" height="22">{{section.name}}</span></th>}
+        </tr></thead><tbody>
+          @for (row of table.rows; track row.index) {
+            @if (row.heading) {<tr class="area-gap" [class.first]="row.firstArea"><td [attr.colspan]="chart().sections.length + 1"><span class="area-label">{{row.heading}}</span></td></tr>}
+            <tr><td class="monster-name">
+              @if (row.href) {
+                <a class="monster-link monster-label" [href]="row.href" [attr.data-preview]="row.image"><span class="mob-name">{{row.name}}</span>@if (row.dar) {<br><span class="drop-rate-tag">({{row.dar}})</span>}</a>
+              } @else {<div class="monster-label"><span class="mob-name">{{row.name}}</span>@if (row.dar) {<br><span class="drop-rate-tag">({{row.dar}})</span>}</div>}
+            </td>
+            @for (cell of row.cells; track $index) {
+              <td class="drop-cell" [class.empty]="!cell.drops.length" [class.ss-rare-cell]="cell.rare" [style.background-color]="cell.color" [style.color]="cell.text">
+                @for (drop of cell.drops; track $index) {
+                  <span class="drop-option" [class.highlight]="drop.highlight" [attr.data-preview]="drop.image" [attr.tabindex]="!drop.href && drop.image ? 0 : null">
+                    @if (drop.href) {<a class="item-name" [class.ss-rare-item]="drop.rare" [class.banner-hit-item]="!drop.rare && drop.hit" [href]="drop.href" [attr.title]="drop.hint || null" [attr.aria-label]="drop.hint ? drop.name + '. ' + drop.hint : null">{{drop.name}}</a>}
+                    @else {<span class="item-name" [class.ss-rare-item]="drop.rare">{{drop.name}}</span>}
+                    @if (drop.rate) {<span class="drop-rate" [class.has-rdr]="!!drop.tooltip" [attr.data-rdr]="drop.tooltip || null" [attr.tabindex]="drop.tooltip ? 0 : null" [attr.aria-label]="drop.tooltip ? drop.rate + '. ' + drop.tooltip : null">{{drop.rate}}</span>}
+                  </span>
+                } @empty {<span class="empty-mark">—</span>}
+              </td>
+            }</tr>
+          }
+        </tbody></table>
+      </div>
+    </section>
+  } @empty {<p class="no-results">{{state().lang === 'zh' ? '没有匹配结果' : state().lang === 'ja' ? '該当なし' : 'No results'}}</p>}
+</main>
+</drop-preview>

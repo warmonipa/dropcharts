@@ -27,13 +27,26 @@ jobs:
         with:
           version: "0.10.7"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
       - name: Run tests
         run: npm test
 
       - name: Build Pages artifact
-        env:
-          DROPTABLE_ASSET_VERSION: ${{ github.sha }}
         run: npm run build
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify browser behavior
+        run: npm run test:e2e
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0

@@ -12,29 +12,56 @@ The production site is [dropcharts.psohaven.com](https://dropcharts.psohaven.com
 - English, Japanese, and Chinese item data
 - Responsive tables with a frozen monster/location column and centered area labels
 
-## Development
+## Architecture and development
 
-Install Python 3.10 or later, [`uv`](https://docs.astral.sh/uv/), and Node.js. Then run:
+Angular 22 owns routing, pages and interactions. Standalone components use
+signals and zoneless change detection; production builds prerender every page
+and hydrate it in the browser. GitHub Pages serves the static artifact without
+a backend or rewrite rules.
+
+| Public route | Chart | Compatible old entry |
+| --- | --- | --- |
+| / | Platform selector | /index.html |
+| /blue-burst/ | Blue Burst | /bb/, /bb/index.html |
+| /dreamcast/ | Dreamcast | /dc/, /dc/index.html |
+| /gamecube/ | GameCube | /ngc/, /ngc/index.html |
+
+Canonical routes use trailing slashes. Language and chart state use the existing
+lang, diff, ep, type, rate and q query parameters. Old entries serve the same
+prerendered chart and Angular normalizes them to the canonical route, preserving
+query parameters and fragments. Navigation within the app uses canonical routes.
+Missing directory slashes receive the host’s normal 301 redirect. Explicit
+index.html requests remain HTTP 200; Angular performs the canonical route
+normalization after hydration. Old standalone scripts and dataset URLs are not
+published. Without JavaScript the default table is readable; query-selected
+filters require JavaScript.
+
+- src/app/chart/: typed drop model, Angular table, responsive viewport and previews.
+- src/app/app.routes.ts: lazy platform data and page routes; compatibility aliases.
+- scripts/generate-data.mjs: converts checked-in pipeline datasets to build inputs.
+- tools/: Python ingestion, localization, alignment and validation, unchanged.
+- scripts/build-site.mjs: Angular prerendering, artifact validation and publication
+  into _site; generated files remain ignored.
+
+Install Node.js 24 (see .nvmrc), Python 3.10+ and uv, then run:
 
 ```bash
+npm ci
 npm test
-```
-
-The test suite validates data alignment, multi-drop cells, build output, and the responsive
-table contract. Layout tests guard the single frozen label column and area-label centering
-used during horizontal scrolling.
-
-Build a deployable static site in `_site` with:
-
-```bash
+npm run dev       # http://127.0.0.1:5173
 npm run build
+npm run preview   # http://127.0.0.1:4173
+npm run test:e2e
 ```
 
-See [the update and deployment guide](docs/update.md) for the complete data pipeline.
+Install the browser with `npx playwright install chromium` before running browser
+tests. The suite covers direct HTTP entries, prerendered tables without JavaScript,
+hydration, URL state, cross-platform navigation, previews and mobile scrolling.
+The data tests cover every platform/language/difficulty and multi-drop cell.
+After regenerating source data, restart the dev command to refresh its generated
+inputs. A production build always regenerates them.
 
-Preview source files locally with `python tools/serve.py`, then open
-<http://127.0.0.1:8766/bb/>. The preview server disables browser caching so script
-and translation changes appear together. Use `--port` to choose another port.
+See [the update and deployment guide](docs/update.md) for the data pipeline.
 
 ## License
 
@@ -47,8 +74,9 @@ current difficulty. Portraits appear on hover, using the same preview as items;
 rows show only names and drop rates. Names and artwork come from the maintained Haven Wiki
 catalog; Chinese monster names use this repository's i18n_names.json authority.
 Both forms and all three languages remain searchable. Monster links preserve
-difficulty and language; item links preserve language. Detail URLs use catalog
-IDs, including every item in multi-item drop cells and box rows.
+difficulty and language; item links preserve language. Detail URLs use Haven’s semantic /items/{id}/ and /enemies/{id}/ paths with
+language prefixes (Chinese unprefixed, English /en/, Japanese /ja/), including
+every item in multi-item drop cells and box rows.
 Difficulty, language, episode, row type, rate format and search are stored in the
 URL, so returning from a detail page or reloading restores the same table.
 

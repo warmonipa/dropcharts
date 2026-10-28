@@ -7,11 +7,11 @@ drop rates or server behavior. DC/NGC retain their legacy SS list.
 
 ## Appearance
 
-- No Hit requirement: animated rainbow name, with no badge or underline.
+- No Hit requirement: animated rainbow name, with no badge. Item links underline on hover/focus.
 - Named weapon with a Hit requirement: steady gold name. Hover its name for the
   required **untekked** Hit percentage. The condition is also included in its
   accessible name. Color identifies eligibility, not the actual rolled Hit.
-- Search matches use a subtle background lift without a red outline.
+- Search matches use a current-text-color outline and heavier item text.
 - Probabilities keep their normal text color. Links, image previews and keyboard
   focus outlines remain functional. The page and table palette is unchanged.
 - No separate legend row is shown. The localized condition is available on each
@@ -19,8 +19,8 @@ drop rates or server behavior. DC/NGC retain their legacy SS list.
 
 Hit tooltips state only the condition, for example
 “公告条件：未鉴定 Hit ≥ 30%。” English, Japanese and Chinese are supported.
-Scope explanations stay in this document rather than the tooltip. Missing
-translations fall back to English; internal translation keys are never displayed.
+Scope explanations stay in this document rather than the tooltip. The three supported language dictionaries supply the condition text; internal
+translation keys are never displayed.
 
 Gold thresholds are 20, 30, 40 or 50 Hit. For example, Frozen Shooter requires
 30 Hit and Spread Needle requires 40 Hit. The table has no rolled Hit values.

@@ -18,3 +18,11 @@ _site/
 .vscode/
 .DS_Store
 .playwright-mcp/
+
+node_modules/
+dist/
+.angular/
+src/app/generated/
+playwright-report/
+test-results/
+.site-build/
