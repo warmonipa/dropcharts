@@ -687,7 +687,7 @@ window.BB_MONSTERS = {
       "ultimate": {
         "names": {
           "en": "Vol Opt ver. 2",
-          "zh": "波鲁欧普 ver.2",
+          "zh": "波鲁欧普 Ver.2",
           "ja": "ボルオプト ver.2"
         },
         "image": null,

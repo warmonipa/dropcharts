@@ -38,7 +38,7 @@ and pass after regeneration. Ordinary `npm test` remains usable without private
 localization resources.
 
 The maintainer approved separate commits, pushes and production deployment on
-2026-09-18. Publish this droptable revision first; Haven must then pin its actual
+2026-09-18. Publish this dropcharts revision first; Haven must then pin its actual
 immutable commit before its own release. Both Pages workflows must pass, and
 production assets must be checked before publication is reported as complete.
 
@@ -48,7 +48,7 @@ The aligned Chinese Unitxt is psobb-localization commit
 `5a679c5e2f9857f54b83a9b8b415931ac172324e`, `localization/zh/unitxt_j.prs`,
 SHA-256 `720cfd525b5645198d89661ea71c628696df6e024e4a03ef4db75bf1110cf401`.
 EN, JP and ZH resources were decoded separately with newserv and compared by
-Unitxt group/index. This is independent of the droptable translation generator.
+Unitxt group/index. This is independent of the dropcharts translation generator.
 
 The second independent audit inspects dated Japanese identities before English
 matches. It found zero mismatches among 6,710 BB, 1,442 DC and 3,292 NGC drop
@@ -263,7 +263,7 @@ mapped to the BB parasitic gene's identity.
 
 The existing `Sourd Source FM` spelling alias receives the same spacing change.
 The other seven identities already follow the relevant format and terminology.
-These names remain in droptable's authority; no localization Unitxt slot is
+These names remain in the dropcharts authority; no localization Unitxt slot is
 added or replaced. Generation changes 13 DC Chinese drop occurrences (10 FM,
 2 Power VR, 1 Special Gene); every other name and all language-independent
 fields are preserved. Validation uses `npm test` (52 tests), the current-Unitxt
@@ -531,3 +531,21 @@ The monster manifest refresh changes object ordering only, not values or artwork
 Claude must commit/push localization first, then this repository, and replace
 Haven's two CI authority pins with the new published dropcharts commit before
 its final sync/verification/push. No future commit ID is fabricated here.
+
+## 2026-11-06 version-marker case and Black Paper quest label
+
+Authority: psobb-localization `8219912bb296a874bc93e35c10f896155cde7d62`,
+main ZH SHA-256 `6b054042e3a839c3b7d767d0cc7bb03cf4eced257bd30b6146d8693d1c429b44`.
+Every Chinese version marker is capitalized: `军用光枪 Ver.OO`, `军用铠 Ver.OO`,
+`军用盾 Ver.OO`, `波鲁欧普 Ver.2`. `npm run update:i18n` regenerated the
+authority and BB/DC/NGC data (only those names change; `dc/data/ja.js` changes
+its generation timestamp only), and `npm run update:wiki` refreshed
+`bb/data/monsters.js` (only `波鲁欧普 Ver.2`).
+
+The hand-maintained quest label `Black Paper’s Deal 2` changes from `黑页危险交易 2`
+to its reviewed BB quest title `黑色密令的更危险交易`, matching the Black Paper
+lock. Haven previously overrode this one record during its sync; that override is
+removed, so Haven mirrors the authority exactly again. `tests/test_name_alignment.py`
+now locks the `Ver` names and requires every Black Paper name to use 黑色密令.
+`npm test` and `validate_names.py --unitxt` pass. Haven pins this repository's
+resulting commit in both CI workflows before its own sync and release.

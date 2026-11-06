@@ -320,7 +320,7 @@ detail links, readable table typography, URL-preserved table context, and the
 UN-10/UN-11 Chinese name refresh. Local verification passed 58 Python and 11 Node
 tests plus the actual Unitxt source gate. Pushing master triggers this repository's
 Pages build and deployment; check both jobs and the live BB assets. Publish
-droptable before updating Haven's immutable authority reference and publishing
+dropcharts before updating Haven's immutable authority reference and publishing
 Haven. The initial release used portrait placeholders for Bulk and Death Gunner.
 The hover-preview revision omits previews for missing artwork; see
 [the interaction review](viewer-interaction-review.md).

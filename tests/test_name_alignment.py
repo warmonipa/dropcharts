@@ -27,6 +27,10 @@ class NameAlignmentTests(unittest.TestCase):
             "D-Parts ver2.10": "D组件 Ver2.10",
             "S-Parts ver1.16": "S组件 Ver1.16",
             "S-Parts ver2.01": "S组件 Ver2.01",
+            # Every Chinese version marker is capitalized Ver (psobb-localization, 2026-11-06).
+            "Custom Ray ver.OO": "军用光枪 Ver.OO",
+            "Custom Frame ver.OO": "军用铠 Ver.OO",
+            "Custom Barrier ver.OO": "军用盾 Ver.OO",
             "Game Magazine": "FAMI通",
             "GAME MAGAZNE": "FAMI通",
             "Thirteen": "暗杀者迷彩",
@@ -51,6 +55,27 @@ class NameAlignmentTests(unittest.TestCase):
             if name.startswith(("Type", "Heart of Type")):
                 with self.subTest(name=name):
                     self.assertNotIn("「皓光」", translations["zh"])
+
+    def test_every_version_marker_is_capitalized(self):
+        """psobb-localization 2026-11-06: no authority Chinese name keeps a lowercase ver."""
+        authority = json.loads((ROOT / "i18n_names.json").read_text(encoding="utf-8"))
+        for section in ("items", "monsters"):
+            for name, translations in authority[section].items():
+                with self.subTest(section=section, name=name):
+                    self.assertNotRegex(translations["zh"], r"(?<![A-Za-z])ver(?=[.\d])")
+        self.assertEqual(authority["items"]["CUSTOM RAY Ver.00"]["zh"], "军用光枪 Ver.OO")
+        self.assertEqual(authority["items"]["Vol Opt ver.2"]["zh"], "波鲁欧普 Ver.2")
+        self.assertEqual(authority["monsters"]["Vol Opt ver. 2"]["zh"], "波鲁欧普 Ver.2")
+
+    def test_black_paper_is_heixing_miling(self):
+        """Black Paper is 黑色密令 everywhere; the quest label uses its reviewed BB title."""
+        items = json.loads((ROOT / "i18n_names.json").read_text(encoding="utf-8"))["items"]
+        self.assertEqual(items["Black Paper’s Deal 2"]["zh"], "黑色密令的更危险交易")
+        for name, translations in items.items():
+            if "Black Paper" in name:
+                with self.subTest(name=name):
+                    self.assertIn("黑色密令", translations["zh"])
+                    self.assertNotRegex(translations["zh"], "黑页|黑纸")
 
     def test_confirmed_epsilon_family(self):
         """A stale but internally consistent dictionary must reject old names."""

@@ -89,7 +89,7 @@ def batch_query_images(file_names):
         "format": "json",
     })
     url = f"{WIKI_API}?{params}"
-    req = urllib.request.Request(url, headers={"User-Agent": "PSO-DropTable/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "PSO-DropCharts/1.0"})
     with urllib.request.urlopen(req, timeout=30) as resp:
         data = json.loads(resp.read())
 
@@ -105,7 +105,7 @@ def batch_query_images(file_names):
 
 
 def download(url, out_path):
-    req = urllib.request.Request(url, headers={"User-Agent": "PSO-DropTable/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "PSO-DropCharts/1.0"})
     with urllib.request.urlopen(req, timeout=15) as resp:
         data = resp.read()
     with open(out_path, "wb") as f:
